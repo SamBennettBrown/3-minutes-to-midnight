@@ -1,0 +1,272 @@
+[gd_scene format=3 uid="uid://begwrj6a1y2p2"]
+
+[ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
+[ext_resource type="Texture2D" uid="uid://dpy4d6umynf7p" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_04.png" id="2_0q2jt"]
+[ext_resource type="FontFile" uid="uid://canmpksdd2ct8" path="res://fonts/Special_Elite/SpecialElite-Regular.ttf" id="2_font"]
+[ext_resource type="Script" uid="uid://fokcbe25o2i3" path="res://scripts/game/floor_label.gd" id="3_label"]
+[ext_resource type="PackedScene" uid="uid://bw2y0uuw1pu3m" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Poster_02.fbx" id="4_u8xnm"]
+[ext_resource type="PackedScene" uid="uid://bdxqcvxyegxe3" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Security_Camera_01.fbx" id="5_0q2jt"]
+[ext_resource type="PackedScene" uid="uid://bsmsen2fessyk" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Plaques_01.fbx" id="7_ywrge"]
+[ext_resource type="PackedScene" uid="uid://bmx5ldjbp7w01" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Plaque_01.fbx" id="9_5qy3e"]
+[ext_resource type="Script" uid="uid://bwnu42umx4iip" path="res://scripts/game/cam_zone.gd" id="92_zone"]
+
+[sub_resource type="BoxShape3D" id="shape_trigger"]
+size = Vector3(6, 4, 26)
+
+[sub_resource type="BoxMesh" id="mesh_glow_v"]
+size = Vector3(0.7, 0.06, 2)
+
+[sub_resource type="StandardMaterial3D" id="mat_glow"]
+albedo_color = Color(0.12, 0.1, 0.06, 1)
+emission_enabled = true
+emission = Color(1, 0.8, 0.45, 1)
+emission_energy_multiplier = 0.55
+
+[sub_resource type="BoxShape3D" id="shape_zone_n"]
+size = Vector3(4, 4, 12)
+
+[sub_resource type="BoxMesh" id="mesh_floor"]
+size = Vector3(4.4, 0.2, 24.4)
+
+[sub_resource type="StandardMaterial3D" id="mat_floor"]
+albedo_color = Color(0.13, 0.135, 0.155, 1)
+roughness = 0.9
+
+[sub_resource type="BoxShape3D" id="shape_floor"]
+size = Vector3(4.4, 0.2, 24.4)
+
+[sub_resource type="BoxMesh" id="mesh_w4"]
+size = Vector3(4, 3, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="mat_wall"]
+albedo_texture = ExtResource("2_0q2jt")
+roughness = 0.95
+uv1_scale = Vector3(2, 2, 2)
+
+[sub_resource type="BoxShape3D" id="shape_w4"]
+size = Vector3(4, 3, 0.3)
+
+[sub_resource type="BoxMesh" id="mesh_v24"]
+size = Vector3(0.3, 3, 24)
+
+[sub_resource type="BoxShape3D" id="shape_v24"]
+size = Vector3(0.3, 3, 24)
+
+[sub_resource type="BoxMesh" id="mesh_v1"]
+size = Vector3(0.3, 3, 1)
+
+[sub_resource type="BoxShape3D" id="shape_v1"]
+size = Vector3(0.3, 3, 1)
+
+[sub_resource type="BoxMesh" id="mesh_v5"]
+size = Vector3(0.3, 3, 5)
+
+[sub_resource type="BoxShape3D" id="shape_v5"]
+size = Vector3(0.3, 3, 5)
+
+[sub_resource type="BoxMesh" id="mesh_v14"]
+size = Vector3(0.3, 3, 14)
+
+[sub_resource type="BoxShape3D" id="shape_v14"]
+size = Vector3(0.3, 3, 14)
+
+[node name="Hall1" type="Node3D" unique_id=711744800]
+script = ExtResource("1_room")
+camera_look_at = Vector3(0, 0.8, -9)
+
+[node name="Camera" type="Camera3D" parent="." unique_id=1301849233]
+transform = Transform3D(1, 0, 0, 0, 0.9746117, 0.22390169, 0, -0.22390169, 0.9746117, 0, 2.4, 13.512683)
+fov = 38.0
+
+[node name="LampNear" type="SpotLight3D" parent="." unique_id=951605732]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 3.1, 4)
+light_color = Color(0.95, 0.95, 0.9, 1)
+light_energy = 4.2
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 9.0
+spot_angle = 46.0
+
+[node name="LampNear3" type="SpotLight3D" parent="." unique_id=277469341]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.95486856, 4.166142, 7.9093294)
+light_color = Color(0.95, 0.95, 0.9, 1)
+light_energy = 4.2
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 9.0
+spot_angle = 46.0
+
+[node name="LampNear2" type="SpotLight3D" parent="." unique_id=1479689384]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 4.0073376, -1.6925473)
+light_color = Color(0.95, 0.95, 0.9, 1)
+light_energy = 4.2
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 9.0
+spot_angle = 46.0
+
+[node name="LampFar" type="SpotLight3D" parent="." unique_id=1199129554]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.88196677, 3.2958813, -5.0794497)
+light_color = Color(0.95, 0.95, 0.9, 1)
+light_energy = 4.2
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 9.0
+spot_angle = 46.0
+
+[node name="LampFar2" type="SpotLight3D" parent="." unique_id=663896272]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.88196677, 3.2958813, -7.897513)
+light_color = Color(0.95, 0.95, 0.9, 1)
+light_energy = 4.2
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 9.0
+spot_angle = 46.0
+
+[node name="Trigger" type="Area3D" parent="." unique_id=171759074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Trigger" unique_id=866255207]
+shape = SubResource("shape_trigger")
+
+[node name="DoorGlowInterrogation" type="MeshInstance3D" parent="." unique_id=409249424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.97, 0.03, -3)
+mesh = SubResource("mesh_glow_v")
+surface_material_override/0 = SubResource("mat_glow")
+
+[node name="DoorGlowObservation" type="MeshInstance3D" parent="." unique_id=2052276368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.97, 0.03, -10)
+mesh = SubResource("mesh_glow_v")
+surface_material_override/0 = SubResource("mat_glow")
+
+[node name="CamZoneDoors" type="Area3D" parent="." unique_id=641512811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -6.5)
+script = ExtResource("92_zone")
+
+[node name="Shape" type="CollisionShape3D" parent="CamZoneDoors" unique_id=1684196978]
+shape = SubResource("shape_zone_n")
+
+[node name="Camera3D" type="Camera3D" parent="CamZoneDoors" unique_id=465448424]
+transform = Transform3D(-0.062435616, -0.7197555, 0.6914145, -0.030146329, 0.69381, 0.71952695, -0.9975936, 0.024080496, -0.06501644, 1.6994948, 1.8226581, -0.20075655)
+fov = 76.8
+
+[node name="Spots" type="Node3D" parent="." unique_id=1394755137]
+
+[node name="Center" type="Marker3D" parent="Spots" unique_id=1707761551]
+
+[node name="MouthBullpen" type="Marker3D" parent="Spots" unique_id=1894091785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11)
+
+[node name="DoorInterrogation" type="Marker3D" parent="Spots" unique_id=524480817]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 0, -3)
+
+[node name="DoorObservation" type="Marker3D" parent="Spots" unique_id=701605096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 0, -10)
+
+[node name="End" type="Marker3D" parent="Spots" unique_id=1415594671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.0439777)
+
+[node name="End2" type="Marker3D" parent="Spots" unique_id=1383352778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.8612795)
+
+[node name="SignInterrogation" type="Label3D" parent="." unique_id=474340118]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, -1.1481161, 0.02, -2.9095893)
+pixel_size = 0.01
+modulate = Color(0.75, 0.75, 0.72, 0.45)
+text = "INTERROGATION"
+font = ExtResource("2_font")
+font_size = 72
+outline_size = 0
+script = ExtResource("3_label")
+yaw_degrees = 90.0
+
+[node name="SignObservation" type="Label3D" parent="." unique_id=1266149413]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, -1.086307, 0.02, -9.437693)
+pixel_size = 0.01
+modulate = Color(0.75, 0.75, 0.72, 0.45)
+text = "OBSERVATION"
+font = ExtResource("2_font")
+font_size = 72
+outline_size = 0
+script = ExtResource("3_label")
+yaw_degrees = 90.0
+
+[node name="walls" type="Node3D" parent="." unique_id=1261015450]
+
+[node name="Floor" type="StaticBody3D" parent="walls" unique_id=1590385699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/Floor" unique_id=2001155278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.3841858e-07, 0)
+mesh = SubResource("mesh_floor")
+surface_material_override/0 = SubResource("mat_floor")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/Floor" unique_id=90185509]
+shape = SubResource("shape_floor")
+
+[node name="WallNorth" type="StaticBody3D" parent="walls" unique_id=875886163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -11.97)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallNorth" unique_id=908128734]
+mesh = SubResource("mesh_w4")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallNorth" unique_id=587416426]
+shape = SubResource("shape_w4")
+
+[node name="WallEast" type="StaticBody3D" parent="walls" unique_id=653379008]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97, 1.5, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallEast" unique_id=544983664]
+mesh = SubResource("mesh_v24")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallEast" unique_id=338318884]
+shape = SubResource("shape_v24")
+
+[node name="WallWestA" type="StaticBody3D" parent="walls" unique_id=381333965]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.97, 1.5, -11.48)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallWestA" unique_id=2109815392]
+mesh = SubResource("mesh_v1")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallWestA" unique_id=1700140052]
+shape = SubResource("shape_v1")
+
+[node name="WallWestB" type="StaticBody3D" parent="walls" unique_id=1368973867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.97, 1.5, -6.5)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallWestB" unique_id=980211255]
+mesh = SubResource("mesh_v5")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallWestB" unique_id=1518187765]
+shape = SubResource("shape_v5")
+
+[node name="WallWestC" type="StaticBody3D" parent="walls" unique_id=1162874985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.97, 1.5, 5)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallWestC" unique_id=389592115]
+mesh = SubResource("mesh_v14")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallWestC" unique_id=830155250]
+shape = SubResource("shape_v14")
+
+[node name="props" type="Node3D" parent="." unique_id=874437785]
+
+[node name="SM_Prop_Plaque_01" parent="props" unique_id=680804316 instance=ExtResource("9_5qy3e")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.8005527, 2.2064264, -6.442269)
+
+[node name="SM_Prop_Plaques_01" parent="props" unique_id=1739513964 instance=ExtResource("7_ywrge")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.8139235, 1.9440802, 7.755003)
+
+[node name="SM_Prop_Poster_02" parent="props" unique_id=1979871860 instance=ExtResource("4_u8xnm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 1.8094281, 2.247561, -3.7262077)
+
+[node name="SM_Prop_Security_Camera_01" parent="props" unique_id=868982782 instance=ExtResource("5_0q2jt")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 1.8060008, 2.4212992, -10.764572)
+
+[node name="SM_Prop_Security_Camera_02" parent="props" unique_id=1668634689 instance=ExtResource("5_0q2jt")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 1.8060008, 2.4212992, 1.2931991)

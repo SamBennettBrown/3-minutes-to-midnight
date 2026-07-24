@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://ctvb52wuagrv0" path="res://scripts/tools/render_probe.gd" id="1_script"]
+
+[node name="RenderProbe" type="Node3D"]
+script = ExtResource("1_script")

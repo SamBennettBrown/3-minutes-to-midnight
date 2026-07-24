@@ -1,0 +1,280 @@
+[gd_scene format=3 uid="uid://bvqg52jo5vyto"]
+
+[ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
+[ext_resource type="Texture2D" uid="uid://tgud24kwct07" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_03.png" id="4_4fv0t"]
+[ext_resource type="PackedScene" uid="uid://dvb5bodfo7pn6" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Shelf_04_Insert_01.fbx" id="4_hjmcv"]
+[ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="4_item"]
+[ext_resource type="PackedScene" uid="uid://4vt14a7anmh1" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Shelf_04.fbx" id="5_fqu2d"]
+[ext_resource type="Script" uid="uid://cd8jayk7qqp2v" path="res://scripts/game/flag_gate.gd" id="5_gate"]
+[ext_resource type="PackedScene" uid="uid://beaus4036544v" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Shelf_04_Insert_03.fbx" id="6_sms3o"]
+[ext_resource type="PackedScene" uid="uid://kb6b7rup60ev" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Shelf_04_Insert_02.fbx" id="8_afkdn"]
+[ext_resource type="PackedScene" uid="uid://bvnlwpdgt57h6" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Weapon_Rack_01.fbx" id="9_gmnji"]
+[ext_resource type="PackedScene" uid="uid://rxdlhff7oo3a" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Weapon_Rack_01_Insert_01.fbx" id="10_01086"]
+[ext_resource type="PackedScene" uid="uid://chqho1u081tmi" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Gun_Case_01.fbx" id="10_u2q84"]
+[ext_resource type="PackedScene" uid="uid://cui3hwollbww8" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Gun_Case_02_Insert_01.fbx" id="11_040kh"]
+[ext_resource type="PackedScene" uid="uid://bc30ou1q4qjqh" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Gun_Case_02.fbx" id="11_l4mrp"]
+[ext_resource type="PackedScene" uid="uid://mtu503i5ev1h" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Evidence_Bag_03.fbx" id="12_3og7v"]
+[ext_resource type="PackedScene" uid="uid://chwtffav4ss0h" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Gun_Case_03.fbx" id="12_u2q84"]
+[ext_resource type="PackedScene" uid="uid://bhv302iffbxb6" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Shelf_03.fbx" id="19_vwkck"]
+[ext_resource type="Script" uid="uid://dslhfod3pn0dg" path="res://scripts/game/rolling_shelf.gd" id="94_rail"]
+[ext_resource type="Script" uid="uid://kw3g3ie2x1ok" path="res://scripts/game/evidence_package.gd" id="95_pkg"]
+[ext_resource type="Script" uid="uid://gvsb5yehcv6o" path="res://scripts/game/evidence_lockdown.gd" id="96_lock"]
+[ext_resource type="Script" uid="uid://b7rcesmr1yh2a" path="res://scripts/game/sliding_shelf.gd" id="97_slide"]
+
+[sub_resource type="BoxShape3D" id="shape_trigger"]
+size = Vector3(12, 4, 12)
+
+[sub_resource type="BoxShape3D" id="shape_gate"]
+size = Vector3(2, 3, 0.18)
+
+[sub_resource type="BoxMesh" id="mesh_floor"]
+size = Vector3(10.4, 0.2, 10.4)
+
+[sub_resource type="StandardMaterial3D" id="mat_floor"]
+albedo_color = Color(0.13, 0.135, 0.155, 1)
+roughness = 0.9
+
+[sub_resource type="BoxShape3D" id="shape_floor"]
+size = Vector3(10.4, 0.2, 10.4)
+
+[sub_resource type="BoxMesh" id="mesh_w10"]
+size = Vector3(10, 3, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="mat_wall"]
+albedo_color = Color(0.63539076, 0.63539076, 0.63539076, 1)
+albedo_texture = ExtResource("4_4fv0t")
+roughness = 0.95
+uv1_scale = Vector3(4, 4, 4)
+
+[sub_resource type="BoxShape3D" id="shape_w10"]
+size = Vector3(10, 3, 0.3)
+
+[sub_resource type="BoxMesh" id="mesh_w4"]
+size = Vector3(4, 3, 0.3)
+
+[sub_resource type="BoxShape3D" id="shape_w4"]
+size = Vector3(4, 3, 0.3)
+
+[sub_resource type="BoxMesh" id="mesh_v10"]
+size = Vector3(0.3, 3, 10)
+
+[sub_resource type="BoxShape3D" id="shape_v10"]
+size = Vector3(0.3, 3, 10)
+
+[node name="Evidence" type="Node3D" unique_id=1453353622]
+script = ExtResource("1_room")
+camera_look_at = Vector3(0, 0.9, -0.6)
+
+[node name="Camera" type="Camera3D" parent="." unique_id=1328592386]
+transform = Transform3D(0.35052815, -0.26234943, 0.8990567, 9.4638e-09, 0.9599643, 0.2801226, -0.9365522, -0.098190844, 0.3364945, 3.8566084, 2.4333131, 3.737784)
+fov = 47.0
+
+[node name="Lamp" type="SpotLight3D" parent="." unique_id=1509427262]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 2.4275134, 4.4650903, -1.9118608)
+light_color = Color(0.82, 0.88, 1, 1)
+light_energy = 4.6
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_angle = 44.0
+
+[node name="Lamp4" type="SpotLight3D" parent="." unique_id=1202799817]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 2.4275134, 4.4650903, 1.7222447)
+light_color = Color(0.82, 0.88, 1, 1)
+light_energy = 4.6
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_angle = 44.0
+
+[node name="Lamp2" type="SpotLight3D" parent="." unique_id=1399839870]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -2.1413162, 4.40548, 2.3384404)
+light_color = Color(0.82, 0.88, 1, 1)
+light_energy = 4.6
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_angle = 44.0
+
+[node name="Lamp3" type="SpotLight3D" parent="." unique_id=577804801]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -2.5213835, 4.40548, -2.3099785)
+light_color = Color(0.82, 0.88, 1, 1)
+light_energy = 4.6
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_angle = 44.0
+
+[node name="Trigger" type="Area3D" parent="." unique_id=691836399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Trigger" unique_id=791091408]
+shape = SubResource("shape_trigger")
+
+[node name="CardGate" type="StaticBody3D" parent="." unique_id=1855556907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 5.06)
+script = ExtResource("5_gate")
+open_flag = "have_evidence_keycard"
+per_loop = true
+closed_by_loop_flag = "evidence_closed"
+let_out = true
+locked_speaker = "CARD READER"
+locked_line = "A hard red blink. EVIDENCE INTAKE - AUTHORIZED CARDHOLDERS ONLY. Somebody around here must keep a card on their desk..."
+
+[node name="Shape" type="CollisionShape3D" parent="CardGate" unique_id=1887277367]
+shape = SubResource("shape_gate")
+
+[node name="CaseFile" type="Node3D" parent="." unique_id=1060443452]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.93, -1.2)
+script = ExtResource("4_item")
+dialogue = [{
+"speaker": "CASE FILE 44-C",
+"text": "Records clerk, found 11:40 PM. The murder weapon was never logged into evidence. Someone signed the lockup sheet that night."
+}, {
+"speaker": "DETECTIVE",
+"text": "Signed the sheet... so it was someone with a badge."
+}]
+sets_flag = "read_case_file"
+pickup = true
+
+[node name="props_SM_Prop_Shelf_07#ThePackage" type="Node3D" parent="." unique_id=1769593115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2, 1.05, 1.4581244)
+script = ExtResource("95_pkg")
+
+[node name="Lockdown" type="Node3D" parent="." unique_id=1529431112]
+script = ExtResource("96_lock")
+
+[node name="Spots" type="Node3D" parent="." unique_id=1215458089]
+
+[node name="Center" type="Marker3D" parent="Spots" unique_id=446840863]
+
+[node name="Door" type="Marker3D" parent="Spots" unique_id=1118844587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.5)
+
+[node name="walls" type="Node3D" parent="." unique_id=1678166166]
+
+[node name="Floor" type="StaticBody3D" parent="walls" unique_id=905094362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/Floor" unique_id=1228161017]
+mesh = SubResource("mesh_floor")
+surface_material_override/0 = SubResource("mat_floor")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/Floor" unique_id=1550982103]
+shape = SubResource("shape_floor")
+
+[node name="WallNorth" type="StaticBody3D" parent="walls" unique_id=1125456512]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -4.97)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallNorth" unique_id=1719587701]
+mesh = SubResource("mesh_w10")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallNorth" unique_id=1265071801]
+shape = SubResource("shape_w10")
+
+[node name="WallSouthLeft" type="StaticBody3D" parent="walls" unique_id=321838840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.5, 4.97)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallSouthLeft" unique_id=1616428524]
+mesh = SubResource("mesh_w4")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallSouthLeft" unique_id=949976328]
+shape = SubResource("shape_w4")
+
+[node name="WallSouthRight" type="StaticBody3D" parent="walls" unique_id=1495875294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.5, 4.97)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallSouthRight" unique_id=291401442]
+mesh = SubResource("mesh_w4")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallSouthRight" unique_id=543880510]
+shape = SubResource("shape_w4")
+
+[node name="WallWest" type="StaticBody3D" parent="walls" unique_id=158993667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97, 1.5, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallWest" unique_id=333945513]
+mesh = SubResource("mesh_v10")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallWest" unique_id=558989131]
+shape = SubResource("shape_v10")
+
+[node name="WallEast" type="StaticBody3D" parent="walls" unique_id=749822161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97, 1.5, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallEast" unique_id=1204484821]
+mesh = SubResource("mesh_v10")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallEast" unique_id=1162807379]
+shape = SubResource("shape_v10")
+
+[node name="props" type="Node3D" parent="." unique_id=984649531]
+script = ExtResource("94_rail")
+
+[node name="GunShelf" parent="props" unique_id=611921814 instance=ExtResource("5_fqu2d")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.317018, 0, -3.327633)
+
+[node name="SM_Prop_Gun_Case_02" parent="props/GunShelf" unique_id=45647871 instance=ExtResource("11_l4mrp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2574666, 0.42116117, 0.020994186)
+
+[node name="SM_Prop_Gun_Case_03" parent="props/GunShelf" unique_id=2037594790 instance=ExtResource("12_u2q84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03171593, 2.4291103, -0.030331612)
+
+[node name="SM_Prop_Gun_Case_01" parent="props/GunShelf" unique_id=600717522 instance=ExtResource("10_u2q84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5732524, 1.9074273, 0.14514112)
+
+[node name="SM_Prop_Gun_Case_02_Insert_01" parent="props/GunShelf" unique_id=109947917 instance=ExtResource("11_040kh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22892493, 1.2805852, 0.17696857)
+
+[node name="SM_Prop_Evidence_Bag_03" parent="props/GunShelf" unique_id=1113661230 instance=ExtResource("12_3og7v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18421912, 0.8941975, 0.20824575)
+
+[node name="SM_Prop_Evidence_Bag_04" parent="props/GunShelf" unique_id=1213377155 instance=ExtResource("12_3og7v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2840352, 0.8941975, -0.037986755)
+
+[node name="SM_Prop_Evidence_Bag_05" parent="props/GunShelf" unique_id=1912111504 instance=ExtResource("12_3og7v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.71470505, 0.8941975, 0.19191074)
+
+[node name="propshelf1" type="StaticBody3D" parent="." unique_id=1982541644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4481707, 0, -0.47232747)
+script = ExtResource("97_slide")
+
+[node name="Shelf" parent="propshelf1" unique_id=585658858 instance=ExtResource("5_fqu2d")]
+
+[node name="Insert" parent="propshelf1/Shelf" unique_id=1948941618 instance=ExtResource("6_sms3o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043387175, 0, 0.040743113)
+
+[node name="propshelf2" type="StaticBody3D" parent="." unique_id=142209632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4481707, 0, 1.4581244)
+script = ExtResource("97_slide")
+
+[node name="Shelf" parent="propshelf2" unique_id=1701009371 instance=ExtResource("5_fqu2d")]
+
+[node name="Insert" parent="propshelf2/Shelf" unique_id=685247767 instance=ExtResource("8_afkdn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022075653, 0, 0.08583474)
+
+[node name="propshelf3" type="StaticBody3D" parent="." unique_id=2045823652]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4481707, 0, 3.3944857)
+script = ExtResource("97_slide")
+
+[node name="Shelf" parent="propshelf3" unique_id=1336125079 instance=ExtResource("5_fqu2d")]
+
+[node name="Insert" parent="propshelf3/Shelf" unique_id=1997559567 instance=ExtResource("4_hjmcv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.026400805, 0, -0.044514775)
+
+[node name="SM_Prop_Weapon_Rack_01" parent="." unique_id=1864852791 instance=ExtResource("9_gmnji")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3293959, 0, -4.4658403)
+
+[node name="SM_Prop_Weapon_Rack_01_Insert_01" parent="SM_Prop_Weapon_Rack_01" unique_id=1302610417 instance=ExtResource("10_01086")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.029315948, -2.3841858e-07, -0.00029170513)
+
+[node name="SM_Prop_Shelf_04" parent="." unique_id=1395409369 instance=ExtResource("19_vwkck")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4507875, 2.3841858e-07, 1.6116023)
+
+[node name="SM_Prop_Shelf_05" parent="." unique_id=1492617488 instance=ExtResource("19_vwkck")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4507875, 2.3841858e-07, 4.3253117)

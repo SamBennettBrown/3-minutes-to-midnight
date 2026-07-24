@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://c3n8ehkwv4pq0"]
+
+[ext_resource type="PackedScene" path="res://scenes/player/character_rig.tscn" id="1_rig"]
+[ext_resource type="Script" uid="uid://dq4eoax0q5nc1" path="res://scripts/game/npc.gd" id="2_npc"]
+
+[node name="OfficerDaniels" unique_id=616090319 instance=ExtResource("1_rig")]
+process_mode = 3
+script = ExtResource("2_npc")
+walk_pace = 1.6
+schedule = [{
+"clip": "idle",
+"pos": Vector3(4.5, 0, -4),
+"t": 0.0
+}, {
+"clip": "walk",
+"pos": Vector3(4.5, 0, -4),
+"t": 2.0
+}, {
+"clip": "idle",
+"pos": Vector3(-1.5, 0, -2.2),
+"t": 9.0
+}, {
+"clip": "walk",
+"pos": Vector3(-1.5, 0, -2.2),
+"t": 13.0
+}, {
+"clip": "idle",
+"pos": Vector3(4.5, 0, -4),
+"t": 20.0
+}, {
+"clip": "idle",
+"pos": Vector3(4.5, 0, -4),
+"t": 24.0
+}]
+barks = []
+visible_mesh = "SM_Chr_Officer_Male_01"
+foot_offset = 0.05
+blocks_player = true
+hide_outside_active_room = true
+start_clip = "idle"
+dialogue = [{
+"speaker": "OFFICER DANIELS",
+"text": "Evening, detective. Chief's been asking for you."
+}, {
+"speaker": "DETECTIVE",
+"text": "The chief can wait. Walk me through it again - who found the body?"
+}, {
+"speaker": "OFFICER DANIELS",
+"text": "Records clerk. 11:40 sharp, same as every night."
+}]

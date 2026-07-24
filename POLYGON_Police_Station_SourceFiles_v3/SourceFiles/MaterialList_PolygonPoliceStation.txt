@@ -1,0 +1,3904 @@
+-------------------
+Folder Name: Buildings
+-------------------
+Prefab Name: SM_Bld_Door_01
+    Mesh Name: SM_Bld_Door_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Bld_Door_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_02 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Door_02
+    Mesh Name: SM_Bld_Door_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Bld_Door_02_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Door_03
+    Mesh Name: SM_Bld_Door_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Bld_Door_03_Glass_01
+        Slot: PolygonPoliceStation_Glass_02 (No Albedo Texture)
+    Mesh Name: SM_Bld_Door_03_Hatch_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Door_04
+    Mesh Name: SM_Bld_Door_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Door_05
+    Mesh Name: SM_Bld_Door_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Door_06
+    Mesh Name: SM_Bld_Door_06
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Bld_Door_06_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Entrance_Pillar_01
+    Mesh Name: SM_Bld_Entrance_Pillar_01
+        Slot: PolygonPoliceStation_Wall_Brick_01 (PolygonPoliceStation_Wall_Brick_01)
+
+Prefab Name: SM_Bld_Entrance_Pillar_02
+    Mesh Name: SM_Bld_Entrance_Pillar_02
+        Slot: PolygonPoliceStation_Wall_Brick_01 (PolygonPoliceStation_Wall_Brick_01)
+
+Prefab Name: SM_Bld_Fence_01
+    Mesh Name: SM_Bld_Fence_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Fence_Gate_01
+    Mesh Name: SM_Bld_Fence_Gate_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Fence_Gate_02
+    Mesh Name: SM_Bld_Fence_Gate_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Fence_Pillar_01
+    Mesh Name: SM_Bld_Fence_Pillar_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Fence_Runner_01
+    Mesh Name: SM_Bld_Fence_Runner_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Fence_Runner_02
+    Mesh Name: SM_Bld_Fence_Runner_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_HeliPad_01
+    Mesh Name: SM_Bld_HeliPad_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_HeliPad_Stairs_01
+    Mesh Name: SM_Bld_HeliPad_Stairs_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Pillar_Round_01
+    Mesh Name: SM_Bld_Pillar_Round_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Roof_Access_01
+    Mesh Name: SM_Bld_Roof_Access_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Roof_Edge_01
+    Mesh Name: SM_Bld_Roof_Edge_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Roof_Edge_Corner_01
+    Mesh Name: SM_Bld_Roof_Edge_Corner_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Roof_Edge_Entrance_01
+    Mesh Name: SM_Bld_Roof_Edge_Entrance_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Roof_Edge_Entrance_Corner_01
+    Mesh Name: SM_Bld_Roof_Edge_Entrance_Corner_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Roof_Edge_Entrance_Corner_02
+    Mesh Name: SM_Bld_Roof_Edge_Entrance_Corner_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Block_01
+    Mesh Name: SM_Bld_Wall_Block_01
+        Slot: PolygonPoliceStation_Wall_Brick_01 (PolygonPoliceStation_Wall_Brick_01)
+        Slot: PolygonPoliceStation_Wall_Brick_01 (PolygonPoliceStation_Wall_Brick_01)
+
+Prefab Name: SM_Bld_Wall_Block_02
+    Mesh Name: SM_Bld_Wall_Block_02
+        Slot: PolygonPoliceStation_Wall_Brick_01 (PolygonPoliceStation_Wall_Brick_01)
+        Slot: PolygonPoliceStation_Wall_Brick_01 (PolygonPoliceStation_Wall_Brick_01)
+
+Prefab Name: SM_Bld_Wall_Block_Corner_01
+    Mesh Name: SM_Bld_Wall_Block_Corner_01
+        Slot: PolygonPoliceStation_Wall_Brick_03 (PolygonPoliceStation_Wall_Brick_03)
+
+Prefab Name: SM_Bld_Wall_Block_Entrance_01
+    Mesh Name: SM_Bld_Wall_Block_Entrance_01
+        Slot: PolygonPoliceStation_Wall_Brick_03 (PolygonPoliceStation_Wall_Brick_03)
+        Slot: PolygonPoliceStation_Wall_Brick_03 (PolygonPoliceStation_Wall_Brick_03)
+
+Prefab Name: SM_Bld_Wall_Cell_01
+    Mesh Name: SM_Bld_Wall_Cell_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Cell_02
+    Mesh Name: SM_Bld_Wall_Cell_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Door_01
+    Mesh Name: SM_Bld_Wall_Door_01
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+    Mesh Name: SM_Bld_Wall_Door_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_02 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Wall_Door_Cell_01
+    Mesh Name: SM_Bld_Wall_Door_Cell_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Entrance_01
+    Mesh Name: SM_Bld_Wall_Entrance_01
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+    Mesh Name: SM_Bld_Wall_Entrance_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Wall_Reception_01
+    Mesh Name: SM_Bld_Wall_Reception_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+    Mesh Name: SM_Bld_Wall_Reception_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Wall_Reception_02
+    Mesh Name: SM_Bld_Wall_Reception_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+    Mesh Name: SM_Bld_Wall_Reception_02_Glass_01
+        Slot: PolygonPoliceStation_Plastic_01 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Wall_Reception_03
+    Mesh Name: SM_Bld_Wall_Reception_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+    Mesh Name: SM_Bld_Wall_Reception_03_Glass_01
+        Slot: PolygonPoliceStation_Plastic_01 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Wall_Trim_01
+    Mesh Name: SM_Bld_Wall_Trim_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Trim_02
+    Mesh Name: SM_Bld_Wall_Trim_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Trim_Entrance_01
+    Mesh Name: SM_Bld_Wall_Trim_Entrance_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Cell_01
+    Mesh Name: SM_Bld_Wall_Window_Cell_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+
+Prefab Name: SM_Bld_Wall_Window_Cell_02
+    Mesh Name: SM_Bld_Wall_Window_Cell_02
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_05 (PolygonPoliceStation_Wall_05)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Window_Cell_02_Glass_01
+        Slot: PolygonPoliceStation_Glass_02 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Wall_Window_Double_01
+    Mesh Name: SM_Bld_Wall_Window_Double_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+    Mesh Name: SM_Bld_Wall_Window_Double_01_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Wall_Window_Entrance_01
+    Mesh Name: SM_Bld_Wall_Window_Entrance_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+    Mesh Name: SM_Bld_Wall_Window_Entrance_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Wall_Window_Half_01
+    Mesh Name: SM_Bld_Wall_Window_Half_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+    Mesh Name: SM_Bld_Wall_Window_Half_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Wall_Window_Large_01
+    Mesh Name: SM_Bld_Wall_Window_Large_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+    Mesh Name: SM_Bld_Wall_Window_Large_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Wall_Window_Large_02
+    Mesh Name: SM_Bld_Wall_Window_Large_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+    Mesh Name: SM_Bld_Wall_Window_Large_02_Glass_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Window_Large_02_Glass_02
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Wall_Window_Large_Double_01
+    Mesh Name: SM_Bld_Wall_Window_Large_Double_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+    Mesh Name: SM_Bld_Wall_Window_Large_Double_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Wall_Window_Large_Double_02
+    Mesh Name: SM_Bld_Wall_Window_Large_Double_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+    Mesh Name: SM_Bld_Wall_Window_Large_Double_02_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Wall_Window_Large_Double_02_Glass_Insert_01
+    Mesh Name: SM_Bld_Wall_Window_Large_Double_02_Glass_Insert_01
+        Slot: PolygonPoliceStation_Glass_Opaque_01 (No Albedo Texture)
+
+-------------------
+Folder Name: Characters
+-------------------
+Prefab Name: SM_Chr_Criminal_Female_01
+    Mesh Name: SM_Chr_Attach_Hair_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Piercings_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Forensic_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Criminal_Male_01
+    Mesh Name: SM_Chr_Attach_Beard_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Piercings_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Male_01
+        Slot: PolygonPoliceStation_Mat_03_A (PolygonPoliceStation_Texture_03_A)
+    Mesh Name: SM_Chr_Detective_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Forensic_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Detective_Female_01
+    Mesh Name: SM_Chr_Attach_Hair_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Glasses_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Badge_02
+        Slot: PolygonPoliceStation_Mat_01_C (PolygonPoliceStation_Texture_01_C)
+    Mesh Name: SM_Chr_Criminal_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Forensic_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Detective_Male_01
+    Mesh Name: SM_Chr_Attach_Glasses_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Hair_06
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Badge_03
+        Slot: PolygonPoliceStation_Mat_01_C (PolygonPoliceStation_Texture_01_C)
+    Mesh Name: SM_Chr_Criminal_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Forensic_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Forensic_01
+    Mesh Name: SM_Chr_Attach_Mask_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Forensic_01
+        Slot: PolygonPoliceStation_Mat_04_A (PolygonPoliceStation_Texture_04_A)
+    Mesh Name: SM_Chr_Officer_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Officer_Female_01
+    Mesh Name: SM_Chr_Attach_Patch_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Hair_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Hat_04_Alt
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Camera_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Radio_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Pouch_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Holster_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Radio_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Forensic_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Officer_Female_02
+    Mesh Name: SM_Chr_Attach_Helmet_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Hair_02_Alt
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Camera_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Patch_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Patch_02 (1)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Holster_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Pouch_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Pouch_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Zip_Ties_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Forensic_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Officer_Female_03
+    Mesh Name: SM_Chr_Attach_Helmet_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Badge_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Forensic_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Officer_Male_01
+    Mesh Name: SM_Chr_Attach_Patch_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Hat_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Moustache_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Camera_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Radio_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Pouch_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Radio_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Baton_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Cuffs_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Forensic_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Officer_Male_02
+    Mesh Name: SM_Chr_Attach_Headset_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Hair_07
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Goggles_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Goggles_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Chr_Attach_Camera_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Patch_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Patch_02 (1)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Holster_01 (1)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Pouch_01 (1)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Pouch_02 (1)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Zip_Ties_01 (1)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Forensic_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Officer_Male_03
+    Mesh Name: SM_Chr_Attach_Hair_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Hat_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Moustache_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Badge_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Criminal_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Detective_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Forensic_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Female_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Officer_Male_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+-------------------
+Folder Name: Environment
+-------------------
+Prefab Name: SM_Env_CloudRing_01
+    Mesh Name: SM_Env_CloudRing_01
+        Slot: PolygonPoliceStation_Clouds_01 (No Albedo Texture)
+
+Prefab Name: SM_Env_Flowers_01
+    Mesh Name: SM_Env_Flowers_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Env_Flowers_02
+    Mesh Name: SM_Env_Flowers_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Env_Flowers_03
+    Mesh Name: SM_Env_Flowers_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Env_Flowers_04
+    Mesh Name: SM_Env_Flowers_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Env_Garden_01
+    Mesh Name: SM_Env_Garden_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Env_Grass_01
+    Mesh Name: SM_Env_Grass_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Env_Grass_02
+    Mesh Name: SM_Env_Grass_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Env_Grass_03
+    Mesh Name: SM_Env_Grass_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Env_Ground_01
+    Mesh Name: SM_Env_Ground_01
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Ground_Manhole_01
+    Mesh Name: SM_Env_Ground_Manhole_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Env_Ground_Panel_01
+    Mesh Name: SM_Env_Ground_Panel_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Env_Ground_ParkingLines_01
+    Mesh Name: SM_Env_Ground_ParkingLines_01
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Ground_ParkingLines_02
+    Mesh Name: SM_Env_Ground_ParkingLines_02
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Ground_ParkingLines_03
+    Mesh Name: SM_Env_Ground_ParkingLines_03
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Ground_ParkingLines_Single_01
+    Mesh Name: SM_Env_Ground_ParkingLines_Single_01
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Ground_Patch_01
+    Mesh Name: SM_Env_Ground_Patch_01
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Ground_Small_01
+    Mesh Name: SM_Env_Ground_Small_01
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Ground_Small_02
+    Mesh Name: SM_Env_Ground_Small_02
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Ground_Small_Crossing_01
+    Mesh Name: SM_Env_Ground_Small_Crossing_01
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Ground_Small_NoParking_01
+    Mesh Name: SM_Env_Ground_Small_NoParking_01
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Intersection_01
+    Mesh Name: SM_Env_Intersection_01
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Road_01
+    Mesh Name: SM_Env_Road_01
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Road_Half_01
+    Mesh Name: SM_Env_Road_Half_01
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Road_Ramp_01
+    Mesh Name: SM_Env_Road_Ramp_01
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Road_Ramp_02
+    Mesh Name: SM_Env_Road_Ramp_02
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Sidewalk_01
+    Mesh Name: SM_Env_Sidewalk_01
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Sidewalk_02
+    Mesh Name: SM_Env_Sidewalk_02
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Sidewalk_Corner_01
+    Mesh Name: SM_Env_Sidewalk_Corner_01
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Sidewalk_Corner_02
+    Mesh Name: SM_Env_Sidewalk_Corner_02
+        Slot: PolygonPoliceStation_Road_01 (PolygonPoliceStation_Road_01)
+
+Prefab Name: SM_Env_Skydome_01
+    Mesh Name: SM_Env_Skydome_01
+        Slot: Skybox_01 (Uses custom shader)
+
+Prefab Name: SM_Env_Tree_01
+    Mesh Name: SM_Env_Tree_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Env_Tree_02
+    Mesh Name: SM_Env_Tree_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Env_Tree_03
+    Mesh Name: SM_Env_Tree_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+-------------------
+Folder Name: FX
+-------------------
+Prefab Name: FX_BloodSplatter_01
+    Mesh Name: FX_BloodSplatter_01
+        Slot: Circle_Additive_01 (Uses custom shader)
+
+Prefab Name: FX_Bullet_Trail_Mesh
+    Mesh Name: FX_Bullet_Trail_Mesh
+        Slot: FX_Glow (Uses custom shader)
+
+Prefab Name: FX_Cigarette_Smoke_01
+    Mesh Name: FX_Cigarette_Smoke_01
+        Slot: Blank (No Albedo Texture)
+        Slot: Circle_Additive_01 (Uses custom shader)
+
+Prefab Name: FX_Dust_Spots_01
+    Mesh Name: FX_Dust_Spots_01
+        Slot: Circle_Additive_01 (Uses custom shader)
+
+Prefab Name: FX_Explosion_01
+    Mesh Name: FX_Explosion_01
+        Slot: FX_Soft (Uses custom shader)
+    Mesh Name: FX_Explosion_Fire_01
+        Slot: FX_Circle (Uses custom shader)
+    Mesh Name: FX_Explosion_Debris_01
+        Slot: FX_Rock (No Albedo Texture)
+    Mesh Name: FX_Explosion_Ember_01
+        Slot: FX_Circle (Uses custom shader)
+    Mesh Name: FX_Explosion_Smoke_01
+        Slot: FX_Default (Uses custom shader)
+
+Prefab Name: FX_Fire_01
+    Mesh Name: FX_Fire_01
+        Slot: Circle_Additive_01 (Uses custom shader)
+
+Prefab Name: FX_Fog_01
+    Mesh Name: FX_Fog_01
+        Slot: Circle_Soft_01 (Uses custom shader)
+
+Prefab Name: FX_Grenade_Explosive_01
+    Mesh Name: FX_Grenade_Explosive_01
+        Slot: FX_Soft (Uses custom shader)
+    Mesh Name: FX_Grenade_Explosive_Fire_01
+        Slot: FX_Circle (Uses custom shader)
+    Mesh Name: FX_Grenade_Explosive_Debris_01
+        Slot: FX_Rock (No Albedo Texture)
+    Mesh Name: FX_Grenade_Explosive_Ember_01
+        Slot: FX_Circle (Uses custom shader)
+    Mesh Name: FX_Grenade_Explosive_Smoke_01
+        Slot: FX_Default (Uses custom shader)
+
+Prefab Name: FX_Gunshot_01
+    Mesh Name: FX_Gunshot_01
+        Slot: FX_Circle (Uses custom shader)
+    Mesh Name: FX_Gunshot_Flash
+        Slot: FX_Circle (Uses custom shader)
+
+Prefab Name: FX_Gunshot_Repeating
+    Mesh Name: FX_Gunshot_Repeating
+        Slot: FX_Circle (Uses custom shader)
+    Mesh Name: FX_Gunshot_Flash
+        Slot: FX_Circle (Uses custom shader)
+
+Prefab Name: FX_Rain_01
+    Mesh Name: FX_Rain_01
+        Slot: FX_Circle_Additive_01 (Uses custom shader)
+    Mesh Name: FX_Rain_Splash_01
+        Slot: FX_Circle_Additive_01 (Uses custom shader)
+
+Prefab Name: FX_SunBeam_01
+    Mesh Name: FX_SunBeam_01
+        Slot: Sunbeam_01 (Uses custom shader)
+
+Prefab Name: LightRay_Cube
+    Mesh Name: SM_Lightray_Cube_01
+        Slot: Lightray_01 (Uses custom shader)
+
+Prefab Name: LightRay_Round
+    Mesh Name: SM_Lightray_Round_01
+        Slot: Lightray_01 (Uses custom shader)
+
+-------------------
+Folder Name: Props
+-------------------
+Prefab Name: SM_Prop_Aircon_01
+    Mesh Name: SM_Prop_Aircon_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Aircon_02
+    Mesh Name: SM_Prop_Aircon_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Aircon_Roof_01
+    Mesh Name: SM_Prop_Aircon_Roof_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Aircon_Roof_02
+    Mesh Name: SM_Prop_Aircon_Roof_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Aircon_Roof_03
+    Mesh Name: SM_Prop_Aircon_Roof_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_AirVent_01
+    Mesh Name: SM_Prop_AirVent_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Ammo_Case_01
+    Mesh Name: SM_Prop_Ammo_Case_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Ammo_Case_01_Lid_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Antenna_01
+    Mesh Name: SM_Prop_Antenna_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Antenna_02
+    Mesh Name: SM_Prop_Antenna_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Ashtray_01
+    Mesh Name: SM_Prop_Ashtray_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Ashtray_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bar_Bell_01
+    Mesh Name: SM_Prop_Bar_Bell_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Beaker_01
+    Mesh Name: SM_Prop_Beaker_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bed_01
+    Mesh Name: SM_Prop_Bed_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Belt_Barrier_01
+    Mesh Name: SM_Prop_Belt_Barrier_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Belt_Barrier_Pole_01
+    Mesh Name: SM_Prop_Belt_Barrier_Pole_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bench_01
+    Mesh Name: SM_Prop_Bench_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bench_01_Drawer_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bench_01_Drawer_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bench_01_Drawer_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bench_01_Drawer_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bench_01_Drawer_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bench_01_Drawer_06
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bench_01_Drawer_07
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bench_01_Drawer_08
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bench_01_Drawer_09
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bench_02
+    Mesh Name: SM_Prop_Bench_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bench_03
+    Mesh Name: SM_Prop_Bench_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bench_Press_01
+    Mesh Name: SM_Prop_Bench_Press_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bike_Stand_01
+    Mesh Name: SM_Prop_Bike_Stand_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Billboard_01
+    Mesh Name: SM_Prop_Billboard_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Billboard_Sign_01
+    Mesh Name: SM_Prop_Billboard_Sign_01
+        Slot: PolygonPoliceStation_Billboard_01 (PolygonPoliceStation_Billboard_01)
+
+Prefab Name: SM_Prop_Bin_01
+    Mesh Name: SM_Prop_Bin_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bin_02
+    Mesh Name: SM_Prop_Bin_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bin_02_Handle_L_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bin_02_Handle_R_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bin_02_Lid_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bin_03
+    Mesh Name: SM_Prop_Bin_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bin_03_Insert_01
+    Mesh Name: SM_Prop_Bin_03_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Blinds_01
+    Mesh Name: SM_Prop_Blinds_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bomb_Large_01
+    Mesh Name: SM_Prop_Bomb_Large_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bomb_Mail_01
+    Mesh Name: SM_Prop_Bomb_Mail_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bomb_Mail_02
+    Mesh Name: SM_Prop_Bomb_Mail_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bomb_Robot_01
+    Mesh Name: SM_Prop_Bomb_Robot_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Tire_Tread_01 (PolygonPoliceStation_Tire_Tread_01)
+    Mesh Name: SM_Prop_Bomb_Robot_01_Arm_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bomb_Robot_01_Arm_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bomb_Robot_01_Arm_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bomb_Robot_01_Hand_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bomb_Robot_01_Clasp_L_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bomb_Robot_01_Clasp_R_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bomb_Robot_02
+    Mesh Name: SM_Prop_Bomb_Robot_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bomb_Robot_02_Arm_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bomb_Robot_02_Arm_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bomb_Robot_02_Arm_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bomb_Robot_02_Hand_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bomb_Robot_02_Clasp_L_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bomb_Robot_02_Clasp_R_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bomb_Robot_02_Wheel_B_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bomb_Robot_02_Wheel_F_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Bomb_Robot_02_Wheel_M_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bomb_Small_01
+    Mesh Name: SM_Prop_Bomb_Small_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bookend_01
+    Mesh Name: SM_Prop_Bookend_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Books_01
+    Mesh Name: SM_Prop_Books_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Book_01
+    Mesh Name: SM_Prop_Book_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Book_Open_01
+    Mesh Name: SM_Prop_Book_Open_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bottle_Large_01
+    Mesh Name: SM_Prop_Bottle_Large_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bottle_Medium_01
+    Mesh Name: SM_Prop_Bottle_Medium_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bottle_Small_01
+    Mesh Name: SM_Prop_Bottle_Small_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Bottle_Small_02
+    Mesh Name: SM_Prop_Bottle_Small_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Boxing_Bag_01
+    Mesh Name: SM_Prop_Boxing_Bag_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Boxing_Bag_01_Bag
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Box_01
+    Mesh Name: SM_Prop_Box_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Box_02
+    Mesh Name: SM_Prop_Box_02
+        Slot: PolygonPoliceStation_Mat_04_C (PolygonPoliceStation_Texture_04_C)
+    Mesh Name: SM_Prop_Box_02_Lid_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Box_03
+    Mesh Name: SM_Prop_Box_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Box_04
+    Mesh Name: SM_Prop_Box_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Breach_Charge_01
+    Mesh Name: SM_Prop_Breach_Charge_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Briefcase_01
+    Mesh Name: SM_Prop_Briefcase_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Briefcase_Lid_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_BulletProof_Vest_01
+    Mesh Name: SM_Prop_BulletProof_Vest_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Cage_01
+    Mesh Name: SM_Prop_Cage_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Cage_01_Door_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Camera_01
+    Mesh Name: SM_Prop_Camera_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Camera_02
+    Mesh Name: SM_Prop_Camera_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Cardboard_Junk_01
+    Mesh Name: SM_Prop_Cardboard_Junk_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Cardboard_Junk_02
+    Mesh Name: SM_Prop_Cardboard_Junk_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Case_File_01
+    Mesh Name: SM_Prop_Case_File_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Case_File_01_Open_01
+    Mesh Name: SM_Prop_Case_File_01_Open_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Centrifuge_01
+    Mesh Name: SM_Prop_Centrifuge_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_01
+    Mesh Name: SM_Prop_Chair_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_02
+    Mesh Name: SM_Prop_Chair_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_03
+    Mesh Name: SM_Prop_Chair_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_04
+    Mesh Name: SM_Prop_Chair_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Cigarette_01
+    Mesh Name: SM_Prop_Cigarette_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Cigarette_02
+    Mesh Name: SM_Prop_Cigarette_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Cigarette_Pack_01
+    Mesh Name: SM_Prop_Cigarette_Pack_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Clipboard_01
+    Mesh Name: SM_Prop_Clipboard_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Clock_01
+    Mesh Name: SM_Prop_Clock_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Clock_02
+    Mesh Name: SM_Prop_Clock_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Clock_02_Arm_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Clock_02_Arm_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Coffee_Cup_01
+    Mesh Name: SM_Prop_Coffee_Cup_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Coffee_Cup_Stack_01
+    Mesh Name: SM_Prop_Coffee_Cup_Stack_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Coffee_Cup_Tray_01
+    Mesh Name: SM_Prop_Coffee_Cup_Tray_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Coffee_Cup_Tray_01_Empty_01
+    Mesh Name: SM_Prop_Coffee_Cup_Tray_01_Empty_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Coffee_Machine_Dripper_01
+    Mesh Name: SM_Prop_Coffee_Machine_Dripper_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Coffee_Pot_01
+    Mesh Name: SM_Prop_Coffee_Pot_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Glass_02 (No Albedo Texture)
+    Mesh Name: SM_Prop_Coffee_Pot_01_Lid_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Coffee_Table_01
+    Mesh Name: SM_Prop_Coffee_Table_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Coffee_Table_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Coffee_Table_02
+    Mesh Name: SM_Prop_Coffee_Table_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Collar_01
+    Mesh Name: SM_Prop_Collar_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Computer_01
+    Mesh Name: SM_Prop_Computer_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Cone_01
+    Mesh Name: SM_Prop_Cone_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Cone_02
+    Mesh Name: SM_Prop_Cone_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Container_01
+    Mesh Name: SM_Prop_Container_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Container_01_Lid_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Corkboard_01
+    Mesh Name: SM_Prop_Corkboard_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Corkboard_02
+    Mesh Name: SM_Prop_Corkboard_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Corkboard_Insert_01
+    Mesh Name: SM_Prop_Corkboard_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Corkboard_Insert_02
+    Mesh Name: SM_Prop_Corkboard_Insert_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Corkboard_Insert_03
+    Mesh Name: SM_Prop_Corkboard_Insert_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Couch_01
+    Mesh Name: SM_Prop_Couch_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Couch_02
+    Mesh Name: SM_Prop_Couch_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Crime_Scene_Pole_01
+    Mesh Name: SM_Prop_Crime_Scene_Pole_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Cupboard_01
+    Mesh Name: SM_Prop_Cupboard_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Cupboard_01_Door_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Cupboard_01_Door_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Cupboard_01_Door_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Cupboard_01_Door_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Decal_Floor
+    Mesh Name: SM_Prop_Decal_Floor
+        Slot: Decal_Evidence_01 (Decal_Evidence_01)
+
+Prefab Name: SM_Prop_Desk_01
+    Mesh Name: SM_Prop_Desk_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Desk_01_Drawer_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Desk_01_Drawer_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Desk_01_Drawer_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Desk_01_Drawer_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Desk_02
+    Mesh Name: SM_Prop_Desk_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Desk_02_Drawer_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Desk_02_Drawer_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Desk_02_Drawer_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Desk_02_Drawer_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Desk_02_Drawer_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Desk_02_Drawer_06
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Desk_03
+    Mesh Name: SM_Prop_Desk_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Desk_03_Drawer_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Desk_03_Drawer_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_DNA_Sequencer_01
+    Mesh Name: SM_Prop_DNA_Sequencer_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_DNA_Sequencer_01_Door_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_DNA_Sequencer_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Dog_Bowl_01
+    Mesh Name: SM_Prop_Dog_Bowl_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Donut_01
+    Mesh Name: SM_Prop_Donut_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Donut_02
+    Mesh Name: SM_Prop_Donut_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Donut_03
+    Mesh Name: SM_Prop_Donut_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Donut_04
+    Mesh Name: SM_Prop_Donut_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Donut_Box_01
+    Mesh Name: SM_Prop_Donut_Box_01
+        Slot: PolygonPoliceStation_Mat_01_B (PolygonPoliceStation_Texture_01_B)
+        Slot: PolygonPoliceStation_Mat_05_C (PolygonPoliceStation_Texture_05_C)
+    Mesh Name: SM_Prop_Donut_Box_01_Lid_01
+        Slot: PolygonPoliceStation_Mat_05_C (PolygonPoliceStation_Texture_05_C)
+    Mesh Name: SM_Prop_Donut_Box_01_Plastic_01
+        Slot: PolygonPoliceStation_Plastic_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Donut_Box_02
+    Mesh Name: SM_Prop_Donut_Box_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Donut_Box_02_Lid_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Donut_Box_02_Plastic_01
+        Slot: PolygonPoliceStation_Plastic_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Donut_Piece_01
+    Mesh Name: SM_Prop_Donut_Piece_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_DownPipe_01
+    Mesh Name: SM_Prop_DownPipe_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_DownPipe_02
+    Mesh Name: SM_Prop_DownPipe_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_DownPipe_03
+    Mesh Name: SM_Prop_DownPipe_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Drone_01
+    Mesh Name: SM_Prop_Drone_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Drone_01_Camera_Arm_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Drone_01_Camera_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Drone_01_Wing_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Drone_01_Wing_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Drone_01_Wing_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Drone_01_Wing_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Dropper_01
+    Mesh Name: SM_Prop_Dropper_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Duffle_Bag_01
+    Mesh Name: SM_Prop_Duffle_Bag_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Dumbbell_01
+    Mesh Name: SM_Prop_Dumbbell_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Dumbbell_Rack_01
+    Mesh Name: SM_Prop_Dumbbell_Rack_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Dumpster_01
+    Mesh Name: SM_Prop_Dumpster_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Dumpster_01_Bar_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Dumpster_01_Lid_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Dumpster_01_Lid_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Dumpster_01_Insert_01
+    Mesh Name: SM_Prop_Dumpster_01_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Evidence_Bag_01
+    Mesh Name: SM_Prop_Evidence_Bag_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Plastic_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Evidence_Bag_01_Insert_01
+    Mesh Name: SM_Prop_Evidence_Bag_01_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Evidence_Bag_02
+    Mesh Name: SM_Prop_Evidence_Bag_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Plastic_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Evidence_Bag_02_Insert_01
+    Mesh Name: SM_Prop_Evidence_Bag_02_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Evidence_Bag_03
+    Mesh Name: SM_Prop_Evidence_Bag_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Plastic_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Evidence_Bag_03_Insert_01
+    Mesh Name: SM_Prop_Evidence_Bag_03_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Evidence_Marker_01
+    Mesh Name: SM_Prop_Evidence_Marker_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Evidence_Marker_02
+    Mesh Name: SM_Prop_Evidence_Marker_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Evidence_Marker_03
+    Mesh Name: SM_Prop_Evidence_Marker_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Evidence_Marker_04
+    Mesh Name: SM_Prop_Evidence_Marker_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Evidence_Marker_05
+    Mesh Name: SM_Prop_Evidence_Marker_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Evidence_Marker_06
+    Mesh Name: SM_Prop_Evidence_Marker_06
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Evidence_Marker_07
+    Mesh Name: SM_Prop_Evidence_Marker_07
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Evidence_Marker_08
+    Mesh Name: SM_Prop_Evidence_Marker_08
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Evidence_Marker_09
+    Mesh Name: SM_Prop_Evidence_Marker_09
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Evidence_Marker_10
+    Mesh Name: SM_Prop_Evidence_Marker_10
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Eye_Wash_01
+    Mesh Name: SM_Prop_Eye_Wash_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Eye_Wash_01_Lever_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Eye_Wash_01_Washer_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Fence_Wire_01
+    Mesh Name: SM_Prop_Fence_Wire_01
+        Slot: PolygonPoliceStation_Wire_01 (PolygonPoliceStation_Wire_01)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Fence_Wire_02
+    Mesh Name: SM_Prop_Fence_Wire_02
+        Slot: PolygonPoliceStation_Wire_01 (PolygonPoliceStation_Wire_01)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Filing_Cabinet_01
+    Mesh Name: SM_Prop_Filing_Cabinet_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_01_Drawer_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_01_Drawer_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_01_Drawer_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_01_Drawer_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Filing_Cabinet_02
+    Mesh Name: SM_Prop_Filing_Cabinet_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_02_Drawer_B_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_02_Drawer_B_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_02_Drawer_B_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_02_Drawer_BM_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_02_Drawer_BM_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_02_Drawer_BM_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_02_Drawer_T_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_02_Drawer_T_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_02_Drawer_T_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_02_Drawer_TM_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_02_Drawer_TM_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Filing_Cabinet_02_Drawer_TM_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Fire_Extinguisher_01
+    Mesh Name: SM_Prop_Fire_Extinguisher_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Fire_Hose_01
+    Mesh Name: SM_Prop_Fire_Hose_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Flag_Hanging_01
+    Mesh Name: SM_Prop_Flag_Hanging_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Flag_Stand_01
+    Mesh Name: SM_Prop_Flag_Stand_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Flashlight_01
+    Mesh Name: SM_Prop_Flashlight_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Forensics_Case_01
+    Mesh Name: SM_Prop_Forensics_Case_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Forensics_Case_01_Handle_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Forensics_Case_01_Lid_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Forensics_Case_01_Insert_01
+    Mesh Name: SM_Prop_Forensics_Case_01_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Forensics_Case_01_Insert_02
+    Mesh Name: SM_Prop_Forensics_Case_01_Insert_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Forensics_Case_01_Insert_03
+    Mesh Name: SM_Prop_Forensics_Case_01_Insert_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Forensics_Case_01_Insert_04
+    Mesh Name: SM_Prop_Forensics_Case_01_Insert_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Fridge_01
+    Mesh Name: SM_Prop_Fridge_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Fridge_01_Door_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Fridge_01_Door_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Glovebox_Isolator_01
+    Mesh Name: SM_Prop_Glovebox_Isolator_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Glovebox_Isolator_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Prop_Glovebox_Isolator_01_Wheel_B_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Glovebox_Isolator_01_Wheel_F_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Glowstick_01
+    Mesh Name: SM_Prop_Glowstick_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Gun_Case_01
+    Mesh Name: SM_Prop_Gun_Case_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Gun_Case_01_Lid_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Gun_Case_01_Insert_01
+    Mesh Name: SM_Prop_Gun_Case_01_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Gun_Case_02
+    Mesh Name: SM_Prop_Gun_Case_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Gun_Case_02_Lid_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Gun_Case_02_Insert_01
+    Mesh Name: SM_Prop_Gun_Case_02_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Gun_Case_03
+    Mesh Name: SM_Prop_Gun_Case_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Gun_Case_03_Lid_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Gun_Case_03_Insert_01
+    Mesh Name: SM_Prop_Gun_Case_03_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Handcuffs_01
+    Mesh Name: SM_Prop_Handcuffs_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Handcuffs_02
+    Mesh Name: SM_Prop_Handcuffs_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Handcuffs_03
+    Mesh Name: SM_Prop_Handcuffs_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Handcuffs_Key_01
+    Mesh Name: SM_Prop_Handcuffs_Key_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Hand_Dryer_01
+    Mesh Name: SM_Prop_Hand_Dryer_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Height_Clearance_01
+    Mesh Name: SM_Prop_Height_Clearance_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Intercom_01
+    Mesh Name: SM_Prop_Intercom_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Kettle_01
+    Mesh Name: SM_Prop_Kettle_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Kettle_01_Lid_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Kettle_01_Base_01
+    Mesh Name: SM_Prop_Kettle_01_Base_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Keyboard_01
+    Mesh Name: SM_Prop_Keyboard_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Kitchen_Counter_01
+    Mesh Name: SM_Prop_Kitchen_Counter_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Kitchen_Counter_01_Door_L_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Kitchen_Counter_01_Door_R_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Kitchen_Counter_01_Drawer_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Kitchen_Dish_Washer_01
+    Mesh Name: SM_Prop_Kitchen_Dish_Washer_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Kitchen_Dish_Washer_01_Door_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Kitchen_Sink_01
+    Mesh Name: SM_Prop_Kitchen_Sink_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Kitchen_Sink_01_Door_L_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Kitchen_Sink_01_Door_R_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Lab_Cabinet_01
+    Mesh Name: SM_Prop_Lab_Cabinet_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Lab_Cabinet_01_Door
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Lab_Cabinet_01_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Lab_Cabinet_02
+    Mesh Name: SM_Prop_Lab_Cabinet_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Lab_Cabinet_02_Door
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Lab_Cabinet_02_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Lab_Refrigerator_01
+    Mesh Name: SM_Prop_Lab_Refrigerator_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Lab_Refrigerator_01_Door_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Lab_Refrigerator_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Lab_Refrigerator_01_Insert_01
+    Mesh Name: SM_Prop_Lab_Refrigerator_01_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Lamp_01
+    Mesh Name: SM_Prop_Lamp_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Lamp_01_Arm_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Lamp_01_Arm_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Lamp_01_Arm_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Lamp_02
+    Mesh Name: SM_Prop_Lamp_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Lamp_Magnifier_01
+    Mesh Name: SM_Prop_Lamp_Magnifier_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Lamp_Magnifier_01_Arm_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Lamp_Magnifier_01_Arm_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Lamp_Magnifier_01_Arm_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Lamp_Magnifier_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Laptop_01
+    Mesh Name: SM_Prop_Laptop_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Laptop_01_Screen_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Screen_01 (PolygonPoliceStation_Screen_01)
+
+Prefab Name: SM_Prop_Leash_Rack_01
+    Mesh Name: SM_Prop_Leash_Rack_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Leash_Rack_01_Insert_01
+    Mesh Name: SM_Prop_Leash_Rack_01_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Light_01
+    Mesh Name: SM_Prop_Light_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Light_02
+    Mesh Name: SM_Prop_Light_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Light_03
+    Mesh Name: SM_Prop_Light_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Lineup_Marker_01
+    Mesh Name: SM_Prop_Lineup_Marker_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Lineup_Sheet_01
+    Mesh Name: SM_Prop_Lineup_Sheet_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Lineup_Sheet_02
+    Mesh Name: SM_Prop_Lineup_Sheet_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Medal_Display_01
+    Mesh Name: SM_Prop_Medal_Display_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Megaphone_01
+    Mesh Name: SM_Prop_Megaphone_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Metal_Detector_01
+    Mesh Name: SM_Prop_Metal_Detector_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Microphone_01
+    Mesh Name: SM_Prop_Microphone_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Microphone_02
+    Mesh Name: SM_Prop_Microphone_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Microphone_Box_01
+    Mesh Name: SM_Prop_Microphone_Box_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Microscope_01
+    Mesh Name: SM_Prop_Microscope_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Microwave_01
+    Mesh Name: SM_Prop_Microwave_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Microwave_01_Door_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Mirror_01
+    Mesh Name: SM_Prop_Mirror_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Money_01
+    Mesh Name: SM_Prop_Money_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Money_02
+    Mesh Name: SM_Prop_Money_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Money_03
+    Mesh Name: SM_Prop_Money_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Money_Stack_01
+    Mesh Name: SM_Prop_Money_Stack_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Money_Stack_02
+    Mesh Name: SM_Prop_Money_Stack_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Money_Stack_03
+    Mesh Name: SM_Prop_Money_Stack_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Monitor_01
+    Mesh Name: SM_Prop_Monitor_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Screen_05 (PolygonPoliceStation_Screen_05)
+
+Prefab Name: SM_Prop_Mousepad_01
+    Mesh Name: SM_Prop_Mousepad_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Mousepad_02
+    Mesh Name: SM_Prop_Mousepad_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Mouse_01
+    Mesh Name: SM_Prop_Mouse_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Mug_01
+    Mesh Name: SM_Prop_Mug_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Mug_02
+    Mesh Name: SM_Prop_Mug_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Package_01
+    Mesh Name: SM_Prop_Package_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Package_Pile_01
+    Mesh Name: SM_Prop_Package_Pile_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Package_Pile_02
+    Mesh Name: SM_Prop_Package_Pile_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Package_Pile_03
+    Mesh Name: SM_Prop_Package_Pile_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Paper_Plate_01
+    Mesh Name: SM_Prop_Paper_Plate_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Paper_Plate_Stack_01
+    Mesh Name: SM_Prop_Paper_Plate_Stack_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_ParkingMeter_01
+    Mesh Name: SM_Prop_ParkingMeter_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Phone_01
+    Mesh Name: SM_Prop_Phone_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Phone_01_Cord_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Phone_01_Handle_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Picture_Frame_01
+    Mesh Name: SM_Prop_Picture_Frame_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Pie_Slice_01
+    Mesh Name: SM_Prop_Pie_Slice_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Pillow_01
+    Mesh Name: SM_Prop_Pillow_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Pizza_01
+    Mesh Name: SM_Prop_Pizza_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Pizza_Box_01
+    Mesh Name: SM_Prop_Pizza_Box_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Pizza_Box_01_Lid_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Pizza_Slice_01
+    Mesh Name: SM_Prop_Pizza_Slice_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Plaques_01
+    Mesh Name: SM_Prop_Plaques_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Plaque_01
+    Mesh Name: SM_Prop_Plaque_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Plaque_02
+    Mesh Name: SM_Prop_Plaque_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Podium_01
+    Mesh Name: SM_Prop_Podium_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Pointer_01
+    Mesh Name: SM_Prop_Pointer_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Police_Wallet_01
+    Mesh Name: SM_Prop_Police_Wallet_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Polygraph_01
+    Mesh Name: SM_Prop_Polygraph_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Portraits_01
+    Mesh Name: SM_Prop_Portraits_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Photo_Wall_01 (PolygonPoliceStation_Photo_Wall_01)
+
+Prefab Name: SM_Prop_Poster_01
+    Mesh Name: SM_Prop_Poster_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Poster_02
+    Mesh Name: SM_Prop_Poster_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Pot_Plant_01
+    Mesh Name: SM_Prop_Pot_Plant_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Pot_Plant_02
+    Mesh Name: SM_Prop_Pot_Plant_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Pot_Plant_03
+    Mesh Name: SM_Prop_Pot_Plant_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Pot_Plant_04
+    Mesh Name: SM_Prop_Pot_Plant_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_PowerBoxes_01
+    Mesh Name: SM_Prop_PowerBoxes_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_PowerBox_01 1
+    Mesh Name: SM_Prop_PowerBox_01 1
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Reception_Bell_01
+    Mesh Name: SM_Prop_Reception_Bell_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Recorder_01
+    Mesh Name: SM_Prop_Recorder_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Recorder_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Recorder_02
+    Mesh Name: SM_Prop_Recorder_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Ring_Stand_01
+    Mesh Name: SM_Prop_Ring_Stand_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Road_Flare_01
+    Mesh Name: SM_Prop_Road_Flare_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Road_Sign_01
+    Mesh Name: SM_Prop_Road_Sign_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Road_Spikes_01_Closed_01
+    Mesh Name: SM_Prop_Road_Spikes_01_Closed_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Road_Spikes_01_Open_01
+    Mesh Name: SM_Prop_Road_Spikes_01_Open_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Robot_Controller_01
+    Mesh Name: SM_Prop_Robot_Controller_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Robot_Controller_Lid_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Sample_Cup_01
+    Mesh Name: SM_Prop_Sample_Cup_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_SatDish_01
+    Mesh Name: SM_Prop_SatDish_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Scanner_01
+    Mesh Name: SM_Prop_Scanner_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Scene_Tape_01
+    Mesh Name: SM_Prop_Scene_Tape_01
+        Slot: PolygonPoliceStation_Tape_01 (PolygonPoliceStation_Tape_01)
+
+Prefab Name: SM_Prop_Scene_Tape_02
+    Mesh Name: SM_Prop_Scene_Tape_02
+        Slot: PolygonPoliceStation_Tape_01 (PolygonPoliceStation_Tape_01)
+
+Prefab Name: SM_Prop_Scene_Tape_03
+    Mesh Name: SM_Prop_Scene_Tape_03
+        Slot: PolygonPoliceStation_Tape_01 (PolygonPoliceStation_Tape_01)
+
+Prefab Name: SM_Prop_Scene_Tape_04
+    Mesh Name: SM_Prop_Scene_Tape_04
+        Slot: PolygonPoliceStation_Tape_01 (PolygonPoliceStation_Tape_01)
+
+Prefab Name: SM_Prop_Scene_Tape_05
+    Mesh Name: SM_Prop_Scene_Tape_05
+        Slot: PolygonPoliceStation_Tape_01 (PolygonPoliceStation_Tape_01)
+
+Prefab Name: SM_Prop_Scene_Tape_06
+    Mesh Name: SM_Prop_Scene_Tape_06
+        Slot: PolygonPoliceStation_Tape_01 (PolygonPoliceStation_Tape_01)
+
+Prefab Name: SM_Prop_Scene_Tape_07
+    Mesh Name: SM_Prop_Scene_Tape_07
+        Slot: PolygonPoliceStation_Tape_01 (PolygonPoliceStation_Tape_01)
+
+Prefab Name: SM_Prop_Scene_Tape_08
+    Mesh Name: SM_Prop_Scene_Tape_08
+        Slot: PolygonPoliceStation_Tape_01 (PolygonPoliceStation_Tape_01)
+
+Prefab Name: SM_Prop_Scene_Tape_09
+    Mesh Name: SM_Prop_Scene_Tape_09
+        Slot: PolygonPoliceStation_Tape_01 (PolygonPoliceStation_Tape_01)
+
+Prefab Name: SM_Prop_Scene_Tape_10
+    Mesh Name: SM_Prop_Scene_Tape_10
+        Slot: PolygonPoliceStation_Tape_01 (PolygonPoliceStation_Tape_01)
+
+Prefab Name: SM_Prop_Seating_01
+    Mesh Name: SM_Prop_Seating_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Sea_Mine_01
+    Mesh Name: SM_Prop_Sea_Mine_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Security_Camera_01
+    Mesh Name: SM_Prop_Security_Camera_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Security_Camera_02
+    Mesh Name: SM_Prop_Security_Camera_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Security_Camera_02_Head_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Shelf_01
+    Mesh Name: SM_Prop_Shelf_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Shelf_02
+    Mesh Name: SM_Prop_Shelf_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Shelf_03
+    Mesh Name: SM_Prop_Shelf_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Shelf_04
+    Mesh Name: SM_Prop_Shelf_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Shelf_04_Handle_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Shelf_04_Wheel_B_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Shelf_04_Wheel_F_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Shelf_04_Insert_01
+    Mesh Name: SM_Prop_Shelf_04_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Plastic_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Shelf_04_Insert_02
+    Mesh Name: SM_Prop_Shelf_04_Insert_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Plastic_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Shelf_04_Insert_03
+    Mesh Name: SM_Prop_Shelf_04_Insert_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Plastic_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Shower_01
+    Mesh Name: SM_Prop_Shower_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Shower_02
+    Mesh Name: SM_Prop_Shower_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Sidewalk_Pole_01
+    Mesh Name: SM_Prop_Sidewalk_Pole_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Sidewalk_Pole_02
+    Mesh Name: SM_Prop_Sidewalk_Pole_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Sink_01
+    Mesh Name: SM_Prop_Sink_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Sink_02
+    Mesh Name: SM_Prop_Sink_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Sink_Toilet_01
+    Mesh Name: SM_Prop_Sink_Toilet_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_SmokeDetector_01
+    Mesh Name: SM_Prop_SmokeDetector_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_01
+    Mesh Name: SM_Prop_Snack_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_02
+    Mesh Name: SM_Prop_Snack_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_03
+    Mesh Name: SM_Prop_Snack_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_04
+    Mesh Name: SM_Prop_Snack_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_05
+    Mesh Name: SM_Prop_Snack_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_06
+    Mesh Name: SM_Prop_Snack_06
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_07
+    Mesh Name: SM_Prop_Snack_07
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_08
+    Mesh Name: SM_Prop_Snack_08
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_09
+    Mesh Name: SM_Prop_Snack_09
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_10
+    Mesh Name: SM_Prop_Snack_10
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Soap_Dispenser_01
+    Mesh Name: SM_Prop_Soap_Dispenser_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Soda_Can_01
+    Mesh Name: SM_Prop_Soda_Can_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Spatula_01
+    Mesh Name: SM_Prop_Spatula_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Speed_Bump_01
+    Mesh Name: SM_Prop_Speed_Bump_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Speed_Camera_01
+    Mesh Name: SM_Prop_Speed_Camera_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Speed_Camera_01_Camera_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Speed_Camera_01_Camera_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Speed_Gun_01
+    Mesh Name: SM_Prop_Speed_Gun_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Sport_BoxingGlove_L_01
+    Mesh Name: SM_Prop_Sport_BoxingGlove_L_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Sport_BoxingGlove_R_01
+    Mesh Name: SM_Prop_Sport_BoxingGlove_R_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Sport_Boxing_Pad_01
+    Mesh Name: SM_Prop_Sport_Boxing_Pad_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Spotter_Scope_01
+    Mesh Name: SM_Prop_Spotter_Scope_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Spray_Can_01
+    Mesh Name: SM_Prop_Spray_Can_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Spray_Gun_01
+    Mesh Name: SM_Prop_Spray_Gun_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Sprinkler_01
+    Mesh Name: SM_Prop_Sprinkler_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Stand_01
+    Mesh Name: SM_Prop_Stand_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Statue_01
+    Mesh Name: SM_Prop_Statue_01
+        Slot: PolygonPoliceStation_Metal_01 (No Albedo Texture)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Streetlight_01
+    Mesh Name: SM_Prop_Streetlight_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Syringe_01
+    Mesh Name: SM_Prop_Syringe_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Table_01
+    Mesh Name: SM_Prop_Table_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Table_02
+    Mesh Name: SM_Prop_Table_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Table_03
+    Mesh Name: SM_Prop_Table_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Table_04
+    Mesh Name: SM_Prop_Table_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Takeaways_01
+    Mesh Name: SM_Prop_Takeaways_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Tape_01
+    Mesh Name: SM_Prop_Tape_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_TestTube_01
+    Mesh Name: SM_Prop_TestTube_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_TestTube_Holder_01
+    Mesh Name: SM_Prop_TestTube_Holder_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_TestTube_Holder_02
+    Mesh Name: SM_Prop_TestTube_Holder_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Ticket_Book_01
+    Mesh Name: SM_Prop_Ticket_Book_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Toilet_01
+    Mesh Name: SM_Prop_Toilet_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Toilet_01_Buttons
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Toilet_01_Lid
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Toilet_01_Seat
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Toilet_Paper_01
+    Mesh Name: SM_Prop_Toilet_Paper_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Toilet_Paper_Dispenser_01
+    Mesh Name: SM_Prop_Toilet_Paper_Dispenser_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Toilet_Stall_01
+    Mesh Name: SM_Prop_Toilet_Stall_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_ToiletStalls_01_Door_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_ToiletStalls_01_Door_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Toilet_Stall_End_01
+    Mesh Name: SM_Prop_Toilet_Stall_End_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Tongs_01
+    Mesh Name: SM_Prop_Tongs_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Toy_01
+    Mesh Name: SM_Prop_Toy_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Toy_01_Glass
+        Slot: PolygonPoliceStation_Plastic_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Training_Dummy_01
+    Mesh Name: SM_Prop_Training_Dummy_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Training_Dummy_02
+    Mesh Name: SM_Prop_Training_Dummy_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Training_Mat_01
+    Mesh Name: SM_Prop_Training_Mat_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Tripod_01
+    Mesh Name: SM_Prop_Tripod_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Tripod_01_Head_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Tripod_02
+    Mesh Name: SM_Prop_Tripod_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Trophy_01
+    Mesh Name: SM_Prop_Trophy_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Trophy_02
+    Mesh Name: SM_Prop_Trophy_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Trophy_03
+    Mesh Name: SM_Prop_Trophy_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_TV_01
+    Mesh Name: SM_Prop_TV_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_TV_01_Screen_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Security_01 (PolygonPoliceStation_Security_01)
+
+Prefab Name: SM_Prop_TV_Stand_01
+    Mesh Name: SM_Prop_TV_Stand_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_TV_Stand_01_Screen_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Security_01 (PolygonPoliceStation_Security_01)
+    Mesh Name: SM_Prop_TV_Stand_01_Shelf_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Vending_Machine_01
+    Mesh Name: SM_Prop_Vending_Machine_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Vending_Machine_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Prop_Vending_Machine_01_Insert_01
+    Mesh Name: SM_Prop_Vending_Machine_01_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Vents_Corner_01
+    Mesh Name: SM_Prop_Vents_Corner_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Vents_Corner_02
+    Mesh Name: SM_Prop_Vents_Corner_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Vents_End_01
+    Mesh Name: SM_Prop_Vents_End_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Vents_Exhaust_01
+    Mesh Name: SM_Prop_Vents_Exhaust_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Vents_Straight_01
+    Mesh Name: SM_Prop_Vents_Straight_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Vents_Transition_01
+    Mesh Name: SM_Prop_Vents_Transition_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Vents_Wide_01
+    Mesh Name: SM_Prop_Vents_Wide_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_WalkieTalkie_01
+    Mesh Name: SM_Prop_WalkieTalkie_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_WalkieTalkie_Base_01
+    Mesh Name: SM_Prop_WalkieTalkie_Base_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_WaterCooler_01
+    Mesh Name: SM_Prop_WaterCooler_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Weapon_Display_01
+    Mesh Name: SM_Prop_Weapon_Display_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Weapon_Locker_01
+    Mesh Name: SM_Prop_Weapon_Locker_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Weapon_Locker_01_Door_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Weapon_Locker_01_Mesh_01
+        Slot: PolygonPoliceStation_Mesh_Tan_01 (PolygonPoliceStation_Mesh_Tan_01)
+    Mesh Name: SM_Prop_Weapon_Locker_01_Door_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Weapon_Locker_01_Mesh_02
+        Slot: PolygonPoliceStation_Mesh_Tan_01 (PolygonPoliceStation_Mesh_Tan_01)
+
+Prefab Name: SM_Prop_Weapon_Locker_02
+    Mesh Name: SM_Prop_Weapon_Locker_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Weapon_Locker_02_Door_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Weapon_Locker_02_Door_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Weapon_Rack_01
+    Mesh Name: SM_Prop_Weapon_Rack_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Weapon_Rack_01_Handle_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Weapon_Rack_01_Wheel_B_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Prop_Weapon_Rack_01_Wheel_F_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Weapon_Rack_01_Insert_01
+    Mesh Name: SM_Prop_Weapon_Rack_01_Insert_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Prop_Whiteboard_01
+    Mesh Name: SM_Prop_Whiteboard_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+-------------------
+Folder Name: Signs
+-------------------
+Prefab Name: SM_Sign_Badge_01
+    Mesh Name: SM_Sign_Badge_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Barcode_01
+    Mesh Name: SM_Sign_Barcode_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Booking_01
+    Mesh Name: SM_Sign_Booking_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Break_Room_01
+    Mesh Name: SM_Sign_Break_Room_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Calendar_01
+    Mesh Name: SM_Sign_Calendar_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Cells_01
+    Mesh Name: SM_Sign_Cells_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Certificate_01
+    Mesh Name: SM_Sign_Certificate_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Conference_01
+    Mesh Name: SM_Sign_Conference_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Crime_Lab_01
+    Mesh Name: SM_Sign_Crime_Lab_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Danger_01
+    Mesh Name: SM_Sign_Danger_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Evidence_01
+    Mesh Name: SM_Sign_Evidence_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Evidence_02
+    Mesh Name: SM_Sign_Evidence_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Evidence_03
+    Mesh Name: SM_Sign_Evidence_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Evidence_04
+    Mesh Name: SM_Sign_Evidence_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Evidence_05
+    Mesh Name: SM_Sign_Evidence_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Evidence_06
+    Mesh Name: SM_Sign_Evidence_06
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Evidence_07
+    Mesh Name: SM_Sign_Evidence_07
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Evidence_08
+    Mesh Name: SM_Sign_Evidence_08
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Evidence_09
+    Mesh Name: SM_Sign_Evidence_09
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Evidence_10
+    Mesh Name: SM_Sign_Evidence_10
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Evidence_11
+    Mesh Name: SM_Sign_Evidence_11
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Evidence_12
+    Mesh Name: SM_Sign_Evidence_12
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Evidence_Tape_01
+    Mesh Name: SM_Sign_Evidence_Tape_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Fire_01
+    Mesh Name: SM_Sign_Fire_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Gym_01
+    Mesh Name: SM_Sign_Gym_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Info_01
+    Mesh Name: SM_Sign_Info_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Interrogation_01
+    Mesh Name: SM_Sign_Interrogation_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Kennels_01
+    Mesh Name: SM_Sign_Kennels_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Label_01
+    Mesh Name: SM_Sign_Label_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Label_02
+    Mesh Name: SM_Sign_Label_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Label_03
+    Mesh Name: SM_Sign_Label_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Label_04
+    Mesh Name: SM_Sign_Label_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Lineup_01
+    Mesh Name: SM_Sign_Lineup_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Lockers_01
+    Mesh Name: SM_Sign_Lockers_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Map_01
+    Mesh Name: SM_Sign_Map_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Map_02
+    Mesh Name: SM_Sign_Map_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Map_03
+    Mesh Name: SM_Sign_Map_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Mugshot_01
+    Mesh Name: SM_Sign_Mugshot_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_No_01
+    Mesh Name: SM_Sign_No_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_No_Phone_01
+    Mesh Name: SM_Sign_No_Phone_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_No_Smoking_01
+    Mesh Name: SM_Sign_No_Smoking_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Office_01
+    Mesh Name: SM_Sign_Office_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Papers_01
+    Mesh Name: SM_Sign_Papers_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Papers_02
+    Mesh Name: SM_Sign_Papers_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Papers_03
+    Mesh Name: SM_Sign_Papers_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Papers_04
+    Mesh Name: SM_Sign_Papers_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_01
+    Mesh Name: SM_Sign_Paper_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_02
+    Mesh Name: SM_Sign_Paper_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_03
+    Mesh Name: SM_Sign_Paper_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_04
+    Mesh Name: SM_Sign_Paper_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_05
+    Mesh Name: SM_Sign_Paper_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_06
+    Mesh Name: SM_Sign_Paper_06
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_07
+    Mesh Name: SM_Sign_Paper_07
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_08
+    Mesh Name: SM_Sign_Paper_08
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_09
+    Mesh Name: SM_Sign_Paper_09
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_10
+    Mesh Name: SM_Sign_Paper_10
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_11
+    Mesh Name: SM_Sign_Paper_11
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_12
+    Mesh Name: SM_Sign_Paper_12
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_13
+    Mesh Name: SM_Sign_Paper_13
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_14
+    Mesh Name: SM_Sign_Paper_14
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_15
+    Mesh Name: SM_Sign_Paper_15
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Paper_16
+    Mesh Name: SM_Sign_Paper_16
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Parking_01
+    Mesh Name: SM_Sign_Parking_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Police_01
+    Mesh Name: SM_Sign_Police_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Police_02
+    Mesh Name: SM_Sign_Police_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Police_03
+    Mesh Name: SM_Sign_Police_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Police_04
+    Mesh Name: SM_Sign_Police_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Police_05
+    Mesh Name: SM_Sign_Police_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Police_06
+    Mesh Name: SM_Sign_Police_06
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Police_07
+    Mesh Name: SM_Sign_Police_07
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Police_08
+    Mesh Name: SM_Sign_Police_08
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Police_09
+    Mesh Name: SM_Sign_Police_09
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Police_10
+    Mesh Name: SM_Sign_Police_10
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Police_11
+    Mesh Name: SM_Sign_Police_11
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Police_12
+    Mesh Name: SM_Sign_Police_12
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Police_Chief_01
+    Mesh Name: SM_Sign_Police_Chief_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Police_Station_01
+    Mesh Name: SM_Sign_Police_Station_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Police_Tape_01
+    Mesh Name: SM_Sign_Police_Tape_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Stickynote_01
+    Mesh Name: SM_Sign_Stickynote_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Stickynote_02
+    Mesh Name: SM_Sign_Stickynote_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Stickynote_03
+    Mesh Name: SM_Sign_Stickynote_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Stickynote_04
+    Mesh Name: SM_Sign_Stickynote_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Stickynote_05
+    Mesh Name: SM_Sign_Stickynote_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Stickynote_06
+    Mesh Name: SM_Sign_Stickynote_06
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Stickynote_07
+    Mesh Name: SM_Sign_Stickynote_07
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Stickynote_08
+    Mesh Name: SM_Sign_Stickynote_08
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Stickynote_09
+    Mesh Name: SM_Sign_Stickynote_09
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Suspect_01
+    Mesh Name: SM_Sign_Suspect_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Suspect_02
+    Mesh Name: SM_Sign_Suspect_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Suspect_03
+    Mesh Name: SM_Sign_Suspect_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Suspect_04
+    Mesh Name: SM_Sign_Suspect_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Suspect_05
+    Mesh Name: SM_Sign_Suspect_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Suspect_06
+    Mesh Name: SM_Sign_Suspect_06
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Toilets_01
+    Mesh Name: SM_Sign_Toilets_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Toilets_02
+    Mesh Name: SM_Sign_Toilets_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Toilets_03
+    Mesh Name: SM_Sign_Toilets_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Toilets_04
+    Mesh Name: SM_Sign_Toilets_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Toilets_05
+    Mesh Name: SM_Sign_Toilets_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Toilets_06
+    Mesh Name: SM_Sign_Toilets_06
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Training_Area_01
+    Mesh Name: SM_Sign_Training_Area_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Warning_01
+    Mesh Name: SM_Sign_Warning_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Weapons_01
+    Mesh Name: SM_Sign_Weapons_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Weapons_02
+    Mesh Name: SM_Sign_Weapons_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Weapons_Room_01
+    Mesh Name: SM_Sign_Weapons_Room_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Sign_Wifi_01
+    Mesh Name: SM_Sign_Wifi_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+-------------------
+Folder Name: Vehicles
+-------------------
+Prefab Name: SM_Veh_Bike_01
+    Mesh Name: SM_Veh_Bike_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Veh_Bike_01_Back_Wheel_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Veh_Bike_01_Bag_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Veh_Bike_01_Battery_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Veh_Bike_01_Front_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Veh_Bike_01_Front_Wheel_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Veh_Bike_01_Pedals_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Veh_Car_01
+    Mesh Name: SM_Veh_Car_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Car_01_Door_FL
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Car_01_Door_FL_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Car_01_Door_FR
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Car_01_Door_FR_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Car_01_Door_Rear
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Car_01_Door_Rear_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Car_01_Door_RL
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Car_01_Door_RL_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Car_01_Door_RR
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Car_01_Door_RR_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Car_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Car_01_Lights_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Car_01_SteeringW
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Car_01_Wheel_LF
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Car_01_Wheel_LR
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Car_01_Wheel_RF
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Car_01_Wheel_RR
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+
+Prefab Name: SM_Veh_Car_02
+    Mesh Name: SM_Veh_Car_02
+        Slot: PolygonPoliceStation_Vehicle_Mat_06 (PolygonPoliceStation_VehicleTexture_06)
+    Mesh Name: SM_Veh_Car_02_Door_fl
+        Slot: PolygonPoliceStation_Vehicle_Mat_08 (PolygonPoliceStation_VehicleTexture_08)
+    Mesh Name: SM_Veh_Car_02_Door_fl_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Car_02_Door_fr
+        Slot: PolygonPoliceStation_Vehicle_Mat_08 (PolygonPoliceStation_VehicleTexture_08)
+    Mesh Name: SM_Veh_Car_02_Door_fr_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Car_02_Door_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Car_02_Door_rl
+        Slot: PolygonPoliceStation_Vehicle_Mat_08 (PolygonPoliceStation_VehicleTexture_08)
+    Mesh Name: SM_Veh_Car_02_Door_rl_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Car_02_Door_rr
+        Slot: PolygonPoliceStation_Vehicle_Mat_08 (PolygonPoliceStation_VehicleTexture_08)
+    Mesh Name: SM_Veh_Car_02_Door_rr_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Car_02_Lights_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_08 (PolygonPoliceStation_VehicleTexture_08)
+    Mesh Name: SM_Veh_Car_02_Nudge_Bar_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_08 (PolygonPoliceStation_VehicleTexture_08)
+    Mesh Name: SM_Veh_Car_02_SteeringW
+        Slot: PolygonPoliceStation_Vehicle_Mat_08 (PolygonPoliceStation_VehicleTexture_08)
+    Mesh Name: SM_Veh_Car_02_Wheel_fl
+        Slot: PolygonPoliceStation_Vehicle_Mat_08 (PolygonPoliceStation_VehicleTexture_08)
+    Mesh Name: SM_Veh_Car_02_Wheel_fr
+        Slot: PolygonPoliceStation_Vehicle_Mat_08 (PolygonPoliceStation_VehicleTexture_08)
+    Mesh Name: SM_Veh_Car_02_Wheel_rl
+        Slot: PolygonPoliceStation_Vehicle_Mat_08 (PolygonPoliceStation_VehicleTexture_08)
+    Mesh Name: SM_Veh_Car_02_Wheel_rr
+        Slot: PolygonPoliceStation_Vehicle_Mat_08 (PolygonPoliceStation_VehicleTexture_08)
+
+Prefab Name: SM_Veh_Helicopter_01
+    Mesh Name: SM_Veh_Helicopter_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Helicopter_01_Blades_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Helicopter_01_Blades_02
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Helicopter_01_Door_fl
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Helicopter_01_Door_fl_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Helicopter_01_Door_fr
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Helicopter_01_Door_fr_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Helicopter_01_Door_rl
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Helicopter_01_Door_rl_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Helicopter_01_Door_rr
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Helicopter_01_Door_rr_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Helicopter_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Helicopter_01_Joystick_L
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Helicopter_01_Joystick_R
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Helicopter_01_Swivel_L_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Helicopter_01_Swivel_L_02
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Helicopter_01_Camera_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Helicopter_01_Swivel_R_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Helicopter_01_Swivel_R_02
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Helicopter_01_Spotlight_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+
+Prefab Name: SM_Veh_Motorbike_01
+    Mesh Name: SM_Veh_Motorbike_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Motorbike_01_Handlebars
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Motorbike_01_Front_Shock
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Motorbike_01_Wheel_Cap
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Motorbike_01_Wheel_Front_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Motorbike_01_Screen
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Motorbike_01_Kickstand
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Motorbike_01_Rear_Shock
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Motorbike_01_Wheel_Rear
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Motorbike_01_Screen
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Veh_Motorbike_02
+    Mesh Name: SM_Veh_Motorbike_02
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Motorbike_02_HandleBars
+        Slot: PolygonPoliceStation_Vehicle_Mat_09 (PolygonPoliceStation_VehicleTexture_09)
+    Mesh Name: SM_Veh_Motorbike_02_Front_Shock_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Motorbike_02_Front_Wheel_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Motorbike_02_Screen
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Motorbike_02_Rear_Shock_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Motorbike_02_Rear_Wheel_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+
+Prefab Name: SM_Veh_Pickup_01
+    Mesh Name: SM_Veh_Pickup_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Pickup_01_Door_FL_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Pickup_01_Door_FL_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Pickup_01_Door_FR_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Pickup_01_Door_FR_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Pickup_01_Door_RL_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Pickup_01_Door_RL_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Pickup_01_Door_RR_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Pickup_01_Door_RR_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Pickup_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Pickup_01_Lights_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Pickup_01_Nudge_Bar_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Pickup_01_Rear_Door_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Pickup_01_SteeringW
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Pickup_01_Wheel_FL_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Pickup_01_Wheel_FR_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Pickup_01_Wheel_RL_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Pickup_01_Wheel_RR_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+
+Prefab Name: SM_Veh_Van_01
+    Mesh Name: SM_Veh_Van_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Van_01_Bench_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Van_01_Cage_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Van_01_Cell_Door_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Van_01_Door_FL_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Van_01_Door_FL_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Van_01_Door_FR_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Van_01_Door_FR_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Van_01_Door_L_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Van_01_Door_L_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Van_01_Door_R_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Van_01_Door_R_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Van_01_Door_RL_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Van_01_Door_RL_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Van_01_Door_RR_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Van_01_Door_RR_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Van_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+    Mesh Name: SM_Veh_Van_01_Lights_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Van_01_SteeringWheel_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Van_01_Wheel_FL_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Van_01_Wheel_FR_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Van_01_Wheel_RL_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+    Mesh Name: SM_Veh_Van_01_Wheel_RR_01
+        Slot: PolygonPoliceStation_Vehicle_Mat_01 (PolygonPoliceStation_VehicleTexture_01)
+
+-------------------
+Folder Name: Weapons
+-------------------
+Prefab Name: SM_Wep_Ammo_Bullet_01
+    Mesh Name: SM_Wep_Ammo_Bullet_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Ammo_Bullet_02
+    Mesh Name: SM_Wep_Ammo_Bullet_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Ammo_Bullet_03
+    Mesh Name: SM_Wep_Ammo_Bullet_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Ammo_Shell_01
+    Mesh Name: SM_Wep_Ammo_Shell_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Ammo_Shell_02
+    Mesh Name: SM_Wep_Ammo_Shell_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Ammo_Shell_03
+    Mesh Name: SM_Wep_Ammo_Shell_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Baton_01
+    Mesh Name: SM_Wep_Baton_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Baton_02
+    Mesh Name: SM_Wep_Baton_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Bullet_01
+    Mesh Name: SM_Wep_Bullet_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Bullet_Damaged_01
+    Mesh Name: SM_Wep_Bullet_Damaged_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Door_Ram_01
+    Mesh Name: SM_Wep_Door_Ram_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_DoubleBarrel_01
+    Mesh Name: SM_Wep_DoubleBarrel_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_DoubleBarrel_Barrel_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_DoubleBarrel_Trigger_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_DoubleBarrel_Trigger_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Grenade_Flash_01
+    Mesh Name: SM_Wep_Grenade_Flash_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Grenade_Smoke_01
+    Mesh Name: SM_Wep_Grenade_Smoke_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Launcher_01
+    Mesh Name: SM_Wep_Launcher_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Launcher_01_Foregrip_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Launcher_01_Light_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Launcher_01_Trigger_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Launcher_01_Tube_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Launcher_01_Sight_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Launcher_01_Sight_Glass_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Mase_Can_01
+    Mesh Name: SM_Wep_Mase_Can_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Pistol_01
+    Mesh Name: SM_Wep_Pistol_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Pistol_01_Clip_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Pistol_01_Slide_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Pistol_01_Trigger_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Revolver_01
+    Mesh Name: SM_Wep_Revolver_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Revolver_CylinderFlip_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Revolver_Cylinder_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Revolver_Bullet_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Revolver_Bullet_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Revolver_Bullet_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Revolver_Bullet_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Revolver_Bullet_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Revolver_Bullet_06
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Revolver_Hammer_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Revolver_Trigger_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Rifle_01
+    Mesh Name: SM_Wep_Rifle_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Rifle_01_Charge_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Rifle_01_Light_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Rifle_01_Mag_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Rifle_01_Sight_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Rifle_01_Sight_Glass_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Rifle_01_Slide_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Rifle_01_Stock_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Rifle_01_Trigger_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Shield_Riot_01
+    Mesh Name: SM_Wep_Shield_Riot_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Shield_Riot_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Wep_Shield_Riot_02
+    Mesh Name: SM_Wep_Shield_Riot_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Shield_Riot_02_Glass_01
+        Slot: PolygonPoliceStation_Plastic_01 (No Albedo Texture)
+
+Prefab Name: SM_Wep_Shield_Riot_03
+    Mesh Name: SM_Wep_Shield_Riot_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Shield_Riot_03_Glass_01
+        Slot: PolygonPoliceStation_Plastic_01 (No Albedo Texture)
+
+Prefab Name: SM_Wep_Shotgun_01
+    Mesh Name: SM_Wep_Shotgun_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Shotgun_01_Pump_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Shotgun_01_Light_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Shotgun_01_Shells_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Shotgun_Slide_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Shotgun_Trigger_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Sniper_01
+    Mesh Name: SM_Wep_Sniper_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Sniper_01_Bipod_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Sniper_01_Bipod_Leg_L_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Sniper_01_Bipod_Leg_R_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Sniper_01_Bolt_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Sniper_01_Mag_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Sniper_01_Scope_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Sniper_01_Scope_Glass_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Sniper_01_Trigger_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Stungun_01
+    Mesh Name: SM_Wep_Stungun_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Stungun_01_Cartridge_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Stungun_01_Trigger_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Stungun_02
+    Mesh Name: SM_Wep_Stungun_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Stun_Baton_01
+    Mesh Name: SM_Wep_Stun_Baton_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+-------------------
+Folder Name: Base
+-------------------
+Prefab Name: SM_Bld_Base_45_Floor_01
+    Mesh Name: SM_Bld_Base_45_Floor_01
+        Slot: PolygonPoliceStation_Floor_Tile_04 (PolygonPoliceStation_Floor_Tile_04)
+
+Prefab Name: SM_Bld_Base_45_Floor_Combined_01
+    Mesh Name: SM_Bld_Base_45_Floor_Combined_01
+        Slot: PolygonPoliceStation_Ceiling_01 (PolygonPoliceStation_Floor_Carpet_04)
+        Slot: PolygonPoliceStation_Roof_01 (PolygonPoliceStation_Roof_01)
+
+Prefab Name: SM_Bld_Base_45_Wall_01
+    Mesh Name: SM_Bld_Base_45_Wall_01
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Ceiling_01
+    Mesh Name: SM_Bld_Base_Ceiling_01
+        Slot: PolygonPoliceStation_Ceiling_01 (PolygonPoliceStation_Floor_Carpet_04)
+
+Prefab Name: SM_Bld_Base_Door_01
+    Mesh Name: SM_Bld_Base_Door_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Door_Large_01
+    Mesh Name: SM_Bld_Base_Door_Large_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Floor_01
+    Mesh Name: SM_Bld_Base_Floor_01
+        Slot: PolygonPoliceStation_Floor_Tile_04 (PolygonPoliceStation_Floor_Tile_04)
+
+Prefab Name: SM_Bld_Base_Floor_Combined_01
+    Mesh Name: SM_Bld_Base_Floor_Combined_01
+        Slot: PolygonPoliceStation_Ceiling_01 (PolygonPoliceStation_Floor_Carpet_04)
+        Slot: PolygonPoliceStation_Roof_01 (PolygonPoliceStation_Roof_01)
+
+Prefab Name: SM_Bld_Base_Floor_Half_01
+    Mesh Name: SM_Bld_Base_Floor_Half_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Floor_Half_Combined_01
+    Mesh Name: SM_Bld_Base_Floor_Half_Combined_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Floor_Quarter_01
+    Mesh Name: SM_Bld_Base_Floor_Quarter_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Floor_Quarter_Combined_01
+    Mesh Name: SM_Bld_Base_Floor_Quarter_Combined_01
+        Slot: PolygonPoliceStation_Ceiling_01 (PolygonPoliceStation_Floor_Carpet_04)
+        Slot: PolygonPoliceStation_Floor_Tile_04 (PolygonPoliceStation_Floor_Tile_04)
+
+Prefab Name: SM_Bld_Base_Pillar_01
+    Mesh Name: SM_Bld_Base_Pillar_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Pillar_02
+    Mesh Name: SM_Bld_Base_Pillar_02
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Pillar_03
+    Mesh Name: SM_Bld_Base_Pillar_03
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Pillar_04
+    Mesh Name: SM_Bld_Base_Pillar_04
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Pillar_05
+    Mesh Name: SM_Bld_Base_Pillar_05
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Pillar_Half_01
+    Mesh Name: SM_Bld_Base_Pillar_Half_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Pillar_Half_02
+    Mesh Name: SM_Bld_Base_Pillar_Half_02
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Pillar_Half_03
+    Mesh Name: SM_Bld_Base_Pillar_Half_03
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Pillar_Half_04
+    Mesh Name: SM_Bld_Base_Pillar_Half_04
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Pillar_Half_05
+    Mesh Name: SM_Bld_Base_Pillar_Half_05
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Stairs_01
+    Mesh Name: SM_Bld_Base_Stairs_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Stairs_02
+    Mesh Name: SM_Bld_Base_Stairs_02
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Wall_01
+    Mesh Name: SM_Bld_Base_Wall_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+
+Prefab Name: SM_Bld_Base_Wall_Angle_01
+    Mesh Name: SM_Bld_Base_Wall_Angle_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+
+Prefab Name: SM_Bld_Base_Wall_Angle_02
+    Mesh Name: SM_Bld_Base_Wall_Angle_02
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+
+Prefab Name: SM_Bld_Base_Wall_Door_01
+    Mesh Name: SM_Bld_Base_Wall_Door_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+
+Prefab Name: SM_Bld_Base_Wall_Door_Double_01
+    Mesh Name: SM_Bld_Base_Wall_Door_Double_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+
+Prefab Name: SM_Bld_Base_Wall_Door_Double_Large_01
+    Mesh Name: SM_Bld_Base_Wall_Door_Double_Large_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+
+Prefab Name: SM_Bld_Base_Wall_Door_Large_01
+    Mesh Name: SM_Bld_Base_Wall_Door_Large_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+
+Prefab Name: SM_Bld_Base_Wall_Half_01
+    Mesh Name: SM_Bld_Base_Wall_Half_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+
+Prefab Name: SM_Bld_Base_Wall_Half_02
+    Mesh Name: SM_Bld_Base_Wall_Half_02
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+
+Prefab Name: SM_Bld_Base_Wall_Quarter_01
+    Mesh Name: SM_Bld_Base_Wall_Quarter_01
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+
+Prefab Name: SM_Bld_Base_Wall_Window_01
+    Mesh Name: SM_Bld_Base_Wall_Window_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+    Mesh Name: SM_Bld_Base_Wall_Window_01_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Base_Wall_Window_Double_01
+    Mesh Name: SM_Bld_Base_Wall_Window_Double_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+    Mesh Name: SM_Bld_Base_Wall_Window_Double_01_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Bld_Base_Wall_Window_Low_01
+    Mesh Name: SM_Bld_Base_Wall_Window_Low_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+        Slot: PolygonPoliceStation_Wall_Brick_02 (PolygonPoliceStation_Wall_Brick_02)
+        Slot: PolygonPoliceStation_Wall_03 (PolygonPoliceStation_Wall_03)
+    Mesh Name: SM_Bld_Base_Wall_Window_Low_01_Glass
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+-------------------
+Folder Name: Chr_Attach
+-------------------
+Prefab Name: SM_Chr_Attach_Badge_01
+    Mesh Name: SM_Chr_Attach_Badge_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Badge_02
+    Mesh Name: SM_Chr_Attach_Badge_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Badge_03
+    Mesh Name: SM_Chr_Attach_Badge_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Baton_01
+    Mesh Name: SM_Chr_Attach_Baton_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Beard_01
+    Mesh Name: SM_Chr_Attach_Beard_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Camera_01
+    Mesh Name: SM_Chr_Attach_Camera_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Cuffs_01
+    Mesh Name: SM_Chr_Attach_Cuffs_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Ear_Piece_01
+    Mesh Name: SM_Chr_Attach_Ear_Piece_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Ear_Piece_02
+    Mesh Name: SM_Chr_Attach_Ear_Piece_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Glasses_01
+    Mesh Name: SM_Chr_Attach_Glasses_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Glasses_02
+    Mesh Name: SM_Chr_Attach_Glasses_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Glasses_03
+    Mesh Name: SM_Chr_Attach_Glasses_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Goggles_01
+    Mesh Name: SM_Chr_Attach_Goggles_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Goggles_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Chr_Attach_Goggles_02
+    Mesh Name: SM_Chr_Attach_Goggles_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Goggles_02_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Chr_Attach_Hair_01
+    Mesh Name: SM_Chr_Attach_Hair_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hair_02
+    Mesh Name: SM_Chr_Attach_Hair_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hair_02_Alt
+    Mesh Name: SM_Chr_Attach_Hair_02_Alt
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hair_03
+    Mesh Name: SM_Chr_Attach_Hair_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hair_05
+    Mesh Name: SM_Chr_Attach_Hair_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hair_06
+    Mesh Name: SM_Chr_Attach_Hair_06
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hair_07
+    Mesh Name: SM_Chr_Attach_Hair_07
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hair_07_Alt
+    Mesh Name: SM_Chr_Attach_Hair_07_Alt
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hair_08
+    Mesh Name: SM_Chr_Attach_Hair_08
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hat_01
+    Mesh Name: SM_Chr_Attach_Hat_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hat_02
+    Mesh Name: SM_Chr_Attach_Hat_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hat_03
+    Mesh Name: SM_Chr_Attach_Hat_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hat_04
+    Mesh Name: SM_Chr_Attach_Hat_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hat_04_Alt
+    Mesh Name: SM_Chr_Attach_Hat_04_Alt
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hat_05
+    Mesh Name: SM_Chr_Attach_Hat_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hat_06
+    Mesh Name: SM_Chr_Attach_Hat_06
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Hat_07
+    Mesh Name: SM_Chr_Attach_Hat_07
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Headset_01
+    Mesh Name: SM_Chr_Attach_Headset_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Headset_02
+    Mesh Name: SM_Chr_Attach_Headset_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Helmet_01
+    Mesh Name: SM_Chr_Attach_Helmet_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Helmet_01_Visor_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Chr_Attach_Helmet_02
+    Mesh Name: SM_Chr_Attach_Helmet_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Helmet_03
+    Mesh Name: SM_Chr_Attach_Helmet_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Helmet_04
+    Mesh Name: SM_Chr_Attach_Helmet_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Helmet_04_Visor_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: pasted__SM_Chr_Attach_Helmet_04_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Chr_Attach_Holster_01
+    Mesh Name: SM_Chr_Attach_Holster_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Holster_02
+    Mesh Name: SM_Chr_Attach_Holster_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Mace_01
+    Mesh Name: SM_Chr_Attach_Mace_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Mask_01
+    Mesh Name: SM_Chr_Attach_Mask_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Chr_Attach_Mask_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Chr_Attach_Mask_02
+    Mesh Name: SM_Chr_Attach_Mask_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Moustache_01
+    Mesh Name: SM_Chr_Attach_Moustache_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Moustache_02
+    Mesh Name: SM_Chr_Attach_Moustache_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Patch_01
+    Mesh Name: SM_Chr_Attach_Patch_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Patch_02
+    Mesh Name: SM_Chr_Attach_Patch_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Patch_03
+    Mesh Name: SM_Chr_Attach_Patch_03
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Patch_04
+    Mesh Name: SM_Chr_Attach_Patch_04
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Patch_05
+    Mesh Name: SM_Chr_Attach_Patch_05
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Piercings_01
+    Mesh Name: SM_Chr_Attach_Piercings_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Piercings_02
+    Mesh Name: SM_Chr_Attach_Piercings_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Pouch_01
+    Mesh Name: SM_Chr_Attach_Pouch_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Pouch_02
+    Mesh Name: SM_Chr_Attach_Pouch_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Radio_01
+    Mesh Name: SM_Chr_Attach_Radio_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Radio_02
+    Mesh Name: SM_Chr_Attach_Radio_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Chr_Attach_Zip_Ties_01
+    Mesh Name: SM_Chr_Attach_Zip_Ties_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+-------------------
+Folder Name: Attachments
+-------------------
+Prefab Name: SM_Wep_Attach_Foregrip_01
+    Mesh Name: SM_Wep_Attach_Foregrip_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Attach_Light_01
+    Mesh Name: SM_Wep_Attach_Light_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Attach_Light_02
+    Mesh Name: SM_Wep_Attach_Light_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+
+Prefab Name: SM_Wep_Attach_Scope_01
+    Mesh Name: SM_Wep_Attach_Scope_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Attach_Scope_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Wep_Attach_Sight_01
+    Mesh Name: SM_Wep_Attach_Sight_01
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Attach_Sight_01_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+
+Prefab Name: SM_Wep_Attach_Sight_02
+    Mesh Name: SM_Wep_Attach_Sight_02
+        Slot: PolygonPoliceStation_Mat_01_A (PolygonPoliceStation_Texture_01_A)
+    Mesh Name: SM_Wep_Attach_Sight_02_Glass_01
+        Slot: PolygonPoliceStation_Glass_01 (No Albedo Texture)
+

@@ -1,0 +1,15 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/player/character_rig.tscn" id="1_rig"]
+[ext_resource type="Script" uid="uid://cliqsw4dghwpt" path="res://scripts/game/junior_cop.gd" id="2_junior"]
+
+[node name="RookiePetty" instance=ExtResource("1_rig")]
+process_mode = 3
+script = ExtResource("2_junior")
+model_path = "res://scripts/tools/retarget/police_chars_rt.glb"
+material_path = "res://materials/police_01_a.tres"
+visible_mesh = "SM_Chr_Officer_Male_03"
+start_clip = "walk"
+foot_offset = 0.05
+blocks_player = true
+hide_outside_active_room = true

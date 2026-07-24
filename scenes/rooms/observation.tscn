@@ -1,0 +1,279 @@
+[gd_scene format=3 uid="uid://bhi6uurcm80er"]
+
+[ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
+[ext_resource type="PackedScene" uid="uid://cxc4bmtgj12uj" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Keyboard_01.fbx" id="2_jo3kw"]
+[ext_resource type="Texture2D" uid="uid://hhakklqq20uy" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_01.png" id="3_4rkwm"]
+[ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="4_item"]
+[ext_resource type="Script" path="res://scripts/game/window_view.gd" id="99_window"]
+[ext_resource type="PackedScene" uid="uid://dtcer0cc3jbgv" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Computer_Monitor_Double_01.fbx" id="5_lei6d"]
+[ext_resource type="PackedScene" uid="uid://da0o675semsa7" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Desk_01.fbx" id="6_yeupe"]
+[ext_resource type="PackedScene" uid="uid://bxa2x1am5erjc" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Camera_Tripod_01.fbx" id="7_yeupe"]
+[ext_resource type="PackedScene" uid="uid://bu287pdpai3v1" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Cord_Desk_01.fbx" id="8_v7ipn"]
+[ext_resource type="PackedScene" uid="uid://c2evd4mirrlbd" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Recorder_01.fbx" id="9_gek3m"]
+[ext_resource type="PackedScene" uid="uid://d1r7rdog0t03h" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Rolling_TV_01.fbx" id="11_43msq"]
+
+[sub_resource type="BoxShape3D" id="shape_trigger"]
+size = Vector3(12, 4, 6)
+
+[sub_resource type="BoxMesh" id="mesh_pane"]
+size = Vector3(6, 1.4, 0.06)
+
+[sub_resource type="StandardMaterial3D" id="mat_pane"]
+transparency = 1
+albedo_color = Color(0.35, 0.42, 0.48, 0.32)
+metallic = 0.4
+roughness = 0.05
+
+[sub_resource type="BoxMesh" id="mesh_floor"]
+size = Vector3(10.4, 0.2, 4.4)
+
+[sub_resource type="StandardMaterial3D" id="mat_floor"]
+albedo_color = Color(0.13, 0.135, 0.155, 1)
+roughness = 0.9
+
+[sub_resource type="BoxShape3D" id="shape_floor"]
+size = Vector3(10.4, 0.2, 4.4)
+
+[sub_resource type="BoxMesh" id="mesh_w10"]
+size = Vector3(10, 3, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="mat_wall"]
+albedo_color = Color(0.03554533, 0.102196716, 0.60113263, 1)
+albedo_texture = ExtResource("3_4rkwm")
+roughness = 0.95
+uv1_scale = Vector3(4, 4, 4)
+
+[sub_resource type="BoxShape3D" id="shape_w10"]
+size = Vector3(10, 3, 0.3)
+
+[sub_resource type="BoxMesh" id="mesh_v4"]
+size = Vector3(0.3, 3, 4)
+
+[sub_resource type="BoxShape3D" id="shape_v4"]
+size = Vector3(0.3, 3, 4)
+
+[sub_resource type="BoxMesh" id="mesh_v1"]
+size = Vector3(0.3, 3, 1)
+
+[sub_resource type="BoxShape3D" id="shape_v1"]
+size = Vector3(0.3, 3, 1)
+
+[sub_resource type="BoxMesh" id="mesh_sill"]
+size = Vector3(10, 1, 0.3)
+
+[sub_resource type="BoxShape3D" id="shape_sill"]
+size = Vector3(10, 1, 0.3)
+
+[sub_resource type="BoxMesh" id="mesh_lintel"]
+size = Vector3(10, 0.6, 0.3)
+
+[sub_resource type="BoxShape3D" id="shape_lintel"]
+size = Vector3(10, 0.6, 0.3)
+
+[sub_resource type="BoxMesh" id="mesh_pillar"]
+size = Vector3(2, 1.4, 0.3)
+
+[sub_resource type="BoxShape3D" id="shape_pillar"]
+size = Vector3(2, 1.4, 0.3)
+
+[node name="Observation" type="Node3D" unique_id=81830535]
+script = ExtResource("1_room")
+camera_look_at = Vector3(0.5, 1, 3.4)
+
+[node name="Camera" type="Camera3D" parent="." unique_id=357523682]
+transform = Transform3D(-0.40318993, -0.41962206, 0.8132375, 0.028950771, 0.88237745, 0.46965083, -0.9146583, 0.21290235, -0.34361732, 4.8026385, 2.9940853, -1.4)
+fov = 50.0
+
+[node name="Lamp" type="SpotLight3D" parent="." unique_id=629837310]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 1.8572481, 3.2049458, -0.5)
+light_color = Color(0.7, 0.75, 0.9, 1)
+light_energy = 3.2
+light_volumetric_fog_energy = 1.6
+shadow_enabled = true
+spot_range = 8.0
+spot_angle = 44.0
+
+[node name="Lamp2" type="SpotLight3D" parent="." unique_id=1456638894]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -1.9838264, 3.072145, -0.5)
+light_color = Color(0.7, 0.75, 0.9, 1)
+light_energy = 3.2
+light_volumetric_fog_energy = 1.6
+shadow_enabled = true
+spot_range = 8.0
+spot_angle = 44.0
+
+[node name="Lamp4" type="SpotLight3D" parent="." unique_id=2144353588]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -3.441177, 3.9360008, -0.5)
+light_color = Color(0.7, 0.75, 0.9, 1)
+light_energy = 3.2
+light_volumetric_fog_energy = 1.6
+shadow_enabled = true
+spot_range = 8.0
+spot_angle = 44.0
+
+[node name="Lamp3" type="SpotLight3D" parent="." unique_id=1763867493]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -2.3466794, 2.2219198, 0.8068106)
+light_color = Color(0.7, 0.75, 0.9, 1)
+light_energy = 3.2
+light_volumetric_fog_energy = 1.6
+shadow_enabled = true
+spot_range = 8.0
+spot_angle = 44.0
+
+[node name="Trigger" type="Area3D" parent="." unique_id=1383512350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Trigger" unique_id=949376171]
+shape = SubResource("shape_trigger")
+
+[node name="WindowPane" type="MeshInstance3D" parent="." unique_id=278217041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 1.97)
+mesh = SubResource("mesh_pane")
+surface_material_override/0 = SubResource("mat_pane")
+
+[node name="FeedPanel" type="Node3D" parent="." unique_id=675554107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0.9, -1.2)
+script = ExtResource("4_item")
+dialogue = [{
+"speaker": "SECURITY FEED",
+"text": "Six grainy monitors. Hall 1's camera pair sweeps on a cycle - and every countdown minute ending in 5, both point AWAY from the observation door for a few seconds."
+}, {
+"speaker": "DETECTIVE",
+"text": "A blind window, regular as a metronome. Good to know."
+}]
+sets_flag = "know_camera_gap"
+prompt_height = 0.8
+
+[node name="Spots" type="Node3D" parent="." unique_id=1420321063]
+
+[node name="Center" type="Marker3D" parent="Spots" unique_id=175020718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3143766, 0, 0)
+
+[node name="Window" type="Marker3D" parent="Spots" unique_id=752487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="Door" type="Marker3D" parent="Spots" unique_id=352105064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 0)
+
+[node name="SM_Prop_Computer_Monitor_Double_01" parent="." unique_id=1487812561 instance=ExtResource("5_lei6d")]
+transform = Transform3D(0.9781476, 0, 0.2079117, 0, 1, 0, -0.2079117, 0, 0.9781476, -3.1192894, 0.7617593, -1.6118714)
+
+[node name="SM_Prop_Desk_01" parent="." unique_id=2101133561 instance=ExtResource("6_yeupe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9986734, 0, -1.3498406)
+
+[node name="walls" type="Node3D" parent="." unique_id=1757418906]
+
+[node name="Floor" type="StaticBody3D" parent="walls" unique_id=264236103]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/Floor" unique_id=436350153]
+mesh = SubResource("mesh_floor")
+surface_material_override/0 = SubResource("mat_floor")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/Floor" unique_id=1474759986]
+shape = SubResource("shape_floor")
+
+[node name="SM_Prop_Keyboard_01" parent="walls/Floor" unique_id=365223860 instance=ExtResource("2_jo3kw")]
+transform = Transform3D(0.9781476, 0, 0.2079117, 0, 1, 0, -0.2079117, 0, 0.9781476, -2.3560717, 0.8461704, -1.7102469)
+
+[node name="WallNorth" type="StaticBody3D" parent="walls" unique_id=1505400678]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -1.97)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallNorth" unique_id=1965042573]
+mesh = SubResource("mesh_w10")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallNorth" unique_id=340758088]
+shape = SubResource("shape_w10")
+
+[node name="WallWest" type="StaticBody3D" parent="walls" unique_id=389482715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97, 1.5, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallWest" unique_id=1363542205]
+mesh = SubResource("mesh_v4")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallWest" unique_id=758653988]
+shape = SubResource("shape_v4")
+
+[node name="WallEastA" type="StaticBody3D" parent="walls" unique_id=204848131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97, 1.5, -1.5)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallEastA" unique_id=659407302]
+mesh = SubResource("mesh_v1")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallEastA" unique_id=2072400415]
+shape = SubResource("shape_v1")
+
+[node name="WallEastB" type="StaticBody3D" parent="walls" unique_id=1602433152]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97, 1.5, 1.5)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallEastB" unique_id=845488912]
+mesh = SubResource("mesh_v1")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallEastB" unique_id=487923595]
+shape = SubResource("shape_v1")
+
+[node name="WindowSill" type="StaticBody3D" parent="walls" unique_id=343948938]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 1.97)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WindowSill" unique_id=1651481726]
+mesh = SubResource("mesh_sill")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WindowSill" unique_id=1542407242]
+shape = SubResource("shape_sill")
+
+[node name="WindowLintel" type="StaticBody3D" parent="walls" unique_id=1079701902]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7, 1.97)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WindowLintel" unique_id=402397423]
+mesh = SubResource("mesh_lintel")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WindowLintel" unique_id=1502795873]
+shape = SubResource("shape_lintel")
+
+[node name="WindowPillarWest" type="StaticBody3D" parent="walls" unique_id=2123049678]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.7, 1.97)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WindowPillarWest" unique_id=1925603574]
+mesh = SubResource("mesh_pillar")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WindowPillarWest" unique_id=886232605]
+shape = SubResource("shape_pillar")
+
+[node name="WindowPillarEast" type="StaticBody3D" parent="walls" unique_id=2020247241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.7, 1.97)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WindowPillarEast" unique_id=1112463388]
+mesh = SubResource("mesh_pillar")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WindowPillarEast" unique_id=1394609283]
+shape = SubResource("shape_pillar")
+
+[node name="probs" type="Node3D" parent="." unique_id=825837620]
+
+[node name="SM_Prop_Camera_Tripod_01" parent="." unique_id=1646655534 instance=ExtResource("7_yeupe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4358847, 0.06857419, 1.4172232)
+
+[node name="SM_Prop_Cord_Desk_01" parent="." unique_id=1063300300 instance=ExtResource("8_v7ipn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.602775, 0.006146269, -1.5755686)
+
+[node name="SM_Prop_Recorder_01" parent="." unique_id=873677043 instance=ExtResource("9_gek3m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.200063, 0.7565708, -1.4283698)
+
+[node name="SM_Prop_Rolling_TV_01" parent="." unique_id=984121972 instance=ExtResource("11_43msq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1250503, -2.3841858e-07, -1.5638833)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1793452724]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.1344949, 0)
+
+[node name="MirrorGlass" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 1.5)
+script = ExtResource("99_window")
+prompt_height = 0.6

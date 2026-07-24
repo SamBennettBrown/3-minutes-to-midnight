@@ -1,0 +1,227 @@
+[gd_scene format=3 uid="uid://2wic0q1jji0f"]
+
+[ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
+[ext_resource type="Texture2D" uid="uid://dnwxfwc21tnud" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Ceiling_Tile_02.png" id="2_0428n"]
+[ext_resource type="PackedScene" uid="uid://dpm8lj0ysqdlg" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Bld_Wall_Door_Cell_01.fbx" id="3_gqlh2"]
+[ext_resource type="PackedScene" uid="uid://b2osvqin2mmov" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Bld_Wall_Cell_02.fbx" id="4_mve0g"]
+[ext_resource type="Texture2D" uid="uid://c0ty18g8lcm3g" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_Brick_01.png" id="5_74hrf"]
+[ext_resource type="PackedScene" uid="uid://bwmsxdytogeiy" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Bed_01.fbx" id="6_rsftb"]
+[ext_resource type="PackedScene" uid="uid://ctruhwn538yxx" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Bld_Wall_Cell_01.fbx" id="8_0xq15"]
+[ext_resource type="PackedScene" uid="uid://c4ijutnhb45s5" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Bld_Door_04.fbx" id="9_dhxgb"]
+[ext_resource type="PackedScene" uid="uid://ckgde03t5rxsi" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Table_01.fbx" id="10_gqlh2"]
+[ext_resource type="PackedScene" uid="uid://bvcge065bx5nx" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Sink_Toilet_01.fbx" id="10_y3btd"]
+[ext_resource type="PackedScene" uid="uid://cb2jyycov5rj6" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Bench_03.fbx" id="11_mve0g"]
+[ext_resource type="Script" uid="uid://cv22om4sbyjyj" path="res://scripts/game/auto_collider.gd" id="90_autocol"]
+[ext_resource type="FontFile" uid="uid://canmpksdd2ct8" path="res://fonts/Special_Elite/SpecialElite-Regular.ttf" id="98_font"]
+[ext_resource type="Script" uid="uid://fokcbe25o2i3" path="res://scripts/game/floor_label.gd" id="99_label"]
+
+[sub_resource type="BoxShape3D" id="shape_trigger"]
+size = Vector3(12, 4, 12)
+
+[sub_resource type="BoxMesh" id="mesh_floor"]
+size = Vector3(10.4, 0.2, 10.4)
+
+[sub_resource type="StandardMaterial3D" id="mat_floor"]
+albedo_color = Color(0.23912677, 0.20488864, 0.18287802, 1)
+albedo_texture = ExtResource("2_0428n")
+roughness = 0.9
+uv1_scale = Vector3(8, 8, 8)
+
+[sub_resource type="BoxShape3D" id="shape_floor"]
+size = Vector3(10.4, 0.2, 10.4)
+
+[sub_resource type="BoxMesh" id="mesh_w10"]
+size = Vector3(10, 3, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="mat_wall"]
+albedo_texture = ExtResource("5_74hrf")
+roughness = 0.95
+uv1_scale = Vector3(8, 8, 8)
+
+[sub_resource type="BoxShape3D" id="shape_w10"]
+size = Vector3(10, 3, 0.3)
+
+[sub_resource type="BoxMesh" id="mesh_v10"]
+size = Vector3(0.3, 3, 10)
+
+[sub_resource type="BoxShape3D" id="shape_v10"]
+size = Vector3(0.3, 3, 10)
+
+[sub_resource type="BoxMesh" id="mesh_v4"]
+size = Vector3(0.3, 3, 4)
+
+[sub_resource type="BoxShape3D" id="shape_v4"]
+size = Vector3(0.3, 3, 4)
+
+[node name="Cells" type="Node3D" unique_id=1382179641]
+script = ExtResource("1_room")
+camera_look_at = Vector3(2.5, 0.7, -1.8)
+
+[node name="Camera" type="Camera3D" parent="." unique_id=1988272098]
+transform = Transform3D(0.14889301, 0.19284073, -0.9698677, -0.013071492, 0.9810985, 0.19306707, 0.98876697, -0.016068714, 0.14859943, -5.6389313, 1.5523994, 0.38123226)
+fov = 53.8
+
+[node name="Lamp" type="SpotLight3D" parent="." unique_id=797995817]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -2.0301552, 3.2, -2.4615984)
+light_color = Color(0.8, 0.85, 1, 1)
+light_energy = 4.0
+light_volumetric_fog_energy = 2.2
+shadow_enabled = true
+spot_range = 9.0
+spot_angle = 42.0
+
+[node name="Lamp3" type="SpotLight3D" parent="." unique_id=1605134045]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -2.0301552, 3.2, 1.7948418)
+light_color = Color(0.8, 0.85, 1, 1)
+light_energy = 4.0
+light_volumetric_fog_energy = 2.2
+shadow_enabled = true
+spot_range = 9.0
+spot_angle = 42.0
+
+[node name="Lamp2" type="SpotLight3D" parent="." unique_id=21127011]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 2.921329, 3.2, -2.40836)
+light_color = Color(0.8, 0.85, 1, 1)
+light_energy = 4.0
+light_volumetric_fog_energy = 2.2
+shadow_enabled = true
+spot_range = 9.0
+spot_angle = 42.0
+
+[node name="Trigger" type="Area3D" parent="." unique_id=567888207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Trigger" unique_id=1108867701]
+shape = SubResource("shape_trigger")
+
+[node name="Spots" type="Node3D" parent="." unique_id=1995577458]
+
+[node name="Center" type="Marker3D" parent="Spots" unique_id=2013836552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5237875, 0, -1.5908855)
+
+[node name="Door" type="Marker3D" parent="Spots" unique_id=931072051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 0)
+
+[node name="walls" type="Node3D" parent="." unique_id=606793807]
+
+[node name="Floor" type="StaticBody3D" parent="walls" unique_id=1445481795]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/Floor" unique_id=1489857748]
+mesh = SubResource("mesh_floor")
+surface_material_override/0 = SubResource("mat_floor")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/Floor" unique_id=866469773]
+shape = SubResource("shape_floor")
+
+[node name="WallNorth" type="StaticBody3D" parent="walls" unique_id=989616493]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -4.97)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallNorth" unique_id=1538876550]
+mesh = SubResource("mesh_w10")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallNorth" unique_id=190263823]
+shape = SubResource("shape_w10")
+
+[node name="WallSouth" type="StaticBody3D" parent="walls" unique_id=442271086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 4.97)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallSouth" unique_id=454708075]
+mesh = SubResource("mesh_w10")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallSouth" unique_id=1937512173]
+shape = SubResource("shape_w10")
+
+[node name="WallEast" type="StaticBody3D" parent="walls" unique_id=545412160]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97, 1.5, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallEast" unique_id=289698960]
+mesh = SubResource("mesh_v10")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallEast" unique_id=1879809109]
+shape = SubResource("shape_v10")
+
+[node name="WallWestNear" type="StaticBody3D" parent="walls" unique_id=169496583]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97, 1.5, 3)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallWestNear" unique_id=1104412428]
+mesh = SubResource("mesh_v4")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallWestNear" unique_id=76887803]
+shape = SubResource("shape_v4")
+
+[node name="WallWestFar" type="StaticBody3D" parent="walls" unique_id=891339479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97, 1.5, -3)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallWestFar" unique_id=1082036709]
+mesh = SubResource("mesh_v4")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallWestFar" unique_id=685465987]
+shape = SubResource("shape_v4")
+
+[node name="cell" type="Node3D" parent="walls" unique_id=1429851919]
+script = ExtResource("90_autocol")
+
+[node name="SM_Bld_Wall_Door_Cell_01" parent="walls/cell" unique_id=766209183 instance=ExtResource("3_gqlh2")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.435, 0, 2.5)
+
+[node name="SM_Bld_Wall_Door_Cell_02" parent="walls/cell" unique_id=10772902 instance=ExtResource("3_gqlh2")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.435, 0, 0)
+
+[node name="SM_Bld_Wall_Cell_05" parent="walls/cell" unique_id=614470392 instance=ExtResource("4_mve0g")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.4346379, 0, 5)
+
+[node name="SM_Bld_Wall_Cell_02" parent="walls/cell" unique_id=701274377 instance=ExtResource("8_0xq15")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.435, 0, -2.5)
+
+[node name="SM_Bld_Wall_Cell_03" parent="walls/cell" unique_id=1036677908 instance=ExtResource("8_0xq15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48535973, 0, 0.008348584)
+
+[node name="SM_Bld_Wall_Cell_04" parent="walls/cell" unique_id=350021036 instance=ExtResource("8_0xq15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9874477, 0, 0.008348584)
+
+[node name="SM_Bld_Door_04" parent="walls/cell" unique_id=1577314212 instance=ExtResource("9_dhxgb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.38922477, -2.3841858e-07, -0.77073693)
+
+[node name="SM_Bld_Door_05" parent="walls/cell" unique_id=10015252 instance=ExtResource("9_dhxgb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.38922477, -2.3841858e-07, 1.728642)
+
+[node name="props" type="Node3D" parent="." unique_id=1652872370]
+script = ExtResource("90_autocol")
+
+[node name="SM_Prop_Sink_Toilet_01" parent="props" unique_id=396033428 instance=ExtResource("10_y3btd")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.5026836, 0, 1.9367199)
+
+[node name="SM_Prop_Bed_01" parent="props" unique_id=1243345506 instance=ExtResource("6_rsftb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.32755, 0.06497502, -2.8802419)
+
+[node name="SM_Prop_Bed_02" parent="props" unique_id=1636250721 instance=ExtResource("6_rsftb")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 3.3086772, 0.17863345, 4.352957)
+
+[node name="SM_Prop_Sink_Toilet_02" parent="props" unique_id=96244892 instance=ExtResource("10_y3btd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4966683, 0, -4.5440574)
+
+[node name="SM_Prop_Table_01" parent="props" unique_id=636018182 instance=ExtResource("10_gqlh2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.284451, 1.1920929e-07, 0.56214523)
+
+[node name="SM_Prop_Table_02" parent="props" unique_id=2037030322 instance=ExtResource("10_gqlh2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2770362, 4.0489138e-17, -0.5219816)
+
+[node name="SM_Prop_Bench_03" parent="props" unique_id=1775372875 instance=ExtResource("11_mve0g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4590776, -2.3841858e-07, -4.452217)
+
+[node name="SignHall2" type="Label3D" parent="." unique_id=13901888]
+transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, -3.4548867, 0.02, -0.25623924)
+pixel_size = 0.01
+modulate = Color(0.75, 0.75, 0.72, 0.45)
+text = "< HALL 2"
+font = ExtResource("98_font")
+font_size = 60
+outline_size = 0
+script = ExtResource("99_label")
+yaw_degrees = -90.0

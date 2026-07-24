@@ -1,0 +1,93 @@
+[gd_scene format=3]
+
+[ext_resource type="Shader" uid="uid://ch4n6sqsrqxmn" path="res://shaders/noir_dither_post.gdshader" id="1_dither"]
+[ext_resource type="Script" uid="uid://d1yq4tokvgw63" path="res://scripts/ui/title_screen.gd" id="0_root"]
+[ext_resource type="PackedScene" path="res://scenes/player/character_rig.tscn" id="2_rig"]
+[ext_resource type="Script" uid="uid://0rcwgsiklf0f" path="res://scripts/ui/options_menu.gd" id="3_menu"]
+[ext_resource type="Script" uid="uid://dma8a8cstgnhh" path="res://scripts/game/flicker_light.gd" id="4_flicker"]
+
+[sub_resource type="Environment" id="Environment_title"]
+background_mode = 1
+background_color = Color(0.016, 0.016, 0.018, 1)
+ambient_light_source = 1
+ambient_light_color = Color(0.22, 0.22, 0.22, 1)
+ambient_light_energy = 1.3
+tonemap_mode = 2
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.035
+volumetric_fog_albedo = Color(0.6, 0.6, 0.6, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_title"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_title_floor"]
+albedo_color = Color(0.13, 0.135, 0.155, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_title_wall"]
+size = Vector3(10, 3, 0.3)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_title_dither"]
+shader = ExtResource("1_dither")
+shader_parameter/luma_levels = 32
+shader_parameter/grain = 1.0
+shader_parameter/shadow_grain = 0.5
+shader_parameter/shadow_desat = 0.35
+shader_parameter/black_floor = 0.01
+shader_parameter/dot_size = 1
+shader_parameter/mono = 1.0
+shader_parameter/mono_tint = Color(1, 1, 1, 1)
+
+[node name="TitleScreen" type="Node3D"]
+script = ExtResource("0_root")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_title")
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("PlaneMesh_title")
+surface_material_override/0 = SubResource("StandardMaterial3D_title_floor")
+
+[node name="BackWall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -3.5)
+mesh = SubResource("BoxMesh_title_wall")
+surface_material_override/0 = SubResource("StandardMaterial3D_title_floor")
+
+[node name="Lamp" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 3.1, 0)
+light_color = Color(1, 0.88, 0.7, 1)
+light_volumetric_fog_energy = 2.5
+shadow_enabled = true
+spot_range = 6.0
+spot_angle = 28.0
+script = ExtResource("4_flicker")
+dropout_volume_db = -80.0
+
+[node name="Detective" parent="." instance=ExtResource("2_rig")]
+transform = Transform3D(0.809, 0, 0.588, 0, 1, 0, -0.588, 0, 0.809, 0, 0, 0)
+model_path = "res://scripts/tools/retarget/police_chars_rt.glb"
+material_path = "res://materials/police_01_b.tres"
+visible_mesh = "SM_Chr_Detective_Male_01"
+start_clip = "idle"
+foot_offset = 0.05
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.8065, -0.0941, 0.5838, 0, 0.9874, 0.1592, -0.5914, -0.1284, 0.7961, 2.2, 1.6, 3)
+fov = 45.0
+current = true
+
+[node name="Dither" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="ColorRect" type="ColorRect" parent="Dither" groups=["dither_fx"]]
+material = SubResource("ShaderMaterial_title_dither")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Menu" type="CanvasLayer" parent="."]
+script = ExtResource("3_menu")
+title_mode = true

@@ -1,0 +1,4210 @@
+-------------------
+Folder Name: Buildings
+-------------------
+Prefab Name: SM_Bld_Ceiling_01
+    Mesh Name: SM_Bld_Ceiling_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Ceiling_02
+    Mesh Name: SM_Bld_Ceiling_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Ceiling_Panel_01
+    Mesh Name: SM_Bld_Ceiling_Panel_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Ceiling_Panel_02
+    Mesh Name: SM_Bld_Ceiling_Panel_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Ceiling_Panel_Light_01
+    Mesh Name: SM_Bld_Ceiling_Panel_Light_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Ceiling_Panel_Light_02
+    Mesh Name: SM_Bld_Ceiling_Panel_Light_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Door_01
+    Mesh Name: SM_Bld_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Door_01_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Door_02
+    Mesh Name: SM_Bld_Door_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Door_03
+    Mesh Name: SM_Bld_Door_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Door_04
+    Mesh Name: SM_Bld_Door_04
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Door_05
+    Mesh Name: SM_Bld_Door_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Door_Large_01_L
+    Mesh Name: SM_Bld_Door_Large_01_L
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Door_Large_01_L_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Door_Large_01_R
+    Mesh Name: SM_Bld_Door_Large_01_R
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Door_Large_01_R_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Elevator_01
+    Mesh Name: SM_Bld_Elevator_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Elevator_01_Door_L
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Elevator_01_Door_R
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_FeatureWall_Slate_01
+    Mesh Name: SM_Bld_FeatureWall_Slate_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_FeatureWall_Slate_02
+    Mesh Name: SM_Bld_FeatureWall_Slate_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_FeatureWall_Square_01
+    Mesh Name: SM_Bld_FeatureWall_Square_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_FeatureWall_Square_02
+    Mesh Name: SM_Bld_FeatureWall_Square_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_FeatureWall_Wood_01
+    Mesh Name: SM_Bld_FeatureWall_Wood_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Floor_Carpet_01
+    Mesh Name: SM_Bld_Floor_Carpet_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Floor_Concrete_01
+    Mesh Name: SM_Bld_Floor_Concrete_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Floor_Grass_01
+    Mesh Name: SM_Bld_Floor_Grass_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Floor_Panel_01
+    Mesh Name: SM_Bld_Floor_Panel_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Floor_Tiles_01
+    Mesh Name: SM_Bld_Floor_Tiles_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Floor_Wood_01
+    Mesh Name: SM_Bld_Floor_Wood_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_GardenEdge_01
+    Mesh Name: SM_Bld_GardenEdge_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_GardenEdge_Corner_01
+    Mesh Name: SM_Bld_GardenEdge_Corner_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Pillar_Exterior_01
+    Mesh Name: SM_Bld_Pillar_Exterior_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Pillar_Exterior_02
+    Mesh Name: SM_Bld_Pillar_Exterior_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Pillar_Exterior_03
+    Mesh Name: SM_Bld_Pillar_Exterior_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Pillar_Exterior_04
+    Mesh Name: SM_Bld_Pillar_Exterior_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Pillar_Interior_01
+    Mesh Name: SM_Bld_Pillar_Interior_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Pillar_Interior_02
+    Mesh Name: SM_Bld_Pillar_Interior_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Pillar_Interior_03
+    Mesh Name: SM_Bld_Pillar_Interior_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Pillar_Interior_04
+    Mesh Name: SM_Bld_Pillar_Interior_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Pillar_Metal_01
+    Mesh Name: SM_Bld_Pillar_Metal_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Roof_01
+    Mesh Name: SM_Bld_Roof_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Roof_Side_01
+    Mesh Name: SM_Bld_Roof_Side_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Roof_Side_02
+    Mesh Name: SM_Bld_Roof_Side_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Roof_Side_Corner_01
+    Mesh Name: SM_Bld_Roof_Side_Corner_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Stairs_Carpet_01
+    Mesh Name: SM_Bld_Stairs_Carpet_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Stairs_Carpet_02
+    Mesh Name: SM_Bld_Stairs_Carpet_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Stairs_Railing_01
+    Mesh Name: SM_Bld_Stairs_Railing_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Stairs_Railing_Corner_01
+    Mesh Name: SM_Bld_Stairs_Railing_Corner_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Stairs_Railing_Corner_Straight_01
+    Mesh Name: SM_Bld_Stairs_Railing_Corner_Straight_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Stairs_Tiles_01
+    Mesh Name: SM_Bld_Stairs_Tiles_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Stairs_Tiles_02
+    Mesh Name: SM_Bld_Stairs_Tiles_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Stairs_Top_Cube_01
+    Mesh Name: SM_Bld_Stairs_Top_Cube_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Stairs_Wood_01
+    Mesh Name: SM_Bld_Stairs_Wood_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Stairs_Wood_02
+    Mesh Name: SM_Bld_Stairs_Wood_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Baseboard_01
+    Mesh Name: SM_Bld_Wall_Baseboard_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Baseboard_Door_01
+    Mesh Name: SM_Bld_Wall_Baseboard_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Baseboard_Door_Large_01
+    Mesh Name: SM_Bld_Wall_Baseboard_Door_Large_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Baseboard_Door_Large_01_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Baseboard_Elevator_01
+    Mesh Name: SM_Bld_Wall_Baseboard_Elevator_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Baseboard_Elevator_01_Door_L
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Baseboard_Elevator_01_Door_R
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Baseboard_Window_01
+    Mesh Name: SM_Bld_Wall_Baseboard_Window_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Baseboard_Window_01_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Baseboard_Window_02
+    Mesh Name: SM_Bld_Wall_Baseboard_Window_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Baseboard_Window_02_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Baseboard_Window_03
+    Mesh Name: SM_Bld_Wall_Baseboard_Window_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Baseboard_Window_03_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Baseboard_Window_04
+    Mesh Name: SM_Bld_Wall_Baseboard_Window_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Baseboard_Window_04_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Blank_01
+    Mesh Name: SM_Bld_Wall_Blank_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Blank_Door_01
+    Mesh Name: SM_Bld_Wall_Blank_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Blank_Door_Large_01
+    Mesh Name: SM_Bld_Wall_Blank_Door_Large_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Blank_Door_Large_01_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Blank_Elevator_01
+    Mesh Name: SM_Bld_Wall_Blank_Elevator_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Blank_Elevator_01_Door_L
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Blank_Elevator_01_Door_R
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Blank_Window_01
+    Mesh Name: SM_Bld_Wall_Blank_Window_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Blank_Window_01_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Blank_Window_02
+    Mesh Name: SM_Bld_Wall_Blank_Window_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Blank_Window_02_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Blank_Window_03
+    Mesh Name: SM_Bld_Wall_Blank_Window_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Blank_Window_03_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Blank_Window_04
+    Mesh Name: SM_Bld_Wall_Blank_Window_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Blank_Window_04_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Brick_01
+    Mesh Name: SM_Bld_Wall_Brick_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Brick_Door_01
+    Mesh Name: SM_Bld_Wall_Brick_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Brick_Door_Large_01
+    Mesh Name: SM_Bld_Wall_Brick_Door_Large_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Brick_Door_Large_01_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Brick_Elevator_01
+    Mesh Name: SM_Bld_Wall_Brick_Elevator_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Brick_Elevator_01_Door_L
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Brick_Elevator_01_Door_R
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Brick_Window_01
+    Mesh Name: SM_Bld_Wall_Brick_Window_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Brick_Window_01_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Brick_Window_02
+    Mesh Name: SM_Bld_Wall_Brick_Window_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Brick_Window_02_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Brick_Window_03
+    Mesh Name: SM_Bld_Wall_Brick_Window_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Brick_Window_03_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Brick_Window_04
+    Mesh Name: SM_Bld_Wall_Brick_Window_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Brick_Window_04_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Glass_01
+    Mesh Name: SM_Bld_Wall_Glass_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Glass_01_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Glass_Door_01
+    Mesh Name: SM_Bld_Wall_Glass_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Glass_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Glass_Door_01_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Glass_Door_01_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Glass_Large_01
+    Mesh Name: SM_Bld_Wall_Glass_Large_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Glass_Large_01_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Glass_Large_Door_01
+    Mesh Name: SM_Bld_Wall_Glass_Large_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Glass_Large_Door_01_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Glass_Large_Window_Blinds_Closed_01
+    Mesh Name: SM_Bld_Wall_Glass_Large_Window_Blinds_Closed_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Glass_Large_Window_Blinds_Down_01
+    Mesh Name: SM_Bld_Wall_Glass_Large_Window_Blinds_Down_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Glass_Large_Window_Blinds_Open_01
+    Mesh Name: SM_Bld_Wall_Glass_Large_Window_Blinds_Open_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Glass_Large_Window_Blinds_Up_01
+    Mesh Name: SM_Bld_Wall_Glass_Large_Window_Blinds_Up_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Glass_Pillar_01
+    Mesh Name: SM_Bld_Wall_Glass_Pillar_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Glass_Pillar_02
+    Mesh Name: SM_Bld_Wall_Glass_Pillar_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Glass_Window_Blinds_Closed_01
+    Mesh Name: SM_Bld_Wall_Glass_Window_Blinds_Closed_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Glass_Window_Blinds_Down_01
+    Mesh Name: SM_Bld_Wall_Glass_Window_Blinds_Down_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Glass_Window_Blinds_Open_01
+    Mesh Name: SM_Bld_Wall_Glass_Window_Blinds_Open_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Glass_Window_Blinds_Up_01
+    Mesh Name: SM_Bld_Wall_Glass_Window_Blinds_Up_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Trim_01
+    Mesh Name: SM_Bld_Wall_Trim_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Trim_Door_01
+    Mesh Name: SM_Bld_Wall_Trim_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Trim_Door_Large_01
+    Mesh Name: SM_Bld_Wall_Trim_Door_Large_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Trim_Door_Large_01_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Trim_Elevator_01
+    Mesh Name: SM_Bld_Wall_Trim_Elevator_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Trim_Elevator_01_Door_L
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Trim_Elevator_01_Door_R
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Trim_Window_01
+    Mesh Name: SM_Bld_Wall_Trim_Window_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Trim_Window_01_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Trim_Window_02
+    Mesh Name: SM_Bld_Wall_Trim_Window_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Trim_Window_02_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Trim_Window_03
+    Mesh Name: SM_Bld_Wall_Trim_Window_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Trim_Window_03_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Trim_Window_04
+    Mesh Name: SM_Bld_Wall_Trim_Window_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Bld_Wall_Trim_Window_04_Glass
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Closed_01
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Closed_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Closed_02
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Closed_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Closed_03
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Closed_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Closed_04
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Closed_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Down_01
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Down_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Down_02
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Down_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Down_03
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Down_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Down_04
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Down_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Open_01
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Open_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Open_02
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Open_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Open_03
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Open_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Open_04
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Open_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Up_01
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Up_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Up_02
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Up_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Up_03
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Up_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Wall_Window_Blinds_Up_04
+    Mesh Name: SM_Bld_Wall_Window_Blinds_Up_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_WeatherCover_01
+    Mesh Name: SM_Bld_WeatherCover_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Window_Awning_01
+    Mesh Name: SM_Bld_Window_Awning_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Window_Awning_Corner_01
+    Mesh Name: SM_Bld_Window_Awning_Corner_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Window_Awning_Corner_02
+    Mesh Name: SM_Bld_Window_Awning_Corner_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Window_Awning_Half_01
+    Mesh Name: SM_Bld_Window_Awning_Half_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Window_Awning_Large_Down_01
+    Mesh Name: SM_Bld_Window_Awning_Large_Down_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Window_Awning_Large_Up_01
+    Mesh Name: SM_Bld_Window_Awning_Large_Up_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Window_Awning_Slates_01
+    Mesh Name: SM_Bld_Window_Awning_Slates_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Window_Cover_Glass_01
+    Mesh Name: SM_Bld_Window_Cover_Glass_01
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Window_Cover_Glass_Gap_01
+    Mesh Name: SM_Bld_Window_Cover_Glass_Gap_01
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Window_Cover_Pole_01
+    Mesh Name: SM_Bld_Window_Cover_Pole_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Window_Net_01
+    Mesh Name: SM_Bld_Window_Net_01
+        Slot: PolygonOffice_Material_Net_01 (Net_Alpha)
+
+Prefab Name: SM_Bld_Window_Net_Corner_01
+    Mesh Name: SM_Bld_Window_Net_Corner_01
+        Slot: PolygonOffice_Material_Net_01 (Net_Alpha)
+
+Prefab Name: SM_Bld_Window_Net_Corner_Pole_01
+    Mesh Name: SM_Bld_Window_Net_Corner_Pole_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Bld_Window_Net_Half_01
+    Mesh Name: SM_Bld_Window_Net_Half_01
+        Slot: PolygonOffice_Material_Net_01 (Net_Alpha)
+
+Prefab Name: SM_Bld_Window_Net_Pole_01
+    Mesh Name: SM_Bld_Window_Net_Pole_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+-------------------
+Folder Name: Characters
+-------------------
+Prefab Name: SM_Chr_Attachment_Antlers_01
+    Mesh Name: SM_Chr_Attachment_Antlers_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Attachment_Headset_01
+    Mesh Name: SM_Chr_Attachment_Headset_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Attachment_Headset_02
+    Mesh Name: SM_Chr_Attachment_Headset_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Attachment_Identity_01
+    Mesh Name: SM_Chr_Attachment_Identity_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Attachment_Nametag_01
+    Mesh Name: SM_Chr_Attachment_Nametag_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Attachment_Pens_01
+    Mesh Name: SM_Chr_Attachment_Pens_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Boss_Female_01
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Boss_Male_01
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Business_Female_01
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Business_Female_02
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Business_Female_03
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Business_Female_04
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Business_Male_01
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Business_Male_02
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Business_Male_03
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Business_Male_04
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Cleaner_Female_01
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Cleaner_Male_01
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Developer_Female_01
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Developer_Female_02
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Developer_Male_01
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Developer_Male_02
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Security_Female_01
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Chr_Security_Male_01
+    Mesh Name: SM_Chr_Boss_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Boss_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Female_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Business_Male_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Cleaner_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Female_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Developer_Male_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Chr_Security_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+-------------------
+Folder Name: Generic
+-------------------
+Prefab Name: SM_Generic_Cloud_01
+    Mesh Name: SM_Generic_Cloud_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Cloud_02
+    Mesh Name: SM_Generic_Cloud_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Cloud_03
+    Mesh Name: SM_Generic_Cloud_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Grass_Patch_01
+    Mesh Name: SM_Generic_Grass_Patch_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Grass_Patch_02
+    Mesh Name: SM_Generic_Grass_Patch_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Grass_Patch_03
+    Mesh Name: SM_Generic_Grass_Patch_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Ground_01
+    Mesh Name: SM_Generic_Ground_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Ground_02
+    Mesh Name: SM_Generic_Ground_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Small_Rocks_01
+    Mesh Name: SM_Generic_Small_Rocks_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Small_Rocks_02
+    Mesh Name: SM_Generic_Small_Rocks_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Small_Rocks_03
+    Mesh Name: SM_Generic_Small_Rocks_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Small_Rocks_04
+    Mesh Name: SM_Generic_Small_Rocks_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Small_Rocks_05
+    Mesh Name: SM_Generic_Small_Rocks_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_TreeDead_01
+    Mesh Name: SM_Generic_TreeDead_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_TreeStump_01
+    Mesh Name: SM_Generic_TreeStump_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Tree_01
+    Mesh Name: SM_Generic_Tree_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Tree_02
+    Mesh Name: SM_Generic_Tree_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Tree_03
+    Mesh Name: SM_Generic_Tree_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Generic_Tree_04
+    Mesh Name: SM_Generic_Tree_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+
+-------------------
+Folder Name: Bathroom
+-------------------
+Prefab Name: SM_Prop_Bathroom_Light_01
+    Mesh Name: SM_Prop_Bathroom_Light_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Bathroom_Mirror_01
+    Mesh Name: SM_Prop_Bathroom_Mirror_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Bathroom_Sink_01
+    Mesh Name: SM_Prop_Bathroom_Sink_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Bathroom_Sink_02
+    Mesh Name: SM_Prop_Bathroom_Sink_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_HandDryer_01
+    Mesh Name: SM_Prop_HandDryer_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_HandDryer_02
+    Mesh Name: SM_Prop_HandDryer_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PaperTowel_Dispenser_01
+    Mesh Name: SM_Prop_PaperTowel_Dispenser_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Soap_Dispenser_01
+    Mesh Name: SM_Prop_Soap_Dispenser_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_ToiletStalls_01
+    Mesh Name: SM_Prop_ToiletStalls_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_ToiletStalls_01_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_ToiletStalls_01_Door_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Toilet_01
+    Mesh Name: SM_Prop_Toilet_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Toilet_01_Buttons
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Toilet_01_Lid
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Toilet_01_Seat
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Toilet_Paper_01
+    Mesh Name: SM_Prop_Toilet_Paper_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Toilet_Paper_02
+    Mesh Name: SM_Prop_Toilet_Paper_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Urinal_01
+    Mesh Name: SM_Prop_Urinal_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Urinal_02
+    Mesh Name: SM_Prop_Urinal_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_VendingMachine_01
+    Mesh Name: SM_Prop_VendingMachine_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_VendingMachine_01_Glass
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+-------------------
+Folder Name: Desk Props
+-------------------
+Prefab Name: SM_Prop_Alcohol_Bottle_01
+    Mesh Name: SM_Prop_Alcohol_Bottle_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Alcohol_Glass_01
+    Mesh Name: SM_Prop_Alcohol_Glass_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Book_Group_01
+    Mesh Name: SM_Prop_Book_Group_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Book_Group_02
+    Mesh Name: SM_Prop_Book_Group_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Book_Group_03
+    Mesh Name: SM_Prop_Book_Group_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Book_Group_04
+    Mesh Name: SM_Prop_Book_Group_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Book_Group_05
+    Mesh Name: SM_Prop_Book_Group_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Book_Group_06
+    Mesh Name: SM_Prop_Book_Group_06
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Book_Group_07
+    Mesh Name: SM_Prop_Book_Group_07
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Book_Group_08
+    Mesh Name: SM_Prop_Book_Group_08
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Book_Magazine_01
+    Mesh Name: SM_Prop_Book_Magazine_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Book_Magazine_02
+    Mesh Name: SM_Prop_Book_Magazine_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Book_Phone_01
+    Mesh Name: SM_Prop_Book_Phone_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Book_Phone_Open_01
+    Mesh Name: SM_Prop_Book_Phone_Open_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Bottle_01
+    Mesh Name: SM_Prop_Bottle_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Box_01
+    Mesh Name: SM_Prop_Box_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Box_Lid_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Calculator_01
+    Mesh Name: SM_Prop_Calculator_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Calculator_02
+    Mesh Name: SM_Prop_Calculator_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Can_Soda_01
+    Mesh Name: SM_Prop_Can_Soda_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CardRoller_01
+    Mesh Name: SM_Prop_CardRoller_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Card_Reader_01
+    Mesh Name: SM_Prop_Card_Reader_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cd_01
+    Mesh Name: SM_Prop_Cd_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cellotape_01
+    Mesh Name: SM_Prop_Cellotape_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cellphone_01
+    Mesh Name: SM_Prop_Cellphone_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cellphone_02
+    Mesh Name: SM_Prop_Cellphone_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Clipboard_01
+    Mesh Name: SM_Prop_Clipboard_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Coffee_Tray_01
+    Mesh Name: SM_Prop_Coffee_Tray_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Coffee_Tray_01_Full
+    Mesh Name: SM_Prop_Coffee_Tray_01_Full
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Computer_Keyboard_01
+    Mesh Name: SM_Prop_Computer_Keyboard_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Computer_Keyboard_02
+    Mesh Name: SM_Prop_Computer_Keyboard_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Computer_Monitor_01
+    Mesh Name: SM_Prop_Computer_Monitor_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_Computer_Monitor_02
+    Mesh Name: SM_Prop_Computer_Monitor_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_Computer_Monitor_03
+    Mesh Name: SM_Prop_Computer_Monitor_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_Computer_Monitor_04
+    Mesh Name: SM_Prop_Computer_Monitor_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_Computer_Monitor_05
+    Mesh Name: SM_Prop_Computer_Monitor_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_Computer_Monitor_Curved_01
+    Mesh Name: SM_Prop_Computer_Monitor_Curved_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_Computer_Monitor_Double_01
+    Mesh Name: SM_Prop_Computer_Monitor_Double_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_Computer_Monitor_Triple_01
+    Mesh Name: SM_Prop_Computer_Monitor_Triple_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_04 (PolygonOffice_Texture_Sceen_04)
+        Slot: PolygonOffice_Material_Screen_03 (PolygonOffice_Texture_Sceen_03)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_Computer_Mousepad_01
+    Mesh Name: SM_Prop_Computer_Mousepad_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Computer_Mousepad_02
+    Mesh Name: SM_Prop_Computer_Mousepad_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Computer_Mousepad_03
+    Mesh Name: SM_Prop_Computer_Mousepad_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Computer_Mouse_01
+    Mesh Name: SM_Prop_Computer_Mouse_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Computer_Mouse_02
+    Mesh Name: SM_Prop_Computer_Mouse_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Computer_Mouse_03
+    Mesh Name: SM_Prop_Computer_Mouse_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Computer_Setup_01
+    Mesh Name: SM_Prop_Computer_Setup_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_03 (PolygonOffice_Texture_Sceen_03)
+
+Prefab Name: SM_Prop_Computer_Setup_02
+    Mesh Name: SM_Prop_Computer_Setup_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_Computer_Tower_01
+    Mesh Name: SM_Prop_Computer_Tower_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Computer_Tower_02
+    Mesh Name: SM_Prop_Computer_Tower_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Computer_Tower_Flat_01
+    Mesh Name: SM_Prop_Computer_Tower_Flat_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Computer_Tower_Modern_01
+    Mesh Name: SM_Prop_Computer_Tower_Modern_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Computer_Tower_Modern_Glass_01
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Console_MegaCube_01
+    Mesh Name: SM_Prop_Console_MegaCube_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Console_PlayBox_01
+    Mesh Name: SM_Prop_Console_PlayBox_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Controller_01
+    Mesh Name: SM_Prop_Controller_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Controller_02
+    Mesh Name: SM_Prop_Controller_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cord_01
+    Mesh Name: SM_Prop_Cord_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cord_Board_01
+    Mesh Name: SM_Prop_Cord_Board_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cord_Desk_01
+    Mesh Name: SM_Prop_Cord_Desk_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cord_Desk_02
+    Mesh Name: SM_Prop_Cord_Desk_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cord_Pile_01
+    Mesh Name: SM_Prop_Cord_Pile_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cord_Wall_01
+    Mesh Name: SM_Prop_Cord_Wall_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cup_Boss_01
+    Mesh Name: SM_Prop_Cup_Boss_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cup_Coffee_Disposable_Cap_01
+    Mesh Name: SM_Prop_Cup_Coffee_Disposable_Cap_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cup_Coffee_Disposable_Closed_01
+    Mesh Name: SM_Prop_Cup_Coffee_Disposable_Closed_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cup_Coffee_Disposable_Open_01
+    Mesh Name: SM_Prop_Cup_Coffee_Disposable_Open_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cup_Coffee_Disposable_Open_Full_01
+    Mesh Name: SM_Prop_Cup_Coffee_Disposable_Open_Full_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cup_Coffee_Disposable_Open_Mellow_01
+    Mesh Name: SM_Prop_Cup_Coffee_Disposable_Open_Mellow_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cup_Lid_01
+    Mesh Name: SM_Prop_Cup_Lid_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cup_Paper_01
+    Mesh Name: SM_Prop_Cup_Paper_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cup_Pens_01
+    Mesh Name: SM_Prop_Cup_Pens_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cup_Red_01
+    Mesh Name: SM_Prop_Cup_Red_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cup_Styrofoam_01
+    Mesh Name: SM_Prop_Cup_Styrofoam_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Desklamp_01
+    Mesh Name: SM_Prop_Desklamp_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Desklamp_02
+    Mesh Name: SM_Prop_Desklamp_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Desklamp_03
+    Mesh Name: SM_Prop_Desklamp_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Desklamp_04
+    Mesh Name: SM_Prop_Desklamp_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_DeskLamp_05
+    Mesh Name: SM_Prop_DeskLamp_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_DeskLamp_05_Arm_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_DeskLamp_05_Arm_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_DeskLamp_05_Lamp_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_DeskLamp_06
+    Mesh Name: SM_Prop_DeskLamp_06
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_DeskLamp_07
+    Mesh Name: SM_Prop_DeskLamp_07
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_DeskLamp_08
+    Mesh Name: SM_Prop_DeskLamp_08
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_DeskToy_NewtownsCradle_01
+    Mesh Name: SM_Prop_DeskToy_NewtownsCradle_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_DeskToy_NewtownsCradle_01_Ball_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_DeskToy_NewtownsCradle_01_Ball_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_DeskToy_NewtownsCradle_01_Ball_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_DeskToy_NewtownsCradle_01_Ball_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_DeskToy_NewtownsCradle_01_Ball_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_DeskToy_Orbiter_01
+    Mesh Name: SM_Prop_DeskToy_Orbiter_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_DeskToy_Orbiter_01_Piece_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_DeskToy_Orbiter_01_Piece_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Dvd_01
+    Mesh Name: SM_Prop_Dvd_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_EnergyDrink_01
+    Mesh Name: SM_Prop_EnergyDrink_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Eraser_01
+    Mesh Name: SM_Prop_Eraser_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Eraser_02
+    Mesh Name: SM_Prop_Eraser_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Eraser_03
+    Mesh Name: SM_Prop_Eraser_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Fan_Desk_01
+    Mesh Name: SM_Prop_Fan_Desk_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Fan_Desk_01_Top
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Fan_Desk_01_Blades
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Fan_USB_01
+    Mesh Name: SM_Prop_Fan_USB_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_SM_Prop_Fan_USB_01_Blades
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_FaxMachine_01
+    Mesh Name: SM_Prop_FaxMachine_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Figure_Cowgirl_01
+    Mesh Name: SM_Prop_Figure_Cowgirl_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Figure_Goblin_01
+    Mesh Name: SM_Prop_Figure_Goblin_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Figure_Knight_01
+    Mesh Name: SM_Prop_Figure_Knight_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Figure_Viking_01
+    Mesh Name: SM_Prop_Figure_Viking_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Flash_Drive_01
+    Mesh Name: SM_Prop_Flash_Drive_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Flash_Drive_02
+    Mesh Name: SM_Prop_Flash_Drive_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_FloppyDisk_01
+    Mesh Name: SM_Prop_FloppyDisk_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_FolderTray_01
+    Mesh Name: SM_Prop_FolderTray_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_FolderTray_02
+    Mesh Name: SM_Prop_FolderTray_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_FolderTray_03
+    Mesh Name: SM_Prop_FolderTray_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_FolderTray_04
+    Mesh Name: SM_Prop_FolderTray_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Folder_Holder_01
+    Mesh Name: SM_Prop_Folder_Holder_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Folder_Holder_02
+    Mesh Name: SM_Prop_Folder_Holder_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Folder_Holder_03
+    Mesh Name: SM_Prop_Folder_Holder_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Folder_Holder_04
+    Mesh Name: SM_Prop_Folder_Holder_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Folder_Manila_01
+    Mesh Name: SM_Prop_Folder_Manila_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Folder_Manila_02
+    Mesh Name: SM_Prop_Folder_Manila_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Folder_Manila_03
+    Mesh Name: SM_Prop_Folder_Manila_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Folder_Manila_04
+    Mesh Name: SM_Prop_Folder_Manila_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Folder_PVC_01
+    Mesh Name: SM_Prop_Folder_PVC_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Folder_PVC_02
+    Mesh Name: SM_Prop_Folder_PVC_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_FootRest_01
+    Mesh Name: SM_Prop_FootRest_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Globe_01
+    Mesh Name: SM_Prop_Globe_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_GraphicsTablet_01
+    Mesh Name: SM_Prop_GraphicsTablet_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_GraphicsTablet_02
+    Mesh Name: SM_Prop_GraphicsTablet_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_GraphicsTablet_03
+    Mesh Name: SM_Prop_GraphicsTablet_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_GraphicsTablet_04
+    Mesh Name: SM_Prop_GraphicsTablet_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_GraphicsTablet_StylusStand_01
+    Mesh Name: SM_Prop_GraphicsTablet_StylusStand_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_GraphicsTablet_Stylus_01
+    Mesh Name: SM_Prop_GraphicsTablet_Stylus_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Guillotine_01
+    Mesh Name: SM_Prop_Guillotine_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Guillotine_01_Blade
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Guillotine_02
+    Mesh Name: SM_Prop_Guillotine_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_SM_Prop_Guillotine_02_Blade
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_HDD_01
+    Mesh Name: SM_Prop_HDD_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_HDD_Dock_01
+    Mesh Name: SM_Prop_HDD_Dock_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_HDD_USB_01
+    Mesh Name: SM_Prop_HDD_USB_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_HDD_USB_02
+    Mesh Name: SM_Prop_HDD_USB_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_HDD_USB_03
+    Mesh Name: SM_Prop_HDD_USB_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Headphones_01
+    Mesh Name: SM_Prop_Headphones_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Headphones_02
+    Mesh Name: SM_Prop_Headphones_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Headset_01
+    Mesh Name: SM_Prop_Headset_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Headset_02
+    Mesh Name: SM_Prop_Headset_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_HolePunch_01
+    Mesh Name: SM_Prop_HolePunch_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_HolePunch_01_Lever_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_ID_Card_01
+    Mesh Name: SM_Prop_ID_Card_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Inhaler_01
+    Mesh Name: SM_Prop_Inhaler_01
+        Slot: PolygonOffice_Material_02_A (PolygonOffice_Texture_02_A)
+
+Prefab Name: SM_Prop_Jellybeans_01
+    Mesh Name: SM_Prop_Jellybeans_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Joystick_01
+    Mesh Name: SM_Prop_Joystick_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Joystick_01_Stick_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Joystick_02
+    Mesh Name: SM_Prop_Joystick_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Joystick_02_Stick_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_LaptopStand_01
+    Mesh Name: SM_Prop_LaptopStand_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_LaptopStand_02
+    Mesh Name: SM_Prop_LaptopStand_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Laptop_01
+    Mesh Name: SM_Prop_Laptop_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_04 (PolygonOffice_Texture_Sceen_04)
+
+Prefab Name: SM_Prop_Laptop_02
+    Mesh Name: SM_Prop_Laptop_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_03 (PolygonOffice_Texture_Sceen_03)
+
+Prefab Name: SM_Prop_Laptop_Folding_01
+    Mesh Name: SM_Prop_Laptop_Folding_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Laptop_Folding_Screen_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_Laptop_Folding_02
+    Mesh Name: SM_Prop_Laptop_Folding_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Laptop_Folding_Screen_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_Microphone_01
+    Mesh Name: SM_Prop_Microphone_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Microphone_01_Arm_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Microphone_01_Arm_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Microphone_01_Arm_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Microphone_01_Mic_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Microphone_02
+    Mesh Name: SM_Prop_Microphone_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Microphone_02_Arm_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Microphone_02_Arm_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Microphone_02_Arm_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Microphone_02_Mic_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Microphone_03
+    Mesh Name: SM_Prop_Microphone_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Mints_01
+    Mesh Name: SM_Prop_Mints_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Modem_01
+    Mesh Name: SM_Prop_Modem_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Modem_02
+    Mesh Name: SM_Prop_Modem_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Modem_03
+    Mesh Name: SM_Prop_Modem_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Modem_04
+    Mesh Name: SM_Prop_Modem_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Monitor_Crt_01
+    Mesh Name: SM_Prop_Monitor_Crt_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_NamePlate_01
+    Mesh Name: SM_Prop_NamePlate_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Napkins_01
+    Mesh Name: SM_Prop_Napkins_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Napkins_02
+    Mesh Name: SM_Prop_Napkins_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Neon_Cactus_01
+    Mesh Name: SM_Prop_Neon_Cactus_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_NetCable_01
+    Mesh Name: SM_Prop_NetCable_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_NetCable_02
+    Mesh Name: SM_Prop_NetCable_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_NetCable_03
+    Mesh Name: SM_Prop_NetCable_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_NotePad_01
+    Mesh Name: SM_Prop_NotePad_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_NotePad_02
+    Mesh Name: SM_Prop_NotePad_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Note_01
+    Mesh Name: SM_Prop_Note_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Note_02
+    Mesh Name: SM_Prop_Note_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Note_03
+    Mesh Name: SM_Prop_Note_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Note_04
+    Mesh Name: SM_Prop_Note_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Note_05
+    Mesh Name: SM_Prop_Note_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Note_06
+    Mesh Name: SM_Prop_Note_06
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Note_07
+    Mesh Name: SM_Prop_Note_07
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PaperShredder_01
+    Mesh Name: SM_Prop_PaperShredder_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PaperTray_01_Empty_01
+    Mesh Name: SM_Prop_PaperTray_01_Empty_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PaperTray_01_Full_01
+    Mesh Name: SM_Prop_PaperTray_01_Full_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Paper_01
+    Mesh Name: SM_Prop_Paper_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Paper_02
+    Mesh Name: SM_Prop_Paper_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Paper_03
+    Mesh Name: SM_Prop_Paper_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Paper_04
+    Mesh Name: SM_Prop_Paper_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Paper_05
+    Mesh Name: SM_Prop_Paper_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Paper_06
+    Mesh Name: SM_Prop_Paper_06
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Paper_Lewd_Copy_01
+    Mesh Name: SM_Prop_Paper_Lewd_Copy_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Paper_Lewd_Copy_02
+    Mesh Name: SM_Prop_Paper_Lewd_Copy_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Paper_Pile_01
+    Mesh Name: SM_Prop_Paper_Pile_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Paper_Pile_02
+    Mesh Name: SM_Prop_Paper_Pile_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Paper_Pile_03
+    Mesh Name: SM_Prop_Paper_Pile_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Paper_Plane_01
+    Mesh Name: SM_Prop_Paper_Plane_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PencilCup_01
+    Mesh Name: SM_Prop_PencilCup_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pencil_01
+    Mesh Name: SM_Prop_Pencil_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pencil_02
+    Mesh Name: SM_Prop_Pencil_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pencil_Sharpener_01
+    Mesh Name: SM_Prop_Pencil_Sharpener_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pencil_Sharpener_02
+    Mesh Name: SM_Prop_Pencil_Sharpener_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pen_01
+    Mesh Name: SM_Prop_Pen_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pen_02
+    Mesh Name: SM_Prop_Pen_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pen_03
+    Mesh Name: SM_Prop_Pen_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pen_04
+    Mesh Name: SM_Prop_Pen_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pen_05
+    Mesh Name: SM_Prop_Pen_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pen_06
+    Mesh Name: SM_Prop_Pen_06
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Phone_Conference_01
+    Mesh Name: SM_Prop_Phone_Conference_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Phone_Desk_01
+    Mesh Name: SM_Prop_Phone_Desk_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Phone_Portable_01_Base_01
+    Mesh Name: SM_Prop_Phone_Portable_01_Base_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Phone_Portable_01_Handset_01
+    Mesh Name: SM_Prop_Phone_Portable_01_Handset_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Phone_Rotary_01
+    Mesh Name: SM_Prop_Phone_Rotary_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Photo_01
+    Mesh Name: SM_Prop_Photo_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Photo_02
+    Mesh Name: SM_Prop_Photo_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Photo_03
+    Mesh Name: SM_Prop_Photo_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Photo_04
+    Mesh Name: SM_Prop_Photo_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Photo_05
+    Mesh Name: SM_Prop_Photo_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Photo_06
+    Mesh Name: SM_Prop_Photo_06
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pills_01
+    Mesh Name: SM_Prop_Pills_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pills_02
+    Mesh Name: SM_Prop_Pills_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Prank_Cushion_01
+    Mesh Name: SM_Prop_Prank_Cushion_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Printer_01
+    Mesh Name: SM_Prop_Printer_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: pCube275
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Printer_3D_01
+    Mesh Name: SM_Prop_Printer_3D_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Printer_3D_Toy_01
+    Mesh Name: SM_Prop_Printer_3D_Toy_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Printer_Mini_01
+    Mesh Name: SM_Prop_Printer_Mini_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Projector_01
+    Mesh Name: SM_Prop_Projector_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Projector_01_Angled
+    Mesh Name: SM_Prop_Projector_01_Angled
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Projector_02
+    Mesh Name: SM_Prop_Projector_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PuzzleCube_01
+    Mesh Name: SM_Prop_PuzzleCube_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Radio_01
+    Mesh Name: SM_Prop_Radio_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Radio_02
+    Mesh Name: SM_Prop_Radio_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ruler_01
+    Mesh Name: SM_Prop_Ruler_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Scissors_01
+    Mesh Name: SM_Prop_Scissors_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Scissors_Handle_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Scissors_02
+    Mesh Name: SM_Prop_Scissors_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Scissors_Handle_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_SD_Card_01
+    Mesh Name: SM_Prop_SD_Card_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Spaceship_01
+    Mesh Name: SM_Prop_Spaceship_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Speaker_Bluetooth_01
+    Mesh Name: SM_Prop_Speaker_Bluetooth_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Speaker_Bluetooth_02
+    Mesh Name: SM_Prop_Speaker_Bluetooth_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Speaker_Computer_01
+    Mesh Name: SM_Prop_Speaker_Computer_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Stapler_01
+    Mesh Name: SM_Prop_Stapler_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Stapler_01_Lever_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Trophy_01
+    Mesh Name: SM_Prop_Trophy_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Typewriter_01
+    Mesh Name: SM_Prop_Typewriter_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_VCR_01
+    Mesh Name: SM_Prop_VCR_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_VHS_Tape_01
+    Mesh Name: SM_Prop_VHS_Tape_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Webcam_01
+    Mesh Name: SM_Prop_Webcam_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Webcam_02
+    Mesh Name: SM_Prop_Webcam_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+-------------------
+Folder Name: Exterior
+-------------------
+Prefab Name: SM_Prop_Benchseat_01
+    Mesh Name: SM_Prop_Benchseat_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_BikeStand_01
+    Mesh Name: SM_Prop_BikeStand_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Concrete_Cube_01
+    Mesh Name: SM_Prop_Concrete_Cube_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Flowers_01
+    Mesh Name: SM_Prop_Flowers_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Flowers_02
+    Mesh Name: SM_Prop_Flowers_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_LampPost_01
+    Mesh Name: SM_Prop_LampPost_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Outdoor_Seat_01
+    Mesh Name: SM_Prop_Outdoor_Seat_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pole_01
+    Mesh Name: SM_Prop_Pole_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PowerBox_02
+    Mesh Name: SM_Prop_PowerBox_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sculpture_01
+    Mesh Name: SM_Prop_Sculpture_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sculpture_02
+    Mesh Name: SM_Prop_Sculpture_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sculpture_Base_01
+    Mesh Name: SM_Prop_Sculpture_Base_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Small_Hedge_01
+    Mesh Name: SM_Prop_Small_Hedge_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Spouting_01
+    Mesh Name: SM_Prop_Spouting_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Spouting_02
+    Mesh Name: SM_Prop_Spouting_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Spouting_03
+    Mesh Name: SM_Prop_Spouting_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Spouting_Top_01
+    Mesh Name: SM_Prop_Spouting_Top_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Trashbin_01
+    Mesh Name: SM_Prop_Trashbin_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Tree_Round_01
+    Mesh Name: SM_Prop_Tree_Round_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+-------------------
+Folder Name: Furniture
+-------------------
+Prefab Name: SM_Prop_Cabinets_01
+    Mesh Name: SM_Prop_Cabinets_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cabinets_02
+    Mesh Name: SM_Prop_Cabinets_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cabinets_03
+    Mesh Name: SM_Prop_Cabinets_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_01
+    Mesh Name: SM_Prop_Chair_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_02
+    Mesh Name: SM_Prop_Chair_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_03
+    Mesh Name: SM_Prop_Chair_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_04
+    Mesh Name: SM_Prop_Chair_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_05
+    Mesh Name: SM_Prop_Chair_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_06
+    Mesh Name: SM_Prop_Chair_06
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_07
+    Mesh Name: SM_Prop_Chair_07
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_08
+    Mesh Name: SM_Prop_Chair_08
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_09
+    Mesh Name: SM_Prop_Chair_09
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_10
+    Mesh Name: SM_Prop_Chair_10
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_11
+    Mesh Name: SM_Prop_Chair_11
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_BeanBag_01
+    Mesh Name: SM_Prop_Chair_BeanBag_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_BeanBag_02
+    Mesh Name: SM_Prop_Chair_BeanBag_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_BeanBag_03
+    Mesh Name: SM_Prop_Chair_BeanBag_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Chair_BeanBag_04
+    Mesh Name: SM_Prop_Chair_BeanBag_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CoffeeTable_01
+    Mesh Name: SM_Prop_CoffeeTable_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CoffeeTable_02
+    Mesh Name: SM_Prop_CoffeeTable_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CoffeeTable_03
+    Mesh Name: SM_Prop_CoffeeTable_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Couch_01
+    Mesh Name: SM_Prop_Couch_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Couch_02
+    Mesh Name: SM_Prop_Couch_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Couch_03
+    Mesh Name: SM_Prop_Couch_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Couch_Pillows_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Couch_04
+    Mesh Name: SM_Prop_Couch_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Couch_05
+    Mesh Name: SM_Prop_Couch_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Couch_06
+    Mesh Name: SM_Prop_Couch_06
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CubicalWall_01
+    Mesh Name: SM_Prop_CubicalWall_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CubicalWall_01_Half
+    Mesh Name: SM_Prop_CubicalWall_01_Half
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CubicalWall_Pillar_01
+    Mesh Name: SM_Prop_CubicalWall_Pillar_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CubicalWall_Pillar_Tall_01
+    Mesh Name: SM_Prop_CubicalWall_Pillar_Tall_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CubicalWall_Tall_01
+    Mesh Name: SM_Prop_CubicalWall_Tall_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CubicalWall_Tall_01_Half
+    Mesh Name: SM_Prop_CubicalWall_Tall_01_Half
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Desk_01
+    Mesh Name: SM_Prop_Desk_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Desk_02
+    Mesh Name: SM_Prop_Desk_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Desk_03
+    Mesh Name: SM_Prop_Desk_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Desk_04
+    Mesh Name: SM_Prop_Desk_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Desk_05
+    Mesh Name: SM_Prop_Desk_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Desk_06
+    Mesh Name: SM_Prop_Desk_06
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Desk_Standing_01
+    Mesh Name: SM_Prop_Desk_Standing_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Desk_Treadmill_01
+    Mesh Name: SM_Prop_Desk_Treadmill_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Divider_01
+    Mesh Name: SM_Prop_Divider_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Divider_Folding_01
+    Mesh Name: SM_Prop_Divider_Folding_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_JapaneseDivider_Folding_01_2
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_JapaneseDivider_Folding_01_1
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Divider_Folding_01_Preset
+    Mesh Name: SM_Prop_Divider_Folding_01_Preset
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Divider_Half_01
+    Mesh Name: SM_Prop_Divider_Half_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Shelf_01
+    Mesh Name: SM_Prop_Shelf_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Shelf_02
+    Mesh Name: SM_Prop_Shelf_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Shelf_03
+    Mesh Name: SM_Prop_Shelf_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Shelf_04
+    Mesh Name: SM_Prop_Shelf_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Shelf_05
+    Mesh Name: SM_Prop_Shelf_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Shelf_06
+    Mesh Name: SM_Prop_Shelf_06
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Shelf_07
+    Mesh Name: SM_Prop_Shelf_07
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_TableFootball_01
+    Mesh Name: SM_Prop_TableFootball_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_TableFootball_Pole_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_TableFootball_Pole_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_TableFootball_Pole_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_TableFootball_Pole_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_TableFootball_Pole_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_TableFootball_Pole_06
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_TableTennis_01
+    Mesh Name: SM_Prop_TableTennis_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Table_01
+    Mesh Name: SM_Prop_Table_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Table_02
+    Mesh Name: SM_Prop_Table_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Table_03
+    Mesh Name: SM_Prop_Table_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Table_Conference_01
+    Mesh Name: SM_Prop_Table_Conference_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Table_Conference_02
+    Mesh Name: SM_Prop_Table_Conference_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Table_Conference_03
+    Mesh Name: SM_Prop_Table_Conference_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Table_Drafting_01
+    Mesh Name: SM_Prop_Table_Drafting_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Table_Round_01
+    Mesh Name: SM_Prop_Table_Round_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Table_Round_02
+    Mesh Name: SM_Prop_Table_Round_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+-------------------
+Folder Name: Kitchen Props
+-------------------
+Prefab Name: SM_Prop_Blender_01
+    Mesh Name: SM_Prop_Blender_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Blender_Jug_01
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Blender_Lid_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cake_01
+    Mesh Name: SM_Prop_Cake_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_ChoppingBoard_01
+    Mesh Name: SM_Prop_ChoppingBoard_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_ChoppingBoard_02
+    Mesh Name: SM_Prop_ChoppingBoard_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CoffeeMachine_01
+    Mesh Name: SM_Prop_CoffeeMachine_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_CoffeeMachine_01_Handle_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_CoffeeMachine_01_Handle_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CoffeeMachine_Dripper_01
+    Mesh Name: SM_Prop_CoffeeMachine_Dripper_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CoffeeMachine_Dripper_01_Pot_01
+    Mesh Name: SM_Prop_CoffeeMachine_Dripper_01_Pot_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_CoffeeMachine_Dripper_01_Glass
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_CoffeeMachine_Dripper_01_Lid
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CoffeeMachine_Small_01
+    Mesh Name: SM_Prop_CoffeeMachine_Small_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_CoffeeMachine_Small_01_Handle_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Container_01
+    Mesh Name: SM_Prop_Container_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cup_01
+    Mesh Name: SM_Prop_Cup_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cup_02
+    Mesh Name: SM_Prop_Cup_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cup_03
+    Mesh Name: SM_Prop_Cup_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cup_Saucer_03
+    Mesh Name: SM_Prop_Cup_Saucer_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Dishes_01
+    Mesh Name: SM_Prop_Dishes_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Dishes_02
+    Mesh Name: SM_Prop_Dishes_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Dishes_03
+    Mesh Name: SM_Prop_Dishes_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Dishes_04
+    Mesh Name: SM_Prop_Dishes_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Donut_01
+    Mesh Name: SM_Prop_Donut_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Donut_Box_01
+    Mesh Name: SM_Prop_Donut_Box_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Donut_Choc_01
+    Mesh Name: SM_Prop_Donut_Choc_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Donut_Cream_01
+    Mesh Name: SM_Prop_Donut_Cream_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Donut_Pink_01
+    Mesh Name: SM_Prop_Donut_Pink_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Donut_Pink_02
+    Mesh Name: SM_Prop_Donut_Pink_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Fridge_01
+    Mesh Name: SM_Prop_Fridge_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Fridge_01_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Fridge_01_Door_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Fridge_01_Door_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Fridge_02
+    Mesh Name: SM_Prop_Fridge_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Fridge_02_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Fridge_02_Door_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_FruitBowl_01
+    Mesh Name: SM_Prop_FruitBowl_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_JellyStapler_01
+    Mesh Name: SM_Prop_JellyStapler_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Kettle_01
+    Mesh Name: SM_Prop_Kettle_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Kettle_01_Lid_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Kettle_01_Base_01
+    Mesh Name: SM_Prop_Kettle_01_Base_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Kitchen_Cabinet_01
+    Mesh Name: SM_Prop_Kitchen_Cabinet_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Kitchen_Cabinet_01_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Kitchen_Cabinet_01_Door_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Kitchen_CounterSink_01
+    Mesh Name: SM_Prop_Kitchen_CounterSink_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Kitchen_CounterSink_01_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Kitchen_CounterSink_01_Door_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Kitchen_CounterSink_Dishes_01
+    Mesh Name: SM_Prop_Kitchen_CounterSink_Dishes_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Kitchen_Counter_01
+    Mesh Name: SM_Prop_Kitchen_Counter_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Kitchen_Counter_01_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Kitchen_Counter_01_Door_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Kitchen_Counter_01_Drawer_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Knife_Holder_01
+    Mesh Name: SM_Prop_Knife_Holder_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Knife_Holder_02
+    Mesh Name: SM_Prop_Knife_Holder_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Lunchbox_01
+    Mesh Name: SM_Prop_Lunchbox_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Lunchbox_Food_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Lunchbox_Lid_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Lunchbox_Plastic_01
+    Mesh Name: SM_Prop_Lunchbox_Plastic_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Lunchbox_Plastic_Food_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Lunchbox_Plastic_Lid_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Microwave_01
+    Mesh Name: SM_Prop_Microwave_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Microwave_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Microwave_Door_Glass_01
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Milk_01
+    Mesh Name: SM_Prop_Milk_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Milk_Claimed_01
+    Mesh Name: SM_Prop_Milk_Claimed_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_MiniFridge_01
+    Mesh Name: SM_Prop_MiniFridge_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_MiniFridge_Door_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_MiniFridge_Door_Glass_01
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pot_01
+    Mesh Name: SM_Prop_Pot_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Pot_Lid_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pot_Spilled_01
+    Mesh Name: SM_Prop_Pot_Spilled_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sandwich_01
+    Mesh Name: SM_Prop_Sandwich_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sandwich_02
+    Mesh Name: SM_Prop_Sandwich_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sink_01
+    Mesh Name: SM_Prop_Sink_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Toaster_01
+    Mesh Name: SM_Prop_Toaster_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Toaster_02
+    Mesh Name: SM_Prop_Toaster_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Toast_01
+    Mesh Name: SM_Prop_Toast_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Toast_02
+    Mesh Name: SM_Prop_Toast_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Toast_03
+    Mesh Name: SM_Prop_Toast_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+-------------------
+Folder Name: Misc
+-------------------
+Prefab Name: SM_Prop_Air_Horn_01
+    Mesh Name: SM_Prop_Air_Horn_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_ArcadeMachine_01
+    Mesh Name: SM_Prop_ArcadeMachine_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_06 (PolygonOffice_Texture_Sceen_Arcade_01)
+    Mesh Name: SM_Prop_ArcadeMachine_01_Stick_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_ArcadeMachine_01_Stick_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Balloon_01
+    Mesh Name: SM_Prop_Balloon_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Balloon_02
+    Mesh Name: SM_Prop_Balloon_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Bin_01
+    Mesh Name: SM_Prop_Bin_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Bin_02
+    Mesh Name: SM_Prop_Bin_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Bin_03
+    Mesh Name: SM_Prop_Bin_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Bin_Rubbish_01
+    Mesh Name: SM_Prop_Bin_Rubbish_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Briefcase_01
+    Mesh Name: SM_Prop_Briefcase_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Briefcase_Lid_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Briefcase_02
+    Mesh Name: SM_Prop_Briefcase_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Briefcase_03
+    Mesh Name: SM_Prop_Briefcase_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Briefcase_Laptop_01
+    Mesh Name: SM_Prop_Briefcase_Laptop_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Broom_01
+    Mesh Name: SM_Prop_Broom_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Bucket_01
+    Mesh Name: SM_Prop_Bucket_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Bucket_02
+    Mesh Name: SM_Prop_Bucket_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Bunting_01
+    Mesh Name: SM_Prop_Bunting_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Bunting_02
+    Mesh Name: SM_Prop_Bunting_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Bunting_03
+    Mesh Name: SM_Prop_Bunting_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Camera_Tripod_01
+    Mesh Name: SM_Prop_Camera_Tripod_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Camera_Tripod_02
+    Mesh Name: SM_Prop_Camera_Tripod_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_CardboardBox_01
+    Mesh Name: SM_Prop_CardboardBox_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CardboardBox_02
+    Mesh Name: SM_Prop_CardboardBox_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CardboardBox_03
+    Mesh Name: SM_Prop_CardboardBox_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CardboardBox_04
+    Mesh Name: SM_Prop_CardboardBox_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CardboardBox_05
+    Mesh Name: SM_Prop_CardboardBox_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CardboardBox_Stack_01
+    Mesh Name: SM_Prop_CardboardBox_Stack_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cart_01
+    Mesh Name: SM_Prop_Cart_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Cart_02
+    Mesh Name: SM_Prop_Cart_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CoatRack_01
+    Mesh Name: SM_Prop_CoatRack_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_CoatRack_Clothes_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Fan_Pedistal_01
+    Mesh Name: SM_Prop_Fan_Pedistal_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_SM_Prop_Fan_Pedistal_01_Top
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Fan_Pedistal_01_Blades
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Fishtank_01
+    Mesh Name: SM_Prop_Fishtank_01
+        Slot: PolygonOffice_FX (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Fishtank_FX_01
+        Slot: Default-Material (No Albedo Texture)
+    Mesh Name: SM_Prop_Fishtank_Glass_01
+        Slot: PolygonOffice_Material_Fishtank_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Fish_01_Preset
+    Mesh Name: FX_Fish
+        Slot: PolygonOffice_FX (PolygonOffice_Texture_01_A)
+    Mesh Name: FX_Bubbles
+        Slot: PolygonOffice_Bubble_FX (Uses custom shader)
+    Mesh Name: SM_Prop_Fishtank_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Fishtank_FX_01
+        Slot: Default-Material (No Albedo Texture)
+    Mesh Name: SM_Prop_Fishtank_Glass_01
+        Slot: PolygonOffice_Material_Fishtank_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_GreenScreen_01
+    Mesh Name: SM_Prop_GreenScreen_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_GreenScreen_02
+    Mesh Name: SM_Prop_GreenScreen_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Janitor_Bucket_01
+    Mesh Name: SM_Prop_Janitor_Bucket_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Janitor_Cart_01
+    Mesh Name: SM_Prop_Janitor_Cart_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Jukebox_01
+    Mesh Name: SM_Prop_Jukebox_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Minigolf_Ball_01
+    Mesh Name: SM_Prop_Minigolf_Ball_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Minigolf_Club_01
+    Mesh Name: SM_Prop_Minigolf_Club_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Minigolf_Flag_01
+    Mesh Name: SM_Prop_Minigolf_Flag_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Minigolf_Green_01
+    Mesh Name: SM_Prop_Minigolf_Green_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Mop_01
+    Mesh Name: SM_Prop_Mop_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Mop_02
+    Mesh Name: SM_Prop_Mop_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_OHP_01
+    Mesh Name: SM_Prop_OHP_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pallet_01
+    Mesh Name: SM_Prop_Pallet_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pan_01
+    Mesh Name: SM_Prop_Pan_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PaperRoll_01
+    Mesh Name: SM_Prop_PaperRoll_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Papers_01
+    Mesh Name: SM_Prop_Papers_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Papers_02
+    Mesh Name: SM_Prop_Papers_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Papers_03
+    Mesh Name: SM_Prop_Papers_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Party_Hat_01
+    Mesh Name: SM_Prop_Party_Hat_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Party_Hat_02
+    Mesh Name: SM_Prop_Party_Hat_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Party_Hat_03
+    Mesh Name: SM_Prop_Party_Hat_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Photocopier_01
+    Mesh Name: SM_Prop_Photocopier_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_03 (PolygonOffice_Texture_Sceen_03)
+    Mesh Name: SM_Prop_Photocopier_01_Lid_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Photocopier_02
+    Mesh Name: SM_Prop_Photocopier_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_03 (PolygonOffice_Texture_Sceen_03)
+    Mesh Name: SM_Prop_Photocopier_02_Lid_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_01
+    Mesh Name: SM_Prop_Plant_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_02
+    Mesh Name: SM_Prop_Plant_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_03
+    Mesh Name: SM_Prop_Plant_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_04
+    Mesh Name: SM_Prop_Plant_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_05
+    Mesh Name: SM_Prop_Plant_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_06
+    Mesh Name: SM_Prop_Plant_06
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_07
+    Mesh Name: SM_Prop_Plant_07
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_08
+    Mesh Name: SM_Prop_Plant_08
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_09
+    Mesh Name: SM_Prop_Plant_09
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_10
+    Mesh Name: SM_Prop_Plant_10
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_11
+    Mesh Name: SM_Prop_Plant_11
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_12
+    Mesh Name: SM_Prop_Plant_12
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_13
+    Mesh Name: SM_Prop_Plant_13
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_14
+    Mesh Name: SM_Prop_Plant_14
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_Flowers_01
+    Mesh Name: SM_Prop_Plant_Flowers_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Plant_Flowers_02
+    Mesh Name: SM_Prop_Plant_Flowers_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PoolBall_01
+    Mesh Name: SM_Prop_PoolBall_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PoolBall_02
+    Mesh Name: SM_Prop_PoolBall_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PoolBall_03
+    Mesh Name: SM_Prop_PoolBall_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PoolBall_04
+    Mesh Name: SM_Prop_PoolBall_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PoolCue_01
+    Mesh Name: SM_Prop_PoolCue_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PoolTable_01
+    Mesh Name: SM_Prop_PoolTable_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PoolTable_02
+    Mesh Name: SM_Prop_PoolTable_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_PoolTriangle_01
+    Mesh Name: SM_Prop_PoolTriangle_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Powerbox_01
+    Mesh Name: SM_Prop_Powerbox_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Presentation_Chart_01
+    Mesh Name: SM_Prop_Presentation_Chart_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Propane_01
+    Mesh Name: SM_Prop_Propane_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Rolling_TV_01
+    Mesh Name: SM_Prop_Rolling_TV_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_Rubbish_01
+    Mesh Name: SM_Prop_Rubbish_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Rubbish_02
+    Mesh Name: SM_Prop_Rubbish_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Rug_01
+    Mesh Name: SM_Prop_Rug_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Rug_02
+    Mesh Name: SM_Prop_Rug_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Rug_03
+    Mesh Name: SM_Prop_Rug_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Rug_04
+    Mesh Name: SM_Prop_Rug_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Server_Cabinet_01
+    Mesh Name: SM_Prop_Server_Cabinet_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Server_Cabinet_01_Full
+    Mesh Name: SM_Prop_Server_Cabinet_01_Full
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Server_Cabinet_02
+    Mesh Name: SM_Prop_Server_Cabinet_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Server_Cabinet_02_Full
+    Mesh Name: SM_Prop_Server_Cabinet_02_Full
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Server_Cabinet_03
+    Mesh Name: SM_Prop_Server_Cabinet_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Server_Cabinet_03_Full
+    Mesh Name: SM_Prop_Server_Cabinet_03_Full
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Server_Node_01
+    Mesh Name: SM_Prop_Server_Node_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Server_Node_02
+    Mesh Name: SM_Prop_Server_Node_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Server_Node_03
+    Mesh Name: SM_Prop_Server_Node_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sign_Wetfloor_01
+    Mesh Name: SM_Prop_Sign_Wetfloor_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_01
+    Mesh Name: SM_Prop_Snack_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_02
+    Mesh Name: SM_Prop_Snack_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_03
+    Mesh Name: SM_Prop_Snack_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_04
+    Mesh Name: SM_Prop_Snack_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_05
+    Mesh Name: SM_Prop_Snack_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_06
+    Mesh Name: SM_Prop_Snack_06
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_07
+    Mesh Name: SM_Prop_Snack_07
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_08
+    Mesh Name: SM_Prop_Snack_08
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_09
+    Mesh Name: SM_Prop_Snack_09
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_10
+    Mesh Name: SM_Prop_Snack_10
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_11
+    Mesh Name: SM_Prop_Snack_11
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_12
+    Mesh Name: SM_Prop_Snack_12
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_13
+    Mesh Name: SM_Prop_Snack_13
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_14
+    Mesh Name: SM_Prop_Snack_14
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_15
+    Mesh Name: SM_Prop_Snack_15
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_16
+    Mesh Name: SM_Prop_Snack_16
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_17
+    Mesh Name: SM_Prop_Snack_17
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Snack_18
+    Mesh Name: SM_Prop_Snack_18
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_SprayBottle_01
+    Mesh Name: SM_Prop_SprayBottle_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_SwissBall_01
+    Mesh Name: SM_Prop_SwissBall_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_TableFootball_Ball_01
+    Mesh Name: SM_Prop_TableFootball_Ball_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_TableTennis_Ball_01
+    Mesh Name: SM_Prop_TableTennis_Ball_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_TableTennis_Paddle_01
+    Mesh Name: SM_Prop_TableTennis_Paddle_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Vacuum_01
+    Mesh Name: SM_Prop_Vacuum_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_WaterCooler_01
+    Mesh Name: SM_Prop_WaterCooler_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_WaterCooler_Glass_01
+        Slot: PolygonOffice_Material_Glass (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Whiteboard_01
+    Mesh Name: SM_Prop_Whiteboard_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Whiteboard_02
+    Mesh Name: SM_Prop_Whiteboard_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Whiteboard_02_Board_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Xmas_Present_01
+    Mesh Name: SM_Prop_Xmas_Present_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Xmas_Present_02
+    Mesh Name: SM_Prop_Xmas_Present_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Xmas_Present_03
+    Mesh Name: SM_Prop_Xmas_Present_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Xmas_Present_04
+    Mesh Name: SM_Prop_Xmas_Present_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Xmas_Present_05
+    Mesh Name: SM_Prop_Xmas_Present_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Xmas_Tree_01
+    Mesh Name: SM_Prop_Xmas_Tree_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Xmas_Tree_02
+    Mesh Name: SM_Prop_Xmas_Tree_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Xmas_Tree_Base_01
+    Mesh Name: SM_Prop_Xmas_Tree_Base_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Wep_ToyGun_OneShot_01
+    Mesh Name: SM_Wep_ToyGun_OneShot_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Wep_ToyGun_OneShot_01_Barrel_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Wep_ToyGun_OneShot_01_Hammer_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Wep_ToyGun_OneShot_01_Trigger_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Wep_ToyGun_Rifle_01
+    Mesh Name: SM_Wep_ToyGun_Rifle_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Wep_ToyGun_Rifle_01_Bolt_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Wep_ToyGun_Rifle_01_Scope_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Wep_ToyGun_Rifle_01_Trigger_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Wep_ToyGun_Shotgun_01
+    Mesh Name: SM_Wep_ToyGun_Shotgun_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Wep_ToyGun_Shotgun_01_Handle_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Wep_ToyGun_Shotgun_01_Trigger_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Wep_ToyGun_SMG_01
+    Mesh Name: SM_Wep_ToyGun_SMG_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Wep_ToyGun_SMG_01_Magazine_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Wep_ToyGun_SMG_01_Slide_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Wep_ToyGun_SMG_01_Trigger_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+-------------------
+Folder Name: Roof Props
+-------------------
+Prefab Name: SM_Bld_Ceiling_Aircon_01
+    Mesh Name: SM_Bld_Ceiling_Aircon_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CableTray_01_Cable_End_01
+    Mesh Name: SM_Prop_CableTray_01_Cable_End_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CableTray_01_Cable_End_02
+    Mesh Name: SM_Prop_CableTray_01_Cable_End_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CableTray_01_Cross
+    Mesh Name: SM_Prop_CableTray_01_Cross
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CableTray_01_Curve
+    Mesh Name: SM_Prop_CableTray_01_Curve
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CableTray_01_Curve_Reverse
+    Mesh Name: SM_Prop_CableTray_01_Curve_Reverse
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CableTray_01_Long
+    Mesh Name: SM_Prop_CableTray_01_Long
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CableTray_01_Short
+    Mesh Name: SM_Prop_CableTray_01_Short
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CableTray_01_ShortHalf
+    Mesh Name: SM_Prop_CableTray_01_ShortHalf
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CableTray_01_Tee
+    Mesh Name: SM_Prop_CableTray_01_Tee
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CeilingFan_01
+    Mesh Name: SM_Prop_CeilingFan_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_CeilingFan_01_Blades_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CeilingFan_02
+    Mesh Name: SM_Prop_CeilingFan_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_CeilingFan_02_Blades_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_01_Cross
+    Mesh Name: SM_Prop_Ducting_01_Cross
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_01_Curve
+    Mesh Name: SM_Prop_Ducting_01_Curve
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_01_Curve_Cross
+    Mesh Name: SM_Prop_Ducting_01_Curve_Cross
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_01_Curve_Tee
+    Mesh Name: SM_Prop_Ducting_01_Curve_Tee
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_01_Curve_Tee_Reverse
+    Mesh Name: SM_Prop_Ducting_01_Curve_Tee_Reverse
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_01_Long
+    Mesh Name: SM_Prop_Ducting_01_Long
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_01_RightAngle
+    Mesh Name: SM_Prop_Ducting_01_RightAngle
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_01_RightAngle_Vent
+    Mesh Name: SM_Prop_Ducting_01_RightAngle_Vent
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_01_Short
+    Mesh Name: SM_Prop_Ducting_01_Short
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_01_Short_T_Vent
+    Mesh Name: SM_Prop_Ducting_01_Short_T_Vent
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_01_Short_Vent
+    Mesh Name: SM_Prop_Ducting_01_Short_Vent
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_01_Tee
+    Mesh Name: SM_Prop_Ducting_01_Tee
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_02_Cap
+    Mesh Name: SM_Prop_Ducting_02_Cap
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_02_Corner
+    Mesh Name: SM_Prop_Ducting_02_Corner
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_02_Cross
+    Mesh Name: SM_Prop_Ducting_02_Cross
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_02_Curve
+    Mesh Name: SM_Prop_Ducting_02_Curve
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_02_Long
+    Mesh Name: SM_Prop_Ducting_02_Long
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_02_RightAngle_Capped
+    Mesh Name: SM_Prop_Ducting_02_RightAngle_Capped
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_02_RightAngle_Large
+    Mesh Name: SM_Prop_Ducting_02_RightAngle_Large
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_02_RightAngle_Uncapped
+    Mesh Name: SM_Prop_Ducting_02_RightAngle_Uncapped
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_02_Short
+    Mesh Name: SM_Prop_Ducting_02_Short
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_02_Short_Half
+    Mesh Name: SM_Prop_Ducting_02_Short_Half
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_02_T
+    Mesh Name: SM_Prop_Ducting_02_T
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_02_Vent_Large
+    Mesh Name: SM_Prop_Ducting_02_Vent_Large
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_02_Vent_Side
+    Mesh Name: SM_Prop_Ducting_02_Vent_Side
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Ducting_02_Vent_Small
+    Mesh Name: SM_Prop_Ducting_02_Vent_Small
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Light_01
+    Mesh Name: SM_Prop_Light_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Light_02
+    Mesh Name: SM_Prop_Light_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Light_03
+    Mesh Name: SM_Prop_Light_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Light_04
+    Mesh Name: SM_Prop_Light_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Light_05
+    Mesh Name: SM_Prop_Light_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Light_06
+    Mesh Name: SM_Prop_Light_06
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Light_07
+    Mesh Name: SM_Prop_Light_07
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Light_08
+    Mesh Name: SM_Prop_Light_08
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Light_Fluorescent_01
+    Mesh Name: SM_Prop_Light_Fluorescent_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pipe_01_Cap
+    Mesh Name: SM_Prop_Pipe_01_Cap
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pipe_01_Cross
+    Mesh Name: SM_Prop_Pipe_01_Cross
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pipe_01_Curve
+    Mesh Name: SM_Prop_Pipe_01_Curve
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pipe_01_Long
+    Mesh Name: SM_Prop_Pipe_01_Long
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pipe_01_RightAngle
+    Mesh Name: SM_Prop_Pipe_01_RightAngle
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pipe_01_Short
+    Mesh Name: SM_Prop_Pipe_01_Short
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Pipe_01_Tee
+    Mesh Name: SM_Prop_Pipe_01_Tee
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Projector_01_Ceiling
+    Mesh Name: SM_Prop_Projector_01_Ceiling
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Rug_05
+    Mesh Name: SM_Prop_Rug_05
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Security_Camera_02
+    Mesh Name: SM_Prop_Security_Camera_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sprinkler
+    Mesh Name: SM_Prop_Sprinkler
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Streamer_01
+    Mesh Name: SM_Prop_Streamer_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Streamer_02
+    Mesh Name: SM_Prop_Streamer_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+-------------------
+Folder Name: Wall Props
+-------------------
+Prefab Name: SM_Prop_Aircon_01
+    Mesh Name: SM_Prop_Aircon_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_AirVent_01
+    Mesh Name: SM_Prop_AirVent_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_AirVent_02
+    Mesh Name: SM_Prop_AirVent_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_AirVent_Wall_01
+    Mesh Name: SM_Prop_AirVent_Wall_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Blackboard_01
+    Mesh Name: SM_Prop_Blackboard_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Calender_01
+    Mesh Name: SM_Prop_Calender_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Card_Scanner_01
+    Mesh Name: SM_Prop_Card_Scanner_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Card_Scanner_02
+    Mesh Name: SM_Prop_Card_Scanner_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Certificate_01
+    Mesh Name: SM_Prop_Certificate_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Child_Art_01
+    Mesh Name: SM_Prop_Child_Art_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Clock_01
+    Mesh Name: SM_Prop_Clock_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Clock_01_Hand_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Clock_01_Hand_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Clock_02 1
+    Mesh Name: SM_Prop_Clock_02 1
+        Slot: PolygonOffice_Material_Screen_02 (PolygonOffice_Texture_Sceen_02)
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CorkBoard_01
+    Mesh Name: SM_Prop_CorkBoard_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CorkBoard_02
+    Mesh Name: SM_Prop_CorkBoard_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_CorkBoard_03
+    Mesh Name: SM_Prop_CorkBoard_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Darkboard_01
+    Mesh Name: SM_Prop_Darkboard_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Elevator_Button_01
+    Mesh Name: SM_Prop_Elevator_Button_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Elevator_Button_02
+    Mesh Name: SM_Prop_Elevator_Button_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Emergency_Axe_01
+    Mesh Name: SM_Prop_Emergency_Axe_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Employee_Wall_01
+    Mesh Name: SM_Prop_Employee_Wall_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_FireAlarm_Switch_01
+    Mesh Name: SM_Prop_FireAlarm_Switch_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Fire_Detector_01
+    Mesh Name: SM_Prop_Fire_Detector_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Fire_Extinguisher_01
+    Mesh Name: SM_Prop_Fire_Extinguisher_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Keypad_01
+    Mesh Name: SM_Prop_Keypad_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Poster_01
+    Mesh Name: SM_Prop_Poster_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Poster_02
+    Mesh Name: SM_Prop_Poster_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Poster_03
+    Mesh Name: SM_Prop_Poster_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Poster_04
+    Mesh Name: SM_Prop_Poster_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Poster_Stocks_01
+    Mesh Name: SM_Prop_Poster_Stocks_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_ProjectorScreen_01
+    Mesh Name: SM_Prop_ProjectorScreen_01
+        Slot: PolygonOffice_Material_Screen_02 (PolygonOffice_Texture_Sceen_02)
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_ProjectorScreen_02_Down
+    Mesh Name: SM_Prop_ProjectorScreen_02_Down
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_02 (PolygonOffice_Texture_Sceen_02)
+
+Prefab Name: SM_Prop_ProjectorScreen_02_Up
+    Mesh Name: SM_Prop_ProjectorScreen_02_Up
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Security_Camera_01
+    Mesh Name: SM_Prop_Security_Camera_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+    Mesh Name: SM_Prop_Security_Camera_Head_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Shelf_Wall_01
+    Mesh Name: SM_Prop_Shelf_Wall_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Shelf_Wall_02
+    Mesh Name: SM_Prop_Shelf_Wall_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Shelf_Wall_03
+    Mesh Name: SM_Prop_Shelf_Wall_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sign_Director_01
+    Mesh Name: SM_Prop_Sign_Director_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sign_Exit_01
+    Mesh Name: SM_Prop_Sign_Exit_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sign_HR_Dep_01
+    Mesh Name: SM_Prop_Sign_HR_Dep_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sign_Kitchen_01
+    Mesh Name: SM_Prop_Sign_Kitchen_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sign_Manager_01
+    Mesh Name: SM_Prop_Sign_Manager_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sign_OutofOrder_01
+    Mesh Name: SM_Prop_Sign_OutofOrder_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sign_Receptionist_01
+    Mesh Name: SM_Prop_Sign_Receptionist_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sign_Sales_01
+    Mesh Name: SM_Prop_Sign_Sales_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sign_Stairs_01
+    Mesh Name: SM_Prop_Sign_Stairs_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sign_Toilets_01
+    Mesh Name: SM_Prop_Sign_Toilets_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sign_Toilets_02
+    Mesh Name: SM_Prop_Sign_Toilets_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sign_Toilets_Disabled_01
+    Mesh Name: SM_Prop_Sign_Toilets_Disabled_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sign_Toilets_Female_01
+    Mesh Name: SM_Prop_Sign_Toilets_Female_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Sign_Toilets_Male_01
+    Mesh Name: SM_Prop_Sign_Toilets_Male_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Socket_Floor_01
+    Mesh Name: SM_Prop_Socket_Floor_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Socket_Switch_01
+    Mesh Name: SM_Prop_Socket_Switch_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Socket_Wall_01
+    Mesh Name: SM_Prop_Socket_Wall_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Socket_Wall_02
+    Mesh Name: SM_Prop_Socket_Wall_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_TV_Wall_01
+    Mesh Name: SM_Prop_TV_Wall_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+        Slot: PolygonOffice_Material_Screen_01 (PolygonOffice_Texture_Sceen_01)
+
+Prefab Name: SM_Prop_WallDressing_01
+    Mesh Name: SM_Prop_WallDressing_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_WallDressing_02
+    Mesh Name: SM_Prop_WallDressing_02
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_WallDressing_03
+    Mesh Name: SM_Prop_WallDressing_03
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_WallDressing_04
+    Mesh Name: SM_Prop_WallDressing_04
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+
+Prefab Name: SM_Prop_Wall_Electronics_01
+    Mesh Name: SM_Prop_Wall_Electronics_01
+        Slot: PolygonOffice_Material_01_A (PolygonOffice_Texture_01_A)
+

@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpptec8yg6gjd"]
+
+[ext_resource type="Script" path="res://scripts/player/player_controller.gd" id="1_ctrl"]
+[ext_resource type="PackedScene" path="res://scenes/player/character_rig.tscn" id="2_rig"]
+[ext_resource type="Script" path="res://scripts/game/interact_prompt.gd" id="3_prompt"]
+[ext_resource type="FontFile" path="res://fonts/Crimson_Text/CrimsonText-Bold.ttf" id="4_font"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_body"]
+radius = 0.35
+height = 1.7
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+script = ExtResource("1_ctrl")
+
+[node name="Rig" parent="." instance=ExtResource("2_rig")]
+process_mode = 3
+model_path = "res://scripts/tools/retarget/police_chars_rt.glb"
+material_path = "res://materials/police_01_b.tres"
+visible_mesh = "SM_Chr_Detective_Male_01"
+start_clip = "idle"
+strip_root_motion = true
+foot_offset = 0.05
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+shape = SubResource("CapsuleShape3D_body")
+
+[node name="InteractPrompt" type="Label3D" parent="."]
+process_mode = 3
+script = ExtResource("3_prompt")
+text = "E"
+font = ExtResource("4_font")
+font_size = 72
+outline_size = 16
+billboard = 1
+no_depth_test = true
+pixel_size = 0.005
+visible = false
