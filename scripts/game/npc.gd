@@ -50,6 +50,11 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 ## how fast the timed turn eases (higher = snappier)
 @export var turn_speed := 4.0
 
+## loop time at which this NPC leaves for good and disappears (they've
+## walked out of the building - the clerk exiting past the lobby door).
+## 0 = never. Reappears on loop restart.
+@export var vanish_at := 0.0
+
 var _clock: Node
 var _bark_i := 0
 var _last_pos := Vector3.INF
@@ -72,6 +77,13 @@ func _process(_delta: float) -> void:
 	if _clock == null:
 		_clock = get_tree().get_first_node_in_group("loop_clock")
 	if _clock == null or get_tree().paused:
+		return
+	# left the building for good: hide and stop doing anything until the
+	# loop restarts (the clerk exiting past the front door)
+	if vanish_at > 0.0 and _clock.time >= vanish_at:
+		if visible:
+			visible = false
+			remove_from_group("talkable")
 		return
 	if not _spots_resolved:
 		_resolve_spots()
@@ -99,9 +111,19 @@ func _process(_delta: float) -> void:
 	var clip := String(a["clip"])
 	var from: Vector3 = a["pos"]
 	var to: Vector3 = b["pos"]
-	# only a WALK segment travels; idle/foottap/etc. HOLD at `from` so the
-	# character doesn't slide across the floor while standing still
+	# only a WALK/RUN segment travels; idle/foottap/etc. HOLD in place so
+	# the character doesn't slide while standing still. When the NEXT entry
+	# is a hold, the walk's destination is where that hold sits (b["pos"]),
+	# which is correct. The snag is a walk whose PREVIOUS entry was a hold:
+	# the character is still at the hold's spot, not this entry's `from`.
 	if clip == "walk" or clip == "run":
+		if i > 0 and String(schedule[i - 1]["clip"]) != "walk" \
+				and String(schedule[i - 1]["clip"]) != "run":
+			# anchor the walk where the character actually stands (the hold),
+			# and aim it at THIS entry's own spot - the leg the hold's `to`
+			# would otherwise swallow
+			from = schedule[i - 1]["pos"]
+			to = a["pos"]
 		var span := float(b["t"]) - float(a["t"])
 		var f := 0.0 if span <= 0.0 else clampf((t - float(a["t"])) / span, 0.0, 1.0)
 		position = from.lerp(to, f)

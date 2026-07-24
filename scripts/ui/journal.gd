@@ -14,17 +14,16 @@ extends CanvasLayer
 
 const Flags := preload("res://scripts/game/flags.gd")
 const Sfx := preload("res://scripts/game/sfx.gd")
-const Tuning := preload("res://scripts/game/tuning.gd")
 
 @export var entries: Array = [
 	{"flag": "bound_promise", "title": "THE TRINKET",
 		"text": "He pressed a small brass charm into my pocket. 'Help me.' It's warm, and it ticks. Midnight keeps coming back. So do I."},
+	{"flag": "found_note_57", "title": "THE NOTE",
+		"text": "Clutched in the dead man's hand: a scrap of paper, one number scrawled on it - 57. Too short for a phone. A badge number. Someone's badge number."},
+	{"flag": "know_loop", "title": "THREE MINUTES",
+		"text": "It's the heirloom. He dies at midnight and it drags me back to 11:57 - three minutes, over and over. If I can change how the night goes, maybe he lives. Start where they took him: interrogation."},
 	{"flag": "read_case_file", "title": "CASE FILE 44-C",
 		"text": "Victim found 11:40 PM. The murder weapon was never logged into evidence. Someone signed the lockup sheet that night."},
-	{"flag": "know_code", "title": "MAINTENANCE SLIP",
-		"text": "Cell-block keypad temp code: " + Tuning.CELLS_CODE + ". Nobody ever changed it."},
-	{"flag": "cells_unlocked", "title": "THE CELL BLOCK",
-		"text": "The temp code works. That door was opened the night of the murder - by someone who knew the code."},
 	{"flag": "overheard_call", "title": "THE PHONE CALL",
 		"text": "Someone called the front desk asking if I was still in the building. The receptionist said she'd 'let him know.'"},
 	{"flag": "know_weight_trap", "title": "THE SPRING PLATE",

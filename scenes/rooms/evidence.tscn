@@ -16,13 +16,14 @@
 [ext_resource type="PackedScene" uid="uid://mtu503i5ev1h" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Evidence_Bag_03.fbx" id="12_3og7v"]
 [ext_resource type="PackedScene" uid="uid://chwtffav4ss0h" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Gun_Case_03.fbx" id="12_u2q84"]
 [ext_resource type="PackedScene" uid="uid://bhv302iffbxb6" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Shelf_03.fbx" id="19_vwkck"]
+[ext_resource type="PackedScene" uid="uid://brchqmbpnhj2w" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Shelf_01.fbx" id="21_rp3yt"]
 [ext_resource type="Script" uid="uid://dslhfod3pn0dg" path="res://scripts/game/rolling_shelf.gd" id="94_rail"]
 [ext_resource type="Script" uid="uid://kw3g3ie2x1ok" path="res://scripts/game/evidence_package.gd" id="95_pkg"]
 [ext_resource type="Script" uid="uid://gvsb5yehcv6o" path="res://scripts/game/evidence_lockdown.gd" id="96_lock"]
 [ext_resource type="Script" uid="uid://b7rcesmr1yh2a" path="res://scripts/game/sliding_shelf.gd" id="97_slide"]
 
 [sub_resource type="BoxShape3D" id="shape_trigger"]
-size = Vector3(12, 4, 12)
+size = Vector3(12, 4, 9.861816)
 
 [sub_resource type="BoxShape3D" id="shape_gate"]
 size = Vector3(2, 3, 0.18)
@@ -109,6 +110,7 @@ spot_angle = 44.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Shape" type="CollisionShape3D" parent="Trigger" unique_id=791091408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.12768555)
 shape = SubResource("shape_trigger")
 
 [node name="CardGate" type="StaticBody3D" parent="." unique_id=1855556907]
@@ -136,10 +138,6 @@ dialogue = [{
 }]
 sets_flag = "read_case_file"
 pickup = true
-
-[node name="props_SM_Prop_Shelf_07#ThePackage" type="Node3D" parent="." unique_id=1769593115]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2, 1.05, 1.4581244)
-script = ExtResource("95_pkg")
 
 [node name="Lockdown" type="Node3D" parent="." unique_id=1529431112]
 script = ExtResource("96_lock")
@@ -245,6 +243,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4481707, 0, -0.47232747)
 script = ExtResource("97_slide")
 
 [node name="Shelf" parent="propshelf1" unique_id=585658858 instance=ExtResource("5_fqu2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6864798, 0, 0.051585674)
 
 [node name="Insert" parent="propshelf1/Shelf" unique_id=1948941618 instance=ExtResource("6_sms3o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043387175, 0, 0.040743113)
@@ -278,3 +277,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4507875, 2.3841858e-07, 1.6
 
 [node name="SM_Prop_Shelf_05" parent="." unique_id=1492617488 instance=ExtResource("19_vwkck")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4507875, 2.3841858e-07, 4.3253117)
+
+[node name="SM_Prop_Shelf_01" parent="." unique_id=1057556704 instance=ExtResource("21_rp3yt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.425731, 0, -0.4105667)
+script = ExtResource("95_pkg")

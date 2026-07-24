@@ -3,15 +3,16 @@ extends Node3D
 # The evidence-room keycard the clerk drops on the reception desk on his
 # way out. It appears when he sets it down; after that it's grabbable -
 # but ONLY while the receptionist is turned to the phone. Reach for it
-# while she's watching and she catches you: the loop restarts.
+# while she's watching and she simply blocks you - no harm, try again on
+# her next call.
 #
 # What you HOLD resets every loop (`have_evidence_keycard` is a per-loop
 # flag), so the perfect run has to re-steal it inside one of her calls.
 
 const Flags := preload("res://scripts/game/flags.gd")
 
-## loop time the clerk sets the card down (matches his desk-stop bark)
-@export var drop_at := 21.0
+## loop time the clerk sets the card down (matches his desk-stop bark ~t25)
+@export var drop_at := 26.0
 ## the loop flag the receptionist raises while she's turned away; taking
 ## the card is only safe when this is set
 @export var safe_flag := "receptionist_turned"
@@ -20,7 +21,6 @@ const Flags := preload("res://scripts/game/flags.gd")
 @export var prompt_height := 0.3
 
 var _clock: Node
-var _taken := false
 
 
 func _ready() -> void:
@@ -48,7 +48,7 @@ func _process(_delta: float) -> void:
 
 func interact() -> void:
 	var dlg := get_tree().get_first_node_in_group("dialogue")
-	if dlg == null or dlg.visible or _taken:
+	if dlg == null or dlg.visible:
 		return
 	if Flags.has_loop_flag(safe_flag):
 		# she's on the phone, turned away - clean lift
@@ -57,12 +57,9 @@ func interact() -> void:
 			{"speaker": "DETECTIVE", "text": "Her back's turned. I palm the card off the desk edge. Evidence room's mine now - for a few minutes."},
 		])
 	else:
-		# she's watching - caught, the night resets
+		# she's watching - she just blocks the grab. No harm; wait for her
+		# to take a call and turn away, then try again
 		dlg.show_dialogue([
-			{"speaker": "RECEPTIONIST", "text": "HEY. That's not yours, detective. ...Security!"},
+			{"speaker": "RECEPTIONIST", "text": "Ah-ah. Hands off the desk, detective. That's not yours."},
+			{"speaker": "DETECTIVE", "text": "...I'll wait until she's looking the other way."},
 		])
-		_taken = true
-		await dlg.closed
-		var lose := get_tree().get_first_node_in_group("lose_screen")
-		if lose != null:
-			lose.play_lose()

@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://ceml5bk41e63e" path="res://scripts/ui/objective.gd" id="24_objective"]
 [ext_resource type="Script" uid="uid://b8573jg6nh1jq" path="res://scripts/ui/room_label.gd" id="26_roomlabel"]
 [ext_resource type="Script" uid="uid://duiifp6g7icn3" path="res://scripts/game/inmate.gd" id="27_inmate"]
+[ext_resource type="Script" uid="uid://d3rl6gbjdb0ry" path="res://scripts/game/story_gate.gd" id="28_storygate"]
 [ext_resource type="PackedScene" uid="uid://cgxnessn3xq7o" path="res://scenes/rooms/lobby.tscn" id="30_lobby"]
 [ext_resource type="PackedScene" uid="uid://24p7xtmo1brk" path="res://scenes/rooms/bullpen.tscn" id="31_bullpen"]
 [ext_resource type="PackedScene" uid="uid://bbbawywlm2pmq" path="res://scenes/rooms/interrogation.tscn" id="32_interrogation"]
@@ -165,9 +166,10 @@ barks = [{
 }]
 hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_06.fbx"
 strip_root_motion = true
+sets_flag = "talked_reception"
 dialogue = [{
 "speaker": "RECEPTIONIST",
-"text": "Busy night, detective. Phone's been ringing off the hook and it's not even midnight."
+"text": "Busy night, detective. Phone's been ringing off the hook and it's not even midnight. Clocking out? Sign here and I'll let them know you're gone."
 }]
 
 [node name="LobbyPatron" parent="." unique_id=1057302812 instance=ExtResource("22_witness")]
@@ -229,6 +231,7 @@ schedule = [{
 "t": 170.0
 }]
 paced = true
+vanish_at = 29.0
 barks = [{
 "dur": 3.0,
 "flag": "saw_vance_leave",
@@ -237,7 +240,7 @@ barks = [{
 "text": "Anyone asks - I left an hour ago."
 }, {
 "dur": 4.0,
-"t": 20.0,
+"t": 25.0,
 "text": "Rosa, I'm out. Evidence room's yours if you need it - I'll leave my card right here."
 }]
 visible_mesh = "SM_Chr_Officer_Male_02"
@@ -553,9 +556,10 @@ dialogue_variants = [{
 
 [node name="IntroDirector" type="Node" parent="." unique_id=2015709943]
 script = ExtResource("23_director")
-witness_path = NodePath("../Witness")
-escort_paths = Array[NodePath]([NodePath("../EscortA"), NodePath("../EscortB")])
 rookie_path = NodePath("../RookiePetty")
+
+[node name="StoryGate" type="Node" parent="." unique_id=2015709944]
+script = ExtResource("28_storygate")
 
 [node name="LoopClock" type="Node" parent="." unique_id=166655877]
 script = ExtResource("3_clock")

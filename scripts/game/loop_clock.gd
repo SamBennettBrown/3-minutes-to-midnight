@@ -59,7 +59,10 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	time += delta
-	if time >= loop_length:
+	# Loop 0 (the opening night) has no countdown - it ends only when the
+	# scripted murder plays out, never on the clock. The 3-minute timer
+	# only governs the real loops, once intro_done is set.
+	if Flags.has_flag("intro_done") and time >= loop_length:
 		restart()
 		return
 	if Input.is_action_pressed("restart") and Flags.has_flag("intro_done"):

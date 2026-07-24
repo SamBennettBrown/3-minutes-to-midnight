@@ -9,8 +9,8 @@
 [ext_resource type="Material" path="res://materials/office_props.tres" id="4_uxkrv"]
 [ext_resource type="Script" uid="uid://bwnu42umx4iip" path="res://scripts/game/cam_zone.gd" id="4_zone"]
 [ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="5_item"]
-[ext_resource type="Script" path="res://scripts/game/vending_machine.gd" id="5_vend"]
 [ext_resource type="PackedScene" uid="uid://bvdwbx6ogpqxm" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Plant_04.fbx" id="5_k24ke"]
+[ext_resource type="Script" uid="uid://bv1n8hg2r8lns" path="res://scripts/game/vending_machine.gd" id="5_vend"]
 [ext_resource type="PackedScene" uid="uid://ddp5hken8m17n" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Chair_01.fbx" id="6_k24ke"]
 [ext_resource type="PackedScene" uid="uid://cx30vux0b38nh" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_WaterCooler_01.fbx" id="6_pa6f4"]
 [ext_resource type="PackedScene" uid="uid://cu6tf05ldqfo8" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_WallDressing_03.fbx" id="7_dxihq"]
@@ -40,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://bin30rnn2po5g" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Poster_01.fbx" id="37_s53du"]
 [ext_resource type="PackedScene" uid="uid://c8r2sber5hkxi" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Photocopier_01.fbx" id="38_isapj"]
 [ext_resource type="PackedScene" uid="uid://cuqullti1mjwf" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Card_Scanner_02.fbx" id="39_k24ke"]
+[ext_resource type="PackedScene" uid="uid://ixbaxlw33yni" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Poster_04.fbx" id="42_s53du"]
 [ext_resource type="Script" uid="uid://cv22om4sbyjyj" path="res://scripts/game/auto_collider.gd" id="90_autocol"]
 
 [sub_resource type="BoxShape3D" id="shape_zone"]
@@ -139,7 +140,7 @@ camera_look_at = Vector3(-4.6, 0.8, -1.2)
 shape = SubResource("shape_zone")
 
 [node name="Camera3D" type="Camera3D" parent="CamZoneWest" unique_id=1416124761]
-transform = Transform3D(0.8231407, 0.19571283, -0.53304404, 0.05618704, 0.90604705, 0.41943038, 0.5650509, -0.37520036, 0.73480767, -3.2362213, 1.8793175, 4.810296)
+transform = Transform3D(0.81248456, 0.20266013, -0.54662395, 0.056187022, 0.906047, 0.4194304, 0.58026874, -0.37149394, 0.7247623, -3.2362213, 1.8793175, 4.4144244)
 fov = 55.0
 
 [node name="SM_Prop_Plaques_01" parent="CamZoneWest" unique_id=1739513964 instance=ExtResource("3_0ar5n")]
@@ -159,7 +160,7 @@ transform = Transform3D(0.973666, 0.10867573, -0.20041, 0.014412075, 0.84797126,
 fov = 55.0
 
 [node name="LampWest" type="SpotLight3D" parent="." unique_id=445755752]
-transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -5, 3.4, 0)
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -6.204529, 3.8186536, 2.3303666)
 light_color = Color(0.98, 0.95, 0.86, 1)
 light_energy = 5.0
 light_volumetric_fog_energy = 2.0
@@ -167,8 +168,17 @@ shadow_enabled = true
 spot_range = 10.0
 spot_angle = 48.0
 
-[node name="LampWest2" type="SpotLight3D" parent="." unique_id=1267940621]
-transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.5753422, 3.4, 0)
+[node name="LampWest4" type="SpotLight3D" parent="." unique_id=1545252323]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -7.510577, 5.6159134, -2.003307)
+light_color = Color(0.98, 0.95, 0.86, 1)
+light_energy = 5.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_angle = 48.0
+
+[node name="LampWest6" type="SpotLight3D" parent="." unique_id=1814679270]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 1.2581302, 3.4, 1.6556424)
 light_color = Color(0.98, 0.95, 0.86, 1)
 light_energy = 5.0
 light_volumetric_fog_energy = 2.0
@@ -177,7 +187,16 @@ spot_range = 10.0
 spot_angle = 48.0
 
 [node name="LampWest3" type="SpotLight3D" parent="." unique_id=1707572117]
-transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -8.25233, 3.4, 0)
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -1.3781116, 4.0178905, -1.1878368)
+light_color = Color(0.98, 0.95, 0.86, 1)
+light_energy = 5.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_angle = 48.0
+
+[node name="LampWest5" type="SpotLight3D" parent="." unique_id=1571634683]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -2.5890236, 3.4, 1.925849)
 light_color = Color(0.98, 0.95, 0.86, 1)
 light_energy = 5.0
 light_volumetric_fog_energy = 2.0
@@ -186,7 +205,7 @@ spot_range = 10.0
 spot_angle = 48.0
 
 [node name="LampEast" type="SpotLight3D" parent="." unique_id=1193434974]
-transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 5, 3.4, 0)
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 5.836202, 4.079692, -1.5033076)
 light_color = Color(0.98, 0.95, 0.86, 1)
 light_energy = 5.0
 light_volumetric_fog_energy = 2.0
@@ -195,7 +214,7 @@ spot_range = 10.0
 spot_angle = 48.0
 
 [node name="LampEast2" type="SpotLight3D" parent="." unique_id=977837468]
-transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 9.520292, 3.4, 0)
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 5.8935027, 4.550217, 1.296138)
 light_color = Color(0.98, 0.95, 0.86, 1)
 light_energy = 5.0
 light_volumetric_fog_energy = 2.0
@@ -232,7 +251,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2682571, 0.1, -1.0821575)
 [node name="VendingMachine" type="Node3D" parent="." unique_id=1974383668]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9, 0, -4.35)
 script = ExtResource("5_vend")
-prompt_height = 1.7
 
 [node name="Body" type="StaticBody3D" parent="VendingMachine" unique_id=1733830920]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
@@ -612,5 +630,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.780319, -4.7683716e-07, -4
 
 [node name="SM_Prop_Card_Scanner_02" parent="." unique_id=320054502 instance=ExtResource("39_k24ke")]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -1.1475394, 1.4232408, -4.8199997)
+
+[node name="SM_Prop_Poster_04" parent="." unique_id=128832852 instance=ExtResource("42_s53du")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.817075, 2.0812998, 0.08726221)
 
 [editable path="Props/SM_Prop_Vending_Machine_01"]
