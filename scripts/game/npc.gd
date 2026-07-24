@@ -82,6 +82,10 @@ func _process(_delta: float) -> void:
 	if schedule.size() < 2:
 		return
 	var total := float(schedule[-1]["t"])
+	var first_pos: Vector3 = schedule[0]["pos"]
+	var last_pos: Vector3 = schedule[-1]["pos"]
+	var closed := first_pos.distance_to(last_pos) < 0.5
+	var t := fmod(float(_clock.time), total) if closed \
 	# closed loop (ends where it began) = a repeating patrol, so wrap with
 	# fmod. Open schedule (ends elsewhere) = a one-time journey, e.g. the
 	# escorts walking out for good - CLAMP so they hold the final spot
