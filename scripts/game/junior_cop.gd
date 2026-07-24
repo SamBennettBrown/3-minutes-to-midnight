@@ -65,6 +65,10 @@ func _process(delta: float) -> void:
 			if _clock == null:
 				_clock = get_tree().get_first_node_in_group("loop_clock")
 			if _clock == null or _clock.time < start_delay:
+				# waiting for his cue: stand idle at his post, don't drift
+				play("idle")
+				if anim_player != null:
+					anim_player.speed_scale = 1.0
 				return
 			if not _locked:
 				_locked = true

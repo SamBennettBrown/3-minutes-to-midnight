@@ -17,6 +17,31 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 @export var chars_per_second := 45.0
 @export var clack_path := "res://audio/sfx/mouse_click.mp3"
 
+# each speaker gets their own name colour so you can tell voices apart at
+# a glance. The dialogue layer sits ABOVE the mono dither, so these read
+# in colour even in black-and-white mode. Any speaker not listed falls
+# back to a deterministic colour hashed from their name.
+const SPEAKER_COLORS := {
+	"DETECTIVE": Color(0.85, 0.82, 0.7),
+	"WITNESS": Color(0.55, 0.8, 1.0),
+	"THE CAPTAIN": Color(1.0, 0.72, 0.42),
+	"THE ROOKIE": Color(0.6, 0.95, 0.65),
+	"ROOKIE PETTY": Color(0.6, 0.95, 0.65),
+	"RECEPTIONIST": Color(0.95, 0.65, 0.85),
+	"OFFICER VANCE": Color(0.75, 0.7, 0.95),
+	"DETECTIVE ROSS": Color(0.9, 0.55, 0.5),
+	"DETECTIVE VALE": Color(0.55, 0.85, 0.85),
+	"OFFICER BELL": Color(0.95, 0.85, 0.5),
+	"PATRON": Color(0.7, 0.72, 0.72),
+	"PRISONER": Color(0.7, 0.72, 0.72),
+	"THE CELL BLOCK": Color(0.7, 0.72, 0.72),
+	"ALARM": Color(1.0, 0.4, 0.35),
+	"CARD READER": Color(1.0, 0.4, 0.35),
+	"OFFICER MAYS": Color(0.55, 0.85, 0.85),
+}
+## default name colour for narration / props / unlisted speakers
+@export var default_speaker_color := Color(0.85, 0.82, 0.7)
+
 var _lines: Array = []
 var _index := 0
 var _opened_frame := -1
@@ -71,11 +96,25 @@ func show_dialogue(lines: Array, flag_on_end: String = "") -> void:
 
 
 func _refresh() -> void:
-	_speaker.text = String(_lines[_index].get("speaker", ""))
+	var speaker := String(_lines[_index].get("speaker", ""))
+	_speaker.text = speaker
+	_speaker.add_theme_color_override("font_color", _color_for(speaker))
 	_text.text = String(_lines[_index].get("text", ""))
 	_text.visible_characters = 0
 	_reveal = 0.0
 	_last_clack = 0
+
+
+# a speaker's name colour: the curated map first, else a stable colour
+# derived from the name so unknown speakers are still consistently tinted
+func _color_for(speaker: String) -> Color:
+	var key := speaker.to_upper()
+	if SPEAKER_COLORS.has(key):
+		return SPEAKER_COLORS[key]
+	if speaker == "":
+		return default_speaker_color
+	var h := float(hash(key) % 360) / 360.0
+	return Color.from_hsv(h, 0.45, 0.95)
 
 
 func _process(_delta: float) -> void:

@@ -4,47 +4,41 @@ extends Node
 # `intro_done` survives restarts, so every later loop skips straight
 # to the familiar start (rookie + coffee, witness already inside).
 #
-# The opening, in the BULLPEN, movement locked until the coffee lands:
-# fade in (no countdown shown yet) -> shift-end monologue -> the
-# witness is escorted THROUGH the bullpen, brushing right past the
-# detective - he slips the trinket - you turn and watch them go ->
-# the rookie hustles over with the two-hour-old coffee -> movement
-# unlocks, task: clock out, go home -> the front door in the lobby
-# ends the night: the shot rings out from interrogation just as you
-# reach it. Every restart's gunshot IS that gunshot.
+# The opening, in the BULLPEN, movement locked: fade in (no countdown -
+# loop 0 has no timer) -> two stand-ins, the WITNESS and the CAPTAIN,
+# are already in front of you. The witness thanks you and presses the
+# family heirloom into your hand (the trinket, `bound_promise`); the
+# captain says they need one final statement, and the pair walk off to
+# interrogation and are removed. Movement unlocks with one task: talk to
+# the front desk. You CAN'T leave by the door. At the desk the night
+# tips over - a gunshot from the cells, the alarm, the block opens - and
+# reaching the body in the cells is what finally ends loop 0.
 #
 # Also fades in from black at the start of EVERY loop.
 
 const Flags := preload("res://scripts/game/flags.gd")
+const Sfx := preload("res://scripts/game/sfx.gd")
+const RigScene := preload("res://scenes/player/character_rig.tscn")
 
 ## DEV: tick to skip the whole loop-0 opening (plays as a normal loop)
 @export var skip_intro := false
-@export var witness_path: NodePath
-@export var escort_paths: Array[NodePath] = []
 @export var rookie_path: NodePath
 ## after the eyes are fully open (blink + fade_in)
 @export var monologue_at := 2.6
-## the witness brushes past the player (match the procession schedule)
-@export var trinket_at := 8.0
-## if the player never heads home, the night ends anyway
-@export var fallback_shot_at := 90.0
+## the witness presses the heirloom into your hand
+@export var trinket_at := 5.5
 @export var rookie_delay := 12.0
-## where the witness stands (interrogation, near the mirror) in every
-## loop after the first - close enough to talk to through the glass
-@export var witness_room_pos := Vector3(0.5, 0, -23.6)
 @export var fade_in := 1.6
-## beat between reaching the front door and the gunshot
-@export var shot_delay := 0.6
-## loop 0: invisible blocks sealing the exits (door centers); gone once
-## the coffee beat ends and the game hands you the clock-out task
-@export var tutorial_door_blocks: Array[Vector3] = [Vector3(0, 1.5, 5)]
+## how long the stand-ins take to walk off before they're removed
+@export var standins_leave_time := 7.0
 
 var _clock: Node
 var _beat := 0
-var _shot_at := -1.0
-var _blocks: Array = []
 var _hint: Label
 var _post_said := false
+var _fake_witness: Node3D
+var _fake_captain: Node3D
+var _leave_at := -1.0
 
 
 func _enter_tree() -> void:
@@ -81,26 +75,15 @@ func _ready() -> void:
 		Flags.loops += 1
 		# the interrogation cast (witness + escorts) is placed statically
 		# inside the room now, so later loops leave them exactly where the
-		# scene put them - just silence the witness's loop-0 walk barks
-		var w := get_node_or_null(witness_path)
-		if w != null:
-			w.barks = []
+		# scene put them
 	else:
 		var r := get_node_or_null(rookie_path)
 		if r != null:
 			r.start_delay = rookie_delay
-		# loop 0: no wandering off before the coffee - and no countdown
+		# loop 0: movement locked through the stand-in beat; the front door
+		# refuses on its own (exit_trigger), so no invisible blocks needed
 		_lock_player.call_deferred(true)
-		for pos in tutorial_door_blocks:
-			var b := StaticBody3D.new()
-			var cs := CollisionShape3D.new()
-			var box := BoxShape3D.new()
-			box.size = Vector3(2.6, 3.0, 0.5)
-			cs.shape = box
-			b.add_child(cs)
-			add_child(b)
-			b.global_position = pos
-			_blocks.append(b)
+		_spawn_standins.call_deferred()
 		# tutorial hint line, bottom-left
 		var hint_layer := CanvasLayer.new()
 		hint_layer.layer = 102
@@ -115,100 +98,338 @@ func _ready() -> void:
 		hint_layer.add_child(_hint)
 
 
+## where the two stand-ins appear (bullpen world coords) - a spot the
+## room camera clearly frames, a couple of metres from the spawn point.
+## They face back toward the player.
+@export var standin_witness_pos := Vector3(-1.2, 0, 3.6)
+@export var standin_captain_pos := Vector3(0.2, 0, 3.6)
+
+# stand-in witness + captain, placed in front of the player for the
+# opening beat only. They are plain rig instances (no schedule script) so
+# they never touch the real cast; freed once they've walked off.
+func _spawn_standins() -> void:
+	var p := get_tree().get_first_node_in_group("player") as Node3D
+	# face them back toward the player (or toward the spawn point)
+	var look := p.global_position if p != null else Vector3(-1.5, 0, 1)
+	_fake_witness = _make_standin(
+			"SM_Chr_Criminal_Male_01",
+			"res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_05.fbx",
+			standin_witness_pos, look)
+	_fake_captain = _make_standin(
+			"SM_Chr_Officer_Male_01",
+			"res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_01.fbx",
+			standin_captain_pos, look)
+
+
+func _make_standin(mesh: String, hair: String, pos: Vector3, look_at: Vector3) -> Node3D:
+	var rig := RigScene.instantiate()
+	rig.visible_mesh = mesh
+	rig.hair_path = hair
+	rig.start_clip = "idle"
+	rig.strip_root_motion = true
+	get_parent().add_child(rig)
+	rig.global_position = pos
+	var d: Vector3 = look_at - pos
+	d.y = 0.0
+	if d.length() > 0.01:
+		rig.rotation.y = atan2(d.x, d.z)
+	return rig
+
+
+# walk the two stand-ins along the exit markers and free them once clear -
+# "they head off to interrogation"
+func _dismiss_standins() -> void:
+	_leave_at = float(_clock.time) + standins_leave_time
+	_exit_leg = 0
+	_resolve_exit_path()
+	for s in [_fake_witness, _fake_captain]:
+		if is_instance_valid(s):
+			s.play("walk")
+
+
+# ease the player's heading to look at the midpoint of the two stand-ins
+func _face_standins(delta: float) -> void:
+	var p := get_tree().get_first_node_in_group("player") as Node3D
+	if p == null:
+		return
+	var mid := _fake_witness.global_position
+	if is_instance_valid(_fake_captain):
+		mid = (mid + _fake_captain.global_position) * 0.5
+	var d: Vector3 = mid - p.global_position
+	d.y = 0.0
+	if d.length() < 0.3:
+		return
+	p.rotation.y = lerp_angle(p.rotation.y, atan2(d.x, d.z), delta * 4.0)
+
+
+## the marker path the stand-ins follow off the bullpen floor - routed
+## around the desks (WalkN -> RookiePost2 -> the hall-1 door) instead of a
+## straight line that clips through the workstations
+@export var standin_exit_spots: Array[String] = [
+	"Bullpen/WalkN", "Bullpen/RookiePost2", "Bullpen/DoorHall1",
+]
+
+var _exit_path: Array = []
+var _exit_leg := 0
+
+
+func _resolve_exit_path() -> void:
+	_exit_path.clear()
+	for name in standin_exit_spots:
+		var m := _find_spot(name)
+		if m != null:
+			_exit_path.append(m.global_position)
+
+
+func _find_spot(spot: String) -> Node3D:
+	var root := get_tree().root
+	if "/" in spot:
+		var parts := spot.split("/")
+		var owner_node := root.find_child(parts[0], true, false)
+		if owner_node != null:
+			return owner_node.find_child(parts[1], true, false) as Node3D
+		return null
+	return root.find_child(spot, true, false) as Node3D
+
+
+func _step_standins(delta: float) -> void:
+	# walk them along the marker path, leg by leg, so they thread around the
+	# desks instead of ploughing straight through them
+	if _exit_path.is_empty():
+		_resolve_exit_path()
+	if _exit_leg >= _exit_path.size():
+		return
+	var target: Vector3 = _exit_path[_exit_leg]
+	for s in [_fake_witness, _fake_captain]:
+		if not is_instance_valid(s):
+			continue
+		var d: Vector3 = target - s.global_position
+		d.y = 0.0
+		if d.length() > 0.1:
+			var dir := d.normalized()
+			s.global_position += dir * 2.0 * delta
+			s.rotation.y = lerp_angle(s.rotation.y, atan2(dir.x, dir.z), delta * 8.0)
+	# advance to the next leg once the LEAD stand-in reaches this waypoint
+	if is_instance_valid(_fake_witness):
+		var lead := _fake_witness.global_position
+		lead.y = 0.0
+		if lead.distance_to(target) < 0.6:
+			_exit_leg += 1
+
+
+func _free_standins() -> void:
+	for s in [_fake_witness, _fake_captain]:
+		if is_instance_valid(s):
+			s.queue_free()
+	_fake_witness = null
+	_fake_captain = null
+
+
 func _process(_delta: float) -> void:
 	if _clock == null:
 		_clock = get_tree().get_first_node_in_group("loop_clock")
 		return
 	if Flags.has_flag("intro_done"):
-		# the first couple of REAL loops open with the detective reeling
-		# (after the eyes have opened)
-		if not _post_said and _clock.time >= 2.4 and not get_tree().paused:
-			_post_said = true
-			match Flags.loops:
-				1:
-					_say([
-						{"speaker": "DETECTIVE", "text": "I- I was at the door. I heard the shot. The witness-"},
-						{"speaker": "DETECTIVE", "text": "He's back in interrogation. The kid's carrying my coffee again. And the thing in my pocket is ticking louder."},
-					])
-				2:
-					_say([
-						{"speaker": "DETECTIVE", "text": "Again. AGAIN. Okay. Breathe. Same night. Same coffee. Same three minutes."},
-						{"speaker": "DETECTIVE", "text": "Nobody else remembers. So it's on me. Help him live through this night."},
-					])
+		_post_intro(_delta)
 		return
 	# --- loop 0 ---
-	if _shot_at >= 0.0:
-		if _clock.time >= _shot_at:
-			_shot()
-		return
-	# the detective can't help but watch the witness pass
-	if _beat >= 1 and _beat <= 2:
-		_watch_witness(_delta)
+	# the stand-ins walk off after the heirloom beat, then get removed
+	if _leave_at >= 0.0:
+		_step_standins(_delta)
+		if _clock.time >= _leave_at and _fake_witness != null:
+			_free_standins()
+			_after_standins()
+	# turn the detective to face the two people standing in front of him
+	# through the opening beat, so the conversation reads right
+	if _beat <= 2 and is_instance_valid(_fake_witness):
+		_face_standins(_delta)
 	if get_tree().paused:
 		return
 	match _beat:
 		0:
+			# once the eyes are open, the whole opening exchange plays as ONE
+			# unbroken conversation (monologue -> witness -> captain), so
+			# there's no dead pause between the detective's line and theirs
 			if _clock.time >= monologue_at:
-				_beat = 1
-				_say([{"speaker": "DETECTIVE",
-					"text": "Three minutes to midnight. Three minutes and this shift is over. I can't wait."}])
-		1:
-			if _clock.time >= trinket_at:
 				_beat = 2
 				_say([
-					{"speaker": "WITNESS", "text": "Please. Help me. You're the only one who-"},
-					{"speaker": "DETECTIVE", "text": "Hey- what's this? He slipped something into my pocket. Small. Brass. Warm. ...Is it ticking?"},
+					{"speaker": "DETECTIVE", "text": "End of shift. The witness and the Captain - they've been waiting for me."},
+					{"speaker": "WITNESS", "text": "Thank you, detective. For everything. I want you to have this - a family heirloom. A token. It's kept me... coming back."},
+					{"speaker": "DETECTIVE", "text": "It's warm. Brass. ...Is it ticking?"},
+					{"speaker": "THE CAPTAIN", "text": "We just need one final statement from him. Won't take long. Head home when you're done - go on."},
 				], "bound_promise")
-		2:
-			# the rookie's coffee dialogue ends by unlocking the player -
-			# that's the moment the night hands you your one task
-			var p := get_tree().get_first_node_in_group("player")
-			if _clock.time > rookie_delay + 2.0 and p != null and not p.input_locked:
-				_beat = 3
-				for b in _blocks:
-					if is_instance_valid(b):
-						b.queue_free()
-				_blocks.clear()
-				var pa := get_tree().get_first_node_in_group("intercom")
-				if pa != null:
-					pa.announce("Day shift - midnight. Go home, people.", 5.0)
-				_set_task("Clock out. Go home.")
-				_set_hint("W · A · S · D — move. The front door is past the lobby.")
+				# once that dialogue closes, send them off to interrogation
+				var dlg := get_tree().get_first_node_in_group("dialogue")
+				if dlg != null:
+					dlg.closed.connect(_dismiss_standins, CONNECT_ONE_SHOT)
 		3:
-			if _clock.time >= fallback_shot_at:
-				_fire_shot()
+			# free to move; checking in with reception tips the night over
+			if Flags.has_flag("talked_reception"):
+				desk_checkin()
+		4:
+			# gunshot's gone off; reaching the cell block ends loop 0
+			if _player_in_cells():
+				cells_reached()
 
 
-# the front door (exit_trigger) calls this when the player reaches it
-func clock_out() -> void:
-	if _beat >= 3 and _shot_at < 0.0:
-		_fire_shot()
+# --- the real loops (intro_done). loops 1 & 2 are the tutorial arc:
+# loop 1 you think it was a bad night and try to go home (all other rooms
+# sealed) - the front door restarts you; loop 2 the penny drops and you
+# learn the goal. loop 3+ you're on your own with the countdown.
+func _post_intro(_delta: float) -> void:
+	if _post_said or _clock.time < 2.4 or get_tree().paused:
+		return
+	_post_said = true
+	match Flags.loops:
+		1:
+			# still groggy - "just a rough night, go home"
+			Flags.set_loop_flag("rooms_sealed")  # everything but the way out
+			_say([
+				{"speaker": "DETECTIVE", "text": "...What just happened? I was in the cells, and now - I'm back at my desk. Same coffee smell. I must be dead on my feet."},
+				{"speaker": "DETECTIVE", "text": "Whatever this is, it can wait till morning. I'm going home."},
+			])
+			_set_task("Go home. Head out the front door.")
+		2:
+			# the reveal - the loop, the stakes, the goal, the clue
+			_say([
+				{"speaker": "DETECTIVE", "text": "Again. The door - and I'm BACK. This isn't exhaustion. Could it be... this heirloom? The thing he pressed into my hand?"},
+				{"speaker": "DETECTIVE", "text": "He dies at midnight. Every time. And it drags me back to 11:57. Three minutes. That's all I get to save him."},
+				{"speaker": "DETECTIVE", "text": "That note in his hand - a number. 57. A badge number, has to be. Start with the interrogation - that's where they took him."},
+			], "know_loop")
+			_set_task("Get to the interrogation room. Find out how he dies.")
+		_:
+			pass  # loop 3+: no hand-holding, the countdown speaks for itself
 
 
-func _fire_shot() -> void:
+# called after the stand-ins are gone: hand the player control + the task
+func _after_standins() -> void:
+	_leave_at = -1.0
+	_beat = 3
+	_lock_player(false)
+	_set_task("Check in with the front desk.")
+	_set_hint("W · A · S · D — move. The reception desk is through the lobby.")
+
+
+# the receptionist calls this when the player checks in at the desk - the
+# player "clocks out and blabs a while", we FAST-FORWARD to midnight, and
+# the night tips over: gunshot from the cells, alarm, the block opens
+func desk_checkin() -> void:
+	if _beat != 3:
+		return
+	_beat = 4
 	_set_hint("")
+	_lock_player(true)
 	_set_task("")
-	if _clock != null:
-		_shot_at = float(_clock.time) + shot_delay
+	_time_skip_to_midnight()
 
 
-func _shot() -> void:
+# stylized skip to 12:00: the screen blurs, the wall clock races the last
+# three minutes in a couple of seconds, a whoosh - then the shot lands
+func _time_skip_to_midnight() -> void:
+	var layer := CanvasLayer.new()
+	layer.layer = 114
+	add_child(layer)
+	var wash := ColorRect.new()
+	wash.color = Color(0, 0, 0, 0)
+	wash.anchor_right = 1.0
+	wash.anchor_bottom = 1.0
+	wash.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	layer.add_child(wash)
+	# a big centre clock that races 11:57 -> 12:00
+	var big := Label.new()
+	big.anchor_left = 0.5
+	big.anchor_right = 0.5
+	big.anchor_top = 0.5
+	big.anchor_bottom = 0.5
+	big.offset_left = -220.0
+	big.offset_right = 220.0
+	big.offset_top = -60.0
+	big.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	big.add_theme_font_size_override("font_size", 92)
+	big.modulate = Color(1, 1, 1, 0)
+	layer.add_child(big)
+	var here := get_tree().get_first_node_in_group("player") as Node3D
+	if here != null and ResourceLoader.exists("res://audio/sfx/rewind.mp3"):
+		Sfx.play_at(here, "res://audio/sfx/rewind.mp3", -12.0)
+	var tw := create_tween()
+	tw.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+	# blur/dim in + clock fades up
+	tw.parallel().tween_property(wash, "color:a", 0.7, 0.5)
+	tw.parallel().tween_property(big, "modulate:a", 1.0, 0.5)
+	# race the seconds 11:57:00 -> 12:00:00 over ~2s
+	tw.tween_method(func(f: float) -> void:
+		var secs := int(lerpf(0.0, 180.0, f))
+		var total := 23 * 3600 + 57 * 60 + secs
+		total %= 24 * 3600
+		big.text = "%02d:%02d:%02d" % [total / 3600, (total / 60) % 60, total % 60],
+		0.0, 1.0, 2.0)
+	tw.tween_interval(0.15)
+	tw.parallel().tween_property(big, "modulate:a", 0.0, 0.3)
+	tw.parallel().tween_property(wash, "color:a", 0.0, 0.3)
+	tw.tween_callback(func() -> void:
+		layer.queue_free()
+		_midnight_gunshot())
+
+
+func _midnight_gunshot() -> void:
+	# the shot + alarm land first, THEN the door blocks lift and the
+	# detective reacts - so the "what was that?" reads after the bang
+	Flags.set_loop_flag("cells_unlocked")
+	Flags.set_flag("cells_unlocked")
+	var pa := get_tree().get_first_node_in_group("intercom")
+	if pa != null:
+		pa.announce("Shots fired - cell block. All units.", 5.0)
+	var here := get_tree().get_first_node_in_group("player") as Node3D
+	if here != null:
+		Sfx.play_at(here, "res://audio/sfx/gun_fire.mp3", -6.0)
+		Sfx.play_at(here, "res://audio/ambient/alarm.mp3", -10.0, 6.0)
+	# a beat, then the reaction line (dialogue pauses the world, so let the
+	# gunshot ring out first)
+	var tw := create_tween()
+	tw.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+	tw.tween_interval(0.6)
+	tw.tween_callback(func() -> void:
+		_lock_player(false)
+		_set_task("A gunshot - from the cells. Get down there.")
+		_say([
+			{"speaker": "DETECTIVE", "text": "What was THAT? A gunshot - down the hall, the cell block. Nobody's supposed to be armed back there."},
+		]))
+
+
+# the cells room calls this when the player reaches the body - the
+# detective finds the witness dead, prises the clue from his hand (the
+# note with a badge number), and the night restarts: loop 0 is over
+func cells_reached() -> void:
+	if _beat != 4:
+		return
+	_beat = 5
+	_say([
+		{"speaker": "DETECTIVE", "text": "Cell two. The empty one. He's... he was ALIVE three minutes ago."},
+		{"speaker": "DETECTIVE", "text": "Something in his hand. A scrap of paper, folded tight. A number scrawled on it - 57. A badge number?"},
+		{"speaker": "DETECTIVE", "text": "The heirloom's gone ice cold. The night's... starting over. I can feel it."},
+	], "found_note_57")
+	var dlg := get_tree().get_first_node_in_group("dialogue")
+	if dlg != null:
+		dlg.closed.connect(_end_loop0, CONNECT_ONE_SHOT)
+	else:
+		_end_loop0()
+
+
+func _end_loop0() -> void:
 	Flags.set_flag("intro_done")
 	var lose := get_tree().get_first_node_in_group("lose_screen")
 	if lose != null:
 		lose.play_lose()
 
 
-func _watch_witness(delta: float) -> void:
-	var w := get_node_or_null(witness_path) as Node3D
-	var p := get_tree().get_first_node_in_group("player") as Node3D
-	if w == null or p == null:
-		return
-	var d: Vector3 = w.global_position - p.global_position
-	d.y = 0.0
-	if d.length() < 0.5 or d.length() > 12.0:
-		return
-	p.rotation.y = lerp_angle(p.rotation.y, atan2(d.x, d.z), delta * 5.0)
+# is the player standing in the cell block right now?
+func _player_in_cells() -> bool:
+	for r in get_tree().get_nodes_in_group("room"):
+		if String(r.name) == "Cells" and r.has_method("contains_point"):
+			var p := get_tree().get_first_node_in_group("player") as Node3D
+			if p != null and r.contains_point(p.global_position, 0.0):
+				return true
+	return false
 
 
 func _lock_player(locked: bool) -> void:

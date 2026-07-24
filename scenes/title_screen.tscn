@@ -69,7 +69,7 @@ model_path = "res://scripts/tools/retarget/police_chars_rt.glb"
 material_path = "res://materials/police_01_b.tres"
 visible_mesh = "SM_Chr_Detective_Male_01"
 start_clip = "idle"
-foot_offset = 0.05
+foot_offset = 0.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.8065, -0.0941, 0.5838, 0, 0.9874, 0.1592, -0.5914, -0.1284, 0.7961, 2.2, 1.6, 3)

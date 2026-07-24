@@ -31,14 +31,14 @@ func _ready() -> void:
 	_strip = ColorRect.new()
 	_strip.color = Color(0, 0, 0, 0.65)
 	_strip.anchor_right = 1.0
-	_strip.offset_bottom = 60.0
+	_strip.offset_bottom = 84.0
 	_strip.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_strip.visible = false
 	add_child(_strip)
 	_label = Label.new()
-	_label.add_theme_font_size_override("font_size", 26)
+	_label.add_theme_font_size_override("font_size", 30)
 	_label.add_theme_color_override("font_color", Color(0.85, 0.82, 0.7))
-	_label.position = Vector2(70, 14)
+	_label.position = Vector2(70, 24)
 	_strip.add_child(_label)
 	_audio = AudioStreamPlayer.new()
 	_audio.volume_db = crackle_volume_db
