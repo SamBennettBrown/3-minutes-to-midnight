@@ -33,6 +33,7 @@ func _ready() -> void:
 	_label(box, "a three-minute mystery by", 24, Color(0.65, 0.65, 0.62))
 	_label(box, "ALEC DOBBELSTEYN", 36, Color(0.92, 0.92, 0.9))
 	_label(box, "DAVID ESTEY", 36, Color(0.92, 0.92, 0.9))
+	_label(box, "SAMWISE THE BRAVE", 36, Color(0.92, 0.92, 0.9))
 	_label(box, "CLAUDE", 36, Color(0.92, 0.92, 0.9))
 	_label(box, " ", 20, Color.WHITE)
 
