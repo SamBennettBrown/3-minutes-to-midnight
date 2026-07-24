@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx8n8aya0t3el"
-path.s3tc="res://.godot/imported/Polygon_Texture_01.png-0eb004a040c4402fa5228d4d5455c524.s3tc.ctex"
+path.s3tc="res://.godot/imported/Polygon_Texture_01.png-e8ff7bd0e2a241ba1f4ab4e81fbf6ed7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://ANIMATION_Idles_SourceFiles_v3/SourceFiles/Textures/Polygon_Texture_01.png"
-dest_files=["res://.godot/imported/Polygon_Texture_01.png-0eb004a040c4402fa5228d4d5455c524.s3tc.ctex"]
+source_file="res://ANIMATION_Idles_SourceFiles_v3/SourceFiles/textures/Polygon_Texture_01.png"
+dest_files=["res://.godot/imported/Polygon_Texture_01.png-e8ff7bd0e2a241ba1f4ab4e81fbf6ed7.s3tc.ctex"]
 
 [params]
 
