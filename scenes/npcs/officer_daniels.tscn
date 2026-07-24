@@ -34,7 +34,7 @@ schedule = [{
 }]
 barks = []
 visible_mesh = "SM_Chr_Officer_Male_01"
-foot_offset = 0.05
+foot_offset = 0.0
 blocks_player = true
 hide_outside_active_room = true
 start_clip = "idle"

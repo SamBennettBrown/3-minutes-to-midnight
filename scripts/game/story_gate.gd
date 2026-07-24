@@ -35,6 +35,7 @@ const LEADS_TO := {
 
 var _blocks: Array = []
 var _phase := ""
+var _cells_open := false
 
 
 func _enter_tree() -> void:
@@ -47,10 +48,12 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	# the phase can change mid-loop (loop 0 opens the cells at the gunshot),
-	# so re-check when the allow-set would differ
+	# the allow-set can change WITHIN a phase (loop 0 opens the cells + hall 2
+	# at the gunshot, without the phase string changing), so track both the
+	# phase and the cells-unlocked flag and refresh when either flips
 	var want := _phase_for_now()
-	if want != _phase:
+	var cells_open: bool = Flags.has_loop_flag("cells_unlocked")
+	if want != _phase or cells_open != _cells_open:
 		_refresh()
 
 
@@ -60,8 +63,11 @@ func _phase_for_now() -> String:
 		return "loop0"
 	match Flags.loops:
 		1: return "loop1"
-		2: return "loop2"
-		_: return "open"  # loop 3+: explore freely
+		# loop 2 onward: the corridors are all open. The rooms that should
+		# stay shut (evidence, interrogation) are held by their OWN gates -
+		# a keycard reader and the interrogation door - so approaching them
+		# gives the right in-fiction "locked" line instead of a blank wall.
+		_: return "open"
 
 
 func _allowed_set() -> Dictionary:
@@ -80,6 +86,7 @@ func _allowed_set() -> Dictionary:
 
 func _refresh() -> void:
 	_phase = _phase_for_now()
+	_cells_open = Flags.has_loop_flag("cells_unlocked")
 	_clear()
 	if _phase == "open":
 		return
@@ -96,18 +103,29 @@ func _refresh() -> void:
 			var dest_ok: bool = allowed.has(dest)
 			# block the doorway when it bridges allowed <-> not-allowed
 			if here_ok != dest_ok:
-				_block_at(m.global_position)
+				# face the thin blocker across the doorway: the door faces
+				# away from the room centre, so the wall runs perpendicular to
+				# the centre->door direction
+				var face: Vector3 = m.global_position - room.room_center()
+				_block_at(m.global_position, face)
 
 
-func _block_at(pos: Vector3) -> void:
+func _block_at(pos: Vector3, face: Vector3) -> void:
 	var body := StaticBody3D.new()
 	var cs := CollisionShape3D.new()
 	var box := BoxShape3D.new()
-	box.size = Vector3(3.2, 3.0, 3.2)
+	# a slim slab that just plugs the door gap - wide enough to span the
+	# opening, thin enough not to jut into the room/hall
+	box.size = Vector3(2.2, 3.0, 0.4)
 	cs.shape = box
 	body.add_child(cs)
 	add_child(body)
 	body.global_position = pos + Vector3(0, 1.5, 0)
+	# rotate so the slab's thin axis (local Z) points along the doorway's
+	# through-direction (centre -> door), i.e. the slab spans the opening
+	face.y = 0.0
+	if face.length() > 0.05:
+		body.rotation.y = atan2(face.x, face.z)
 	_blocks.append(body)
 
 

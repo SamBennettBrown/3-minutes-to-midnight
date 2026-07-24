@@ -30,7 +30,7 @@ const RigScene := preload("res://scenes/player/character_rig.tscn")
 @export var rookie_delay := 12.0
 @export var fade_in := 1.6
 ## how long the stand-ins take to walk off before they're removed
-@export var standins_leave_time := 4.0
+@export var standins_leave_time := 7.0
 
 var _clock: Node
 var _beat := 0
@@ -136,11 +136,12 @@ func _make_standin(mesh: String, hair: String, pos: Vector3, look_at: Vector3) -
 	return rig
 
 
-# walk the two stand-ins toward the hall-1 door and free them once they're
-# clear - "they head off to interrogation"
+# walk the two stand-ins along the exit markers and free them once clear -
+# "they head off to interrogation"
 func _dismiss_standins() -> void:
 	_leave_at = float(_clock.time) + standins_leave_time
-	var exit_dir := Vector3(0, 0, -1)  # toward the hall side of the bullpen
+	_exit_leg = 0
+	_resolve_exit_path()
 	for s in [_fake_witness, _fake_captain]:
 		if is_instance_valid(s):
 			s.play("walk")
@@ -161,9 +162,44 @@ func _face_standins(delta: float) -> void:
 	p.rotation.y = lerp_angle(p.rotation.y, atan2(d.x, d.z), delta * 4.0)
 
 
+## the marker path the stand-ins follow off the bullpen floor - routed
+## around the desks (WalkN -> RookiePost2 -> the hall-1 door) instead of a
+## straight line that clips through the workstations
+@export var standin_exit_spots: Array[String] = [
+	"Bullpen/WalkN", "Bullpen/RookiePost2", "Bullpen/DoorHall1",
+]
+
+var _exit_path: Array = []
+var _exit_leg := 0
+
+
+func _resolve_exit_path() -> void:
+	_exit_path.clear()
+	for name in standin_exit_spots:
+		var m := _find_spot(name)
+		if m != null:
+			_exit_path.append(m.global_position)
+
+
+func _find_spot(spot: String) -> Node3D:
+	var root := get_tree().root
+	if "/" in spot:
+		var parts := spot.split("/")
+		var owner_node := root.find_child(parts[0], true, false)
+		if owner_node != null:
+			return owner_node.find_child(parts[1], true, false) as Node3D
+		return null
+	return root.find_child(spot, true, false) as Node3D
+
+
 func _step_standins(delta: float) -> void:
-	# glide them away from the player toward the bullpen's hall-1 door
-	var target := Vector3(7, 0, -4.5)  # Bullpen/DoorHall1 world-ish
+	# walk them along the marker path, leg by leg, so they thread around the
+	# desks instead of ploughing straight through them
+	if _exit_path.is_empty():
+		_resolve_exit_path()
+	if _exit_leg >= _exit_path.size():
+		return
+	var target: Vector3 = _exit_path[_exit_leg]
 	for s in [_fake_witness, _fake_captain]:
 		if not is_instance_valid(s):
 			continue
@@ -173,6 +209,12 @@ func _step_standins(delta: float) -> void:
 			var dir := d.normalized()
 			s.global_position += dir * 2.0 * delta
 			s.rotation.y = lerp_angle(s.rotation.y, atan2(dir.x, dir.z), delta * 8.0)
+	# advance to the next leg once the LEAD stand-in reaches this waypoint
+	if is_instance_valid(_fake_witness):
+		var lead := _fake_witness.global_position
+		lead.y = 0.0
+		if lead.distance_to(target) < 0.6:
+			_exit_leg += 1
 
 
 func _free_standins() -> void:
@@ -205,16 +247,13 @@ func _process(_delta: float) -> void:
 		return
 	match _beat:
 		0:
+			# once the eyes are open, the whole opening exchange plays as ONE
+			# unbroken conversation (monologue -> witness -> captain), so
+			# there's no dead pause between the detective's line and theirs
 			if _clock.time >= monologue_at:
-				_beat = 1
-				_say([{"speaker": "DETECTIVE",
-					"text": "End of shift. The witness and the Captain - they've been waiting for me."}])
-		1:
-			# they're standing right in front of you; wait a beat, then the
-			# witness thanks you and gives the heirloom, the captain speaks
-			if _clock.time >= trinket_at:
 				_beat = 2
 				_say([
+					{"speaker": "DETECTIVE", "text": "End of shift. The witness and the Captain - they've been waiting for me."},
 					{"speaker": "WITNESS", "text": "Thank you, detective. For everything. I want you to have this - a family heirloom. A token. It's kept me... coming back."},
 					{"speaker": "DETECTIVE", "text": "It's warm. Brass. ...Is it ticking?"},
 					{"speaker": "THE CAPTAIN", "text": "We just need one final statement from him. Won't take long. Head home when you're done - go on."},
@@ -333,8 +372,8 @@ func _time_skip_to_midnight() -> void:
 
 
 func _midnight_gunshot() -> void:
-	_lock_player(false)
-	_set_task("A gunshot - from the cells. Get down there.")
+	# the shot + alarm land first, THEN the door blocks lift and the
+	# detective reacts - so the "what was that?" reads after the bang
 	Flags.set_loop_flag("cells_unlocked")
 	Flags.set_flag("cells_unlocked")
 	var pa := get_tree().get_first_node_in_group("intercom")
@@ -344,6 +383,17 @@ func _midnight_gunshot() -> void:
 	if here != null:
 		Sfx.play_at(here, "res://audio/sfx/gun_fire.mp3", -6.0)
 		Sfx.play_at(here, "res://audio/ambient/alarm.mp3", -10.0, 6.0)
+	# a beat, then the reaction line (dialogue pauses the world, so let the
+	# gunshot ring out first)
+	var tw := create_tween()
+	tw.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+	tw.tween_interval(0.6)
+	tw.tween_callback(func() -> void:
+		_lock_player(false)
+		_set_task("A gunshot - from the cells. Get down there.")
+		_say([
+			{"speaker": "DETECTIVE", "text": "What was THAT? A gunshot - down the hall, the cell block. Nobody's supposed to be armed back there."},
+		]))
 
 
 # the cells room calls this when the player reaches the body - the

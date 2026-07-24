@@ -11,6 +11,8 @@ extends Node3D
 
 const Flags := preload("res://scripts/game/flags.gd")
 
+const StoryLock := preload("res://scripts/game/story_lock.gd")
+
 ## loop time the clerk sets the card down (matches his desk-stop bark ~t25)
 @export var drop_at := 26.0
 ## the loop flag the receptionist raises while she's turned away; taking
@@ -19,6 +21,10 @@ const Flags := preload("res://scripts/game/flags.gd")
 ## granted when you successfully lift the card (per-loop holding)
 @export var grants_flag := "have_evidence_keycard"
 @export var prompt_height := 0.3
+## STORY LOCK - the card only exists once you're a knowing looper. During
+## loops 0-1 (the tutorial) it stays hidden/uninteractable, so you can't
+## grab it before the game has taught you what it's for.
+@export var unlock_flag := "know_loop"
 
 var _clock: Node
 
@@ -31,12 +37,14 @@ func _process(_delta: float) -> void:
 	if _clock == null:
 		_clock = get_tree().get_first_node_in_group("loop_clock")
 		return
+	# locked during the tutorial loops - not dropped, not there at all
+	var unlocked: bool = StoryLock.is_unlocked(unlock_flag)
 	# the card is on the desk from the moment the clerk drops it until you
 	# take it this loop; taking it (have flag) hides it for the rest of
 	# the loop, and a fresh loop clears the flag so it reappears on drop
 	var dropped: bool = _clock.time >= drop_at
 	var held: bool = Flags.has_loop_flag(grants_flag)
-	var show: bool = dropped and not held
+	var show: bool = unlocked and dropped and not held
 	if show != visible:
 		visible = show
 	# only offer the E-prompt while it's actually on the desk

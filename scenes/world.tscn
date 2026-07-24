@@ -111,8 +111,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 1)
 
 
 [node name="RookiePetty" parent="." unique_id=1583510316 instance=ExtResource("12_rookie")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 3.2)
-spawn_pos = Vector3(0.5, 0, 3.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 2.5)
+spawn_pos = Vector3(7.5, 0, 2.5)
 post_pos = Vector3(7.5, 0, 2.5)
 approach_speed = 2.4
 approach_distance = 1.3
@@ -262,7 +262,7 @@ schedule = [{
 }, {
 "clip": "walk",
 "spot": "Interrogation/Seat",
-"t": 120.0
+"t": 90.0
 }, {
 "clip": "walk",
 "spot": "Interrogation/Door",
@@ -316,7 +316,7 @@ schedule = [{
 }, {
 "clip": "walk",
 "spot": "Interrogation/WindowInside2",
-"t": 120.0
+"t": 90.0
 }, {
 "clip": "walk",
 "spot": "Interrogation/Door",
@@ -391,20 +391,12 @@ schedule = [{
 "t": 66.0
 }, {
 "clip": "walk",
-"spot": "Interrogation/WindowInside",
+"spot": "Interrogation/Center",
 "t": 70.0
 }, {
 "clip": "idle",
-"spot": "Interrogation/WindowInside",
+"spot": "Interrogation/Center",
 "t": 90.0
-}, {
-"clip": "walk",
-"spot": "Interrogation/Center",
-"t": 94.0
-}, {
-"clip": "idle",
-"spot": "Interrogation/Center",
-"t": 120.0
 }, {
 "clip": "walk",
 "spot": "Interrogation/Door",
@@ -452,13 +444,14 @@ dialogue = [{
 }]
 
 [node name="OfficerBell" parent="." unique_id=1441253231 instance=ExtResource("11_daniels")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6215935, 0, -2.841864)
 schedule = [{
 "clip": "idle",
-"spot": "Bullpen/RookiePost2",
+"spot": "Bullpen/WalkNW",
 "t": 0.0
 }, {
 "clip": "walk",
-"spot": "Bullpen/RookiePost2",
+"spot": "Bullpen/WalkNW",
 "t": 45.0
 }, {
 "clip": "walk",
@@ -501,12 +494,16 @@ schedule = [{
 "spot": "Bullpen/WalkN",
 "t": 79.5
 }, {
+"clip": "walk",
+"spot": "Bullpen/WalkNW",
+"t": 82.0
+}, {
 "clip": "idle",
-"spot": "Bullpen/RookiePost2",
+"spot": "Bullpen/WalkNW",
 "t": 84.5
 }, {
 "clip": "idle",
-"spot": "Bullpen/RookiePost2",
+"spot": "Bullpen/WalkNW",
 "t": 170.0
 }]
 paced = true

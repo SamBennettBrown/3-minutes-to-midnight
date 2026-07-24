@@ -10,6 +10,6 @@ model_path = "res://scripts/tools/retarget/police_chars_rt.glb"
 material_path = "res://materials/police_01_a.tres"
 visible_mesh = "SM_Chr_Officer_Female_01"
 start_clip = "idle"
-foot_offset = 0.05
+foot_offset = 0.0
 blocks_player = true
 hide_outside_active_room = true

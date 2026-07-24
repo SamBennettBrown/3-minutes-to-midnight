@@ -12,6 +12,7 @@ extends Node3D
 # what it had to give).
 
 const Flags := preload("res://scripts/game/flags.gd")
+const StoryLock := preload("res://scripts/game/story_lock.gd")
 
 ## examine text: [{"speaker": ..., "text": ...}]
 @export var dialogue: Array = []
@@ -25,13 +26,20 @@ const Flags := preload("res://scripts/game/flags.gd")
 @export var per_loop := false
 ## where the E prompt floats, above this node's origin
 @export var prompt_height := 0.5
+## STORY LOCK: leave empty for "always available". Set a flag (e.g.
+## "know_loop" or "intro_done") and this stays hidden/uninteractable until
+## that flag is set - so tutorial loops don't expose things early.
+@export var unlock_flag := ""
 
 
 func _ready() -> void:
 	add_to_group("talkable")
-	# only pickups need to watch for their flag - static examinables
-	# never change, so they don't tick at all
-	set_process(pickup and sets_flag != "")
+	# tick if it's a pickup that can vanish, OR if it's story-locked (needs
+	# to watch for the unlock). Static, always-available examinables never
+	# change, so they don't tick at all.
+	set_process((pickup and sets_flag != "") or unlock_flag != "")
+	if unlock_flag != "":
+		_apply_lock()
 
 
 func _flag_known() -> bool:
@@ -39,6 +47,24 @@ func _flag_known() -> bool:
 
 
 func _process(_delta: float) -> void:
+	# story lock: appear only once unlocked (and re-hide if somehow relocked)
+	if unlock_flag != "":
+		_apply_lock()
+		if not visible:
+			return
 	if visible and _flag_known():
 		visible = false
 		remove_from_group("talkable")
+
+
+func _apply_lock() -> void:
+	var open := StoryLock.is_unlocked(unlock_flag)
+	if open and not visible and not _flag_known():
+		visible = true
+		if not is_in_group("talkable"):
+			add_to_group("talkable")
+	elif not open:
+		if visible:
+			visible = false
+		if is_in_group("talkable"):
+			remove_from_group("talkable")

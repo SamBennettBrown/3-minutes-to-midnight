@@ -9,10 +9,29 @@ extends Area3D
 const Flags := preload("res://scripts/game/flags.gd")
 
 var _cooldown := 0.0
+var _wall: StaticBody3D
 
 
 func _ready() -> void:
 	body_entered.connect(_on_enter)
+	# EXCEPT on loop 1 (where walking into the door is meant to restart the
+	# night), drop an invisible wall across the doorway so the player can't
+	# actually walk out into the void - the door only ever turns you back.
+	if not (Flags.has_flag("intro_done") and Flags.loops == 1):
+		_build_wall()
+
+
+# a slim solid barrier filling the exit gap, sized to this trigger
+func _build_wall() -> void:
+	_wall = StaticBody3D.new()
+	var cs := CollisionShape3D.new()
+	var box := BoxShape3D.new()
+	box.size = Vector3(3.0, 3.0, 0.4)
+	cs.shape = box
+	_wall.add_child(cs)
+	add_child(_wall)
+	# sit it at the doorway plane, just past the trigger, spanning the gap
+	_wall.position = Vector3(0, 0.2, 0.4)
 
 
 func _on_enter(body: Node3D) -> void:

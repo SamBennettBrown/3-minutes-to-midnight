@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
 [ext_resource type="Texture2D" uid="uid://tgud24kwct07" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_03.png" id="4_4fv0t"]
 [ext_resource type="PackedScene" uid="uid://dvb5bodfo7pn6" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Shelf_04_Insert_01.fbx" id="4_hjmcv"]
-[ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="4_item"]
 [ext_resource type="PackedScene" uid="uid://4vt14a7anmh1" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Shelf_04.fbx" id="5_fqu2d"]
 [ext_resource type="Script" uid="uid://cd8jayk7qqp2v" path="res://scripts/game/flag_gate.gd" id="5_gate"]
 [ext_resource type="PackedScene" uid="uid://beaus4036544v" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Shelf_04_Insert_03.fbx" id="6_sms3o"]
@@ -125,19 +124,6 @@ locked_line = "A hard red blink. EVIDENCE INTAKE - AUTHORIZED CARDHOLDERS ONLY. 
 
 [node name="Shape" type="CollisionShape3D" parent="CardGate" unique_id=1887277367]
 shape = SubResource("shape_gate")
-
-[node name="CaseFile" type="Node3D" parent="." unique_id=1060443452]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.93, -1.2)
-script = ExtResource("4_item")
-dialogue = [{
-"speaker": "CASE FILE 44-C",
-"text": "Records clerk, found 11:40 PM. The murder weapon was never logged into evidence. Someone signed the lockup sheet that night."
-}, {
-"speaker": "DETECTIVE",
-"text": "Signed the sheet... so it was someone with a badge."
-}]
-sets_flag = "read_case_file"
-pickup = true
 
 [node name="Lockdown" type="Node3D" parent="." unique_id=1529431112]
 script = ExtResource("96_lock")

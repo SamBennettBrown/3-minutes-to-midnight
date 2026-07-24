@@ -19,7 +19,7 @@ material_path = "res://materials/police_01_b.tres"
 visible_mesh = "SM_Chr_Detective_Male_01"
 start_clip = "idle"
 strip_root_motion = true
-foot_offset = 0.05
+foot_offset = 0.0
 
 [node name="Collider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
