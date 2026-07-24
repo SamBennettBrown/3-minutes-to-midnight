@@ -1,0 +1,39 @@
+# Godot 4.7+ specific ignores
+
+# Godot-created folders and files
+.godot/
+/android/
+/export_presets.cfg
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono/C# build artifacts (if using C#)
+.mono/
+data_*/
+mono_crash.*.json
+
+# Exported builds
+/build/
+/builds/
+/export/
+/exports/
+*.exe
+*.pck
+*.zip
+*.dmg
+*.apk
+*.aab
+*.ipa
+*.x86_64
+*.x86
+*.wasm
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
