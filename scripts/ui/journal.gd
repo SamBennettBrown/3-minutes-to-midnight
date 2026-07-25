@@ -19,11 +19,11 @@ const NOTE_FONT := preload("res://fonts/Special_Elite/SpecialElite-Regular.ttf")
 
 @export var entries: Array = [
 	{"flag": "bound_promise", "title": "THE TRINKET",
-		"text": "He {who is he?} pressed a small brass charm into my pocket."},
+		"text": "The Witness slid a small brass charm into my pocket."},
 	{"flag": "know_loop", "title": "THREE MINUTES",
-		"text": "It's the heirloom. He dies at midnight and it drags me back to 11:57 - three minutes, over and over. If I can change how the night goes, maybe he lives. Start where they took him: interrogation."},
+		"text": "It's the heirloom. The Witness dies at midnight and it drags me back to 11:57 - three minutes, over and over. If I can change how the night goes, maybe he lives. Start where they took him: interrogation."},
 	{"flag": "found_note_57", "title": "THE NOTE",
-		"text": "Clutched in the dead mans {who is the dead man} hand: a scrap of paper, one number scrawled on it - 57. Too short for a phone. A badge number. Someone's badge number."},
+		"text": "Clutched in the dead mans {who is he} hand: a scrap of paper, one number scrawled on it - 57. Too short for a phone. A badge number. Someone's badge number."},
 	{"flag": "read_case_file", "title": "CASE FILE 44-C",
 		"text": "Victim found 11:40 PM. The murder weapon was never logged into evidence. Someone signed the lockup sheet that night."},
 	{"flag": "overheard_call", "title": "THE PHONE CALL",
