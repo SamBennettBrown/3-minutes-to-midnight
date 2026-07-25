@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cgxnessn3xq7o"]
 
+[ext_resource type="Script" uid="uid://0vxeo4crdm1y" path="res://scripts/game/desk_keycard.gd" id="1_deskcard"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
-[ext_resource type="Script" path="res://scripts/game/desk_keycard.gd" id="1_deskcard"]
+[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="1_ambient"]
 [ext_resource type="FontFile" uid="uid://canmpksdd2ct8" path="res://fonts/Special_Elite/SpecialElite-Regular.ttf" id="2_font"]
 [ext_resource type="Texture2D" uid="uid://bqad1yykn7qqy" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Floor_Carpet_03.png" id="2_fqlfb"]
 [ext_resource type="Script" uid="uid://fokcbe25o2i3" path="res://scripts/game/floor_label.gd" id="3_label"]
@@ -93,6 +94,11 @@ size = Vector3(0.3, 3, 10)
 [node name="Lobby" type="Node3D" unique_id=908179267]
 script = ExtResource("1_room")
 camera_look_at = Vector3(0.5, 0.8, -1.5)
+
+[node name="Ambient" type="Node" parent="." unique_id=908179268]
+script = ExtResource("1_ambient")
+sound = "res://audio/sfx/street.mp3"
+volume_db = -16.0
 
 [node name="Camera" type="Camera3D" parent="." unique_id=871682273]
 transform = Transform3D(0.94758046, -0.10496314, 0.30178457, -0.04004178, 0.8980457, 0.43807584, -0.31699818, -0.4271961, 0.8467678, 0.8018856, 1.9781022, 5.162466)
@@ -203,7 +209,7 @@ script = ExtResource("3_label")
 yaw_degrees = 0.0
 
 [node name="SignExit" type="Label3D" parent="." unique_id=1475965608]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.02, 3.9)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.02, 4.0853143)
 pixel_size = 0.01
 modulate = Color(0.75, 0.75, 0.72, 0.45)
 text = "EXIT"
@@ -333,6 +339,7 @@ transform = Transform3D(-0.69465846, 0, -0.7193397, 0, 1, 0, 0.7193397, 0, -0.69
 [node name="SM_Prop_ID_Card_01" parent="." unique_id=1887632627 instance=ExtResource("18_x5s0x")]
 transform = Transform3D(0.8480481, 0, 0.52991927, 0, 1, 0, -0.52991927, 0, 0.8480481, -3.0958083, 0.9314009, 0.74074984)
 script = ExtResource("1_deskcard")
+drop_at = 30.0
 
 [node name="SM_Chr_Attach_Hat_04_Alt" parent="." unique_id=1872876967 instance=ExtResource("19_2vmrs")]
 transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -4.8373632, 1.4747313, 0.18901385)

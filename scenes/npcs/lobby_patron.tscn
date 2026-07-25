@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cnpc0patron001"]
+
+; Lobby Patron - the stolen-bicycle guy waiting at reception. Pure flavour /
+; red herring; a bit of life in the lobby.
+
+[ext_resource type="PackedScene" path="res://scenes/player/character_rig.tscn" id="1_rig"]
+[ext_resource type="Script" uid="uid://dq4eoax0q5nc1" path="res://scripts/game/npc.gd" id="2_npc"]
+
+[node name="LobbyPatron" instance=ExtResource("1_rig")]
+process_mode = 3
+script = ExtResource("2_npc")
+walk_pace = 1.6
+foot_offset = 0.02
+blocks_player = true
+hide_outside_active_room = true
+start_clip = "idle"
+strip_root_motion = true
+visible_mesh = "SM_Chr_Criminal_Male_01"
+hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Beard_01.fbx"
+voice_clip = "res://audio/sfx/sfx_voice_male_02.mp3"
+paced = true
+barks = [{
+"dur": 3.5,
+"t": 70.0,
+"text": "...How long's a guy gotta wait to report a stolen bicycle?"
+}]
+dialogue = [{
+"speaker": "PATRON",
+"text": "Somebody stole my bicycle. THE NERVE. Right outside a police station. You gonna take a statement or what?"
+}]

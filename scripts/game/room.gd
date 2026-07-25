@@ -32,6 +32,11 @@ static var current: Node3D = null
 
 var _camera: Camera3D
 var _trigger_cs: CollisionShape3D
+# ALL floor colliders under this room (any node whose parent name contains
+# "Floor"). A room's footprint is the UNION of these boxes, so a room can
+# annex an extra strip - e.g. the locker room's floor patch reaching into
+# the hidden passage, so the locker camera holds while you walk through it.
+var _floor_cs_list: Array[CollisionShape3D] = []
 
 # which room the player is in - static so all rooms agree; used to
 # play the door sound only on genuine transitions
@@ -59,21 +64,32 @@ func _ready() -> void:
 	if trigger != null:
 		trigger.body_entered.connect(_on_body_entered)
 		_trigger_cs = trigger.get_node_or_null("Shape")
+	# the FLOOR collider - its footprint ends AT the walls, so it's what
+	# decides "which room am I standing over" (the trigger overhangs into
+	# neighbours and would flip the camera late, into a rendered void)
+	for f in find_children("*", "CollisionShape3D", true, false):
+		if f.get_parent() != null and "Floor" in String(f.get_parent().name):
+			_floor_cs_list.append(f)
 	if start_room:
 		activate.call_deferred()
 
 
 # can a point be SEEN while this room is active? Inside it - or, when
 # neighbors render (show_neighbors), inside a visible neighbor (the
-# witness behind the observation glass stays visible)
+# witness behind the observation glass stays visible).
+#
+# Uses the FLOOR footprint (which stops at the walls), NOT the oversized
+# Trigger box - otherwise NPCs standing up to ~1m past a wall in the next
+# room leak into view. The floor is the true room boundary.
 func sees_point(p: Vector3, margin := 0.0) -> bool:
-	if contains_point(p, margin):
+	if contains_floor_point(p, margin):
 		return true
 	if not show_neighbors:
 		return false
 	for np in neighbors:
 		var n := get_node_or_null(np)
-		if n != null and n.has_method("contains_point") and n.contains_point(p, margin):
+		if n != null and n.has_method("contains_floor_point") \
+				and n.contains_floor_point(p, margin):
 			return true
 	return false
 
@@ -101,6 +117,37 @@ func contains_point(p: Vector3, margin := 0.0) -> bool:
 	var local := _trigger_cs.global_transform.affine_inverse() * p
 	var e: Vector3 = _trigger_cs.shape.size * 0.5 + Vector3(margin, margin, margin)
 	return absf(local.x) <= e.x and absf(local.y) <= e.y and absf(local.z) <= e.z
+
+
+# is the point standing over THIS room's floor (XZ only)? The floor's
+# footprint stops at the walls, so this flips the camera AT the doorway
+# instead of 0.8 m into the next room like the oversized trigger does.
+# `margin` grows the floor a touch so the shared-wall seam has a hair of
+# overlap and can't flicker.
+func contains_floor_point(p: Vector3, margin := 0.0) -> bool:
+	if _floor_cs_list.is_empty():
+		# no floor to test against - fall back to the trigger
+		return contains_point(p, margin)
+	# the room owns the UNION of its floor boxes - inside ANY of them counts
+	# (the main floor OR an annexed patch like the passage strip)
+	for cs in _floor_cs_list:
+		if not (cs.shape is BoxShape3D):
+			continue
+		var local := cs.global_transform.affine_inverse() * p
+		var e: Vector3 = cs.shape.size * 0.5 + Vector3(margin, 0.0, margin)
+		if absf(local.x) <= e.x and absf(local.z) <= e.z:
+			return true
+	return false
+
+
+# world-space centre of this room's FLOOR - the resolver tie-breaks on the
+# nearest floor centre when two floors' margins overlap at a doorway
+func floor_center() -> Vector3:
+	# the MAIN floor centre (first collector) - the tie-break wants the room's
+	# body, not the annexed patch
+	if not _floor_cs_list.is_empty():
+		return _floor_cs_list[0].global_transform.origin
+	return room_center()
 
 
 func _on_body_entered(body: Node3D) -> void:

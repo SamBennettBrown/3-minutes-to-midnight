@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cnpc0vance001"]
+
+; The EVIDENCE CLERK - skips out early, dropping his keycard on the reception
+; desk (the per-loop keycard-steal setup). Bullpen patrol then out the lobby
+; door; vanishes at t=29.
+
+[ext_resource type="PackedScene" path="res://scenes/player/character_rig.tscn" id="1_rig"]
+[ext_resource type="Script" uid="uid://dq4eoax0q5nc1" path="res://scripts/game/npc.gd" id="2_npc"]
+
+[node name="EvidenceClerk" instance=ExtResource("1_rig")]
+process_mode = 3
+script = ExtResource("2_npc")
+walk_pace = 1.6
+foot_offset = 0.02
+blocks_player = true
+hide_outside_active_room = true
+start_clip = "idle"
+strip_root_motion = true
+visible_mesh = "SM_Chr_Officer_Male_02"
+hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_06.fbx"
+voice_clip = "res://audio/sfx/sfx_voice_male_03.mp3"
+paced = true
+vanish_at_spot = "Lobby/Exit"
+schedule = [{
+"clip": "idle",
+"spot": "Bullpen/RookiePost2",
+"t": 0.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/RookiePost2",
+"t": 8.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/WalkN",
+"t": 10.4
+}, {
+"clip": "walk",
+"spot": "Bullpen/WalkMid",
+"t": 12.3
+}, {
+"clip": "walk",
+"spot": "Bullpen/WalkS",
+"t": 14.1
+}, {
+"clip": "walk",
+"spot": "Bullpen/DoorLobby",
+"t": 15.2
+}, {
+"clip": "walk",
+"spot": "Lobby/DeskVisit",
+"t": 15.0
+}, {
+"clip": "idle",
+"spot": "Lobby/DeskVisit",
+"t": 36.0
+}, {
+"clip": "walk",
+"spot": "Lobby/Exit",
+"t": 40.0
+}, {
+"clip": "idle",
+"spot": "Lobby/Exit",
+"t": 170.0
+}]
+barks = [{
+"dur": 3.0,
+"t": 6.0,
+"text": "Anyone asks - I left an hour ago."
+}, {
+"dur": 4.0,
+"t": 28.0,
+"text": "That's me clocked out. Evidence room's open if you need it - I'll drop my card right here on the desk."
+}]
+dialogue = [{
+"speaker": "EVIDENCE CLERK",
+"text": "Off the clock, detective. Whatever it is - tomorrow. Or never. Never works."
+}]

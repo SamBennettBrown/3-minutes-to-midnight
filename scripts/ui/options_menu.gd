@@ -327,7 +327,13 @@ func _add_button(text: String, cb: Callable) -> Button:
 	b.add_theme_color_override("font_hover_color", Color(0.08, 0.08, 0.1))
 	b.add_theme_color_override("font_focus_color", Color(0.08, 0.08, 0.1))
 	b.add_theme_color_override("font_pressed_color", Color(0.45, 0.1, 0.12))
+	# kill every default button background box - otherwise clicking flashes a
+	# light "pressed"/"hover" panel behind the text. Only the font colour reacts.
 	b.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
+	b.add_theme_stylebox_override("normal", StyleBoxEmpty.new())
+	b.add_theme_stylebox_override("hover", StyleBoxEmpty.new())
+	b.add_theme_stylebox_override("pressed", StyleBoxEmpty.new())
+	b.add_theme_stylebox_override("disabled", StyleBoxEmpty.new())
 	b.mouse_entered.connect(_on_button_hover.bind(b))
 	b.focus_entered.connect(_on_button_hover.bind(b))
 	b.mouse_exited.connect(_on_button_unhover)

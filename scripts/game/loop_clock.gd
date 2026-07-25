@@ -29,6 +29,10 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 @export var heart_swell_end_db := -6.0
 
 var time := 0.0
+## when the endgame intercept fires, the clock FREEZES here - the night
+## never reaches 0:00, so the murder never happens. The endgame director
+## sets this; nothing else touches it.
+var frozen := false
 
 var _label := Label.new()
 var _r_held := 0.0
@@ -41,31 +45,51 @@ func _enter_tree() -> void:
 	add_to_group("loop_clock")
 	# a new loop starts: whatever you were HOLDING is back where it was
 	Flags.clear_loop_flags()
+	# every scene load is a fresh loop (first boot = loop 1). Some beats
+	# escalate with the count - e.g. the rookie closes in faster each time.
+	Flags.loops += 1
 
 
 func _ready() -> void:
 	var hud := CanvasLayer.new()
 	hud.layer = 101
 	add_child(hud)
-	_label.anchor_left = 1.0
+	# the countdown owns the top-centre of the screen - big, so it's the
+	# thing you can't look away from
+	_label.anchor_left = 0.0
 	_label.anchor_right = 1.0
-	_label.offset_left = -320.0
-	_label.offset_top = 14.0
-	_label.offset_right = -20.0
-	_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	_label.add_theme_font_size_override("font_size", 56)
+	_label.offset_top = 18.0
+	_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_label.add_theme_font_size_override("font_size", 96)
+	_label.add_theme_color_override("font_color", Color(0.95, 0.95, 0.93))
 	hud.add_child(_label)
 
 
 func _process(delta: float) -> void:
+	# the countdown doesn't burn time during the OPENING MONOLOGUE only - it
+	# holds until the intro hands over control (bound_promise). After that the
+	# 3:00 runs continuously EVERY loop, even while other beats lock the
+	# player's MOVEMENT (the observation peek, the rookie's approach) - those
+	# are gameplay, and the loop must keep counting down through them.
+	var live: bool = Flags.has_flag("bound_promise")
+	if not live:
+		_label.visible = false
+		return
+	# the session stopwatch, for the win credits - all live play counts,
+	# including the frozen confrontation
+	Flags.playtime += delta
+	# the endgame caught the killer: the night is held open, the countdown
+	# stops where it stands (still shown, still able to hold-R to restart).
+	if frozen:
+		var rem_f: float = maxf(loop_length - time, 0.0)
+		_label.text = "%d:%02d" % [int(rem_f) / 60, int(rem_f) % 60]
+		_label.visible = true
+		return
 	time += delta
-	# Loop 0 (the opening night) has no countdown - it ends only when the
-	# scripted murder plays out, never on the clock. The 3-minute timer
-	# only governs the real loops, once intro_done is set.
-	if Flags.has_flag("intro_done") and time >= loop_length:
+	if time >= loop_length:
 		restart()
 		return
-	if Input.is_action_pressed("restart") and Flags.has_flag("intro_done"):
+	if Input.is_action_pressed("restart"):
 		_r_held += delta
 		_set_darken(_r_held / restart_hold)
 		if _r_held >= restart_hold:
@@ -79,13 +103,11 @@ func _process(delta: float) -> void:
 		_r_held = 0.0
 		_set_darken(0.0)
 	var left := int(ceil(loop_length - time))
-	# wall clock counting up: 11:57:00 + elapsed, shown as HH:MM:SS
-	var total_s := int(start_hour) * 3600 + int(start_minute) * 60 + int(time)
-	total_s %= 24 * 3600
-	_label.text = "%02d:%02d:%02d" % [total_s / 3600, (total_s / 60) % 60, total_s % 60]
-	# the clock only becomes real after the first gunshot (the opening
-	# night runs to its own scripted end)
-	_label.visible = Flags.has_flag("intro_done")
+	# COUNTDOWN to midnight: 3:00 -> 0:00. The theme is the clock running
+	# out, so the HUD counts DOWN the time you have left.
+	var rem: float = maxf(loop_length - time, 0.0)
+	_label.text = "%d:%02d" % [int(rem) / 60, int(rem) % 60]
+	_label.visible = true
 	_heartbeat(left, delta)
 	_tension_ramp()
 

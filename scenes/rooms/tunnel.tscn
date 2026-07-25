@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://cxhm23hbm6ilg"]
+
+[ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
+[ext_resource type="Texture2D" uid="uid://bfxpsfud35wa2" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Concrete_01.png" id="2_floor"]
+[ext_resource type="Texture2D" uid="uid://dpy4d6umynf7p" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_04.png" id="3_wall"]
+[ext_resource type="Script" uid="uid://cd8jayk7qqp2v" path="res://scripts/game/flag_gate.gd" id="6_gate"]
+
+[sub_resource type="BoxShape3D" id="shape_trigger"]
+size = Vector3(2, 4, 2.4)
+
+[sub_resource type="BoxMesh" id="mesh_floor"]
+size = Vector3(3, 0.2, 2.4)
+
+[sub_resource type="StandardMaterial3D" id="mat_floor"]
+albedo_color = Color(0.1, 0.1, 0.11, 1)
+albedo_texture = ExtResource("2_floor")
+roughness = 0.95
+uv1_scale = Vector3(4, 4, 4)
+
+[sub_resource type="BoxShape3D" id="shape_floor"]
+size = Vector3(2, 0.2, 2.4)
+
+[sub_resource type="BoxMesh" id="mesh_wside"]
+size = Vector3(3, 2.6, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="mat_wall"]
+albedo_color = Color(0.09, 0.09, 0.1, 1)
+albedo_texture = ExtResource("3_wall")
+roughness = 0.95
+uv1_scale = Vector3(2, 2, 2)
+
+[sub_resource type="BoxShape3D" id="shape_wside"]
+size = Vector3(3, 2.6, 0.3)
+
+[sub_resource type="BoxMesh" id="mesh_gate"]
+size = Vector3(0.3, 2.6, 2.4)
+
+[sub_resource type="BoxShape3D" id="shape_gate"]
+size = Vector3(0.3, 2.6, 2.4)
+
+[node name="Tunnel" type="Node3D" unique_id=2041605566]
+script = ExtResource("1_room")
+display_name = "HIDDEN PASSAGE"
+show_neighbors = true
+
+[node name="Lamp" type="SpotLight3D" parent="." unique_id=271995018]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 2.6, 0)
+light_color = Color(0.7, 0.76, 0.85, 1)
+light_energy = 2.8
+light_volumetric_fog_energy = 1.8
+shadow_enabled = true
+spot_range = 6.0
+spot_angle = 46.0
+
+[node name="Trigger" type="Area3D" parent="." unique_id=1163357578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.274, 1.3, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Trigger" unique_id=968692621]
+shape = SubResource("shape_trigger")
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=962475578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="Floor" unique_id=1334710660]
+mesh = SubResource("mesh_floor")
+surface_material_override/0 = SubResource("mat_floor")
+
+[node name="Shape" type="CollisionShape3D" parent="Floor" unique_id=535976990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.274, 0, 0)
+shape = SubResource("shape_floor")
+
+[node name="WallNorth" type="StaticBody3D" parent="." unique_id=229843151]
+transform = Transform3D(0.8059257, 0, 0, 0, 1, 0, 0, 0, 1, -0.15515625, 1.3, -1.35)
+
+[node name="Mesh" type="MeshInstance3D" parent="WallNorth" unique_id=1579326317]
+mesh = SubResource("mesh_wside")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="WallNorth" unique_id=1231222213]
+shape = SubResource("shape_wside")
+
+[node name="WallSouth" type="StaticBody3D" parent="." unique_id=1821127790]
+transform = Transform3D(0.85863733, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 1.35)
+
+[node name="Mesh" type="MeshInstance3D" parent="WallSouth" unique_id=1828476883]
+mesh = SubResource("mesh_wside")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="WallSouth" unique_id=1450935399]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.052121736, 0, 0)
+shape = SubResource("shape_wside")
+
+[node name="LockerGate" type="StaticBody3D" parent="." unique_id=914089386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.3, 0)
+script = ExtResource("6_gate")
+open_flag = "passage_open_this_loop"
+per_loop = true
+locked_speaker = "THE WALL"
+locked_line = "Behind the captain's locker, the panel won't budge. There's a draft coming from somewhere back here - but the way through is sealed."
+
+[node name="Mesh" type="MeshInstance3D" parent="LockerGate" unique_id=790578193]
+mesh = SubResource("mesh_gate")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="LockerGate" unique_id=697786969]
+shape = SubResource("shape_gate")
+
+[node name="Spots" type="Node3D" parent="." unique_id=765524349]
+
+[node name="Center" type="Marker3D" parent="Spots" unique_id=1815981244]
+
+[node name="DoorLocker" type="Marker3D" parent="Spots" unique_id=1692570307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 0, 0)
+
+[node name="DoorCells" type="Marker3D" parent="Spots" unique_id=1245710958]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 0, 0)

@@ -13,8 +13,14 @@
 
 static var _flags := {}
 
-# how many REAL loops have started (0 = still in the opening night)
+# how many loops have started this session; the loop clock bumps it on
+# every scene load, so the first playable loop is 1. Some beats escalate
+# with the count (the rookie closes in faster each loop).
 static var loops := 0
+
+# total seconds of live play this session (the loop clock accumulates it;
+# survives restarts) - shown in the win credits for fun
+static var playtime := 0.0
 
 
 # callables invoked with (flag_name) the first time a flag is set;
@@ -70,8 +76,10 @@ static func clear_loop_flags() -> void:
 	_loop_flags.clear()
 
 
-# full fresh-start (future "New Game" button): knowledge AND loop count
+# full fresh-start (the win resets to the title, "New Game"): knowledge,
+# loop count, and the session stopwatch
 static func clear() -> void:
 	_flags.clear()
 	_loop_flags.clear()
 	loops = 0
+	playtime = 0.0

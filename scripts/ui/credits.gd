@@ -1,13 +1,18 @@
 extends CanvasLayer
 
-# Credits: opened from the pause menu via open(). Esc / E / Enter
-# closes. (A win flow will also call open() once the accusation/win
-# screen exists - not built yet; every ending currently routes to the
-# lose screen.)
+# Credits: centred on a full black screen. Two ways in:
+#  - the pause menu's CREDITS button -> open()      : closing unpauses back
+#  - the WIN flow (endgame_director) -> open(true)  : closing RESETS the run
+#    (all flags + loop count) and returns to the title screen, so the next
+#    START plays the opening monologue fresh - the loop is broken, the story
+#    starts over.
 
 const TYPEWRITER := "res://fonts/Special_Elite/SpecialElite-Regular.ttf"
+const Flags := preload("res://scripts/game/flags.gd")
 
 var _bg: ColorRect
+var _stats: Label
+var _win_mode := false
 
 
 func _enter_tree() -> void:
@@ -18,16 +23,18 @@ func _ready() -> void:
 	layer = 112
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_bg = ColorRect.new()
-	_bg.color = Color(0, 0, 0, 0.88)
+	_bg.color = Color(0, 0, 0, 1)
 	_bg.anchor_right = 1.0
 	_bg.anchor_bottom = 1.0
 	add_child(_bg)
 
+	var center := CenterContainer.new()
+	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	add_child(center)
+
 	var box := VBoxContainer.new()
-	box.position = Vector2(70, 180)
-	box.rotation_degrees = -8.0
 	box.add_theme_constant_override("separation", 14)
-	add_child(box)
+	center.add_child(box)
 
 	_label(box, "LOOP GAME", 52, Color(0.95, 0.95, 0.93))
 	_label(box, "a three-minute mystery by", 24, Color(0.65, 0.65, 0.62))
@@ -42,32 +49,46 @@ func _ready() -> void:
 	rt.fit_content = true
 	rt.custom_minimum_size = Vector2(980, 0)
 	rt.add_theme_font_size_override("normal_font_size", 30)
-	rt.text = "OUR DETECTIVE WILL RETURN IN [s]AVENGERS: DOOMSDAY[/s]"
+	rt.text = "[center]OUR DETECTIVE WILL RETURN IN [s]AVENGERS: DOOMSDAY[/s][/center]"
 	box.add_child(rt)
 
-	var scrawl := Label.new()
-	scrawl.text = "LOOP GAME 2: OVERTIME"
-	scrawl.add_theme_font_size_override("font_size", 34)
-	scrawl.add_theme_color_override("font_color", Color(0.9, 0.88, 0.8))
-	if ResourceLoader.exists(TYPEWRITER):
-		scrawl.add_theme_font_override("font", load(TYPEWRITER))
-	scrawl.rotation_degrees = -2.0
-	box.add_child(scrawl)
-
+	_label(box, "LOOP GAME 2: OVERTIME", 34, Color(0.9, 0.88, 0.8), true)
 	_label(box, " ", 20, Color.WHITE)
-	_label(box, "esc to close", 20, Color(0.55, 0.55, 0.52))
+	# the run stats - filled in when the WIN opens the credits
+	_stats = Label.new()
+	_stats.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_stats.add_theme_font_size_override("font_size", 26)
+	_stats.add_theme_color_override("font_color", Color(0.75, 0.72, 0.6))
+	if ResourceLoader.exists(TYPEWRITER):
+		_stats.add_theme_font_override("font", load(TYPEWRITER))
+	_stats.visible = false
+	box.add_child(_stats)
+	_label(box, " ", 20, Color.WHITE)
+	_label(box, "press E", 20, Color(0.55, 0.55, 0.52))
 	visible = false
 
 
-func _label(parent: Node, text: String, size: int, color: Color) -> void:
+func _label(parent: Node, text: String, size: int, color: Color, typewriter := false) -> void:
 	var l := Label.new()
 	l.text = text
+	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	l.add_theme_font_size_override("font_size", size)
 	l.add_theme_color_override("font_color", color)
+	if typewriter and ResourceLoader.exists(TYPEWRITER):
+		l.add_theme_font_override("font", load(TYPEWRITER))
 	parent.add_child(l)
 
 
-func open() -> void:
+func open(win := false) -> void:
+	_win_mode = win
+	if _stats != null:
+		_stats.visible = win
+		if win:
+			var s := int(Flags.playtime)
+			var clock := "%d:%02d:%02d" % [s / 3600, (s % 3600) / 60, s % 60] \
+					if s >= 3600 else "%d:%02d" % [s / 60, s % 60]
+			_stats.text = "the night looped %d times  -  %s on the clock" \
+					% [Flags.loops, clock]
 	visible = true
 	get_tree().paused = true
 
@@ -80,3 +101,8 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		visible = false
 		get_tree().paused = false
+		if _win_mode:
+			# the loop is broken - wipe the run (knowledge, holdings, loop
+			# count) and return to the title. Next START = the intro again.
+			Flags.clear()
+			get_tree().change_scene_to_file("res://scenes/title_screen.tscn")

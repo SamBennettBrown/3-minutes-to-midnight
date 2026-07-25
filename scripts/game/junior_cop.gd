@@ -15,12 +15,21 @@ extends "res://scripts/player/player.gd"
 @export var post_pos := Vector3(2.6, 0, -3.4)
 @export var approach_speed := 1.9
 @export var approach_distance := 1.3
-## loop-clock time at which the approach starts (loop 0 delays him)
+## loop-clock time at which the approach starts (0 = from the top of the loop)
 @export var start_delay := 0.0
 ## the room the rookie belongs to (his approach is CLAMPED to it, so he
 ## never chases the player through a wall into another room). Empty = the
 ## room named "Bullpen".
 @export var home_room_path: NodePath
+## how close he keeps while following you on the final run (legacy - the
+## rookie no longer follows; kept so old scene overrides still load)
+@export var follow_distance := 1.6
+## the room he hides in for the ambush, and the marker he tucks behind
+@export var stage_room_name := "LockerRoom"
+@export var stage_spot_name := "LockerRoom/Door"
+## loop time he leaves his post to make the meet ("locker room, 0:15") -
+## early enough to be hidden there before the clock reads 0:15 (t165)
+@export var stage_go_time := 150.0
 
 const Tuning := preload("res://scripts/game/tuning.gd")
 var _state := "approach"
@@ -30,21 +39,69 @@ var _clock: Node
 var _locked := false
 var _intro_opened := false
 var _talk_wait := 0.0
+var _approach_wait := 0.0
 var _home_room: Node3D
 
 
 func _ready() -> void:
-	# his conversations use the rig's variant system (last match wins;
-	# "once" lines fall through to the repeatable quip after first hear)
+	# TWO separate pools:
+	#  - the AUTO-INTRO beat (freezes the player each loop) rotates through
+	#    short coffee exchanges - see _pick_intro(). Flavour only.
+	#  - dialogue_variants (below) is what you get when you WALK UP and talk
+	#    to him: he's the HINT SYSTEM. He reads your progress (journal flags)
+	#    and points you at the NEXT thing you don't have. Last match wins, so
+	#    order = the case chain. The "anything you need?" gag pays off in the
+	#    recruit beat.
 	if dialogue_variants.is_empty():
 		dialogue_variants = [
+			# --- no leads yet -> the cells / the prisoner ---
 			{"lines": [
-				{"speaker": "ROOKIE PETTY", "text": "Filing, detective. So much filing. ...Shouldn't you be somewhere?"},
+				{"speaker": "THE ROOKIE", "text": "A man shot in a SEALED cell? Gives me the creeps. If anybody saw how, it's whoever else is locked up down there."},
+				{"speaker": "DETECTIVE", "text": "The other prisoner. Worth a conversation."},
+				{"speaker": "THE ROOKIE", "text": "Careful in the cell block, yeah? And if you need anything - anything - I'm right here."},
 			]},
-			{"once": true, "lines": [
-				{"speaker": "ROOKIE PETTY", "text": "Coffee, detective! Two sugars, like always. You look like you slept at your desk again."},
-				{"speaker": "DETECTIVE", "text": "Kid, I asked for this coffee two hours ago. My shift ends in three minutes."},
-				{"speaker": "ROOKIE PETTY", "text": "...It's still warm. Mostly."},
+			# --- prisoner said interrogation -> point at the observation glass ---
+			{"flag": "inmate_tip", "lines": [
+				{"speaker": "THE ROOKIE", "text": "Interrogation's sealed tight - NO ENTRY, captain's orders. But, uh... the observation room's right next door. Two-way glass."},
+				{"speaker": "DETECTIVE", "text": "You didn't tell me that."},
+				{"speaker": "THE ROOKIE", "text": "Tell you what? I didn't say anything. ...Need anything else, you know where I am."},
+			]},
+			# --- overheard the evidence tip -> a nudge toward the front desk ---
+			{"flag": "heard_evidence_tip", "lines": [
+				{"speaker": "THE ROOKIE", "text": "You've got that locked-door look, detective."},
+				{"speaker": "THE ROOKIE", "text": "...All I'll say is, the receptionist sees everything that crosses that front desk. Well. ALMOST everything."},
+				{"speaker": "DETECTIVE", "text": "Kid, you might actually be useful."},
+			]},
+			# --- knows the weight trap -> the vending machine ---
+			{"flag": "know_weight_trap", "lines": [
+				{"speaker": "THE ROOKIE", "text": "A counterweight? About a pound? ...The vending machine bags. The Puffy Stars. Trust me, I've bought enough of them to know the heft."},
+				{"speaker": "DETECTIVE", "text": "A bag of chips. This case gets more dignified by the minute."},
+				{"speaker": "THE ROOKIE", "text": "Machine eats dollars, fair warning. Anything else you need, just ask!"},
+			]},
+			# --- found the brother file -> point at the OFFICE (the code) ---
+			{"flag": "found_murder_weapon", "lines": [
+				{"speaker": "THE ROOKIE", "text": "The captain's locker? It's got a keypad - good luck. Between us... sometimes I sneak into his office just to look at his medals. Hope I'm that decorated one day."},
+				{"speaker": "THE ROOKIE", "text": "He's got this whole wall of photos in there too. His daughter, his wife... that dog of his. Man LOVES that dog. Talks about its birthday like it's a national holiday."},
+				{"speaker": "DETECTIVE", "text": "...Birthdays. Kid - anything you need, it's yours. Later."},
+			]},
+			# --- knows about the passage -> the end of the loop ---
+			{"flag": "captain_is_guilty", "lines": [
+				{"speaker": "THE ROOKIE", "text": "You've got a face like a funeral, detective. Whatever you found... be careful when the clock runs out. Midnight's when things go wrong around here."},
+				{"speaker": "DETECTIVE", "text": "Yeah. I've noticed."},
+				{"speaker": "THE ROOKIE", "text": "I mean it. Anything you need - I'm your guy."},
+			]},
+			# --- THE PAYOFF: after the taught death, you take him up on it.
+			# (Also fires from the auto-intro; this covers walking up to him.) ---
+			{"flag": "taught_death_seen", "sets_flag": "have_rookie", "lines": [
+				{"speaker": "THE ROOKIE", "text": "Coffee, detective? Two sug-"},
+				{"speaker": "DETECTIVE", "text": "You keep asking if I need anything, kid. ...Actually. I do."},
+				{"speaker": "THE ROOKIE", "text": "...Wait. Really? What do you need?"},
+				{"speaker": "DETECTIVE", "text": "When that clock reads 0:15, be in the locker room. Hidden. Not a sound, no matter what you hear - you just remember every word."},
+				{"speaker": "THE ROOKIE", "text": "Locker room. 0:15. Invisible. ...I won't let you down, detective."},
+			]},
+			# --- recruited: he makes the meet on his own ---
+			{"flag": "have_rookie", "lines": [
+				{"speaker": "THE ROOKIE", "text": "0:15. Locker room. I'll be there, detective."},
 			]},
 		]
 	strip_root_motion = true
@@ -59,8 +116,23 @@ func _process(delta: float) -> void:
 	super._process(delta)
 	if get_tree().paused:
 		return
+	# recruited: he does NOT tail you. He keeps his post, then heads off ON
+	# HIS OWN to make the meet - "locker room, 0:15" - leaving early enough
+	# to be hidden there when the clock reads 0:15 (t165).
+	if Flags.has_flag("have_rookie") and not Flags.has_loop_flag("rookie_staged") \
+			and _state in ["posted", "to_post"] \
+			and _clock != null and _clock.time >= stage_go_time:
+		_state = "staging"
 	match _state:
 		"approach":
+			# the opening monologue owns the screen - don't start the coffee
+			# beat (which would open a dialogue and freeze the intro) until the
+			# intro has handed over control (bound_promise).
+			if not Flags.has_flag("bound_promise"):
+				play("idle")
+				if anim_player != null:
+					anim_player.speed_scale = 1.0
+				return
 			# delay reads the loop clock, not an own timer - determinism
 			if _clock == null:
 				_clock = get_tree().get_first_node_in_group("loop_clock")
@@ -82,12 +154,23 @@ func _process(delta: float) -> void:
 			# when they're not, so he can never straight-line through a wall
 			var target := _clamp_to_home(_player_body.global_position)
 			if _step_toward(target, approach_distance, delta, _approach_speed_now()):
-				_face(_player_body.global_position)
 				play("idle")
 				if anim_player != null:
 					anim_player.speed_scale = 1.0
 				_state = "talk"
+			else:
+				# SAFETY: if the player is out of the bullpen the clamped
+				# target never reaches them - don't hold the player's input
+				# hostage. After ~6s of not reaching, unlock and post up.
+				_approach_wait += delta
+				if _approach_wait > 6.0:
+					_set_player_locked(false)
+					_state = "to_post"
 		"talk":
+			# keep easing to face the player while the intro plays out - no
+			# hard snap when he arrives
+			if _player_body != null:
+				_face(_player_body.global_position, delta)
 			# the dialogue box may be busy (trinket beat) - retry until
 			# free. Safety: if it never frees within ~8s (some other
 			# dialogue stuck open), give up and unlock so the player is
@@ -105,6 +188,45 @@ func _process(delta: float) -> void:
 				if anim_player != null:
 					anim_player.speed_scale = 1.0
 				_state = "posted"
+		"posted":
+			# idle at post; if recruited, the top-of-frame check sends him to
+			# the meet when it's time
+			play("idle")
+			if anim_player != null:
+				anim_player.speed_scale = 1.0
+		"staging":
+			# off to the meet: walk to the hiding spot in the locker room
+			var spot := _stage_target()
+			if _step_toward(spot, 0.2, delta, approach_speed):
+				play("idle")
+				if anim_player != null:
+					anim_player.speed_scale = 1.0
+				# he's hidden and ready - the endgame director reads this
+				Flags.set_loop_flag("rookie_staged")
+				_state = "staged"
+		"staged":
+			play("idle")
+			if anim_player != null:
+				anim_player.speed_scale = 1.0
+
+
+# world position of the hidden marker the rookie tucks into
+func _stage_target() -> Vector3:
+	var m := _find_spot(stage_spot_name)
+	if m != null:
+		return m.global_position
+	return global_position
+
+
+func _find_spot(spot: String) -> Node3D:
+	var root := get_tree().root
+	if "/" in spot:
+		var parts := spot.split("/")
+		var owner_node := root.find_child(parts[0], true, false)
+		if owner_node != null:
+			return owner_node.find_child(parts[1], true, false) as Node3D
+		return null
+	return root.find_child(spot, true, false) as Node3D
 
 
 # clamp a world point to lie inside the rookie's home room, so his
@@ -150,10 +272,52 @@ func _step_toward(target: Vector3, stop_at: float, delta: float, speed: float) -
 	return false
 
 
-func _face(target: Vector3) -> void:
+func _face(target: Vector3, delta: float) -> void:
 	var d := target - global_position
 	if d.length() > 0.01:
-		rotation.y = atan2(d.x, d.z)
+		# ease, don't snap - matches every other heading turn in the game
+		rotation.y = lerp_angle(rotation.y, atan2(d.x, d.z), delta * 8.0)
+
+
+# The auto-played opening beat: a ROTATING pool of short coffee exchanges
+# (rotates on the loop count, so coming back keeps it fresh - and the
+# detective isn't always gracious about it). Two overrides: the loop after
+# the taught death it becomes the recruit payoff, and once recruited it's
+# just a nod. The HINTS live in dialogue_variants (walk up and talk to him).
+func _pick_intro() -> Dictionary:
+	if Flags.has_flag("taught_death_seen") and not Flags.has_flag("have_rookie"):
+		return {"sets_flag": "have_rookie", "lines": [
+			{"speaker": "THE ROOKIE", "text": "Coffee, detective? Two sug-"},
+			{"speaker": "DETECTIVE", "text": "You keep asking if I need anything, kid. ...Actually. I do."},
+			{"speaker": "THE ROOKIE", "text": "...Wait. Really? What do you need?"},
+			{"speaker": "DETECTIVE", "text": "When that clock reads 0:15, be in the locker room. Hidden. Not a sound, no matter what you hear - you just remember every word."},
+			{"speaker": "THE ROOKIE", "text": "Locker room. 0:15. Invisible. ...I won't let you down, detective."},
+		]}
+	if Flags.has_flag("have_rookie"):
+		return {"sets_flag": "", "lines": [
+			{"speaker": "THE ROOKIE", "text": "0:15. Locker room. I'll be there, detective."},
+		]}
+	var pool := [
+		[
+			{"speaker": "THE ROOKIE", "text": "Coffee, detective! Two sugars, like always. You look like you slept at your desk again."},
+			{"speaker": "DETECTIVE", "text": "Kid, my shift ends in three minutes. It always does."},
+			{"speaker": "THE ROOKIE", "text": "...It's still warm. Mostly."},
+		],
+		[
+			{"speaker": "THE ROOKIE", "text": "Coffee, detective! Fresh pot, brewed it my-"},
+			{"speaker": "DETECTIVE", "text": "Coffee. Yeah, yeah. It's fine. Put it down."},
+			{"speaker": "THE ROOKIE", "text": "...Somebody woke up on the wrong side of the precinct."},
+		],
+		[
+			{"speaker": "THE ROOKIE", "text": "Still filing, detective. SO much filing. Shouldn't you be halfway home by now?"},
+			{"speaker": "DETECTIVE", "text": "Don't remind me, kid."},
+		],
+		[
+			{"speaker": "THE ROOKIE", "text": "Cells are all prepped - your witness is tucked in safe and sound. We did good tonight, right?"},
+			{"speaker": "DETECTIVE", "text": "...Ask me again at midnight."},
+		],
+	]
+	return {"sets_flag": "", "lines": pool[Flags.loops % pool.size()]}
 
 
 func _try_open_intro() -> void:
@@ -166,7 +330,8 @@ func _try_open_intro() -> void:
 		return
 	_intro_opened = true
 	_dialogue_ui.closed.connect(_finish_intro, CONNECT_ONE_SHOT)
-	var convo := get_conversation()
+	_play_voice()
+	var convo := _pick_intro()
 	_dialogue_ui.show_dialogue(convo.get("lines", []), convo.get("sets_flag", ""))
 
 

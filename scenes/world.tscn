@@ -6,20 +6,18 @@
 [ext_resource type="Script" uid="uid://0rcwgsiklf0f" path="res://scripts/ui/options_menu.gd" id="5_menu"]
 [ext_resource type="Script" uid="uid://gq57w4lajme1" path="res://scripts/ui/dialogue.gd" id="8_dialog"]
 [ext_resource type="Script" uid="uid://sf3f7f52auvg" path="res://scripts/ui/lose_screen.gd" id="9_lose"]
-[ext_resource type="PackedScene" uid="uid://c3n8ehkwv4pq0" path="res://scenes/npcs/officer_daniels.tscn" id="11_daniels"]
-[ext_resource type="PackedScene" path="res://scenes/npcs/rookie_petty.tscn" id="12_rookie"]
+[ext_resource type="PackedScene" path="res://scenes/npcs/rookie.tscn" id="12_rookie"]
 [ext_resource type="Script" uid="uid://d2dfkcgobryi7" path="res://scripts/ui/offscreen_arrow.gd" id="14_arrow"]
 [ext_resource type="Script" uid="uid://0pdxmrkldiht" path="res://scripts/ui/journal.gd" id="15_journal"]
 [ext_resource type="Script" uid="uid://bnut7dgt4svoy" path="res://scripts/ui/keypad_ui.gd" id="18_keypad_ui"]
 [ext_resource type="Script" uid="uid://dmc0mqlr5p00k" path="res://scripts/ui/intercom.gd" id="19_intercom"]
 [ext_resource type="PackedScene" path="res://scenes/npcs/receptionist.tscn" id="20_reception"]
 [ext_resource type="Script" uid="uid://carwj2rwami7r" path="res://scripts/ui/credits.gd" id="21_credits"]
-[ext_resource type="PackedScene" uid="uid://e8xndcvhrvkb" path="res://scenes/npcs/witness.tscn" id="22_witness"]
 [ext_resource type="Script" uid="uid://vfu2xka7tlkv" path="res://scripts/game/intro_director.gd" id="23_director"]
 [ext_resource type="Script" uid="uid://ceml5bk41e63e" path="res://scripts/ui/objective.gd" id="24_objective"]
 [ext_resource type="Script" uid="uid://b8573jg6nh1jq" path="res://scripts/ui/room_label.gd" id="26_roomlabel"]
-[ext_resource type="Script" uid="uid://duiifp6g7icn3" path="res://scripts/game/inmate.gd" id="27_inmate"]
 [ext_resource type="Script" uid="uid://d3rl6gbjdb0ry" path="res://scripts/game/story_gate.gd" id="28_storygate"]
+[ext_resource type="Script" uid="uid://bdd740e7b76ak" path="res://scripts/game/endgame_director.gd" id="29_endgame"]
 [ext_resource type="PackedScene" uid="uid://cgxnessn3xq7o" path="res://scenes/rooms/lobby.tscn" id="30_lobby"]
 [ext_resource type="PackedScene" uid="uid://24p7xtmo1brk" path="res://scenes/rooms/bullpen.tscn" id="31_bullpen"]
 [ext_resource type="PackedScene" uid="uid://bbbawywlm2pmq" path="res://scenes/rooms/interrogation.tscn" id="32_interrogation"]
@@ -30,6 +28,15 @@
 [ext_resource type="PackedScene" uid="uid://bjno51ebqavpw" path="res://scenes/rooms/hall2.tscn" id="37_hall2"]
 [ext_resource type="PackedScene" uid="uid://bhi6uurcm80er" path="res://scenes/rooms/observation.tscn" id="38_observation"]
 [ext_resource type="PackedScene" uid="uid://va8rfm47q1t" path="res://scenes/rooms/locker_room.tscn" id="39_locker"]
+[ext_resource type="PackedScene" uid="uid://cxhm23hbm6ilg" path="res://scenes/rooms/tunnel.tscn" id="40_tunnel"]
+[ext_resource type="PackedScene" uid="uid://cnpc0vance001" path="res://scenes/npcs/evidence_clerk.tscn" id="41_vance"]
+[ext_resource type="PackedScene" uid="uid://cnpc0bell0001" path="res://scenes/npcs/night_officer.tscn" id="42_bell"]
+[ext_resource type="PackedScene" uid="uid://cnpc0ross0001" path="res://scenes/npcs/investigator.tscn" id="43_ross"]
+[ext_resource type="PackedScene" uid="uid://cnpc0captain01" path="res://scenes/npcs/captain.tscn" id="44_captain"]
+[ext_resource type="PackedScene" uid="uid://cnpc0witness01" path="res://scenes/npcs/the_witness.tscn" id="45_witness"]
+[ext_resource type="PackedScene" uid="uid://cnpc0patron001" path="res://scenes/npcs/lobby_patron.tscn" id="46_patron"]
+[ext_resource type="PackedScene" uid="uid://cnpc0inmate001" path="res://scenes/npcs/inmate.tscn" id="47_inmate"]
+[ext_resource type="Script" uid="uid://8kto5y078dnj" path="res://scripts/game/cell_murder.gd" id="48_cellmurder"]
 
 [sub_resource type="Environment" id="Environment_grim"]
 background_mode = 1
@@ -100,463 +107,138 @@ neighbors = Array[NodePath]([NodePath("../Bullpen"), NodePath("../LockerRoom"), 
 
 [node name="LockerRoom" parent="Rooms" unique_id=216065553 instance=ExtResource("39_locker")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.766994, 0, 7)
-neighbors = Array[NodePath]([NodePath("../Hall2")])
+neighbors = Array[NodePath]([NodePath("../Hall2"), NodePath("../Tunnel")])
 
 [node name="Cells" parent="Rooms" unique_id=1276451036 instance=ExtResource("34_cells")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
-neighbors = Array[NodePath]([NodePath("../Hall2")])
+neighbors = Array[NodePath]([NodePath("../Hall2"), NodePath("../Tunnel")])
+
+[node name="Tunnel" parent="Rooms" unique_id=216065554 instance=ExtResource("40_tunnel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.224182, 0, 3.5)
+neighbors = Array[NodePath]([NodePath("../LockerRoom"), NodePath("../Cells")])
 
 [node name="Player" parent="." unique_id=577674332 instance=ExtResource("1_f3sb7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 1)
 
-
-[node name="RookiePetty" parent="." unique_id=1583510316 instance=ExtResource("12_rookie")]
+[node name="Rookie" parent="." unique_id=1583510316 instance=ExtResource("12_rookie")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 2.5)
 spawn_pos = Vector3(7.5, 0, 2.5)
 post_pos = Vector3(7.5, 0, 2.5)
 approach_speed = 2.4
 approach_distance = 1.3
 start_delay = 0.0
+home_room_path = NodePath("")
+follow_distance = 1.6
+stage_room_name = "LockerRoom"
+stage_spot_name = "LockerRoom/Door"
 hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_03.fbx"
 strip_root_motion = true
-dialogue_variants = [{
-"lines": [{
-"speaker": "ROOKIE PETTY",
-"text": "Filing, detective. So much filing. ...Shouldn't you be somewhere?"
-}]
-}, {
-"lines": [{
-"speaker": "ROOKIE PETTY",
-"text": "Coffee, detective! Two sugars, like always. You look like you slept at your desk again."
-}, {
-"speaker": "DETECTIVE",
-"text": "Kid, I asked for this coffee two hours ago. My shift ends in three minutes."
-}, {
-"speaker": "ROOKIE PETTY",
-"text": "...It's still warm. Mostly."
-}],
-"once": true
-}]
+voice_clip = "res://audio/sfx/sfx_voice_male_01.mp3"
 
 [node name="Receptionist" parent="." unique_id=1436037487 instance=ExtResource("20_reception")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 2.419167, 0, 12.2)
 walk_pace = 1.6
 schedule = []
 paced = true
-turn_windows = [{
-"dur": 14.0,
-"flag": "receptionist_turned",
-"t": 40.0,
-"yaw": 40.0
-}]
 barks = [{
+"dur": 4.0,
+"t": 12.0,
+"text": "No, YOU hang up first. ...No, YOU. ...Babe, I'm at work."
+}, {
 "sound": "res://audio/sfx/phone.mp3",
 "sound_len": 4.0,
 "t": 40.0
 }, {
 "dur": 5.0,
-"flag": "overheard_call",
-"hear_range": 7.0,
-"t": 44.0,
-"text": "Front desk... Yes. Yes, he's still here. I'll let him know."
+"t": 41.8,
+"text": "It's him again. ...Hi baby. Yes, I miss you too. Hang on, one sec-"
 }, {
-"dur": 3.5,
-"t": 50.0,
-"text": "...You didn't hear that from me."
+"dur": 4.0,
+"t": 78.0,
+"text": "He KNOWS I'm at work. ...It's kind of sweet though. Right?"
+}, {
+"sound": "res://audio/sfx/phone.mp3",
+"sound_len": 4.0,
+"t": 100.0
+}, {
+"dur": 5.0,
+"t": 101.8,
+"text": "That's him AGAIN. ...Hi honey. No I can't talk, I- okay, thirty seconds."
 }]
+turn_windows = [{
+"dur": 14.0,
+"flag": "receptionist_turned",
+"t": 40.0,
+"yaw": 40.0
+}, {
+"dur": 14.0,
+"flag": "receptionist_turned",
+"t": 100.0,
+"yaw": 40.0
+}]
+turn_speed = 4.0
+vanish_at = 0.0
 hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_06.fbx"
 strip_root_motion = true
-sets_flag = "talked_reception"
+voice_clip = "res://audio/sfx/receptionist.mp3"
 dialogue = [{
 "speaker": "RECEPTIONIST",
-"text": "Busy night, detective. Phone's been ringing off the hook and it's not even midnight. Clocking out? Sign here and I'll let them know you're gone."
+"text": "Sorry, detective - my boyfriend keeps calling. Clocking out? Sign here and I'll let them know you're- oop, that's him again. Hold on."
 }]
+sets_flag = "talked_reception"
 
-[node name="LobbyPatron" parent="." unique_id=1057302812 instance=ExtResource("22_witness")]
+[node name="LobbyPatron" parent="." unique_id=1057302812 instance=ExtResource("46_patron")]
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 11.083695, 0, 9.2)
-paced = true
-barks = [{
-"dur": 3.5,
-"t": 70.0,
-"text": "...How long's a guy gotta wait to report a stolen bicycle?"
-}]
-visible_mesh = "SM_Chr_Criminal_Male_01"
-hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Beard_01.fbx"
-dialogue = [{
-"speaker": "PATRON",
-"text": "Somebody stole my bicycle. THE NERVE. Right outside a police station. You gonna take a statement or what?"
-}]
+schedule = []
+turn_windows = []
+turn_speed = 4.0
+vanish_at = 0.0
 
-[node name="OfficerVance" parent="." unique_id=1348544489 instance=ExtResource("11_daniels")]
+[node name="EvidenceClerk" parent="." unique_id=1348544489 instance=ExtResource("41_vance")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -2.337265)
-schedule = [{
-"clip": "idle",
-"spot": "Bullpen/RookiePost2",
-"t": 0.0
-}, {
-"clip": "walk",
-"spot": "Bullpen/RookiePost2",
-"t": 8.0
-}, {
-"clip": "walk",
-"spot": "Bullpen/WalkN",
-"t": 10.4
-}, {
-"clip": "walk",
-"spot": "Bullpen/WalkMid",
-"t": 12.3
-}, {
-"clip": "walk",
-"spot": "Bullpen/WalkS",
-"t": 14.1
-}, {
-"clip": "walk",
-"spot": "Bullpen/DoorLobby",
-"t": 15.2
-}, {
-"clip": "walk",
-"spot": "Lobby/DeskVisit",
-"t": 19.4
-}, {
-"clip": "idle",
-"spot": "Lobby/DeskVisit",
-"t": 22.8
-}, {
-"clip": "walk",
-"spot": "Lobby/Exit",
-"t": 25.0
-}, {
-"clip": "idle",
-"spot": "Lobby/Exit",
-"t": 170.0
-}]
-paced = true
-vanish_at = 29.0
-barks = [{
-"dur": 3.0,
-"flag": "saw_vance_leave",
-"hear_range": 9.0,
-"t": 6.0,
-"text": "Anyone asks - I left an hour ago."
-}, {
-"dur": 4.0,
-"t": 25.0,
-"text": "Rosa, I'm out. Evidence room's yours if you need it - I'll leave my card right here."
-}]
-visible_mesh = "SM_Chr_Officer_Male_02"
-hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_06.fbx"
-strip_root_motion = true
-dialogue = [{
-"speaker": "OFFICER VANCE",
-"text": "Off the clock, detective. Whatever it is - tomorrow. Or never. Never works."
-}]
+turn_windows = []
+turn_speed = 4.0
 
-[node name="Witness" parent="." unique_id=1992559892 instance=ExtResource("22_witness")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1020606, 0, -22.785679)
-visible_mesh = "SM_Chr_Criminal_Male_01"
-hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_05.fbx"
-schedule = [{
-"clip": "idle",
-"spot": "Interrogation/Seat",
-"t": 0.0
-}, {
-"clip": "walk",
-"spot": "Interrogation/Seat",
-"t": 90.0
-}, {
-"clip": "walk",
-"spot": "Interrogation/Door",
-"t": 123.0
-}, {
-"clip": "walk",
-"spot": "Hall1/DoorInterrogation",
-"t": 126.0
-}, {
-"clip": "walk",
-"spot": "Hall1/MouthBullpen",
-"t": 132.0
-}, {
-"clip": "walk",
-"spot": "Bullpen/DoorHall1",
-"t": 135.0
-}, {
-"clip": "walk",
-"spot": "Bullpen/DoorHall2",
-"t": 139.0
-}, {
-"clip": "walk",
-"spot": "Hall2/MouthBullpen",
-"t": 142.0
-}, {
-"clip": "walk",
-"spot": "Hall2/DoorCells",
-"t": 149.0
-}, {
-"clip": "walk",
-"spot": "Cells/Center",
-"t": 153.0
-}, {
-"clip": "idle",
-"spot": "Cells/Center",
-"t": 400.0
-}]
-paced = true
-strip_root_motion = true
-dialogue = [{
-"speaker": "WITNESS",
-"text": "You again? We keep having this conversation... don't we. They're going to kill me tonight. I can FEEL it."
-}]
+[node name="Witness" parent="." unique_id=1992559892 instance=ExtResource("45_witness")]
+transform = Transform3D(-0.492288, 0, -0.870432, 0, 1, 0, 0.870432, 0, -0.492288, -2.1020606, 0, -22.785679)
+turn_windows = []
+turn_speed = 4.0
+vanish_at = 0.0
 
-[node name="EscortA" parent="." unique_id=2132622844 instance=ExtResource("11_daniels")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5289958, 0, -21.470287)
-schedule = [{
-"clip": "idle",
-"spot": "Interrogation/WindowInside2",
-"t": 0.0
-}, {
-"clip": "walk",
-"spot": "Interrogation/WindowInside2",
-"t": 90.0
-}, {
-"clip": "walk",
-"spot": "Interrogation/Door",
-"t": 123.0
-}, {
-"clip": "walk",
-"spot": "Hall1/DoorInterrogation",
-"t": 126.0
-}, {
-"clip": "walk",
-"spot": "Hall1/MouthBullpen",
-"t": 132.0
-}, {
-"clip": "walk",
-"spot": "Bullpen/DoorHall1",
-"t": 135.0
-}, {
-"clip": "walk",
-"spot": "Bullpen/DoorHall2",
-"t": 139.0
-}, {
-"clip": "walk",
-"spot": "Hall2/MouthBullpen",
-"t": 142.0
-}, {
-"clip": "walk",
-"spot": "Hall2/DoorCells",
-"t": 149.0
-}, {
-"clip": "walk",
-"spot": "Cells/Door",
-"t": 153.0
-}, {
-"clip": "idle",
-"spot": "Cells/Door",
-"t": 400.0
-}]
-paced = true
-visible_mesh = "SM_Chr_Detective_Male_01"
-hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_07.fbx"
-strip_root_motion = true
-dialogue = [{
-"speaker": "DETECTIVE ROSS",
-"text": "Move along. This one's ours."
-}]
+[node name="Investigator" parent="." unique_id=2132622844 instance=ExtResource("43_ross")]
+transform = Transform3D(-0.20078, 0, 0.979636, 0, 1, 0, -0.979636, 0, -0.20078, 2.5289958, 0, -21.470287)
+turn_windows = []
+turn_speed = 4.0
+vanish_at = 0.0
 
-[node name="EscortB" parent="." unique_id=1505632220 instance=ExtResource("11_daniels")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.083815, 0, -19.114504)
-schedule = [{
-"clip": "idle",
-"spot": "Interrogation/Center",
-"t": 0.0
-}, {
-"clip": "walk",
-"spot": "Interrogation/Center",
-"t": 18.0
-}, {
-"clip": "walk",
-"spot": "Interrogation/WindowInside",
-"t": 22.0
-}, {
-"clip": "idle",
-"spot": "Interrogation/WindowInside",
-"t": 42.0
-}, {
-"clip": "walk",
-"spot": "Interrogation/Center",
-"t": 46.0
-}, {
-"clip": "idle",
-"spot": "Interrogation/Center",
-"t": 66.0
-}, {
-"clip": "walk",
-"spot": "Interrogation/Center",
-"t": 70.0
-}, {
-"clip": "idle",
-"spot": "Interrogation/Center",
-"t": 90.0
-}, {
-"clip": "walk",
-"spot": "Interrogation/Door",
-"t": 123.0
-}, {
-"clip": "walk",
-"spot": "Hall1/DoorInterrogation",
-"t": 126.0
-}, {
-"clip": "walk",
-"spot": "Hall1/MouthBullpen",
-"t": 132.0
-}, {
-"clip": "walk",
-"spot": "Bullpen/DoorHall1",
-"t": 135.0
-}, {
-"clip": "walk",
-"spot": "Bullpen/DoorHall2",
-"t": 139.0
-}, {
-"clip": "walk",
-"spot": "Hall2/MouthBullpen",
-"t": 142.0
-}, {
-"clip": "walk",
-"spot": "Hall2/DoorCells",
-"t": 149.0
-}, {
-"clip": "walk",
-"spot": "Cells/Center",
-"t": 153.0
-}, {
-"clip": "idle",
-"spot": "Cells/Center",
-"t": 400.0
-}]
-paced = true
-visible_mesh = "SM_Chr_Detective_Female_01"
-hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_08.fbx"
-strip_root_motion = true
-dialogue = [{
-"speaker": "DETECTIVE VALE",
-"text": "Busy, detective. Interrogation's booked for the night."
-}]
+[node name="Captain" parent="." unique_id=1505632220 instance=ExtResource("44_captain")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -8.01, 0, -12.11)
 
-[node name="OfficerBell" parent="." unique_id=1441253231 instance=ExtResource("11_daniels")]
+[node name="NightOfficer" parent="." unique_id=1441253231 instance=ExtResource("42_bell")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6215935, 0, -2.841864)
-schedule = [{
-"clip": "idle",
-"spot": "Bullpen/WalkNW",
-"t": 0.0
-}, {
-"clip": "walk",
-"spot": "Bullpen/WalkNW",
-"t": 45.0
-}, {
-"clip": "walk",
-"spot": "Bullpen/WalkN",
-"t": 50.0
-}, {
-"clip": "walk",
-"spot": "Bullpen/WalkMid",
-"t": 51.9
-}, {
-"clip": "walk",
-"spot": "Bullpen/WalkS",
-"t": 53.7
-}, {
-"clip": "walk",
-"spot": "Bullpen/DoorLobby",
-"t": 54.8
-}, {
-"clip": "walk",
-"spot": "Lobby/DeskVisit",
-"t": 59.0
-}, {
-"clip": "idle",
-"spot": "Lobby/DeskVisit",
-"t": 70.0
-}, {
-"clip": "walk",
-"spot": "Lobby/DoorBullpen",
-"t": 74.1
-}, {
-"clip": "walk",
-"spot": "Bullpen/WalkS",
-"t": 75.8
-}, {
-"clip": "walk",
-"spot": "Bullpen/WalkMid",
-"t": 77.6
-}, {
-"clip": "walk",
-"spot": "Bullpen/WalkN",
-"t": 79.5
-}, {
-"clip": "walk",
-"spot": "Bullpen/WalkNW",
-"t": 82.0
-}, {
-"clip": "idle",
-"spot": "Bullpen/WalkNW",
-"t": 84.5
-}, {
-"clip": "idle",
-"spot": "Bullpen/WalkNW",
-"t": 170.0
-}]
-paced = true
-barks = [{
-"dur": 4.0,
-"flag": "heard_bell_logbook",
-"hear_range": 8.0,
-"t": 62.0,
-"text": "Evening, Rosa. Night shift needs the radio log... all of it. Captain's orders."
-}]
-visible_mesh = "SM_Chr_Officer_Female_02"
-hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_06.fbx"
-strip_root_motion = true
-dialogue = [{
-"speaker": "OFFICER BELL",
-"text": "Night shift. You're the day guy who won't go home, huh? It's all yours, detective."
-}]
+turn_windows = []
+turn_speed = 4.0
+vanish_at = 0.0
 
-[node name="Inmate" parent="." unique_id=1672845536 instance=ExtResource("22_witness")]
+[node name="Inmate" parent="." unique_id=1672845536 instance=ExtResource("47_inmate")]
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 31.4, 0, -0.7)
-script = ExtResource("27_inmate")
-cam_offset = Vector3(-2.5, 1.5, 0.4)
-cam_fov = 40.0
-push_in_time = 0.7
-paced = true
-visible_mesh = "SM_Chr_Criminal_Female_01"
-hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_03.fbx"
-dialogue_variants = [{
-"lines": [{
-"speaker": "PRISONER",
-"text": "Quiet night. Well - except the shot. There's always the shot."
-}]
-}, {
-"lines": [{
-"speaker": "PRISONER",
-"text": "That witness they marched past? Word inside was somebody wanted him gone. Somebody CLOSE. You want my professional opinion, detective?"
-}, {
-"speaker": "PRISONER",
-"text": "He was safer in HERE. Bars keep things out better than they keep things in."
-}, {
-"speaker": "DETECTIVE",
-"text": "Somebody close. Somebody with a badge, a schedule, and three minutes."
-}],
-"once": true,
-"sets_flag": "inmate_tip"
-}]
+schedule = []
+barks = []
+turn_windows = []
+turn_speed = 4.0
+vanish_at = 0.0
 
 [node name="IntroDirector" type="Node" parent="." unique_id=2015709943]
 script = ExtResource("23_director")
-rookie_path = NodePath("../RookiePetty")
 
 [node name="StoryGate" type="Node" parent="." unique_id=2015709944]
 script = ExtResource("28_storygate")
+
+[node name="EndgameDirector" type="Node" parent="." unique_id=2015709945]
+script = ExtResource("29_endgame")
+
+[node name="CellMurder" type="Node" parent="." unique_id=2015709946]
+script = ExtResource("48_cellmurder")
 
 [node name="LoopClock" type="Node" parent="." unique_id=166655877]
 script = ExtResource("3_clock")

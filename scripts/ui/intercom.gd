@@ -5,8 +5,10 @@ extends CanvasLayer
 # keeps moving under it. Opens with a static crackle.
 
 @export var announcements: Array = [
-	{"t": 20.0, "text": "Shift change in five minutes. Evidence lockup closes at quarter to.", "dur": 6.0},
-	{"t": 70.0, "text": "Detective, the chief wants your report on his desk. Today.", "dur": 6.0},
+	# clock starts 11:57:00 (t0). These land at real wall-clock moments.
+	{"t": 8.0, "text": "Attention - interrogation in progress in the east wing. Please steer clear until it clears.", "dur": 6.0},
+	{"t": 30.0, "text": "11:57 - Evidence lockup is now closed for the night. Card access only.", "dur": 6.0},
+	{"t": 120.0, "text": "11:59 - You have one minute to clock out. You will not be paid a minute after.", "dur": 6.0},
 ]
 @export var crackle_volume_db := -16.0
 

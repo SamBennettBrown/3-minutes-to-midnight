@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://do5on3g0d1l6u" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Bld_Wall_Window_Blinds_Down_01.fbx" id="9_vt52e"]
 [ext_resource type="Script" uid="uid://cv22om4sbyjyj" path="res://scripts/game/auto_collider.gd" id="90_autocol"]
 [ext_resource type="Script" uid="uid://cd8jayk7qqp2v" path="res://scripts/game/flag_gate.gd" id="91_gate"]
-[ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="92_item"]
 [ext_resource type="Script" uid="uid://ya2iepgusbsw" path="res://scripts/game/timed_flag.gd" id="93_timed"]
 
 [sub_resource type="BoxShape3D" id="shape_doorgate"]
@@ -228,8 +227,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25, 1.5, 0)
 script = ExtResource("91_gate")
 open_flag = "interrogation_clear"
 per_loop = true
-locked_speaker = "OFFICER MAYS"
-locked_line = "Interrogation's closed, detective. Come back when we're done - shouldn't be long now."
+locked_speaker = "DETECTIVE"
+locked_line = "I can't go in during an interrogation. Card on the glass says it plain - IN USE. Through the wood, low voices, the scrape of a chair."
 
 [node name="Shape" type="CollisionShape3D" parent="DoorGate" unique_id=771224901]
 shape = SubResource("shape_doorgate")
@@ -237,21 +236,9 @@ shape = SubResource("shape_doorgate")
 [node name="ClearTimer" type="Node" parent="." unique_id=771224902]
 script = ExtResource("93_timed")
 flag = "interrogation_clear"
-at = 120.0
+at = 100.0
 per_loop = true
 
-[node name="PaperNotes" type="Node3D" parent="." unique_id=771224903]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.85, -0.637)
-script = ExtResource("92_item")
-dialogue = [{
-"speaker": "INTERVIEW NOTES",
-"text": "Cramped handwriting on a legal pad. Subject questioned re: the records-clerk killing. Answers evasive. Kept asking the time. Kept saying 'they won't let me leave here alive.'"
-}, {
-"speaker": "DETECTIVE",
-"text": "The transcript just... stops. Mid-sentence. Whoever was writing this put the pen down and never picked it back up."
-}]
-sets_flag = "read_interview_notes"
-prompt_height = 1.0
 
 [node name="props" type="Node3D" parent="." unique_id=341905133]
 script = ExtResource("90_autocol")

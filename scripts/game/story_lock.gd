@@ -7,10 +7,9 @@
 #   if StoryLock.is_unlocked(unlock_flag): ...   # in _process
 #
 # `unlock_flag` conventions:
-#   ""              -> always unlocked (no gate)
-#   "intro_done"    -> unlocked once loop 0 is over (any real loop)
-#   "know_loop"     -> unlocked once the detective understands the loop
-#   any other flag  -> unlocked once that permanent flag is set
+#   ""               -> always unlocked (no gate)
+#   "bound_promise"  -> unlocked once the opening monologue hands over control
+#   any other flag   -> unlocked once that permanent flag is set
 #
 # Everything here is static and side-effect free - safe to call every frame.
 

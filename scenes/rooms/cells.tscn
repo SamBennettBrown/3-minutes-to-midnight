@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bvcge065bx5nx" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Sink_Toilet_01.fbx" id="10_y3btd"]
 [ext_resource type="PackedScene" uid="uid://cb2jyycov5rj6" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Bench_03.fbx" id="11_mve0g"]
 [ext_resource type="Script" uid="uid://cv22om4sbyjyj" path="res://scripts/game/auto_collider.gd" id="90_autocol"]
+[ext_resource type="Script" uid="uid://cd8jayk7qqp2v" path="res://scripts/game/flag_gate.gd" id="91_gate"]
 [ext_resource type="FontFile" uid="uid://canmpksdd2ct8" path="res://fonts/Special_Elite/SpecialElite-Regular.ttf" id="98_font"]
 [ext_resource type="Script" uid="uid://fokcbe25o2i3" path="res://scripts/game/floor_label.gd" id="99_label"]
 
@@ -46,6 +47,24 @@ size = Vector3(0.3, 3, 10)
 
 [sub_resource type="BoxShape3D" id="shape_v10"]
 size = Vector3(0.3, 3, 10)
+
+[sub_resource type="BoxMesh" id="mesh_wn_lo"]
+size = Vector3(0.3, 3, 1.65)
+
+[sub_resource type="BoxShape3D" id="shape_wn_lo"]
+size = Vector3(0.3, 3, 1.65)
+
+[sub_resource type="BoxMesh" id="mesh_wn_hi"]
+size = Vector3(0.3, 3, 0.65)
+
+[sub_resource type="BoxShape3D" id="shape_wn_hi"]
+size = Vector3(0.3, 3, 0.65)
+
+[sub_resource type="BoxMesh" id="mesh_cells_door"]
+size = Vector3(0.3, 3, 1.7)
+
+[sub_resource type="BoxShape3D" id="shape_cells_door"]
+size = Vector3(0.3, 3, 1.7)
 
 [sub_resource type="BoxMesh" id="mesh_v4"]
 size = Vector3(0.3, 3, 4)
@@ -97,10 +116,19 @@ shape = SubResource("shape_trigger")
 [node name="Spots" type="Node3D" parent="." unique_id=1995577458]
 
 [node name="Center" type="Marker3D" parent="Spots" unique_id=2013836552]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5237875, 0, -1.5908855)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -1)
 
 [node name="Door" type="Marker3D" parent="Spots" unique_id=931072051]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 0)
+
+[node name="CellRight" type="Marker3D" parent="Spots" unique_id=931072052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4, 0, -2.6)
+
+[node name="CorridorRight" type="Marker3D" parent="Spots" unique_id=931072053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 1.2230089)
+
+[node name="CellLeft" type="Marker3D" parent="Spots" unique_id=931072054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, 2.6)
 
 [node name="walls" type="Node3D" parent="." unique_id=606793807]
 
@@ -144,15 +172,39 @@ surface_material_override/0 = SubResource("mat_wall")
 [node name="Shape" type="CollisionShape3D" parent="walls/WallEast" unique_id=1879809109]
 shape = SubResource("shape_v10")
 
-[node name="WallWestNear" type="StaticBody3D" parent="walls" unique_id=169496583]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97, 1.5, 3)
+[node name="WallWestNearLo" type="StaticBody3D" parent="walls" unique_id=169496583]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97, 1.5, 1.825)
 
-[node name="Mesh" type="MeshInstance3D" parent="walls/WallWestNear" unique_id=1104412428]
-mesh = SubResource("mesh_v4")
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallWestNearLo" unique_id=1104412428]
+mesh = SubResource("mesh_wn_lo")
 surface_material_override/0 = SubResource("mat_wall")
 
-[node name="Shape" type="CollisionShape3D" parent="walls/WallWestNear" unique_id=76887803]
-shape = SubResource("shape_v4")
+[node name="Shape" type="CollisionShape3D" parent="walls/WallWestNearLo" unique_id=76887803]
+shape = SubResource("shape_wn_lo")
+
+[node name="WallWestNearHi" type="StaticBody3D" parent="walls" unique_id=169496584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97, 1.5, 4.675)
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/WallWestNearHi" unique_id=1104412429]
+mesh = SubResource("mesh_wn_hi")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/WallWestNearHi" unique_id=76887804]
+shape = SubResource("shape_wn_hi")
+
+[node name="CellsPassageDoor" type="StaticBody3D" parent="walls" unique_id=169496585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97, 1.5, 3.5)
+script = ExtResource("91_gate")
+open_flag = "passage_open_this_loop"
+per_loop = true
+locked_speaker = "THE WALL"
+
+[node name="Mesh" type="MeshInstance3D" parent="walls/CellsPassageDoor" unique_id=1104412430]
+mesh = SubResource("mesh_cells_door")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="walls/CellsPassageDoor" unique_id=76887805]
+shape = SubResource("shape_cells_door")
 
 [node name="WallWestFar" type="StaticBody3D" parent="walls" unique_id=891339479]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97, 1.5, -3)

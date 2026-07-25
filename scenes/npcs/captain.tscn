@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://cnpc0captain01"]
+
+; THE CAPTAIN - the killer. He is NOT part of the interrogation/escort (the
+; investigator handles that alone). He sits in his OFFICE until ~2:00, brushing
+; the detective off ("I'm busy"), then walks to the LOCKER ROOM and vanishes
+; into the hidden passage (vanish_into_passage_at) to do the killing cell-side.
+; The passage is sealed to the player, so on a blind run he just disappears and
+; the witness dies in a sealed cell - the impossible death.
+;
+; Proving guilt (locker 0806) doesn't change his route - it only unlocks the
+; CATCH: endgame_director lets you intercept him in the locker room during
+; 2:45-3:00, before he vanishes. Paced walk; his office idle-hold is authored.
+
+[ext_resource type="PackedScene" path="res://scenes/player/character_rig.tscn" id="1_rig"]
+[ext_resource type="Script" path="res://scripts/game/captain.gd" id="2_captain"]
+
+[node name="Captain" instance=ExtResource("1_rig")]
+process_mode = 3
+script = ExtResource("2_captain")
+walk_pace = 1.6
+foot_offset = 0.02
+blocks_player = true
+hide_outside_active_room = true
+start_clip = "idle"
+strip_root_motion = true
+visible_mesh = "SM_Chr_Detective_Female_01"
+hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_08.fbx"
+voice_clip = "res://audio/sfx/sfx_voice_male_06.mp3"
+paced = true
+vanish_into_passage_at = 178.0
+barks = [{
+"dur": 4.0,
+"t": 20.0,
+"text": "Not now, detective. Paperwork. Chain of custody doesn't file itself."
+}, {
+"dur": 4.0,
+"t": 80.0,
+"text": "Still here? I said I'm busy. Go do your rounds."
+}]
+schedule = [{
+"clip": "idle",
+"spot": "CaptainsOffice/DeskFront",
+"t": 0.0
+}, {
+"clip": "idle",
+"spot": "CaptainsOffice/DeskFront",
+"t": 120.0
+}, {
+"clip": "walk",
+"spot": "CaptainsOffice/Door",
+"t": 123.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/DoorCaptain",
+"t": 127.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/DoorHall2",
+"t": 132.0
+}, {
+"clip": "walk",
+"spot": "Hall2/MouthBullpen",
+"t": 136.0
+}, {
+"clip": "walk",
+"spot": "Hall2/DoorLocker",
+"t": 142.0
+}, {
+"clip": "walk",
+"spot": "LockerRoom/Door",
+"t": 146.0
+}, {
+"clip": "walk",
+"spot": "LockerRoom/CaptainsLockerSpot",
+"t": 150.0
+}, {
+"clip": "idle",
+"spot": "LockerRoom/CaptainsLockerSpot",
+"t": 400.0
+}]
+dialogue = [{
+"speaker": "THE CAPTAIN",
+"text": "I'm busy, detective. Whatever it is, it waits. Out."
+}]

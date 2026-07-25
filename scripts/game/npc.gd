@@ -54,6 +54,10 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 ## walked out of the building - the clerk exiting past the lobby door).
 ## 0 = never. Reappears on loop restart.
 @export var vanish_at := 0.0
+## OR: vanish the moment they physically REACH this spot (e.g. "Lobby/Exit")
+## - no clock guessing, they disappear right as they hit the door. Empty =
+## unused. Reappears on loop restart.
+@export var vanish_at_spot := ""
 
 var _clock: Node
 var _bark_i := 0
@@ -61,6 +65,7 @@ var _last_pos := Vector3.INF
 var _spots_resolved := false
 var _base_yaw := 0.0
 var _base_yaw_set := false
+var _gone := false
 
 
 func _ready() -> void:
@@ -78,15 +83,31 @@ func _process(_delta: float) -> void:
 		_clock = get_tree().get_first_node_in_group("loop_clock")
 	if _clock == null or get_tree().paused:
 		return
+	# the opening monologue owns the screen - nobody moves or barks until the
+	# intro hands over control (bound_promise). Otherwise a bark could open a
+	# line and pause the tree, freezing the intro.
+	if not Flags.has_flag("bound_promise"):
+		return
 	# left the building for good: hide and stop doing anything until the
 	# loop restarts (the clerk exiting past the front door)
-	if vanish_at > 0.0 and _clock.time >= vanish_at:
+	if _gone or (vanish_at > 0.0 and _clock.time >= vanish_at):
 		if visible:
 			visible = false
 			remove_from_group("talkable")
 		return
 	if not _spots_resolved:
 		_resolve_spots()
+	# spot-based exit: gone the moment they physically reach the marker
+	if vanish_at_spot != "":
+		var exit_m := _find_spot(vanish_at_spot)
+		if exit_m != null:
+			var flat := global_position - exit_m.global_position
+			flat.y = 0.0
+			if flat.length() < 0.45:
+				_gone = true
+				visible = false
+				remove_from_group("talkable")
+				return
 	while _bark_i < barks.size() and _clock.time >= float(barks[_bark_i].get("t", 1e9)):
 		_do_bark(barks[_bark_i])
 		_bark_i += 1
@@ -103,37 +124,36 @@ func _process(_delta: float) -> void:
 	var closed := first_pos.distance_to(last_pos) < 0.5
 	var t := fmod(float(_clock.time), total) if closed \
 			else minf(float(_clock.time), total)
-	var i := 0
-	while i < schedule.size() - 2 and t >= float(schedule[i + 1]["t"]):
-		i += 1
-	var a: Dictionary = schedule[i]
-	var b: Dictionary = schedule[i + 1]
-	var clip := String(a["clip"])
-	var from: Vector3 = a["pos"]
-	var to: Vector3 = b["pos"]
-	# only a WALK/RUN segment travels; idle/foottap/etc. HOLD in place so
-	# the character doesn't slide while standing still. When the NEXT entry
-	# is a hold, the walk's destination is where that hold sits (b["pos"]),
-	# which is correct. The snag is a walk whose PREVIOUS entry was a hold:
-	# the character is still at the hold's spot, not this entry's `from`.
-	if clip == "walk" or clip == "run":
-		if i > 0 and String(schedule[i - 1]["clip"]) != "walk" \
-				and String(schedule[i - 1]["clip"]) != "run":
-			# anchor the walk where the character actually stands (the hold),
-			# and aim it at THIS entry's own spot - the leg the hold's `to`
-			# would otherwise swallow
-			from = schedule[i - 1]["pos"]
-			to = a["pos"]
-		var span := float(b["t"]) - float(a["t"])
-		var f := 0.0 if span <= 0.0 else clampf((t - float(a["t"])) / span, 0.0, 1.0)
+	# ONE model, shared with _repace_schedule: each entry is a waypoint the
+	# character is AT by its `t`. The segment we're on now runs from the
+	# PREVIOUS waypoint's pos to the CURRENT target's pos over [prev.t,
+	# cur.t], and the CURRENT entry's clip says how we cross it. So `dest` is
+	# the first entry whose t is still ahead (or the last one).
+	var dest := 1
+	while dest < schedule.size() - 1 and t >= float(schedule[dest]["t"]):
+		dest += 1
+	var cur: Dictionary = schedule[dest]
+	var prev: Dictionary = schedule[dest - 1]
+	var clip := String(cur["clip"])
+	var from: Vector3 = prev["pos"]
+	var to: Vector3 = cur["pos"]
+	# a "walk"/"run" segment that covers no ground (both waypoints the same
+	# spot, e.g. a hold authored as a walk) must NOT play the walk cycle in
+	# place - fall back to idle so the character stands still convincingly.
+	var moving := (clip == "walk" or clip == "run") and from.distance_to(to) > 0.05
+	if moving:
+		# travel prev -> cur across the segment's own time window
+		var span := float(cur["t"]) - float(prev["t"])
+		var f := 0.0 if span <= 0.0 else clampf((t - float(prev["t"])) / span, 0.0, 1.0)
 		position = from.lerp(to, f)
 		var dir := to - from
 		if dir.length() > 0.01:
-			# smooth turn - snapping at waypoints reads as a side-step
 			rotation.y = lerp_angle(rotation.y, atan2(dir.x, dir.z), _delta * 8.0)
+		play(clip)
 	else:
-		position = from
-	play(clip)
+		# a hold: stay put at the destination's own spot
+		position = to
+		play("idle")
 	_sync_walk_speed(_delta)
 
 
@@ -199,11 +219,18 @@ func _resolve_spots() -> void:
 			e["pos"] = Vector3(p.x, 0.0, p.z)
 	if paced:
 		_repace_schedule()
+	# seed the NPC at its first waypoint so it never TELEPORTS from its
+	# authored transform to schedule[0] the moment the schedule engages
+	# (the authored transform and schedule[0] are two sources of truth).
+	if schedule.size() > 0 and schedule[0].has("pos"):
+		position = schedule[0]["pos"]
 
 
-# Rewrite each entry's `t` so walk segments run at walk_pace and non-walk
-# segments hold for their originally-authored duration. Motion becomes
-# speed-correct no matter how the times were hand-entered.
+# Rewrite each entry's `t` so a TRAVELING segment runs at walk_pace and a
+# HOLD keeps its authored duration. Uses the SAME model as the _process
+# lerp: the segment from entry i-1 to entry i is described by entry i's
+# clip - a "walk"/"run" there means you cross that distance at pace;
+# anything else (idle) is a hold for the authored gap.
 func _repace_schedule() -> void:
 	if schedule.size() < 2:
 		return
@@ -213,12 +240,15 @@ func _repace_schedule() -> void:
 	for i in range(1, schedule.size()):
 		var prev: Dictionary = schedule[i - 1]
 		var cur: Dictionary = schedule[i]
+		var moves: bool = String(cur.get("clip", "")) == "walk" \
+				or String(cur.get("clip", "")) == "run"
+		var d: float = (Vector3(cur["pos"]) - Vector3(prev["pos"])).length()
 		var dur: float
-		if String(prev.get("clip", "")) == "walk":
-			var d: float = (Vector3(cur["pos"]) - Vector3(prev["pos"])).length()
+		# a traveling segment is paced by distance when it covers ground;
+		# a hold (or a zero-distance walk-in-place) keeps its authored gap.
+		if moves and d > 0.05:
 			dur = d / pace
 		else:
-			# hold for the authored gap (a deliberate pause/idle beat)
 			dur = maxf(float(cur.get("t", 0.0)) - float(prev.get("t", 0.0)), 0.0)
 		t += maxf(dur, 0.05)
 		cur["t"] = t

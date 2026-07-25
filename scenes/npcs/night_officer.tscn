@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://cnpc0bell0001"]
+
+; The NIGHT OFFICER - relieving officer for the night shift. Paces the
+; bullpen, swings past the front desk to say hello, gripes about the vending
+; machine, and tells you the evidence clerk always ducks out early leaving
+; his card at the desk.
+
+[ext_resource type="PackedScene" path="res://scenes/player/character_rig.tscn" id="1_rig"]
+[ext_resource type="Script" uid="uid://dq4eoax0q5nc1" path="res://scripts/game/npc.gd" id="2_npc"]
+
+[node name="NightOfficer" instance=ExtResource("1_rig")]
+process_mode = 3
+script = ExtResource("2_npc")
+walk_pace = 1.6
+foot_offset = 0.02
+blocks_player = true
+hide_outside_active_room = true
+start_clip = "idle"
+strip_root_motion = true
+visible_mesh = "SM_Chr_Officer_Female_02"
+hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_06.fbx"
+voice_clip = "res://audio/sfx/female_officer.mp3"
+paced = true
+schedule = [{
+"clip": "idle",
+"spot": "Bullpen/WalkNW",
+"t": 0.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/WalkNW",
+"t": 45.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/WalkN",
+"t": 50.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/WalkMid",
+"t": 51.9
+}, {
+"clip": "walk",
+"spot": "Bullpen/WalkS",
+"t": 53.7
+}, {
+"clip": "walk",
+"spot": "Bullpen/DoorLobby",
+"t": 54.8
+}, {
+"clip": "walk",
+"spot": "Lobby/DeskVisit",
+"t": 59.0
+}, {
+"clip": "idle",
+"spot": "Lobby/DeskVisit",
+"t": 70.0
+}, {
+"clip": "walk",
+"spot": "Lobby/DoorBullpen",
+"t": 74.1
+}, {
+"clip": "walk",
+"spot": "Bullpen/WalkS",
+"t": 75.8
+}, {
+"clip": "walk",
+"spot": "Bullpen/WalkMid",
+"t": 77.6
+}, {
+"clip": "walk",
+"spot": "Bullpen/WalkN",
+"t": 79.5
+}, {
+"clip": "walk",
+"spot": "Bullpen/WalkNW",
+"t": 82.0
+}, {
+"clip": "idle",
+"spot": "Bullpen/WalkNW",
+"t": 84.5
+}, {
+"clip": "idle",
+"spot": "Bullpen/WalkNW",
+"t": 170.0
+}]
+barks = [{
+"dur": 3.0,
+"t": 62.0,
+"text": "Evening, Rosa. Long night, huh?"
+}, {
+"dur": 4.0,
+"t": 90.0,
+"text": "Ugh - I lost another dollar to that damn vending machine. Third time this week."
+}]
+dialogue = [{
+"speaker": "NIGHT OFFICER",
+"text": "Night shift. You're the day guy who won't go home, huh? It's all yours, detective."
+}, {
+"speaker": "NIGHT OFFICER",
+"text": "Looking for the evidence clerk? Ha - he always skips out a little early. Clocks his card, drops it at the desk, and he's a ghost before midnight."
+}]
