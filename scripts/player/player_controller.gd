@@ -39,9 +39,15 @@ var _latch_valid := false
 var _latched_fwd := Vector3.FORWARD
 var _latched_right := Vector3.RIGHT
 var _bump_cd := 0.0
+var _slow_time := 0.0
 
 
-func _physics_process(delta: float) -> void:
+# Movement runs at RENDER rate (in _process, below), not on physics ticks.
+# The player used to advance in fixed 60Hz physics steps while every NPC
+# glided at frame rate - side by side that reads as jagged stutter,
+# especially on high-refresh screens. Everything the player collides with
+# here is static geometry, so move_and_slide at render rate is safe.
+func _move(delta: float) -> void:
 	var input := Vector2.ZERO if input_locked \
 			else Input.get_vector("move_left", "move_right", "move_back", "move_forward")
 	var running := Input.is_action_pressed("sprint")
@@ -54,11 +60,17 @@ func _physics_process(delta: float) -> void:
 	velocity.y = 0.0 if is_on_floor() else velocity.y - 9.8 * delta
 	move_and_slide()
 
-	# the animation follows what actually HAPPENED, not what was asked for:
-	# pushing straight into a wall leaves velocity ~0 after the slide, and
-	# that must read as standing, not a walk-in-place moonwalk
+	# the animation follows what actually HAPPENED, not what was asked for -
+	# but with a short grace window, because the accel ramp passes through
+	# ~zero speed on a direction reversal and a raw threshold would flap the
+	# clip walk->idle->walk on every wiggle. Sustained blockage (walking
+	# into a wall) still drops to idle - no moonwalking.
 	var hv := Vector2(velocity.x, velocity.z).length()
-	_update_animation(moving and hv > 0.3, running)
+	if not moving or hv > 0.3:
+		_slow_time = 0.0
+	else:
+		_slow_time += delta
+	_update_animation(moving and _slow_time < 0.15, running)
 	_check_bump(delta, moving)
 
 
@@ -77,8 +89,9 @@ func _move_camera_relative(input: Vector2, running: bool, delta: float) -> bool:
 	if input == Vector2.ZERO:
 		_latch_valid = false
 		# ease to a stop over ~0.1s instead of freezing mid-stride
-		velocity.x = move_toward(velocity.x, 0.0, decel * delta)
-		velocity.z = move_toward(velocity.z, 0.0, decel * delta)
+		var stop := Vector2(velocity.x, velocity.z).move_toward(Vector2.ZERO, decel * delta)
+		velocity.x = stop.x
+		velocity.z = stop.y
 		return false
 	if not _latch_valid:
 		var cam := get_viewport().get_camera_3d()
@@ -95,9 +108,13 @@ func _move_camera_relative(input: Vector2, running: bool, delta: float) -> bool:
 		dir = dir.normalized()
 	var speed := run_speed if running else walk_speed
 	# ramp toward the target velocity - kills the instant-speed skate on
-	# starts and hard direction changes while staying responsive (~0.12s)
-	velocity.x = move_toward(velocity.x, dir.x * speed, accel * delta)
-	velocity.z = move_toward(velocity.z, dir.z * speed, accel * delta)
+	# starts and hard direction changes while staying responsive (~0.12s).
+	# One VECTOR move_toward, not per-axis: per-axis ramps kink the velocity
+	# direction mid-turn, which reads as a jagged little hitch on corners.
+	var v := Vector2(velocity.x, velocity.z) \
+			.move_toward(Vector2(dir.x, dir.z) * speed, accel * delta)
+	velocity.x = v.x
+	velocity.z = v.y
 	if dir.length() > 0.1:
 		var target := atan2(dir.x, dir.z)
 		# small deadband so the heading isn't micro-corrected every tick
@@ -144,8 +161,8 @@ func _check_bump(delta: float, moving: bool) -> void:
 const RoomState := preload("res://scripts/game/room.gd")
 
 
-func _process(_delta: float) -> void:
-	# render-frame check: physics ticks can miss a just_pressed edge
+func _process(delta: float) -> void:
+	_move(delta)
 	if Input.is_action_just_pressed("interact") and not input_locked:
 		_try_talk()
 	_keep_room_current()

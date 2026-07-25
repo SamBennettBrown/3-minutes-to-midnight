@@ -240,6 +240,15 @@ func _repace_schedule() -> void:
 	for i in range(1, schedule.size()):
 		var prev: Dictionary = schedule[i - 1]
 		var cur: Dictionary = schedule[i]
+		# "until" pins this entry to an ABSOLUTE clock beat - pacing turns
+		# authored times into relative gaps, which makes exact departures
+		# ("the investigator leaves the cells at 1:00 on the dot") drift.
+		# A pinned hold ends at its authored moment no matter how long the
+		# paced walk took to get there.
+		if cur.has("until"):
+			t = maxf(float(cur["until"]), t + 0.05)
+			cur["t"] = t
+			continue
 		var moves: bool = String(cur.get("clip", "")) == "walk" \
 				or String(cur.get("clip", "")) == "run"
 		var d: float = (Vector3(cur["pos"]) - Vector3(prev["pos"])).length()

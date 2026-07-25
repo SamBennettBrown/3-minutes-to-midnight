@@ -8,12 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://ddp5hken8m17n" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Chair_01.fbx" id="7_5k3x6"]
 [ext_resource type="PackedScene" uid="uid://qclq44bswwm1" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Coffee_Cup_01.fbx" id="8_oyhdq"]
 [ext_resource type="PackedScene" uid="uid://do5on3g0d1l6u" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Bld_Wall_Window_Blinds_Down_01.fbx" id="9_vt52e"]
+[ext_resource type="PackedScene" uid="uid://8rsahuaxkoxs" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Bin_01.fbx" id="12_owsvw"]
 [ext_resource type="Script" uid="uid://cv22om4sbyjyj" path="res://scripts/game/auto_collider.gd" id="90_autocol"]
 [ext_resource type="Script" uid="uid://cd8jayk7qqp2v" path="res://scripts/game/flag_gate.gd" id="91_gate"]
 [ext_resource type="Script" uid="uid://ya2iepgusbsw" path="res://scripts/game/timed_flag.gd" id="93_timed"]
-
-[sub_resource type="BoxShape3D" id="shape_doorgate"]
-size = Vector3(0.2, 3, 2.2)
 
 [sub_resource type="BoxShape3D" id="shape_trigger"]
 size = Vector3(9.82, 4, 9.17)
@@ -72,6 +70,9 @@ size = Vector3(0.3, 3, 3.9301758)
 [sub_resource type="BoxShape3D" id="shape_v4"]
 size = Vector3(0.3, 3, 4)
 
+[sub_resource type="BoxShape3D" id="shape_doorgate"]
+size = Vector3(0.2, 3, 2.2)
+
 [node name="Interrogation" type="Node3D" unique_id=993639396]
 script = ExtResource("1_room")
 
@@ -80,8 +81,8 @@ transform = Transform3D(0.5713326, -0.19022107, 0.7983703, -2.4760999e-08, 0.972
 fov = 45.0
 
 [node name="PeekCamera" type="Camera3D" parent="." unique_id=489121704]
-transform = Transform3D(-1, 0, 0, 0, 0.976187, 0.21693, 0, 0.21693, -0.976187, 0.5, 1.7, -4.3)
-fov = 42.0
+transform = Transform3D(-1, 0, 0, 0, 0.92955035, 0.36869502, 0, 0.36869502, -0.92955035, 0.5, 1.7, -4.9965715)
+fov = 63.7
 
 [node name="Lamp" type="SpotLight3D" parent="." unique_id=1310841159]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 3.8710914, -3)
@@ -170,7 +171,7 @@ surface_material_override/0 = SubResource("mat_wall")
 shape = SubResource("shape_pillar")
 
 [node name="Mirror" type="MeshInstance3D" parent="." unique_id=524494926]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, -4.94)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00030857325, 1.7037995, -4.946202)
 mesh = SubResource("mesh_pane")
 surface_material_override/0 = SubResource("mat_mirror")
 
@@ -237,43 +238,38 @@ shape = SubResource("shape_doorgate")
 script = ExtResource("93_timed")
 flag = "interrogation_clear"
 at = 100.0
-per_loop = true
-
 
 [node name="props" type="Node3D" parent="." unique_id=341905133]
 script = ExtResource("90_autocol")
 
 [node name="SM_Prop_Table_04" parent="props" unique_id=201082161 instance=ExtResource("6_owsvw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24328691, 0, -0.96693516)
 
 [node name="SM_Prop_Chair_01" parent="props" unique_id=978827135 instance=ExtResource("7_5k3x6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24328691, 0, -2.066935)
 
 [node name="SM_Prop_Chair_02" parent="props" unique_id=343378800 instance=ExtResource("7_5k3x6")]
-transform = Transform3D(-0.9396926, 0, 0.3420202, 0, 1, 0, -0.3420202, 0, -0.9396926, -0.500577, 0, 0.7)
+transform = Transform3D(-0.9396926, 0, 0.3420202, 0, 1, 0, -0.3420202, 0, -0.9396926, -0.25729007, 0, 0.23306483)
 
 [node name="SM_Prop_NotePad_01" parent="props" unique_id=1068420005 instance=ExtResource("2_xpbmo")]
-transform = Transform3D(0.97437006, 0, 0.22495104, 0, 1, 0, -0.22495104, 0, 0.97437006, 0.3, 0.78, -0.6373111)
+transform = Transform3D(0.97437006, 0, 0.22495104, 0, 1, 0, -0.22495104, 0, 0.97437006, 0.5432869, 0.78, -1.1042463)
 
 [node name="SM_Prop_Coffee_Cup_01" parent="props" unique_id=434104572 instance=ExtResource("8_oyhdq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 0.78, -0.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10671309, 0.78, -0.76693517)
 
 [node name="SM_Prop_Camera_Tripod_01" parent="props" unique_id=1861833982 instance=ExtResource("3_25vpd")]
-transform = Transform3D(0.707, 0, -0.707, 0, 1, 0, 0.707, 0, 0.707, -1.8, 0, -0.5999999)
+transform = Transform3D(0.707, 0, -0.707, 0, 1, 0, 0.707, 0, 0.707, -1.1962326, 0, -1.0669351)
 
 [node name="Spots" type="Node3D" parent="." unique_id=126052631]
 
-[node name="Center" type="Marker3D" parent="Spots" unique_id=1442568367]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.083815, 0, 0.8854955)
-
 [node name="Seat" type="Marker3D" parent="Spots" unique_id=929479746]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1020606, 0, -2.7856786)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1020606, 0, 0.93566036)
 
 [node name="WindowInside" type="Marker3D" parent="Spots" unique_id=1236115319]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.9289124)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0950105, -0.007189989, -1.4194196)
 
 [node name="WindowInside2" type="Marker3D" parent="Spots" unique_id=1497695993]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5289958, 0, -1.4702868)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5289958, 0, 0.10201794)
 
 [node name="Door" type="Marker3D" parent="Spots" unique_id=282495988]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 0)
@@ -281,5 +277,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 0)
 [node name="SM_Bld_Wall_Window_Blinds_Down_01" parent="." unique_id=1958578539 instance=ExtResource("9_vt52e")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.6668873, 0, 0.024681807)
 
-[node name="observe" type="Camera3D" parent="." unique_id=753002082]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.7857225, -4.9777203)
+[node name="SM_Prop_Bin_01" parent="." unique_id=266079799 instance=ExtResource("12_owsvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5084245, -2.3841858e-07, 1.4970164)

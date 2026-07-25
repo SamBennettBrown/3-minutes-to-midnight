@@ -49,12 +49,6 @@ emission_enabled = true
 emission = Color(1, 0.8, 0.45, 1)
 emission_energy_multiplier = 0.55
 
-[sub_resource type="BoxMesh" id="mesh_note2"]
-size = Vector3(0.22, 0.3, 0.02)
-
-[sub_resource type="StandardMaterial3D" id="mat_note2"]
-albedo_color = Color(0.75, 0.72, 0.62, 1)
-
 [sub_resource type="BoxMesh" id="mesh_w4"]
 size = Vector3(4, 3, 0.3)
 
@@ -161,34 +155,19 @@ surface_material_override/0 = SubResource("mat_floor")
 [node name="Shape" type="CollisionShape3D" parent="Floor" unique_id=1463601146]
 shape = SubResource("shape_floor")
 
+[node name="SM_Prop_Pipe_01_Curve" parent="Floor" unique_id=1615909964 instance=ExtResource("3_hthjo")]
+transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, 4.0557475, 2.5567303, -4.7586403)
+
 [node name="FloorPassage" type="StaticBody3D" parent="." unique_id=1426629262]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.63, -0.1, -3.5)
 
 [node name="Shape" type="CollisionShape3D" parent="FloorPassage" unique_id=1463601147]
 shape = SubResource("shape_floor_passage")
 
-[node name="SM_Prop_Pipe_01_Curve" parent="Floor" unique_id=1615909964 instance=ExtResource("3_hthjo")]
-transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, 4.0557475, 2.5567303, -4.7586403)
-
 [node name="DoorGlow" type="MeshInstance3D" parent="." unique_id=1722630948]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, -4.97)
 mesh = SubResource("mesh_glow_h")
 surface_material_override/0 = SubResource("mat_glow")
-
-[node name="MaintenanceSlip" type="Node3D" parent="." unique_id=2074755953]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 1.4, -1)
-script = ExtResource("91_item")
-dialogue = [{
-"speaker": "MAINTENANCE SLIP",
-"text": "Pinned to the corkboard: 'Locker-room heating's on the fritz again. Third request this month. - Maintenance'"
-}, {
-"speaker": "DETECTIVE",
-"text": "Nobody ever fixes anything around here until it's too late."
-}]
-
-[node name="Mesh" type="MeshInstance3D" parent="MaintenanceSlip" unique_id=1574498929]
-mesh = SubResource("mesh_note2")
-surface_material_override/0 = SubResource("mat_note2")
 
 [node name="Spots" type="Node3D" parent="." unique_id=690834603]
 
@@ -269,7 +248,6 @@ script = ExtResource("92_gate")
 open_flag = "passage_open_this_loop"
 per_loop = true
 locked_speaker = "THE WALL"
-locked_line = ""
 
 [node name="Mesh" type="MeshInstance3D" parent="Walls/PassageDoor" unique_id=748132197]
 mesh = SubResource("mesh_passage_door")
@@ -363,14 +341,12 @@ dialogue = [{
 prompt_height = 1.6
 
 [node name="SM_Prop_Weapon_Locker_06" parent="Props" unique_id=1206367764 instance=ExtResource("5_1k2jd")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.75, 0.010403633, -3.5)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.7876024, 0.010403633, -3.5)
 script = ExtResource("93_keypad")
 code = "0806"
 sets_flag = "captains_locker_open"
 unlocked_text = "I swing the locker off the wall again. The passage - right where he left it."
-reveal_flag = "captain_is_guilty"
-opens_loop_flag = "passage_open_this_loop"
-hide_when_flag = "passage_open_this_loop"
+prompt_height = 1.6
 reveal_dialogue = [{
 "speaker": "DETECTIVE",
 "text": "0806. Deputy Biscuit's birthday. The lock clicks. Alright, Captain - let's have that gun. End this whole thing right here."
@@ -384,7 +360,12 @@ reveal_dialogue = [{
 "speaker": "DETECTIVE",
 "text": "He doesn't keep the murder weapon here. He keeps the murder ROUTE. That's how he gets to a sealed cell - right through the wall. THAT'S how my witness dies."
 }]
-prompt_height = 1.6
+reveal_flag = "captain_is_guilty"
+opens_loop_flag = "passage_open_this_loop"
+hide_when_flag = "passage_open_this_loop"
+
+[node name="SM_Sign_Label_01" parent="Props" unique_id=334238416 instance=ExtResource("16_47ryp")]
+transform = Transform3D(1.1924881e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, 1.1924881e-08, -5.2125306e-16, 3.233544, 1.669495, -3.2707381)
 
 [node name="SM_Prop_Bench_02" parent="Props" unique_id=1500003497 instance=ExtResource("6_x4sv2")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 2.3563566, -2.3841858e-07, -1.4597298)
@@ -422,17 +403,14 @@ transform = Transform3D(0.9781476, 0, 0.2079117, 0, 1, 0, -0.2079117, 0, 0.97814
 [node name="SM_Sign_Stickynote_02" parent="." unique_id=635035461 instance=ExtResource("15_4xbq2")]
 transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 4.165031, 1.4733686, 2.142148)
 
-[node name="SM_Sign_Label_01" parent="." unique_id=334238416 instance=ExtResource("16_47ryp")]
-transform = Transform3D(1.1924881e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, 1.1924881e-08, -5.2125306e-16, 4.180522, 1.669495, -3.2707381)
-
 [node name="SM_Sign_Label_02" parent="." unique_id=326954132 instance=ExtResource("16_47ryp")]
 transform = Transform3D(1.1924881e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, 1.1924881e-08, -5.2125306e-16, 4.180522, 1.669495, 3.2193072)
 
 [node name="SignHall2" type="Label3D" parent="." unique_id=2031246792]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.02, -3.6)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.02, -3.7776234)
 pixel_size = 0.01
 modulate = Color(0.75, 0.75, 0.72, 0.45)
-text = "< HALL 2"
+text = "HALL 2"
 font = ExtResource("98_font")
 font_size = 60
 outline_size = 0

@@ -18,9 +18,10 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 ## wall-clock time the loop starts at (counts up to midnight)
 @export var start_hour := 23
 @export var start_minute := 57
-## hold R this long to restart; the screen darkens while held so a
-## stray tap can't reset the run
-@export var restart_hold := 3.0
+## hold R this long to restart; the screen darkens, the trinket TICKS and a
+## big REWINDING banner ramps in while held - fast, but a stray tap still
+## can't reset the run
+@export var restart_hold := 1.4
 ## the countdown becomes audible at the end: tick-tock swells over the
 ## final 30 seconds, heartbeats layer in over the final 15
 @export var tick_swell_start_db := -26.0
@@ -36,6 +37,9 @@ var frozen := false
 
 var _label := Label.new()
 var _r_held := 0.0
+var _r_label: Label
+var _r_tick := 0.0
+var _r_tock := false
 var _prev_left := -1
 
 
@@ -63,6 +67,17 @@ func _ready() -> void:
 	_label.add_theme_font_size_override("font_size", 96)
 	_label.add_theme_color_override("font_color", Color(0.95, 0.95, 0.93))
 	hud.add_child(_label)
+	# the hold-R banner: big, centred, blood-warm - ramps in over the darken
+	# while the trinket ticks, so a restart never sneaks up on you
+	_r_label = Label.new()
+	_r_label.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_r_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_r_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	_r_label.text = "REWINDING THE NIGHT"
+	_r_label.add_theme_font_size_override("font_size", 64)
+	_r_label.add_theme_color_override("font_color", Color(0.92, 0.32, 0.28))
+	_r_label.modulate.a = 0.0
+	hud.add_child(_r_label)
 
 
 func _process(delta: float) -> void:
@@ -90,17 +105,29 @@ func _process(delta: float) -> void:
 		restart()
 		return
 	if Input.is_action_pressed("restart"):
+		var prog := _r_held / restart_hold
 		_r_held += delta
-		_set_darken(_r_held / restart_hold)
+		_set_darken(prog)
+		# the banner ramps in ahead of the darken so it reads immediately
+		_r_label.modulate.a = clampf(prog * 1.6, 0.0, 1.0)
+		# the trinket ticks faster and faster as the rewind takes hold
+		_r_tick -= delta
+		if _r_tick <= 0.0:
+			_r_tick = lerpf(0.24, 0.08, prog)
+			_r_tock = not _r_tock
+			Sfx.play(self, "res://audio/sfx/tock.mp3" if _r_tock else "res://audio/sfx/tick.mp3", -6.0)
 		if _r_held >= restart_hold:
 			_r_held = 0.0
+			_r_label.modulate.a = 0.0
 			restart()
 			return
 	elif _r_held > 0.0:
 		# backed out of the restart: the hammer falls on an empty chamber
-		if _r_held > 0.4:
+		if _r_held > 0.3:
 			Sfx.play(self, "res://audio/sfx/empty_gun.mp3", -10.0)
 		_r_held = 0.0
+		_r_tick = 0.0
+		_r_label.modulate.a = 0.0
 		_set_darken(0.0)
 	var left := int(ceil(loop_length - time))
 	# COUNTDOWN to midnight: 3:00 -> 0:00. The theme is the clock running

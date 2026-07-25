@@ -93,10 +93,13 @@ func _ready() -> void:
 	_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_hint.add_theme_font_size_override("font_size", 20)
 	_hint.add_theme_color_override("font_color", Color(0.8, 0.8, 0.78))
-	_hint.text = "E to continue"
+	_hint.text = "E to continue   ·   ESC to skip"
 	_hint.modulate.a = 0.0
 	_layer.add_child(_hint)
 	_playing = true
+	# claim ESC while the monologue plays - the pause menu checks this group
+	# before opening, so ESC skips the intro instead of raising the menu
+	add_to_group("active_peek")
 	_lock_player.call_deferred(true)
 	# the gunshot that opens the night
 	var p := get_tree().get_first_node_in_group("player") as Node3D
@@ -147,21 +150,38 @@ func _show_line() -> void:
 	_fading_out = false
 
 
+func _input(event: InputEvent) -> void:
+	# ESC skips the whole monologue (first run only; it never replays)
+	if not _playing:
+		return
+	if event is InputEventKey and event.pressed and not event.is_echo() \
+			and event.physical_keycode == KEY_ESCAPE:
+		get_viewport().set_input_as_handled()
+		_finish()
+
+
 func _finish() -> void:
 	_playing = false
+	if is_in_group("active_peek"):
+		remove_from_group("active_peek")
 	if _label != null:
 		_label.queue_free()
 	if _hint != null:
 		_hint.queue_free()
-	if grants_flag != "":
-		Flags.set_flag(grants_flag)
-	if lead_flag != "":
-		Flags.set_flag(lead_flag)
-	# lift the black and give control
+	# lift the black, hand control back, and only THEN raise the flags that
+	# wake the world. ORDER MATTERS: the rookie's opening beat starts the
+	# moment bound_promise exists and re-locks the player - raising the flag
+	# before this fade meant our own unlock STOMPED his lock 0.6s later, so
+	# the player walked free through the beat on the very first loop.
 	var tw := create_tween()
 	tw.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 	tw.tween_property(_black, "color:a", 0.0, fade)
-	tw.tween_callback(func() -> void: _lock_player(false))
+	tw.tween_callback(func() -> void:
+		_lock_player(false)
+		if grants_flag != "":
+			Flags.set_flag(grants_flag)
+		if lead_flag != "":
+			Flags.set_flag(lead_flag))
 
 
 func _lock_player(locked: bool) -> void:
