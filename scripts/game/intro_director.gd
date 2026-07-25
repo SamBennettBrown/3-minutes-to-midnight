@@ -283,12 +283,13 @@ func _post_intro(_delta: float) -> void:
 	match Flags.loops:
 		1:
 			# still groggy - "just a rough night, go home"
+			## NOTE: this feels like its a bug, you might be better off just letting someone free-roam
 			Flags.set_loop_flag("rooms_sealed")  # everything but the way out
 			_say([
 				{"speaker": "DETECTIVE", "text": "...What just happened? I was in the cells, and now - I'm back at my desk. Same coffee smell. I must be dead on my feet."},
 				{"speaker": "DETECTIVE", "text": "Whatever this is, it can wait till morning. I'm going home."},
 			])
-			_set_task("Go home. Head out the front door.")
+			_set_task("Go home. Head out through the lobby.")
 		2:
 			# the reveal - the loop, the stakes, the goal, the clue
 			_say([
@@ -296,7 +297,7 @@ func _post_intro(_delta: float) -> void:
 				{"speaker": "DETECTIVE", "text": "He dies at midnight. Every time. And it drags me back to 11:57. Three minutes. That's all I get to save him."},
 				{"speaker": "DETECTIVE", "text": "That note in his hand - a number. 57. A badge number, has to be. Start with the interrogation - that's where they took him."},
 			], "know_loop")
-			_set_task("Get to the interrogation room. Find out how he dies.")
+			_set_task("Get to the interrogation room through hall 2. Find out how he dies.")
 		_:
 			pass  # loop 3+: no hand-holding, the countdown speaks for itself
 
@@ -306,7 +307,7 @@ func _after_standins() -> void:
 	_leave_at = -1.0
 	_beat = 3
 	_lock_player(false)
-	_set_task("Check in with the front desk.")
+	_set_task("Check in with the front desk in the lobby.")
 	_set_hint("W · A · S · D — move. The reception desk is through the lobby.")
 
 
