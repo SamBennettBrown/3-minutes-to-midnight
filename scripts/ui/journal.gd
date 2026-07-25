@@ -70,7 +70,7 @@ func _ready() -> void:
 	add_child(_dim)
 
 	var box := VBoxContainer.new()
-	var boxRotation = .15
+	var boxRotation = 0
 	box.position = Vector2(70, 130)
 	box.rotation_degrees = boxRotation
 	box.add_theme_constant_override("separation", 22)
