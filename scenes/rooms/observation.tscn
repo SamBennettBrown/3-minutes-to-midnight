@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
 [ext_resource type="PackedScene" uid="uid://cxc4bmtgj12uj" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Keyboard_01.fbx" id="2_jo3kw"]
 [ext_resource type="Texture2D" uid="uid://hhakklqq20uy" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_01.png" id="3_4rkwm"]
-[ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="4_item"]
 [ext_resource type="Script" path="res://scripts/game/window_view.gd" id="99_window"]
 [ext_resource type="PackedScene" uid="uid://dtcer0cc3jbgv" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Computer_Monitor_Double_01.fbx" id="5_lei6d"]
 [ext_resource type="PackedScene" uid="uid://da0o675semsa7" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Desk_01.fbx" id="6_yeupe"]
@@ -131,18 +130,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 1.97)
 mesh = SubResource("mesh_pane")
 surface_material_override/0 = SubResource("mat_pane")
 
-[node name="FeedPanel" type="Node3D" parent="." unique_id=675554107]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0.9, -1.2)
-script = ExtResource("4_item")
-dialogue = [{
-"speaker": "SECURITY FEED",
-"text": "Six grainy monitors. Hall 1's camera pair sweeps on a cycle - and every countdown minute ending in 5, both point AWAY from the observation door for a few seconds."
-}, {
-"speaker": "DETECTIVE",
-"text": "A blind window, regular as a metronome. Good to know."
-}]
-sets_flag = "know_camera_gap"
-prompt_height = 0.8
 
 [node name="Spots" type="Node3D" parent="." unique_id=1420321063]
 

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://24p7xtmo1brk"]
 
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
+[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="1_ambient"]
 [ext_resource type="FontFile" uid="uid://canmpksdd2ct8" path="res://fonts/Special_Elite/SpecialElite-Regular.ttf" id="2_font"]
 [ext_resource type="PackedScene" uid="uid://bsmsen2fessyk" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Plaques_01.fbx" id="3_0ar5n"]
 [ext_resource type="Script" uid="uid://fokcbe25o2i3" path="res://scripts/game/floor_label.gd" id="3_label"]
@@ -130,6 +131,11 @@ size = Vector3(0.3, 3, 4)
 script = ExtResource("1_room")
 start_room = true
 camera_look_at = Vector3(0, 0.8, -1.2)
+
+[node name="Ambient" type="Node" parent="." unique_id=270526305]
+script = ExtResource("1_ambient")
+sound = "res://audio/sfx/air_filter.mp3"
+volume_db = -22.0
 
 [node name="CamZoneWest" type="Area3D" parent="." unique_id=557993292]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5, 0)
@@ -515,7 +521,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5893168, 0.31999636, -4.794
 
 [node name="SM_Prop_Vending_Machine_01" parent="Props" unique_id=1975981110 instance=ExtResource("3_wqxhk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1024914, -2.3841858e-07, -3.2336712)
-script = ExtResource("5_item")
 
 [node name="SM_Prop_Vending_Machine_01" parent="Props/SM_Prop_Vending_Machine_01" index="0" unique_id=966779761]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6911602, 0, -1.2360735)

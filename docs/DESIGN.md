@@ -4,27 +4,129 @@
 station. Fixed cameras, hard cuts, black & white. Loop = **3:00**
 (`Tuning.LOOP_LENGTH`) — the title is a promise.*
 
-## Premise & Loop 0
+## Premise (LOCKED 2026-07-24 — Loop 0/1 SCRAPPED)
 
-Minutes before the end of his shift, a witness being escorted to
-interrogation brushes past the detective in the bullpen and slips a
-small brass trinket into his pocket: "Help me." The trinket is a MAGIC
-PROMISE — binding. The witness is shot in interrogation before
-midnight; the trinket won't let the night end until he survives it.
-**Someone is killing the witness — WHO, HOW, and the intervention are
-still undecided. (TOP OPEN QUESTION — settle before day 3.)**
+A time-loop noir. The witness the detective saved pressed a family
+heirloom into his hand out of gratitude — it's the source of the loop.
+The witness is murdered in the cells before midnight; the heirloom won't
+let the night end until the detective solves it and saves him. When the
+clock strikes 12:00 it snaps back to 11:57. Three minutes, over and over.
 
-**Loop 0 = the tutorial** (once per session, `intro_done` flag), all in
-the bullpen, movement LOCKED until the coffee lands:
-fade in → "Three minutes to midnight" monologue → witness + two
-escorts walk THROUGH the bullpen right past you (trinket beat,
-`bound_promise`; your head tracks them as they go) → rookie hustles
-over with the coffee you ordered two hours ago → movement unlocks,
-task appears top-right: **"Clock out. Go home."** → the front door
-(lobby exit trigger) fires the gunshot from interrogation just as you
-reach it → restart, countdown appears. If the player dawdles the night
-ends by itself (`fallback_shot_at`, 90s). On every later loop the
-front door = the trinket refuses + restart.
+**The truth (what the player uncovers):**
+- HOW: after the witness is walked to the cells and everyone leaves, the
+  CAPTAIN goes to the locker room, takes the HIDDEN PASSAGE (locker →
+  tunnel → cells) and shoots him from the cell-side, then slips back. The
+  cell looks sealed with only an unarmed prisoner inside — the killer
+  comes and goes through the wall. The passage IS the murder method.
+- WHY (LOCKED 2026-07-25): the criminal the witness is testifying against
+  is the CAPTAIN'S BROTHER. The testimony would send his brother to prison,
+  so the captain kills the witness to bury the case. Family, not money.
+- THE CHAIN (two locations, one carried item):
+  1. EVIDENCE ROOM → weight-swap → grab the PACKAGE. The package IS the
+     brother-proof: a family photo of the captain with his brother, next to
+     the case-file MUGSHOT of the criminal the witness is testifying against
+     — the same face. This is the physical evidence you CARRY
+     (`have_evidence_package`, per-loop). It also tells you WHY, and makes you
+	 want to search the captain's LOCKER for the gun.
+  2. LOCKER (0806) → you go looking for the weapon, but instead you find the
+	 HIDDEN DOORWAY behind it — the murder method. Cracking it sets
+	 `captain_is_guilty` (knowledge) and opens the passage + unlocks the
+	 endgame intercept.
+- PHYSICAL-EVIDENCE WIN: the win requires you to be HOLDING the package this
+  run — grab it from evidence → stage the rookie → be in the locker room
+  2:45-3:00 with the package in hand. `captain_is_guilty` (from the locker)
+  unlocks the intercept; the package (carried) is what lets you nail him.
+- EARLY SEED: an officer's medals bark ("I sneak into the captain's office to
+  look at his medals… hope I'm that decorated one day") draws attention to
+  the captain before the evidence names him.
+
+### NO INTRO CUTSCENE, NO SCRIPTED LOOPS 0/1
+The whole special-cased tutorial (stand-ins, desk check-in, time-skip,
+scripted gunshot, rooms_sealed, active_in_intro, know_loop gating, generic
+intro lines) is REMOVED. Every loop is the same core loop from frame one.
+
+**Opening (once, on a black screen or a slow camera drift over the map):**
+a gunshot, then the monologue —
+> *That sound again. Three minutes to midnight. My shift's almost over,
+> but no matter what I do it's always the same.*
+> *I got my witness his justice and the protection he needed. He was so
+> thankful he gave me this — a family heirloom. Then it happens. He's
+> killed in the cell block, and there's no one in there but a prisoner
+> with no gun. He's walked in, everyone leaves - and a minute later he's
+> dead. When the clock strikes twelve, it's back to 11:57.*
+> *I could throw this thing in the trash and be done. But this is the
+> job. So — here we go again.*
+
+Then control, the 3:00 countdown, and the first journal entry:
+**THE IMPOSSIBLE DEATH** — *"A man died alone in a sealed cell, no weapon.
+Impossible. My only lead: the cell block. Start there."*
+
+### The breadcrumb trail (self-guided, no scripting)
+1. Go to the CELLS → talk to the PRISONER → *"The witness? They've got him
+   in interrogation right now."* → points you to interrogation.
+2. INTERROGATION is in use / locked. Go to OBSERVATION, watch through the
+   glass: the cast's overheard talk → the case file is in EVIDENCE on a
+   hidden weighted shelf (chain of custody, badge 57 seed).
+3. EVIDENCE (needs the keycard Vance drops at reception): slide the shelf,
+   weight-swap the package → the murder weapon, badge 57 = the CAPTAIN.
+4. CAPTAIN'S OFFICE: 3 birthday photos → dog's b'day 0806.
+5. LOCKER ROOM: crack the captain's locker (0806) on the clock wall → it
+   swings out, revealing the HIDDEN PASSAGE to the cells (`captain_is_guilty`).
+
+### The solve (endgame — LOCKED 2026-07-25, TO BUILD)
+
+**The murder mechanic (why it looks impossible).**
+- The escort (CAPTAIN + INVESTIGATOR) walks the WITNESS into the cells and
+  leaves interrogation EARLY — **~1:00** (t60), reaching the cells ~1:57.
+  You can be present; the escorts just refuse you ("This one's ours"). NO
+  hard lockout — being in the cell block is allowed and in fact intended.
+- The CAPTAIN and INVESTIGATOR both come back OUT and leave. The witness is
+  now alone in the cell.
+- The CAPTAIN doubles back to the LOCKER ROOM and takes the HIDDEN PASSAGE.
+  **The kill is at 3:00 (0:00 on the countdown).** The passage is sealed to
+  the player until they crack the locker, so on a blind run the captain
+  "vanishes" (not in the locker room if you follow) and the witness dies in
+  a sealed cell with only an unarmed prisoner. Impossible — the killer comes
+  through the wall.
+
+**The DISCOVERY beat — waiting in the cells is a REAL clue, not a trap.**
+- The player's natural instinct is "I'll just wait in the cells at midnight
+  and catch him." We REWARD that instead of walling it off. The first time
+  you're in the CELLS during ~2:50–3:00, you witness the impossible death up
+  close: a muzzle-flash comes from **inside the wall**, the witness drops,
+  and you're standing right there and STILL couldn't stop it — the shooter
+  is behind solid concrete. Sets `saw_wall_shot` + a journal beat: *"The
+  shot came from inside the wall. There's a way in there I can't see."* This
+  is what points you at the passage. (You witnessed it but can't reach or
+  prove it — so you go find the passage and get to HIS side.) Then the loop
+  resets as normal (you didn't stop it).
+
+**The intercept — the win path (PROOF-GATED).**
+- Trigger requires **`captain_is_guilty`** (you cracked locker 0806) AND the
+  player being in the LOCKER ROOM during the window **2:45–3:00** (t165–180).
+  When both are true the **loop clock FREEZES** (we do not let it tick to
+  0:00) and the confrontation fires. Without the proof, nothing happens —
+  being in the locker room does nothing and the murder proceeds (restart).
+  You cannot stumble into the ending; the knowledge is the key.
+
+**First confrontation ALONE = a TAUGHT death.**
+- Intercept in the window WITH proof but WITHOUT the rookie staged → the
+  captain kills YOU. Teaching line: *"I can't take him alone — my word
+  against his and I'm the one who ends up in a cell. I need someone who
+  lives to see this."* → points at the ROOKIE. Restart.
+
+**Final run — bring the ROOKIE.**
+- After the lesson, a new dialogue option recruits the ROOKIE (he's begged
+  to help all game); he then FOLLOWS the player. Lead him to the locker room
+  and stage him hidden. Intercept the captain in the 2:45–3:00 window with
+  the rookie present → the captain is caught / confesses, the rookie steps
+  in as the living witness → **`loop_broken`**, the witness LIVES → credits.
+- NO physical recorder. The rookie IS the evidence (a living witness beats a
+  tape, and it pays off his whole arc).
+
+**New endgame flags:** `captain_endgame` (captain diverts to locker once
+guilty-known), `have_rookie` (recruited/following), `rookie_staged` (hidden
+in locker room), `taught_death_seen` (lesson learned), `loop_broken` (win).
 
 ## The precinct (rebuilt 2026-07-23)
 

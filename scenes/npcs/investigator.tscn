@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://cnpc0ross0001"]
+
+; The INVESTIGATOR (EscortA) - one of the two who walk the witness to the
+; cells. Through the interrogation glass he lets slip that he logged the case
+; file into evidence on the hidden weighted shelf (heard_evidence_tip).
+; Escorts out at ~1:30, ends at the cell door. (The PLAYER is the detective,
+; so this one is the "investigator" to avoid a name clash.)
+
+[ext_resource type="PackedScene" path="res://scenes/player/character_rig.tscn" id="1_rig"]
+[ext_resource type="Script" uid="uid://dq4eoax0q5nc1" path="res://scripts/game/npc.gd" id="2_npc"]
+
+[node name="Investigator" instance=ExtResource("1_rig")]
+process_mode = 3
+script = ExtResource("2_npc")
+walk_pace = 1.6
+foot_offset = 0.02
+blocks_player = true
+hide_outside_active_room = true
+start_clip = "idle"
+strip_root_motion = true
+visible_mesh = "SM_Chr_Detective_Male_01"
+hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_07.fbx"
+voice_clip = "res://audio/sfx/sfx_voice_male_05.mp3"
+paced = true
+barks = [{
+"dur": 4.5,
+"t": 20.0,
+"text": "Just you and me tonight. Your testimony's going to be the nail in the coffin for this case."
+}, {
+"dur": 6.0,
+"flag": "heard_evidence_tip",
+"hear_range": 9.0,
+"t": 42.0,
+"text": "Don't worry - I logged the case file into evidence myself. Hidden, weighted shelf in the back. Safe as it gets."
+}, {
+"dur": 4.0,
+"t": 115.0,
+"text": "In you go. You'll be safe in here - nobody gets to you behind these bars."
+}]
+schedule = [{
+"clip": "idle",
+"spot": "Interrogation/WindowInside2",
+"t": 0.0
+}, {
+"clip": "walk",
+"spot": "Interrogation/WindowInside2",
+"t": 60.0
+}, {
+"clip": "walk",
+"spot": "Interrogation/Door",
+"t": 62.0
+}, {
+"clip": "walk",
+"spot": "Hall1/DoorInterrogation",
+"t": 126.0
+}, {
+"clip": "walk",
+"spot": "Hall1/MouthBullpen",
+"t": 132.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/DoorHall1",
+"t": 135.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/DoorHall2",
+"t": 139.0
+}, {
+"clip": "walk",
+"spot": "Hall2/MouthBullpen",
+"t": 142.0
+}, {
+"clip": "walk",
+"spot": "Hall2/DoorCells",
+"t": 149.0
+}, {
+"clip": "walk",
+"spot": "Cells/CorridorRight",
+"t": 153.0
+}, {
+"clip": "idle",
+"spot": "Cells/CorridorRight",
+"t": 182.0
+}, {
+"clip": "walk",
+"spot": "Cells/Door",
+"t": 185.0
+}, {
+"clip": "walk",
+"spot": "Hall2/DoorCells",
+"t": 189.0
+}, {
+"clip": "walk",
+"spot": "Hall2/MouthBullpen",
+"t": 196.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/DoorHall2",
+"t": 200.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/Center",
+"t": 205.0
+}, {
+"clip": "idle",
+"spot": "Bullpen/Center",
+"t": 400.0
+}]
+dialogue = [{
+"speaker": "INVESTIGATOR",
+"text": "Move along. This one's ours."
+}]

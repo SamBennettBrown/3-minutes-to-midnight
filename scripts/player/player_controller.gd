@@ -23,6 +23,10 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 @export var turn_speed := 2.8
 ## camera-relative: how quickly the body turns into the move direction
 @export var face_speed := 10.0
+## ground accel / decel (m/s^2). Fast enough to stay snappy, but no more
+## instant-velocity skating on starts, stops and turns
+@export var accel := 18.0
+@export var decel := 26.0
 ## how close a "talkable" must be for E to interact
 @export var talk_range := Tuning.INTERACT_RANGE
 
@@ -50,7 +54,11 @@ func _physics_process(delta: float) -> void:
 	velocity.y = 0.0 if is_on_floor() else velocity.y - 9.8 * delta
 	move_and_slide()
 
-	_update_animation(moving, running)
+	# the animation follows what actually HAPPENED, not what was asked for:
+	# pushing straight into a wall leaves velocity ~0 after the slide, and
+	# that must read as standing, not a walk-in-place moonwalk
+	var hv := Vector2(velocity.x, velocity.z).length()
+	_update_animation(moving and hv > 0.3, running)
 	_check_bump(delta, moving)
 
 
@@ -68,8 +76,9 @@ func _move_tank(input: Vector2, running: bool, delta: float) -> bool:
 func _move_camera_relative(input: Vector2, running: bool, delta: float) -> bool:
 	if input == Vector2.ZERO:
 		_latch_valid = false
-		velocity.x = 0.0
-		velocity.z = 0.0
+		# ease to a stop over ~0.1s instead of freezing mid-stride
+		velocity.x = move_toward(velocity.x, 0.0, decel * delta)
+		velocity.z = move_toward(velocity.z, 0.0, decel * delta)
 		return false
 	if not _latch_valid:
 		var cam := get_viewport().get_camera_3d()
@@ -85,13 +94,16 @@ func _move_camera_relative(input: Vector2, running: bool, delta: float) -> bool:
 	if dir.length() > 1.0:
 		dir = dir.normalized()
 	var speed := run_speed if running else walk_speed
-	velocity.x = dir.x * speed
-	velocity.z = dir.z * speed
+	# ramp toward the target velocity - kills the instant-speed skate on
+	# starts and hard direction changes while staying responsive (~0.12s)
+	velocity.x = move_toward(velocity.x, dir.x * speed, accel * delta)
+	velocity.z = move_toward(velocity.z, dir.z * speed, accel * delta)
 	if dir.length() > 0.1:
 		var target := atan2(dir.x, dir.z)
-		# deadband: stop micro-correcting heading every tick - that
-		# constant correction reads as a walk wobble
-		if absf(angle_difference(rotation.y, target)) > 0.05:
+		# small deadband so the heading isn't micro-corrected every tick
+		# (walk wobble) - but tight enough that the body never settles
+		# visibly askew from its travel direction
+		if absf(angle_difference(rotation.y, target)) > 0.015:
 			rotation.y = lerp_angle(rotation.y, target, face_speed * delta)
 	return true
 
@@ -142,49 +154,33 @@ func _process(_delta: float) -> void:
 # Fixed-camera room ownership - ONE authoritative rule, works for every
 # room, no per-room tuning, cannot ping-pong.
 #
-# Each frame: of all rooms whose trigger contains the player, the one
-# whose trigger CENTRE is nearest is the room you're in. That single
-# pick is deterministic - overlapping doorway triggers resolve to
-# whichever room you're more inside of, and it flips exactly once as you
-# cross the midpoint of the overlap.
-#
-# Anti-oscillation: to switch AWAY from the current room, the new
-# nearest must be closer by at least STICK metres (a deadband). Standing
-# exactly on a seam can't flicker because the tie never beats the
-# deadband. If NO trigger contains you (a corridor gap), keep the last
-# valid room - never cut to black.
-const ROOM_STICK := 0.6
+# The active room is the one whose FLOOR you're standing over. A floor's
+# footprint ends at that room's walls, so the camera flips exactly as you
+# cross a doorway - never 0.8 m late into an unrendered void (which is
+# what the oversized ENTRY triggers would do). Floors of neighbouring
+# rooms meet at the shared wall; a small SEAM margin gives them a hair of
+# overlap so standing on the boundary can't flicker (nearest floor-centre
+# wins the tie). If you're over NO floor (in a wall/doorway sliver, or a
+# corridor gap), keep the room you were in - never cut to black.
+const SEAM := 0.25
 
 func _keep_room_current() -> void:
 	var cur = RoomState.current
 	var pos := global_position
 	var best: Node3D = null
 	var best_d := INF
-	var cur_d := INF
 	for r in get_tree().get_nodes_in_group("room"):
-		if not r.contains_point(pos, 0.0):
+		if not r.contains_floor_point(pos, SEAM):
 			continue
-		var d: float = r.room_center().distance_to(pos)
-		if r == cur:
-			cur_d = d
+		var d: float = r.floor_center().distance_to(pos)
 		if d < best_d:
 			best_d = d
 			best = r
-	# no room contains us: keep the current one (corridor gap), unless it
-	# was freed by a scene reload
+	# over no floor (doorway sliver / corridor gap): hold the current room,
+	# unless it was freed by a scene reload
 	if best == null:
-		if is_instance_valid(cur):
-			return
-		return  # nothing to activate this frame; a trigger will catch us
-	# already in the nearest room? done
-	if best == cur:
 		return
-	# STICKY current room: as long as the current room's trigger still
-	# contains us, stay in it - even if another room's centre is nearer.
-	# The camera only flips once we've fully LEFT the old room's trigger,
-	# so a step into the doorway (still overlapping the old room) doesn't
-	# cut early. Requires adjacent triggers to OVERLAP at doorways.
-	if is_instance_valid(cur) and cur_d < INF:
+	if best == cur:
 		return
 	best.activate()
 

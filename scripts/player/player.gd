@@ -69,6 +69,10 @@ const RoomState := preload("res://scripts/game/room.gd")
 @export var footstep_volume_db := -10.0
 ## seconds between steps while walking; running steps come 40% faster
 @export var footstep_interval := 0.5
+## a short voice clip that plays ONCE the first time you talk to this
+## character - a mumble/greeting so each NPC has a voice. Empty = silent.
+@export_file("*.wav", "*.ogg", "*.mp3") var voice_clip := ""
+@export var voice_volume_db := -6.0
 
 # --- conversation (see game/conversation.gd for the variant format) ---
 @export var dialogue: Array = []
@@ -88,6 +92,7 @@ var _step_i := 0
 var _bark_label: Label3D
 var _bark_timer := 0.0
 var _seen_once := {}
+var _voice_player: AudioStreamPlayer3D
 
 
 func _ready() -> void:
@@ -222,6 +227,7 @@ func play(clip_name: String) -> void:
 # --- conversation ---
 
 func get_conversation() -> Dictionary:
+	_play_voice()
 	# picked atomically: lines + flag from the same variant
 	var idx := Conversation.pick(dialogue_variants, _seen_once, _clock_time())
 	if idx < 0:
@@ -232,9 +238,43 @@ func get_conversation() -> Dictionary:
 	return {"lines": v.get("lines", []), "sets_flag": String(v.get("sets_flag", ""))}
 
 
+# the name this character speaks under - borrow it from their normal
+# dialogue/variants so the intro line is attributed right
+func _speaker_name() -> String:
+	if not dialogue.is_empty():
+		return String(dialogue[0].get("speaker", "OFFICER"))
+	for v in dialogue_variants:
+		var lines: Array = v.get("lines", [])
+		if not lines.is_empty():
+			return String(lines[0].get("speaker", "OFFICER"))
+	return "OFFICER"
+
+
 func _clock_time() -> float:
 	var clock := get_tree().get_first_node_in_group("loop_clock")
 	return clock.time if clock != null else 0.0
+
+
+# a short voice line from this character when you start talking to them.
+# One AudioStreamPlayer3D reused per NPC; each talk restarts it (one clip,
+# no overlap, no loop).
+func _play_voice() -> void:
+	if voice_clip == "" or not ResourceLoader.exists(voice_clip):
+		return
+	if _voice_player == null:
+		_voice_player = AudioStreamPlayer3D.new()
+		_voice_player.max_distance = 14.0
+		_voice_player.attenuation_filter_cutoff_hz = 20500
+		_voice_player.volume_db = voice_volume_db
+		_voice_player.process_mode = Node.PROCESS_MODE_ALWAYS  # play under the paused dialogue
+		add_child(_voice_player)
+	var stream: AudioStream = load(voice_clip)
+	# strip any import loop so it's strictly one-shot
+	if stream is AudioStreamMP3 and stream.loop:
+		stream = stream.duplicate()
+		stream.loop = false
+	_voice_player.stream = stream
+	_voice_player.play()
 
 
 # --- barks (overheard speech) ---
@@ -245,6 +285,10 @@ func bark(text: String, duration := 3.0) -> void:
 	if _bark_label == null:
 		_bark_label = Label3D.new()
 		_bark_label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+		# draws OVER the room's own geometry (desks, counters) so a bark is
+		# always readable. Cross-room leaking is prevented separately: bark
+		# visibility is gated on the model being rendered (_process culling),
+		# so a culled character in the next room shows nothing at all.
 		_bark_label.no_depth_test = true
 		_bark_label.pixel_size = 0.005
 		_bark_label.font_size = 40
@@ -272,9 +316,19 @@ func _process(_delta: float) -> void:
 		# standing in is being rendered for another reason - e.g. the
 		# observation window peek reveals interrogation (room.visible=true)
 		# while the active room is still Observation
-		model.visible = not is_instance_valid(room) \
-				or room.sees_point(global_position, 1.2) \
+		# small margin so an NPC right in a doorway doesn't pop out; the floor
+		# footprint already stops at the walls, so this hugs the room.
+		var shown: bool = not is_instance_valid(room) \
+				or room.sees_point(global_position, 0.4) \
 				or _standing_room_visible()
+		model.visible = shown
+		# the floating bark rides the model: only ever visible when this
+		# character is actually being rendered (in the active room, or revealed
+		# through the observation-glass peek). When culled, the bark is hidden
+		# so interrogation chatter can't float through the observation wall.
+		# Its own timer still governs how long it lingers once shown.
+		if _bark_label != null:
+			_bark_label.visible = shown and _bark_timer > 0.0
 
 	if _dlg == null:
 		_dlg = get_tree().get_first_node_in_group("dialogue")
@@ -306,14 +360,18 @@ func _process(_delta: float) -> void:
 # NPCs inside it, even though RoomState.current is elsewhere
 func _standing_room_visible() -> bool:
 	for r in get_tree().get_nodes_in_group("room"):
-		if r.visible and r.has_method("contains_point") \
-				and r.contains_point(global_position, 0.5):
+		if r.visible and r.has_method("contains_floor_point") \
+				and r.contains_floor_point(global_position, 0.3):
 			return true
 	return false
 
 
 func _step_footsteps(delta: float) -> void:
 	if _steps.is_empty():
+		return
+	# no ghost footsteps: characters culled in another room (or vanished)
+	# walk in silence - you only hear steps you could actually see
+	if model != null and not model.is_visible_in_tree():
 		return
 	if current_clip == "walk" or current_clip == "run":
 		_step_timer -= delta * (1.4 if current_clip == "run" else 1.0)

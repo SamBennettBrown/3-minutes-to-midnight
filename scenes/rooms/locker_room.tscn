@@ -1,13 +1,11 @@
 [gd_scene format=3 uid="uid://va8rfm47q1t"]
 
+[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="1_ambient"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
-[ext_resource type="FontFile" uid="uid://canmpksdd2ct8" path="res://fonts/Special_Elite/SpecialElite-Regular.ttf" id="98_font"]
-[ext_resource type="Script" uid="uid://fokcbe25o2i3" path="res://scripts/game/floor_label.gd" id="99_label"]
 [ext_resource type="Texture2D" uid="uid://bfxpsfud35wa2" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Concrete_01.png" id="2_1k2jd"]
 [ext_resource type="Texture2D" uid="uid://brya1xpufru8p" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Floor_Tile_05.png" id="2_i5mbs"]
 [ext_resource type="PackedScene" uid="uid://d8tmrq7x86xs" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Pipe_01_Curve.fbx" id="3_hthjo"]
 [ext_resource type="PackedScene" uid="uid://02bm1rwr1obv" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Weapon_Locker_02.fbx" id="5_1k2jd"]
-[ext_resource type="Script" uid="uid://ektvhakogsnn" path="res://scripts/game/keypad.gd" id="5_keypad"]
 [ext_resource type="PackedScene" uid="uid://b0pbkrtql626c" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Bench_02.fbx" id="6_x4sv2"]
 [ext_resource type="PackedScene" uid="uid://kgk35vcalm1r" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_DownPipe_01.fbx" id="9_j7y0x"]
 [ext_resource type="PackedScene" uid="uid://b05xbqqwk6rsd" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Clock_01.fbx" id="10_awbiy"]
@@ -17,10 +15,12 @@
 [ext_resource type="PackedScene" uid="uid://2kclr0y1i5lc" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Sign_Paper_04.fbx" id="14_nj7pm"]
 [ext_resource type="PackedScene" uid="uid://dn5yi4s7fmp4s" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Sign_Stickynote_02.fbx" id="15_4xbq2"]
 [ext_resource type="PackedScene" uid="uid://cdlwxev6bkj2s" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Sign_Label_01.fbx" id="16_47ryp"]
-
-[ext_resource type="Script" path="res://scripts/game/interactable.gd" id="91_item"]
-[ext_resource type="Script" path="res://scripts/game/keypad.gd" id="93_keypad"]
-[ext_resource type="Script" path="res://scripts/game/auto_collider.gd" id="90_autocol"]
+[ext_resource type="Script" uid="uid://cv22om4sbyjyj" path="res://scripts/game/auto_collider.gd" id="90_autocol"]
+[ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="91_item"]
+[ext_resource type="Script" uid="uid://cd8jayk7qqp2v" path="res://scripts/game/flag_gate.gd" id="92_gate"]
+[ext_resource type="Script" uid="uid://ektvhakogsnn" path="res://scripts/game/keypad.gd" id="93_keypad"]
+[ext_resource type="FontFile" uid="uid://canmpksdd2ct8" path="res://fonts/Special_Elite/SpecialElite-Regular.ttf" id="98_font"]
+[ext_resource type="Script" uid="uid://fokcbe25o2i3" path="res://scripts/game/floor_label.gd" id="99_label"]
 
 [sub_resource type="BoxShape3D" id="shape_trigger"]
 size = Vector3(12, 4, 12)
@@ -37,14 +37,8 @@ uv1_scale = Vector3(8, 8, 8)
 [sub_resource type="BoxShape3D" id="shape_floor"]
 size = Vector3(10.4, 0.2, 10.4)
 
-[sub_resource type="BoxMesh" id="mesh_keypad"]
-size = Vector3(0.14, 0.2, 0.07)
-
-[sub_resource type="StandardMaterial3D" id="mat_keypad"]
-albedo_color = Color(0.1, 0.1, 0.12, 1)
-emission_enabled = true
-emission = Color(0.9, 0.7, 0.2, 1)
-emission_energy_multiplier = 0.5
+[sub_resource type="BoxShape3D" id="shape_floor_passage"]
+size = Vector3(1.8, 0.2, 1.7)
 
 [sub_resource type="BoxMesh" id="mesh_glow_h"]
 size = Vector3(2, 0.06, 0.7)
@@ -54,6 +48,12 @@ albedo_color = Color(0.12, 0.1, 0.06, 1)
 emission_enabled = true
 emission = Color(1, 0.8, 0.45, 1)
 emission_energy_multiplier = 0.55
+
+[sub_resource type="BoxMesh" id="mesh_note2"]
+size = Vector3(0.22, 0.3, 0.02)
+
+[sub_resource type="StandardMaterial3D" id="mat_note2"]
+albedo_color = Color(0.75, 0.72, 0.62, 1)
 
 [sub_resource type="BoxMesh" id="mesh_w4"]
 size = Vector3(4, 3, 0.3)
@@ -78,15 +78,32 @@ size = Vector3(0.3, 3, 10)
 [sub_resource type="BoxShape3D" id="shape_v10"]
 size = Vector3(0.3, 3, 10)
 
-[sub_resource type="BoxMesh" id="mesh_note2"]
-size = Vector3(0.22, 0.3, 0.02)
+[sub_resource type="BoxMesh" id="mesh_vgap_lo"]
+size = Vector3(0.3, 3, 0.6)
 
-[sub_resource type="StandardMaterial3D" id="mat_note2"]
-albedo_color = Color(0.75, 0.72, 0.62, 1)
+[sub_resource type="BoxShape3D" id="shape_vgap_lo"]
+size = Vector3(0.3, 3, 0.6)
+
+[sub_resource type="BoxMesh" id="mesh_vgap_hi"]
+size = Vector3(0.3, 3, 7.7)
+
+[sub_resource type="BoxShape3D" id="shape_vgap_hi"]
+size = Vector3(0.3, 3, 7.7)
+
+[sub_resource type="BoxMesh" id="mesh_passage_door"]
+size = Vector3(0.3, 3, 1.7)
+
+[sub_resource type="BoxShape3D" id="shape_passage_door"]
+size = Vector3(0.3, 3, 1.7)
 
 [node name="LockerRoom" type="Node3D" unique_id=152648341]
 script = ExtResource("1_room")
 camera_look_at = Vector3(1, 1, 0.5)
+
+[node name="Ambient" type="Node" parent="." unique_id=152648342]
+script = ExtResource("1_ambient")
+sound = "res://audio/ambient/light_static.mp3"
+volume_db = -12.0
 
 [node name="Camera" type="Camera3D" parent="." unique_id=908663507]
 transform = Transform3D(-0.48171178, 0.33630764, -0.80922866, 0.01764094, 0.92696375, 0.374736, 0.8761522, 0.1662392, -0.45246208, -3.8, 2.3446333, -3.7)
@@ -144,6 +161,12 @@ surface_material_override/0 = SubResource("mat_floor")
 [node name="Shape" type="CollisionShape3D" parent="Floor" unique_id=1463601146]
 shape = SubResource("shape_floor")
 
+[node name="FloorPassage" type="StaticBody3D" parent="." unique_id=1426629262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.63, -0.1, -3.5)
+
+[node name="Shape" type="CollisionShape3D" parent="FloorPassage" unique_id=1463601147]
+shape = SubResource("shape_floor_passage")
+
 [node name="SM_Prop_Pipe_01_Curve" parent="Floor" unique_id=1615909964 instance=ExtResource("3_hthjo")]
 transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, 4.0557475, 2.5567303, -4.7586403)
 
@@ -152,20 +175,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, -4.97)
 mesh = SubResource("mesh_glow_h")
 surface_material_override/0 = SubResource("mat_glow")
 
-[node name="MaintenanceSlip" type="Node3D" parent="."]
+[node name="MaintenanceSlip" type="Node3D" parent="." unique_id=2074755953]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 1.4, -1)
 script = ExtResource("91_item")
 dialogue = [{
 "speaker": "MAINTENANCE SLIP",
-"text": "Pinned to the corkboard: 'Cell block panel reset after the outage. Temp code 4471. CHANGE THIS, people. - Maintenance'"
+"text": "Pinned to the corkboard: 'Locker-room heating's on the fritz again. Third request this month. - Maintenance'"
 }, {
 "speaker": "DETECTIVE",
-"text": "4471. Nobody ever changes the temp code."
+"text": "Nobody ever fixes anything around here until it's too late."
 }]
-sets_flag = "know_code"
-pickup = true
 
-[node name="Mesh" type="MeshInstance3D" parent="MaintenanceSlip"]
+[node name="Mesh" type="MeshInstance3D" parent="MaintenanceSlip" unique_id=1574498929]
 mesh = SubResource("mesh_note2")
 surface_material_override/0 = SubResource("mat_note2")
 
@@ -222,116 +243,148 @@ surface_material_override/0 = SubResource("mat_wall")
 [node name="Shape" type="CollisionShape3D" parent="Walls/WallWest" unique_id=1733468958]
 shape = SubResource("shape_v10")
 
-[node name="WallEast" type="StaticBody3D" parent="Walls" unique_id=163430684]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97, 1.5, 0)
+[node name="WallEastLo" type="StaticBody3D" parent="Walls" unique_id=163430684]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97, 1.5, -4.7)
 
-[node name="Mesh" type="MeshInstance3D" parent="Walls/WallEast" unique_id=748132195]
-mesh = SubResource("mesh_v10")
+[node name="Mesh" type="MeshInstance3D" parent="Walls/WallEastLo" unique_id=748132195]
+mesh = SubResource("mesh_vgap_lo")
 surface_material_override/0 = SubResource("mat_wall")
 
-[node name="Shape" type="CollisionShape3D" parent="Walls/WallEast" unique_id=2041353955]
-shape = SubResource("shape_v10")
+[node name="Shape" type="CollisionShape3D" parent="Walls/WallEastLo" unique_id=2041353955]
+shape = SubResource("shape_vgap_lo")
+
+[node name="WallEastHi" type="StaticBody3D" parent="Walls" unique_id=163430685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97, 1.5, 1.15)
+
+[node name="Mesh" type="MeshInstance3D" parent="Walls/WallEastHi" unique_id=748132196]
+mesh = SubResource("mesh_vgap_hi")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="Walls/WallEastHi" unique_id=2041353956]
+shape = SubResource("shape_vgap_hi")
+
+[node name="PassageDoor" type="StaticBody3D" parent="Walls" unique_id=163430686]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97, 1.5, -3.55)
+script = ExtResource("92_gate")
+open_flag = "passage_open_this_loop"
+per_loop = true
+locked_speaker = "THE WALL"
+locked_line = ""
+
+[node name="Mesh" type="MeshInstance3D" parent="Walls/PassageDoor" unique_id=748132197]
+mesh = SubResource("mesh_passage_door")
+surface_material_override/0 = SubResource("mat_wall")
+
+[node name="Shape" type="CollisionShape3D" parent="Walls/PassageDoor" unique_id=2041353957]
+shape = SubResource("shape_passage_door")
 
 [node name="Props" type="Node3D" parent="." unique_id=1058823455]
 script = ExtResource("90_autocol")
 
 [node name="SM_Prop_Weapon_Locker_02" parent="Props" unique_id=1716754394 instance=ExtResource("5_1k2jd")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, 0.9315636)
 script = ExtResource("91_item")
 dialogue = [{
-"speaker": "LOCKER - DANIELS",
-"text": "'DANIELS' on masking tape. A spare tie, cough drops, and a photo of a fishing boat."
+"speaker": "LOCKER",
+"text": "A day-shift officer's locker. A spare tie, cough drops, and a photo of a fishing boat."
 }]
 prompt_height = 1.6
-transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, 0.9315636)
 
 [node name="SM_Prop_Weapon_Locker_11" parent="Props" unique_id=674329273 instance=ExtResource("5_1k2jd")]
-script = ExtResource("91_item")
-dialogue = [{
-"speaker": "LOCKER - GRUBER",
-"text": "'GRUBER'. Somebody drew a tiny hat on the name plate."
-}]
-prompt_height = 1.6
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, -2.2975802)
-
-[node name="SM_Prop_Weapon_Locker_12" parent="Props" unique_id=258848932 instance=ExtResource("5_1k2jd")]
 script = ExtResource("91_item")
 dialogue = [{
-"speaker": "LOCKER - FONSECA",
-"text": "'FONSECA'. Rain jacket, umbrella, second umbrella. A prepared officer."
+"speaker": "LOCKER",
+"text": "Somebody drew a tiny hat on the blank name plate."
 }]
 prompt_height = 1.6
-transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, -3.3342307)
 
 [node name="SM_Prop_Weapon_Locker_03" parent="Props" unique_id=377133470 instance=ExtResource("5_1k2jd")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, 1.826855)
 script = ExtResource("91_item")
 dialogue = [{
-"speaker": "LOCKER - PETTY",
-"text": "'PETTY' in fresh marker. Three coffee punch cards, all one stamp from free."
+"speaker": "LOCKER",
+"text": "The rookie's locker - fresh marker on the tape. Three coffee punch cards, all one stamp from free."
 }]
 prompt_height = 1.6
-transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, 1.826855)
+
+[node name="SM_Prop_Weapon_Locker_07" parent="Props" unique_id=969206529 instance=ExtResource("5_1k2jd")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.3000052, 0.010403633, 4.770116)
+script = ExtResource("91_item")
+dialogue = [{
+"speaker": "LOCKER",
+"text": "The range sergeant's locker. Ear protection, a spare uniform, a thermos gone cold. Nothing that helps me tonight."
+}]
+prompt_height = 1.6
+
+[node name="SM_Prop_Weapon_Locker_08" parent="Props" unique_id=196579980 instance=ExtResource("5_1k2jd")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.7305937, 0.010403633, 4.770116)
+script = ExtResource("91_item")
+dialogue = [{
+"speaker": "LOCKER",
+"text": "Gym bag, gym smell. Padlock hanging open."
+}]
+prompt_height = 1.6
+
+[node name="SM_Prop_Weapon_Locker_09" parent="Props" unique_id=2041242339 instance=ExtResource("5_1k2jd")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.8784986, 0.010403633, 4.770116)
+script = ExtResource("91_item")
+dialogue = [{
+"speaker": "LOCKER",
+"text": "The investigator's locker. Nothing visible through the vents but darkness."
+}]
+prompt_height = 1.6
+
+[node name="SM_Prop_Weapon_Locker_10" parent="Props" unique_id=1047345779 instance=ExtResource("5_1k2jd")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.4986129, 0.010403633, 4.770116)
+script = ExtResource("91_item")
+dialogue = [{
+"speaker": "LOCKER",
+"text": "A postcard from Lisbon taped inside the vent slats."
+}]
+prompt_height = 1.6
+
+[node name="SM_Prop_Weapon_Locker_04" parent="Props" unique_id=1312032880 instance=ExtResource("5_1k2jd")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, -1.3411549)
+script = ExtResource("91_item")
+dialogue = [{
+"speaker": "LOCKER",
+"text": "The night officer's locker. Night-shift kit: flashlight batteries and a crossword book."
+}]
+prompt_height = 1.6
+
+[node name="SM_Prop_Weapon_Locker_05" parent="Props" unique_id=2062319173 instance=ExtResource("5_1k2jd")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, 2.7900233)
+script = ExtResource("91_item")
+dialogue = [{
+"speaker": "LOCKER",
+"text": "The evidence clerk's locker. Cleared out - empty hangers, one bent. He wasn't planning on coming back tonight."
+}]
+prompt_height = 1.6
 
 [node name="SM_Prop_Weapon_Locker_06" parent="Props" unique_id=1206367764 instance=ExtResource("5_1k2jd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.75, 0.010403633, -3.5)
 script = ExtResource("93_keypad")
 code = "0806"
 sets_flag = "captains_locker_open"
-unlocked_text = "The captain's locker hangs open. Deputy Biscuit keeps its secrets no more."
-prompt_height = 1.6
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.5901785, 0.010403633, 4.770116)
-
-[node name="SM_Prop_Weapon_Locker_07" parent="Props" unique_id=969206529 instance=ExtResource("5_1k2jd")]
-script = ExtResource("91_item")
-dialogue = [{
-"speaker": "LOCKER - TALLY",
-"text": "'SGT. TALLY'. Ear protection and a scorecard - top line reads 40, circled twice."
+unlocked_text = "I swing the locker off the wall again. The passage - right where he left it."
+reveal_flag = "captain_is_guilty"
+opens_loop_flag = "passage_open_this_loop"
+hide_when_flag = "passage_open_this_loop"
+reveal_dialogue = [{
+"speaker": "DETECTIVE",
+"text": "0806. Deputy Biscuit's birthday. The lock clicks. Alright, Captain - let's have that gun. End this whole thing right here."
+}, {
+"speaker": "DETECTIVE",
+"text": "...Oh. That's not what I expected."
+}, {
+"speaker": "DETECTIVE",
+"text": "No gun. No shelf. No BACK. The whole locker swings off the wall like a door - and behind it, a crawlspace. A hidden passage, running straight toward the cells."
+}, {
+"speaker": "DETECTIVE",
+"text": "He doesn't keep the murder weapon here. He keeps the murder ROUTE. That's how he gets to a sealed cell - right through the wall. THAT'S how my witness dies."
 }]
 prompt_height = 1.6
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.3000052, 0.010403633, 4.770116)
-
-[node name="SM_Prop_Weapon_Locker_08" parent="Props" unique_id=196579980 instance=ExtResource("5_1k2jd")]
-script = ExtResource("91_item")
-dialogue = [{
-"speaker": "LOCKER - MAYS",
-"text": "'MAYS'. Gym bag, gym smell. Padlock hanging open."
-}]
-prompt_height = 1.6
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.7305937, 0.010403633, 4.770116)
-
-[node name="SM_Prop_Weapon_Locker_09" parent="Props" unique_id=2041242339 instance=ExtResource("5_1k2jd")]
-script = ExtResource("91_item")
-dialogue = [{
-"speaker": "LOCKER - ROSS",
-"text": "'DET. ROSS'. Nothing visible through the vents but darkness."
-}]
-prompt_height = 1.6
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.8784986, 0.010403633, 4.770116)
-
-[node name="SM_Prop_Weapon_Locker_10" parent="Props" unique_id=1047345779 instance=ExtResource("5_1k2jd")]
-script = ExtResource("91_item")
-dialogue = [{
-"speaker": "LOCKER - OKONKWO",
-"text": "'OKONKWO'. A postcard from Lisbon taped inside the vent slats."
-}]
-prompt_height = 1.6
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.4986129, 0.010403633, 4.770116)
-
-[node name="SM_Prop_Weapon_Locker_04" parent="Props" unique_id=1312032880 instance=ExtResource("5_1k2jd")]
-script = ExtResource("91_item")
-dialogue = [{
-"speaker": "LOCKER - BELL",
-"text": "'BELL'. Night-shift kit: flashlight batteries and a crossword book."
-}]
-prompt_height = 1.6
-transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, -1.3411549)
-
-[node name="SM_Prop_Weapon_Locker_05" parent="Props" unique_id=2062319173 instance=ExtResource("5_1k2jd")]
-script = ExtResource("91_item")
-dialogue = [{
-"speaker": "LOCKER - VANCE",
-"text": "'VANCE'. Cleared out. Empty hangers, one bent. He wasn't planning on coming back tonight."
-}]
-prompt_height = 1.6
-transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, 2.7900233)
 
 [node name="SM_Prop_Bench_02" parent="Props" unique_id=1500003497 instance=ExtResource("6_x4sv2")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 2.3563566, -2.3841858e-07, -1.4597298)
@@ -360,9 +413,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7711802, 0, -4.441421)
 [node name="SM_Sign_Label_03" parent="." unique_id=506612492 instance=ExtResource("13_qjgsb")]
 transform = Transform3D(1.1924881e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, 1.1924881e-08, -5.2125306e-16, 4.190031, 1.6578935, -1.8332838)
 
-[node name="SM_Sign_Label_04" parent="." unique_id=709925733 instance=ExtResource("13_qjgsb")]
-transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, 0.11093652, 1.6578935, 4.1778626)
-
 [node name="SM_Sign_Label_05" parent="." unique_id=1355029723 instance=ExtResource("13_qjgsb")]
 transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, 1.5019163, 1.5230702, 4.1778626)
 
@@ -373,13 +423,13 @@ transform = Transform3D(0.9781476, 0, 0.2079117, 0, 1, 0, -0.2079117, 0, 0.97814
 transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 4.165031, 1.4733686, 2.142148)
 
 [node name="SM_Sign_Label_01" parent="." unique_id=334238416 instance=ExtResource("16_47ryp")]
-transform = Transform3D(1.1924881e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, 1.1924881e-08, -5.2125306e-16, 4.180522, 1.669495, -2.8290408)
+transform = Transform3D(1.1924881e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, 1.1924881e-08, -5.2125306e-16, 4.180522, 1.669495, -3.2707381)
 
 [node name="SM_Sign_Label_02" parent="." unique_id=326954132 instance=ExtResource("16_47ryp")]
 transform = Transform3D(1.1924881e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, 1.1924881e-08, -5.2125306e-16, 4.180522, 1.669495, 3.2193072)
 
-[node name="SignHall2" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, -3.6)
+[node name="SignHall2" type="Label3D" parent="." unique_id=2031246792]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.02, -3.6)
 pixel_size = 0.01
 modulate = Color(0.75, 0.75, 0.72, 0.45)
 text = "< HALL 2"

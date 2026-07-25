@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://cnpc0witness01"]
+
+; THE WITNESS - the man the detective saved, murdered in the cells every
+; loop. Starts in interrogation, is walked to the cells with the escort at
+; ~1:30, and waits there for the shot. His heirloom is the source of the loop.
+
+[ext_resource type="PackedScene" path="res://scenes/player/character_rig.tscn" id="1_rig"]
+[ext_resource type="Script" uid="uid://dq4eoax0q5nc1" path="res://scripts/game/npc.gd" id="2_npc"]
+
+[node name="TheWitness" instance=ExtResource("1_rig")]
+process_mode = 3
+script = ExtResource("2_npc")
+walk_pace = 1.6
+foot_offset = 0.02
+blocks_player = true
+hide_outside_active_room = true
+start_clip = "idle"
+strip_root_motion = true
+visible_mesh = "SM_Chr_Criminal_Male_01"
+hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_05.fbx"
+voice_clip = "res://audio/sfx/sfx_voice_male_04.mp3"
+paced = true
+barks = [{
+"dur": 4.5,
+"t": 54.0,
+"text": "I'm scared. Something doesn't feel right about tonight."
+}]
+schedule = [{
+"clip": "idle",
+"spot": "Interrogation/Seat",
+"t": 0.0
+}, {
+"clip": "walk",
+"spot": "Interrogation/Seat",
+"t": 60.0
+}, {
+"clip": "walk",
+"spot": "Interrogation/Door",
+"t": 62.0
+}, {
+"clip": "walk",
+"spot": "Hall1/DoorInterrogation",
+"t": 126.0
+}, {
+"clip": "walk",
+"spot": "Hall1/MouthBullpen",
+"t": 132.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/DoorHall1",
+"t": 135.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/DoorHall2",
+"t": 139.0
+}, {
+"clip": "walk",
+"spot": "Hall2/MouthBullpen",
+"t": 142.0
+}, {
+"clip": "walk",
+"spot": "Hall2/DoorCells",
+"t": 149.0
+}, {
+"clip": "walk",
+"spot": "Cells/Center",
+"t": 153.0
+}, {
+"clip": "walk",
+"spot": "Cells/CellLeft",
+"t": 158.0
+}, {
+"clip": "idle",
+"spot": "Cells/CellLeft",
+"t": 400.0
+}]
+dialogue_variants = [{
+"lines": [{
+"speaker": "WITNESS",
+"text": "You again? We keep having this conversation... don't we. They're going to kill me tonight. I can FEEL it."
+}]
+}, {
+"after": 118.0,
+"lines": [{
+"speaker": "WITNESS",
+"text": "Detective? They put me back here. Said it's for my own good. ...It doesn't feel that way."
+}, {
+"speaker": "DETECTIVE",
+"text": "Listen to me. Stay in this cell. Don't open it for anyone - not a badge, not a friendly face. Everything is going to be fine. I promise you."
+}, {
+"speaker": "WITNESS",
+"text": "...You always say that. And it never is."
+}]
+}]

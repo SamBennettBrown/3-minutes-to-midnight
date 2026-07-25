@@ -13,7 +13,6 @@ var _entered := ""
 var _display: Label
 var _box: VBoxContainer
 var _audio: AudioStreamPlayer
-var _beep: AudioStreamPlayer
 var _mono_font: FontFile
 
 
@@ -63,11 +62,6 @@ func _ready() -> void:
 	_audio = AudioStreamPlayer.new()
 	_audio.volume_db = -8.0
 	add_child(_audio)
-	_beep = AudioStreamPlayer.new()
-	if ResourceLoader.exists("res://audio/sfx/button_beep.mp3"):
-		_beep.stream = load("res://audio/sfx/button_beep.mp3")
-	_beep.volume_db = -12.0
-	add_child(_beep)
 	visible = false
 
 
@@ -89,8 +83,6 @@ func _update() -> void:
 
 
 func _press(t: String) -> void:
-	if _beep != null and _beep.stream != null:
-		_beep.play()
 	if t == "CLR":
 		_entered = ""
 	elif t == "OK":

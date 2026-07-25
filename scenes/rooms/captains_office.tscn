@@ -29,9 +29,13 @@
 
 [ext_resource type="Script" path="res://scripts/game/interactable.gd" id="91_item"]
 [ext_resource type="Script" path="res://scripts/game/auto_collider.gd" id="90_autocol"]
+[ext_resource type="Script" path="res://scripts/game/office_ward.gd" id="92_ward"]
 
 [sub_resource type="BoxShape3D" id="shape_trigger"]
 size = Vector3(12, 4, 12)
+
+[sub_resource type="BoxShape3D" id="shape_ward"]
+size = Vector3(8, 3, 6)
 
 [sub_resource type="BoxMesh" id="mesh_frame"]
 size = Vector3(0.22, 0.28, 0.04)
@@ -128,6 +132,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Shape" type="CollisionShape3D" parent="Trigger" unique_id=18899253]
 shape = SubResource("shape_trigger")
+
+[node name="OfficeWard" type="Area3D" parent="." unique_id=104397291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+script = ExtResource("92_ward")
+clear_at = 120.0
+shove_to = Vector3(-7.5, 0, -3.6)
+
+[node name="Shape" type="CollisionShape3D" parent="OfficeWard" unique_id=18899254]
+shape = SubResource("shape_ward")
 
 [node name="DoorGlow" type="MeshInstance3D" parent="." unique_id=689341992]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.03, 4.97)

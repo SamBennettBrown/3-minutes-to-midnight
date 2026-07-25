@@ -26,18 +26,16 @@ const SPEAKER_COLORS := {
 	"WITNESS": Color(0.55, 0.8, 1.0),
 	"THE CAPTAIN": Color(1.0, 0.72, 0.42),
 	"THE ROOKIE": Color(0.6, 0.95, 0.65),
-	"ROOKIE PETTY": Color(0.6, 0.95, 0.65),
 	"RECEPTIONIST": Color(0.95, 0.65, 0.85),
-	"OFFICER VANCE": Color(0.75, 0.7, 0.95),
-	"DETECTIVE ROSS": Color(0.9, 0.55, 0.5),
-	"DETECTIVE VALE": Color(0.55, 0.85, 0.85),
-	"OFFICER BELL": Color(0.95, 0.85, 0.5),
+	"EVIDENCE CLERK": Color(0.75, 0.7, 0.95),
+	"INVESTIGATOR": Color(0.9, 0.55, 0.5),
+	"NIGHT OFFICER": Color(0.95, 0.85, 0.5),
+	"OFFICER": Color(0.55, 0.85, 0.85),
 	"PATRON": Color(0.7, 0.72, 0.72),
 	"PRISONER": Color(0.7, 0.72, 0.72),
 	"THE CELL BLOCK": Color(0.7, 0.72, 0.72),
 	"ALARM": Color(1.0, 0.4, 0.35),
 	"CARD READER": Color(1.0, 0.4, 0.35),
-	"OFFICER MAYS": Color(0.55, 0.85, 0.85),
 }
 ## default name colour for narration / props / unlisted speakers
 @export var default_speaker_color := Color(0.85, 0.82, 0.7)

@@ -13,6 +13,9 @@ static func play(parent: Node, path: String, volume_db := 0.0) -> void:
 	var a := AudioStreamPlayer.new()
 	a.stream = _one_shot(load(path))
 	a.volume_db = volume_db
+	# keep sounding even while a dialogue box has the world paused - a
+	# gunshot or alarm shouldn't cut off the instant a line opens
+	a.process_mode = Node.PROCESS_MODE_ALWAYS
 	parent.add_child(a)
 	a.play()
 	a.finished.connect(a.queue_free)
@@ -28,6 +31,7 @@ static func play_at(parent: Node, path: String, volume_db := 0.0, max_seconds :=
 	# lowpass (it reads as the sound sagging in pitch)
 	a.max_distance = 14.0
 	a.attenuation_filter_cutoff_hz = 20500
+	a.process_mode = Node.PROCESS_MODE_ALWAYS
 	parent.add_child(a)
 	a.play()
 	a.finished.connect(a.queue_free)

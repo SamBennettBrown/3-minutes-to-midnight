@@ -17,8 +17,13 @@ static func prep_clip(anim: Animation, trim := 0.1) -> void:
 	anim.loop_mode = Animation.LOOP_LINEAR
 
 
-# Zero out the hips' horizontal travel so a clip plays in place - for
+# Pin the hips' TRAVEL so a clip plays in place at a constant height - for
 # characters whose position is driven externally (player, scheduled NPCs).
+# We flatten ALL three axes to the first frame: X/Z so it doesn't drift,
+# and Y so the vertical hip bob can't push the planted foot through the
+# floor (or leave the character floating) at the extremes of the cycle.
+# Grounding then depends only on the static foot_offset, which can be
+# tuned once instead of fighting a moving low-point every stride.
 static func strip_root_motion(anim: Animation) -> void:
 	for i in anim.get_track_count():
 		if anim.track_get_type(i) != Animation.TYPE_POSITION_3D:
@@ -30,8 +35,7 @@ static func strip_root_motion(anim: Animation) -> void:
 			continue
 		var first: Vector3 = anim.track_get_key_value(i, 0)
 		for k in anim.track_get_key_count(i):
-			var v: Vector3 = anim.track_get_key_value(i, k)
-			anim.track_set_key_value(i, k, Vector3(first.x, v.y, first.z))
+			anim.track_set_key_value(i, k, first)
 
 
 # Rest height of the hips - used to normalize GLB scale (aim ~0.95m).

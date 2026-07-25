@@ -1,0 +1,176 @@
+extends Node
+
+# The endgame. Everything up to here is investigation; this node owns the
+# final confrontation and nothing else does. It watches for ONE condition:
+#
+#   * you have PROVEN the captain guilty  (flag `captain_is_guilty`), AND
+#   * the clock is in the intercept window (2:45-3:00, t165-180), AND
+#   * you are standing in the LOCKER ROOM, where the captain is about to slip
+#     into the passage.
+#
+# When all three are true it FREEZES the loop clock (the night never reaches
+# 0:00, so the witness is never shot) and runs the confrontation:
+#
+#   - ROOKIE NOT STAGED -> a TAUGHT death. The captain kills you; the lose
+#     screen holds a lesson: you can't take him alone, you need a living
+#     witness. Sets `taught_death_seen`, then the loop resets.
+#   - ROOKIE STAGED (hidden in the locker room, `rookie_staged`) -> the WIN.
+#     The captain confesses to you, the rookie steps out as the witness who
+#     lives, the loop BREAKS (`loop_broken`), and the credits roll.
+#
+# Design record: docs/DESIGN.md "The solve (endgame)".
+
+const Flags := preload("res://scripts/game/flags.gd")
+
+## the intercept window, in loop seconds (2:45 -> 3:00 on a 180s loop)
+@export var window_start := 165.0
+@export var window_end := 180.0
+## the captain must actually BE in the locker room to intercept (he vanishes
+## into the passage a little after the window). Matched by node name.
+@export var captain_name := "Captain"
+@export var locker_room_name := "LockerRoom"
+
+## the lesson shown on the taught death
+@export var taught_line := "He'd shoot me and call it self-defence - my word against a captain's, and I'm the one who ends up in a cell. I can't take him alone. I need someone who lives to see this."
+## the lesson when the rookie was hidden but your hands were empty
+@export var no_evidence_line := "Words are wind. I need the PROOF in my hand - the package from the evidence room, the photo of him and his brother. Grab it first, THEN corner him."
+
+var _clock: Node
+var _fired := false
+
+
+func _enter_tree() -> void:
+	add_to_group("endgame_director")
+
+
+func _process(_delta: float) -> void:
+	if _fired:
+		return
+	if _clock == null:
+		_clock = get_tree().get_first_node_in_group("loop_clock")
+		if _clock == null:
+			return
+	# gate 1: you must have proven his guilt. No stumbling into the ending.
+	if not Flags.has_flag("captain_is_guilty"):
+		return
+	# gate 2: the intercept window (2:45-3:00)
+	var t: float = _clock.time
+	if t < window_start or t > window_end:
+		return
+	# gate 3: you're in the locker room, and the captain is here too (he
+	# hasn't slipped into the passage yet)
+	var player := get_tree().get_first_node_in_group("player")
+	if player == null:
+		return
+	var locker := _find_room(locker_room_name)
+	if locker == null or not locker.contains_point(player.global_position, 0.0):
+		return
+	var captain := _find_captain()
+	if captain == null or not captain.visible:
+		return
+	_fired = true
+	_intercept(captain)
+
+
+func _intercept(captain: Node3D) -> void:
+	# hold the night open - the murder never lands
+	_clock.frozen = true
+	# The WIN needs BOTH per-loop holdings, re-done this very run:
+	#  - rookie_staged: the living witness, hidden in the locker room
+	#  - have_evidence_package: the brother-proof photo, physically in hand
+	# Missing either = the confrontation fails and teaches what was missing.
+	if Flags.has_loop_flag("rookie_staged") and Flags.has_loop_flag("have_evidence_package"):
+		_win(captain)
+	elif Flags.has_loop_flag("rookie_staged"):
+		_no_evidence_death()
+	else:
+		_taught_death()
+
+
+# --- alone: the lesson ---
+func _taught_death() -> void:
+	Flags.set_flag("taught_death_seen")
+	var dlg := get_tree().get_first_node_in_group("dialogue")
+	if dlg != null and not dlg.visible:
+		dlg.show_dialogue([
+			{"speaker": "THE CAPTAIN", "text": "You. In MY locker room, at MY hour. You really don't stop."},
+			{"speaker": "DETECTIVE", "text": "I know what's behind that wall, Captain. I know what you do down there."},
+			{"speaker": "THE CAPTAIN", "text": "Then you know how this ends. No witness, no case. Just a detective who wouldn't go home."},
+		])
+		await dlg.closed
+		if not is_inside_tree():
+			return
+	_die_with_lesson()
+
+
+func _die_with_lesson() -> void:
+	var lose := get_tree().get_first_node_in_group("lose_screen")
+	if lose != null:
+		# the frozen clock is about to be wiped by the reload anyway
+		lose.play_lose(taught_line)
+
+
+# --- rookie hidden but EMPTY-HANDED: an accusation with no proof ---
+func _no_evidence_death() -> void:
+	Flags.set_flag("taught_death_seen")
+	var dlg := get_tree().get_first_node_in_group("dialogue")
+	if dlg != null and not dlg.visible:
+		dlg.show_dialogue([
+			{"speaker": "DETECTIVE", "text": "It's over, Captain. I know about the passage. I know about your brother."},
+			{"speaker": "THE CAPTAIN", "text": "My brother? Show me. Show me one shred of paper that says any of that out loud."},
+			{"speaker": "DETECTIVE", "text": "..."},
+			{"speaker": "THE CAPTAIN", "text": "That's what I thought."},
+		])
+		await dlg.closed
+		if not is_inside_tree():
+			return
+	var lose := get_tree().get_first_node_in_group("lose_screen")
+	if lose != null:
+		lose.play_lose(no_evidence_line)
+
+
+# --- with the rookie: the win ---
+func _win(captain: Node3D) -> void:
+	var dlg := get_tree().get_first_node_in_group("dialogue")
+	if dlg == null:
+		_roll_credits()
+		return
+	if dlg.visible:
+		# something else is mid-line; wait a beat and re-drive
+		await dlg.closed
+	dlg.show_dialogue([
+		{"speaker": "THE CAPTAIN", "text": "Out of my way, detective. I have a loose end in that cell and three minutes to tie it off."},
+		{"speaker": "DETECTIVE", "text": "Recognize this? Two brothers at a lake. One of them's wearing your face. The other one is sitting in a courtroom because of MY witness."},
+		{"speaker": "THE CAPTAIN", "text": "...Where did you get that."},
+		{"speaker": "DETECTIVE", "text": "Where you buried it - your own evidence room. Along with the passage behind your locker. You walk through that wall and put him down every single night. For your brother."},
+		{"speaker": "THE CAPTAIN", "text": "You think a photo convicts a captain? It's your word against mine, and mine wears more brass. Nobody heard a thing."},
+		{"speaker": "THE ROOKIE", "text": "...I did, Captain. I heard every word of it."},
+		{"speaker": "THE CAPTAIN", "text": "...You. How long have you-"},
+		{"speaker": "DETECTIVE", "text": "Long enough. The photo, and a witness who lives. The two things you could never plan around. It's over."},
+	])
+	await dlg.closed
+	if not is_inside_tree():
+		return
+	_roll_credits()
+
+
+func _roll_credits() -> void:
+	Flags.set_flag("loop_broken")
+	var credits := get_tree().get_first_node_in_group("credits")
+	if credits != null:
+		# win mode: closing the credits resets the run and returns to the
+		# title, so the next START replays the intro - the loop is broken
+		credits.open(true)
+
+
+# --- lookups ---
+func _find_room(room_name: String) -> Node3D:
+	for r in get_tree().get_nodes_in_group("room"):
+		if String(r.name) == room_name:
+			return r
+	return null
+
+
+func _find_captain() -> Node3D:
+	var n := get_tree().get_root().find_child(captain_name, true, false)
+	return n as Node3D

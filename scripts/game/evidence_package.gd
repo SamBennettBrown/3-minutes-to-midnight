@@ -11,8 +11,12 @@ extends Node3D
 # the "have_evidence_package" holding tracks whether you've taken it.
 
 const Flags := preload("res://scripts/game/flags.gd")
+const Sfx := preload("res://scripts/game/sfx.gd")
 
 @export var prompt_height := 1.4
+## the snick of palming the package off the plate
+@export_file("*.wav", "*.ogg", "*.mp3") var pickup_sound := "res://audio/sfx/click.mp3"
+@export var pickup_volume_db := -8.0
 
 
 func _ready() -> void:
@@ -33,8 +37,13 @@ func interact() -> void:
 		Flags.set_loop_flag("have_evidence_package")
 		Flags.set_flag("found_murder_weapon")
 		Flags.clear_loop_flag("have_chips")  # the chips stay on the plate
+		if pickup_sound != "" and ResourceLoader.exists(pickup_sound):
+			Sfx.play_at(self, pickup_sound, pickup_volume_db)
 		dlg.show_dialogue([
-			{"speaker": "DETECTIVE", "text": "Bag of Puffy Stars on the plate, package off. Even trade... A service revolver, serial filed off. Never logged. THIS is what killed the clerk."},
+			{"speaker": "DETECTIVE", "text": "Bag of Puffy Stars on the plate, package off. Even trade... It's not a weapon. It's a case file. The one the witness is testifying against."},
+			{"speaker": "DETECTIVE", "text": "A mugshot clipped to the front. And behind it - a family photo. Two brothers at a lake, arms around each other. One of them is our defendant."},
+			{"speaker": "DETECTIVE", "text": "The other... is the CAPTAIN. The man the witness would put away is his own brother. THAT'S the motive. Somebody buried this here to keep it quiet."},
+			{"speaker": "DETECTIVE", "text": "If the Captain's the shooter... maybe I can get to his GUN first. Crack his locker, take the piece, and prevent this whole thing once and for all."},
 		])
 	elif not Flags.has_flag("know_weight_trap"):
 		# first look: learn the trap (permanent knowledge)

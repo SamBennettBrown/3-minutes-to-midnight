@@ -27,8 +27,8 @@ const StoryLock := preload("res://scripts/game/story_lock.gd")
 ## where the E prompt floats, above this node's origin
 @export var prompt_height := 0.5
 ## STORY LOCK: leave empty for "always available". Set a flag (e.g.
-## "know_loop" or "intro_done") and this stays hidden/uninteractable until
-## that flag is set - so tutorial loops don't expose things early.
+## "bound_promise") and this stays hidden/uninteractable until that flag is
+## set - so nothing is exposed during the black-screen opening.
 @export var unlock_flag := ""
 
 
