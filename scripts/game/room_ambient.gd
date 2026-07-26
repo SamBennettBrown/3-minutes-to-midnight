@@ -16,6 +16,7 @@ extends Node
 @export var room_path: NodePath
 
 const RoomState := preload("res://scripts/game/room.gd")
+const Flags := preload("res://scripts/game/flags.gd")
 
 var _player: AudioStreamPlayer
 var _room: Node3D
@@ -67,6 +68,12 @@ func _process(_delta: float) -> void:
 		return
 	if _room == null:
 		_resolve_room()
+	# silent through the black-screen intro - a fan roaring under the
+	# monologue (and right before the opening shot) broke the mood
+	if not Flags.has_flag("bound_promise"):
+		if _player.playing:
+			_player.stop()
+		return
 	# audible only while our room is the active one (or if we truly have no
 	# room to bind to)
 	var here: bool = _room == null or RoomState.current == _room

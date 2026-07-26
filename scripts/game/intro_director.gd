@@ -111,7 +111,7 @@ func _ready() -> void:
 	# the gunshot that opens the night; skipping unlocks only once it's rung out
 	var p := get_tree().get_first_node_in_group("player") as Node3D
 	if p != null and ResourceLoader.exists("res://audio/sfx/gun_fire.mp3"):
-		Sfx.play(self, "res://audio/sfx/gun_fire.mp3", -6.0)
+		Sfx.play(self, "res://audio/sfx/gun_fire.mp3", -14.0)
 		var shot := load("res://audio/sfx/gun_fire.mp3") as AudioStream
 		if shot != null:
 			_skip_at = shot.get_length()
