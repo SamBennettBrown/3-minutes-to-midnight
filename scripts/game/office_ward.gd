@@ -1,73 +1,71 @@
 extends Area3D
 
-# The captain guarding his office. While he's still here (before he leaves
-# for the locker room at `clear_at`), being ANYWHERE in the office gets you
-# his brush-off and a shove out into the bullpen. No restart, no death.
-# After he leaves, the office is yours.
+# The captain's office while he's inside: the DOOR IS SIMPLY BLOCKED.
+# Bump it and he growls through the wood - no shove, no teleport, no
+# control-scheme weirdness (the old teleport ate tank-control state and
+# could be snuck past). At `clear_at` he's gone and the office is open.
 #
-# This POLLS the office room's floor footprint every frame instead of using
-# an Area box - a box left uncovered strips along the walls that you could
-# sneak through. The floor footprint IS the room; there is nowhere to hide.
-# (The node stays an Area3D only so the scene doesn't need restructuring.)
-#
-# The shove destination must sit WELL inside the bullpen floor - a
-# destination on the doorway seam makes the room resolver flip-flop.
+# The solid slab is built in code and parked across the doorway, so the
+# scene needs no restructuring - this node just has to live in the office.
 
 const Flags := preload("res://scripts/game/flags.gd")
+const Sfx := preload("res://scripts/game/sfx.gd")
 
-## loop time the captain leaves (office becomes free afterward). Match the
-## captain's schedule departure.
+## loop time the captain leaves (the door unblocks). Match his schedule.
 @export var clear_at := 120.0
-## where he shoves you back to (world) - well inside the bullpen
-@export var shove_to := Vector3(-7.5, 0, -3.6)
-## how deep past the doorway counts as "inside" (shrinks the floor test so
-## brushing the door frame doesn't trigger)
-@export var entry_grace := 0.4
-@export var line := "I'm busy, detective. This isn't a break room. Out."
+## the door gap, in OFFICE-LOCAL coords (south wall doorway)
+@export var door_local := Vector3(2.5, 1.5, 4.97)
+@export var door_size := Vector3(2.4, 3.0, 0.35)
+@export var line := "Occupied. I'm in here, detective - find somewhere else to be."
 @export var speaker := "THE CAPTAIN"
 
 var _clock: Node
 var _room: Node3D
-var _said_this_loop := false
-var _cooldown := 0.0
-var _prev_time := 999.0
+var _shape: CollisionShape3D
+var _said := false
 
 
-func _process(delta: float) -> void:
-	if _cooldown > 0.0:
-		_cooldown -= delta
+func _ready() -> void:
+	_room = _find_office()
+	var block := StaticBody3D.new()
+	_shape = CollisionShape3D.new()
+	var box := BoxShape3D.new()
+	box.size = door_size
+	_shape.shape = box
+	block.add_child(_shape)
+	add_child(block)
+	# the office room sits unrotated in the world, so local offsets add
+	if _room != null:
+		block.global_position = _room.global_position + door_local
+	else:
+		block.position = door_local
+
+
+func _process(_delta: float) -> void:
 	if _clock == null:
 		_clock = get_tree().get_first_node_in_group("loop_clock")
 		return
-	# loop restarted (clock jumped back): re-arm the line + shove
-	if _clock.time < _prev_time - 1.0:
-		_said_this_loop = false
-		_cooldown = 0.0
-	_prev_time = _clock.time
-	# once he's gone, the office is open
-	if _clock.time >= clear_at:
+	var closed: bool = _clock.time < clear_at
+	if _shape.disabled == closed:
+		_shape.disabled = not closed
+	if not closed or _said:
 		return
+	# bump line, once per loop (scene reload re-arms it) - HORIZONTAL
+	# distance; the slab centre sits 1.5m up
 	var p := get_tree().get_first_node_in_group("player") as Node3D
 	if p == null:
 		return
-	if _room == null:
-		_room = _find_office()
-		if _room == null:
-			return
-	if _cooldown > 0.0:
-		return
-	# the whole room is his: floor footprint, shrunk a hair at the doorway
-	if _room.contains_floor_point(p.global_position, -entry_grace):
-		_cooldown = 1.0
+	var flat := (_room.global_position + door_local) - p.global_position if _room != null \
+			else global_position - p.global_position
+	flat.y = 0.0
+	if flat.length() < 1.7:
+		_said = true
 		var dlg := get_tree().get_first_node_in_group("dialogue")
-		if dlg != null and not dlg.visible and not _said_this_loop:
-			_said_this_loop = true
+		if dlg != null and not dlg.visible:
 			dlg.show_dialogue([{"speaker": speaker, "text": line}])
-		p.set_deferred("global_position", shove_to)
 
 
 func _find_office() -> Node3D:
-	# the room this ward lives in (walk up), else by name
 	var n: Node = get_parent()
 	while n != null:
 		if n.is_in_group("room"):

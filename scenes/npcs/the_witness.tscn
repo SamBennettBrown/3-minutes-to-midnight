@@ -22,8 +22,16 @@ voice_clip = "res://audio/sfx/sfx_voice_male_04.mp3"
 paced = true
 barks = [{
 "dur": 4.5,
-"t": 54.0,
+"t": 18.0,
+"text": "I've told you three times already. I saw what I saw - and he knows my face."
+}, {
+"dur": 4.5,
+"t": 32.0,
 "text": "I'm scared. Something doesn't feel right about tonight."
+}, {
+"dur": 4.5,
+"t": 52.0,
+"text": "You keep saying 'safe'. Nobody's said where."
 }]
 schedule = [{
 "clip": "idle",

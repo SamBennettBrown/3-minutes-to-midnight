@@ -24,8 +24,12 @@ voice_clip = "res://audio/sfx/sfx_voice_male_05.mp3"
 paced = true
 barks = [{
 "dur": 4.5,
-"t": 20.0,
-"text": "Just you and me tonight. Your testimony's going to be the nail in the coffin for this case."
+"t": 10.0,
+"text": "Walk me through it one more time. Slow. Every detail you remember."
+}, {
+"dur": 4.5,
+"t": 26.0,
+"text": "Your testimony's going to be the nail in the coffin for this case."
 }, {
 "dur": 6.0,
 "flag": "heard_evidence_tip",
@@ -80,7 +84,7 @@ schedule = [{
 }, {
 "clip": "idle",
 "spot": "Cells/CorridorRight",
-"t": 182.0
+"until": 120.0
 }, {
 "clip": "walk",
 "spot": "Cells/Door",

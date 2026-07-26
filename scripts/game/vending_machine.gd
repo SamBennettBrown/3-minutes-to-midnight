@@ -51,7 +51,7 @@ func interact() -> void:
 	# rattling the bag loose - CAPPED, the source recording runs for ages
 	# and would still be droning from the next room over
 	Sfx.play_at(self, "res://audio/sfx/bump.mp3", -6.0)
-	Sfx.play_at(self, "res://audio/sfx/vending_machine.mp3", -8.0, 3.5)
+	Sfx.play_at(self, "res://audio/sfx/vendingmachine.mp3", -8.0, 3.5)
 	dlg.show_dialogue([
 		{"speaker": "DETECTIVE", "text": "I put a shoulder into it. The bag drops. PUFFY STARS - mine now. Feels about right for a swap."},
 	])

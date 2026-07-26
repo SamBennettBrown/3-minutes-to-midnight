@@ -25,6 +25,39 @@ var _rect: ColorRect
 var _audio: AudioStreamPlayer
 var _teach_label: Label
 var _active := false
+# the rewind spectacle: while the rewind sfx plays under the black, the
+# clock rips backward from 0:00 up to 3:00 with rings converging on it
+var _fx: RewindFx
+var _fx_clock: Label
+var _fx_dur := 1.0
+var _fx_time := -1.0
+
+
+# The dial storm behind the rewinding clock: rings collapsing inward and a
+# wheel of clock hands spinning BACKWARD - all driven off one 0..1 progress.
+class RewindFx extends Control:
+	var progress := 0.0
+	const INK := Color(0.95, 0.95, 0.93)
+	const BLOOD := Color(0.92, 0.32, 0.28)
+
+	func _draw() -> void:
+		var c := size * 0.5
+		var max_r := c.length()
+		# rings converging on the clock, staggered so there's always a few
+		# mid-flight; they brighten and thicken as they close in
+		for i in 7:
+			var ph := fposmod(progress * 2.2 + float(i) / 7.0, 1.0)
+			var r := (1.0 - ph) * max_r
+			var col := Color(INK.r, INK.g, INK.b, ph * 0.5)
+			draw_arc(c, maxf(r, 2.0), 0.0, TAU, 72, col, 2.0 + ph * 5.0)
+		# a wheel of hands around the numbers, sweeping counter-clockwise -
+		# time being dragged the wrong way. Every third hand runs blood-red.
+		for i in 10:
+			var ang := -progress * TAU * 2.5 + TAU * float(i) / 10.0
+			var ln := 34.0 + 30.0 * sin(progress * TAU * 3.0 + float(i) * 1.7)
+			var col := BLOOD if i % 3 == 0 else Color(INK.r, INK.g, INK.b, 0.7)
+			var dir := Vector2(cos(ang), sin(ang))
+			draw_line(c + dir * 190.0, c + dir * (190.0 + ln), col, 3.0)
 
 
 func _enter_tree() -> void:
@@ -59,6 +92,77 @@ func _ready() -> void:
 	_teach_label.add_theme_color_override("font_color", Color(0.9, 0.55, 0.5))
 	_teach_label.modulate.a = 0.0
 	add_child(_teach_label)
+
+
+func _process(delta: float) -> void:
+	if _fx_time < 0.0:
+		return
+	_fx_time += delta
+	if _fx_time >= _fx_dur:
+		# done: clean up after ourselves - the death path reloads the scene
+		# anyway, but the INTRO borrows this anim and plays on afterwards
+		_fx_time = -1.0
+		_fx.visible = false
+		_fx_clock.visible = false
+		return
+	var p := clampf(_fx_time / _fx_dur, 0.0, 1.0)
+	_fx.progress = p
+	_fx.queue_redraw()
+	# the readout accelerates like tape on rewind: slow first ticks, then a
+	# blur up to 3:00
+	var s := int(round(p * p * 180.0))
+	var txt := "%d:%02d" % [s / 60, s % 60]
+	if txt != _fx_clock.text:
+		_fx_clock.text = txt
+		# juice: every flip punches the clock a little bigger
+		_fx_clock.pivot_offset = _fx_clock.size * 0.5
+		_fx_clock.scale = Vector2(1.18, 1.18)
+	_fx_clock.scale = _fx_clock.scale.lerp(Vector2.ONE, delta * 10.0)
+
+
+func _start_rewind_fx(duration: float) -> void:
+	if _fx == null:
+		_fx = RewindFx.new()
+		_fx.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		_fx.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		add_child(_fx)
+		_fx_clock = Label.new()
+		_fx_clock.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		_fx_clock.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		_fx_clock.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		# the numbers must WIN against the dial storm behind them: huge, bold,
+		# and a heavy black outline that carves the hands away around them
+		var bold := "res://fonts/Crimson_Text/CrimsonText-Bold.ttf"
+		if ResourceLoader.exists(bold):
+			_fx_clock.add_theme_font_override("font", load(bold))
+		_fx_clock.add_theme_font_size_override("font_size", 180)
+		_fx_clock.add_theme_color_override("font_color", Color(0.97, 0.97, 0.95))
+		_fx_clock.add_theme_color_override("font_outline_color", Color.BLACK)
+		_fx_clock.add_theme_constant_override("outline_size", 26)
+		_fx_clock.text = "0:00"
+		add_child(_fx_clock)
+	# the teaching line hands the screen over to the rewind
+	if _teach_label.modulate.a > 0.0:
+		var tw := create_tween()
+		tw.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+		tw.tween_property(_teach_label, "modulate:a", 0.0, 0.25)
+	_fx.visible = true
+	_fx_clock.visible = true
+	_fx_dur = duration
+	_fx_time = 0.0
+
+
+## The rewind spectacle (sfx + the clock ripping back up to 3:00) WITHOUT
+## ending the loop. The intro plays this as the bridge from the monologue
+## into the first run; play_lose routes through it for every reset.
+func play_rewind(duration := 1.7) -> void:
+	if ResourceLoader.exists(rewind_path):
+		var rw := AudioStreamPlayer.new()
+		rw.stream = load(rewind_path)
+		rw.volume_db = rewind_volume_db
+		add_child(rw)
+		rw.play()
+	_start_rewind_fx(duration)
 
 
 func is_active() -> bool:
@@ -100,12 +204,8 @@ func play_lose(teach_line := "") -> void:
 		await get_tree().create_timer(0.54).timeout
 		if not is_instance_valid(self) or not is_inside_tree():
 			return
-	if ResourceLoader.exists(rewind_path):
-		var rw := AudioStreamPlayer.new()
-		rw.stream = load(rewind_path)
-		rw.volume_db = rewind_volume_db
-		add_child(rw)
-		rw.play()
+	# the clock rips back to 3:00 over the rewind sound
+	play_rewind(maxf(linger - 0.6, 0.1))
 	await get_tree().create_timer(maxf(linger - 0.6, 0.1)).timeout
 	if not is_instance_valid(self) or not is_inside_tree():
 		return

@@ -44,14 +44,7 @@ func _ready() -> void:
 	_label(box, "CLAUDE", 36, Color(0.92, 0.92, 0.9))
 	_label(box, " ", 20, Color.WHITE)
 
-	var rt := RichTextLabel.new()
-	rt.bbcode_enabled = true
-	rt.fit_content = true
-	rt.custom_minimum_size = Vector2(980, 0)
-	rt.add_theme_font_size_override("normal_font_size", 30)
-	rt.text = "[center]OUR DETECTIVE WILL RETURN IN [s]AVENGERS: DOOMSDAY[/s][/center]"
-	box.add_child(rt)
-
+	_label(box, "our detective will return in", 24, Color(0.65, 0.65, 0.62))
 	_label(box, "LOOP GAME 2: OVERTIME", 34, Color(0.9, 0.88, 0.8), true)
 	_label(box, " ", 20, Color.WHITE)
 	# the run stats - filled in when the WIN opens the credits

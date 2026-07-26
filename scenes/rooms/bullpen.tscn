@@ -236,6 +236,7 @@ shape = SubResource("shape_trigger")
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=1823294569]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+script = ExtResource("90_autocol")
 
 [node name="Mesh" type="MeshInstance3D" parent="Floor" unique_id=213437160]
 transform = Transform3D(1.0001711, 0, 0, 0, 1.0001711, 0, 0, 0, 1.0001711, 0.0038895607, -0.0018117428, 0.0007234812)
@@ -630,7 +631,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1215901, 2.275857, -4.81999
 [node name="SM_Prop_Poster_02" parent="." unique_id=51405411 instance=ExtResource("37_s53du")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9831874, 2.6799798, -4.8167567)
 
-[node name="SM_Prop_Photocopier_01" parent="." unique_id=1550211046 instance=ExtResource("38_isapj")]
+[node name="SM_Prop_Photocopier_01" parent="Props" unique_id=1550211046 instance=ExtResource("38_isapj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.780319, -4.7683716e-07, -4.457451)
 
 [node name="SM_Prop_Card_Scanner_02" parent="." unique_id=320054502 instance=ExtResource("39_k24ke")]

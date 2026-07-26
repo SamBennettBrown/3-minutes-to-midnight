@@ -23,8 +23,8 @@ blocks_player = true
 hide_outside_active_room = true
 start_clip = "idle"
 strip_root_motion = true
-visible_mesh = "SM_Chr_Detective_Female_01"
-hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hair_08.fbx"
+visible_mesh = "SM_Chr_Officer_Male_01"
+hair_path = "res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Chr_Attach_Hat_01.fbx"
 voice_clip = "res://audio/sfx/sfx_voice_male_06.mp3"
 paced = true
 vanish_into_passage_at = 178.0
@@ -34,8 +34,8 @@ barks = [{
 "text": "Not now, detective. Paperwork. Chain of custody doesn't file itself."
 }, {
 "dur": 4.0,
-"t": 80.0,
-"text": "Still here? I said I'm busy. Go do your rounds."
+"t": 75.0,
+"text": "Long night, people. Do your jobs and go home."
 }]
 schedule = [{
 "clip": "idle",
@@ -44,35 +44,47 @@ schedule = [{
 }, {
 "clip": "idle",
 "spot": "CaptainsOffice/DeskFront",
-"t": 120.0
+"t": 60.0
 }, {
 "clip": "walk",
 "spot": "CaptainsOffice/Door",
-"t": 123.0
+"t": 63.0
 }, {
 "clip": "walk",
 "spot": "Bullpen/DoorCaptain",
-"t": 127.0
+"t": 67.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/Center",
+"t": 72.0
+}, {
+"clip": "idle",
+"spot": "Bullpen/Center",
+"until": 95.0
 }, {
 "clip": "walk",
 "spot": "Bullpen/DoorHall2",
-"t": 132.0
+"t": 99.0
 }, {
 "clip": "walk",
 "spot": "Hall2/MouthBullpen",
-"t": 136.0
+"t": 103.0
+}, {
+"clip": "idle",
+"spot": "Hall2/MouthBullpen",
+"until": 138.0
 }, {
 "clip": "walk",
 "spot": "Hall2/DoorLocker",
-"t": 142.0
+"t": 144.0
 }, {
 "clip": "walk",
 "spot": "LockerRoom/Door",
-"t": 146.0
+"t": 148.0
 }, {
 "clip": "walk",
 "spot": "LockerRoom/CaptainsLockerSpot",
-"t": 150.0
+"t": 152.0
 }, {
 "clip": "idle",
 "spot": "LockerRoom/CaptainsLockerSpot",

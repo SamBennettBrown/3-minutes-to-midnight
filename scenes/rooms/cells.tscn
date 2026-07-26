@@ -136,6 +136,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, 2.6)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 
 [node name="Mesh" type="MeshInstance3D" parent="walls/Floor" unique_id=1489857748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009790897, 0.0034956932, 0.001046896)
 mesh = SubResource("mesh_floor")
 surface_material_override/0 = SubResource("mat_floor")
 
@@ -268,10 +269,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2770362, 4.0489138e-17, -0.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4590776, -2.3841858e-07, -4.452217)
 
 [node name="SignHall2" type="Label3D" parent="." unique_id=13901888]
-transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, -3.4548867, 0.02, -0.25623924)
+transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, -3.5987098, 0.02, -0.06278676)
 pixel_size = 0.01
 modulate = Color(0.75, 0.75, 0.72, 0.45)
-text = "< HALL 2"
+text = "HALL 2"
 font = ExtResource("98_font")
 font_size = 60
 outline_size = 0

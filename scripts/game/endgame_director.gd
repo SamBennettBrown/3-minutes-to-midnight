@@ -150,6 +150,8 @@ func _win(captain: Node3D) -> void:
 		{"speaker": "DETECTIVE", "text": "I think it's about time you... *takes off glasses*"},
 		{"speaker": "DETECTIVE", "text": "Clocked out, Captain "},
 		{"speaker": "CSI MIAMI", "text": "YEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH!!"},
+		{"speaker": "THE ROOKIE", "text": "Sir... it's three minutes past midnight. Does this count as overtime?"},
+		{"speaker": "DETECTIVE", "text": "Kid, I've worked this same three minutes more times than I can count. The department owes me a YEAR."},
 	])
 	await dlg.closed
 	if not is_inside_tree():

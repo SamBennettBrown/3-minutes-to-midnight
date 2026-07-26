@@ -48,6 +48,11 @@ func interact() -> void:
 		room.visible = true
 	cam.make_current()
 	_set_tint(true)
+	# while looking through the glass, the label should say where you're
+	# LOOKING, not where you're standing
+	var rl := get_tree().get_first_node_in_group("room_label")
+	if rl != null:
+		rl.set_room("INTERROGATION")
 	var p := get_tree().get_first_node_in_group("player")
 	if p != null:
 		p.input_locked = true
@@ -75,6 +80,12 @@ func _step_back() -> void:
 		room.visible = false
 	if is_instance_valid(_prev_cam):
 		_prev_cam.make_current()
+	var rl := get_tree().get_first_node_in_group("room_label")
+	if rl != null and RoomState.current != null:
+		var label: String = RoomState.current.display_name
+		if label == "":
+			label = String(RoomState.current.name).capitalize().to_upper()
+		rl.set_room(label)
 	var p := get_tree().get_first_node_in_group("player")
 	if p != null:
 		p.input_locked = false

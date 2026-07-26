@@ -88,8 +88,12 @@ func _move_tank(input: Vector2, running: bool, delta: float) -> bool:
 func _move_camera_relative(input: Vector2, running: bool, delta: float) -> bool:
 	if input == Vector2.ZERO:
 		_latch_valid = false
-		# ease to a stop over ~0.1s instead of freezing mid-stride
-		var stop := Vector2(velocity.x, velocity.z).move_toward(Vector2.ZERO, decel * delta)
+		# ease to a stop over ~0.1s instead of freezing mid-stride. Decel
+		# scales with how fast you're actually going, so stopping from a
+		# sprint takes the same beat as stopping from a walk - not a glide
+		var hv := Vector2(velocity.x, velocity.z)
+		var d := decel * maxf(1.0, hv.length() / walk_speed)
+		var stop := hv.move_toward(Vector2.ZERO, d * delta)
 		velocity.x = stop.x
 		velocity.z = stop.y
 		return false
@@ -111,8 +115,12 @@ func _move_camera_relative(input: Vector2, running: bool, delta: float) -> bool:
 	# starts and hard direction changes while staying responsive (~0.12s).
 	# One VECTOR move_toward, not per-axis: per-axis ramps kink the velocity
 	# direction mid-turn, which reads as a jagged little hitch on corners.
+	# Accel scales with the target speed so a RUNNING direction change is as
+	# crisp as a walking one - unscaled, reversing at sprint took ~0.5s of
+	# floaty drift.
+	var ramp := accel * (speed / walk_speed)
 	var v := Vector2(velocity.x, velocity.z) \
-			.move_toward(Vector2(dir.x, dir.z) * speed, accel * delta)
+			.move_toward(Vector2(dir.x, dir.z) * speed, ramp * delta)
 	velocity.x = v.x
 	velocity.z = v.y
 	if dir.length() > 0.1:

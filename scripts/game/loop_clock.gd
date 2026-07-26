@@ -41,6 +41,7 @@ var _r_label: Label
 var _r_tick := 0.0
 var _r_tock := false
 var _prev_left := -1
+var _dlg: Node
 
 
 func _enter_tree() -> void:
@@ -90,6 +91,14 @@ func _process(delta: float) -> void:
 	if not live:
 		_label.visible = false
 		return
+	# hide the countdown while a conversation has the screen (letterboxed
+	# dialogue reads as a cutaway - the clock over it breaks the frame). The
+	# tree is paused during dialogue so we won't run again until it closes;
+	# hiding happens on the OPENED signal, and _process restores after.
+	if _dlg == null:
+		_dlg = get_tree().get_first_node_in_group("dialogue")
+		if _dlg != null:
+			_dlg.opened.connect(func() -> void: _label.visible = false)
 	# the session stopwatch, for the win credits - all live play counts,
 	# including the frozen confrontation
 	Flags.playtime += delta

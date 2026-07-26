@@ -17,9 +17,37 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 
 const NOTE_FONT := preload("res://fonts/Special_Elite/SpecialElite-Regular.ttf")
 
+# The case file is a TIMELINE of the night: each entry carries "when" (the
+# loop-second its moment comes) and the file sorts by it, so no matter what
+# order you LEARN things, the page reads as the plan of the run - top to
+# bottom, execute in order. "stamp" is the countdown time shown dim above a
+# note, matching the HUD clock.
 @export var entries: Array = [
-	{"flag": "bound_promise", "title": "THE TRINKET",
+	{"flag": "bound_promise", "title": "THE TRINKET", "when": 0.0,
 		"text": "The Witness slid a small brass charm into my pocket."},
+	{"flag": "know_impossible_death", "title": "THE IMPOSSIBLE DEATH", "when": 1.0,
+		"text": "Shot dead in a sealed cell, every loop. No gun in the room. Start in the cells."},
+	{"flag": "inmate_tip", "title": "WITNESS IN INTERROGATION", "when": 5.0, "stamp": "UNTIL 2:00",
+		"text": "He's in INTERROGATION until 2:00. Word inside: somebody CLOSE wanted him gone."},
+	{"flag": "heard_evidence_tip", "title": "OVERHEARD - INTERROGATION", "when": 15.0,
+		"text": "The case file is in EVIDENCE - hidden, weighted shelf in the back."},
+	{"flag": "know_card_drop", "title": "THE CLERK'S CARD", "when": 30.0, "stamp": "2:30",
+		"text": "Clerk dumps his keycard on the front desk at 2:30. Rosa's boyfriend calls at 2:20 - that's my window."},
+	{"flag": "seen_stuck_snack", "title": "THE STUCK BAG", "when": 40.0,
+		"text": "PUFFY STARS wedged in the vending machine. About a pound. One shoulder-check."},
+	{"flag": "know_weight_trap", "title": "THE SPRING PLATE", "when": 50.0,
+		"text": "The package sits on a weight plate. It wants a stand-in - about a pound."},
+	{"flag": "found_murder_weapon", "title": "THE PACKAGE - HIS BROTHER", "when": 60.0,
+		"text": "The defendant is the CAPTAIN'S BROTHER. Family photo in the file. Get the gun from his locker - end this."},
+	{"flag": "captains_locker_open", "title": "0806", "when": 70.0,
+		"text": "The dog's birthday. His locker opens to it - every night."},
+	{"flag": "captain_is_guilty", "title": "NOT A GUN - A DOORWAY", "when": 120.0, "stamp": "HE MOVES AT 2:00",
+		"text": "A hidden passage to the cells, behind his locker. He leaves his office at 2:00."},
+	{"flag": "taught_death_seen", "title": "HOW TO NAIL HIM", "when": 165.0, "stamp": "0:15",
+		"text": "PACKAGE in hand. ROOKIE hidden and listening. Locker room, 0:15."},
+	{"flag": "saw_wall_shot", "title": "THE SHOT FROM THE WALL", "when": 180.0, "stamp": "0:00",
+		"text": "Muzzle-flash from INSIDE the wall. There's a way into that block I can't see."},
+	# --- legacy entries (flags currently never set; kept for reference) ---
 	{"flag": "know_loop", "title": "THREE MINUTES",
 		"text": "It's the heirloom. The Witness dies at midnight and it drags me back to 11:57 - three minutes, over and over. If I can change how the night goes, maybe he lives. Start where they took him: interrogation."},
 	{"flag": "read_case_file", "title": "CASE FILE 44-C",
@@ -28,22 +56,6 @@ const NOTE_FONT := preload("res://fonts/Special_Elite/SpecialElite-Regular.ttf")
 		"text": "Someone called the front desk asking if I was still in the building. The receptionist said she'd 'let him know.'"},
 	{"flag": "found_note_57", "title": "THE NOTE",
 		"text": "Clutched in the dead man's hand: a scrap of paper, one number scrawled on it - 57. Too short for a phone. A badge number. Someone's badge number."},
-	{"flag": "know_impossible_death", "title": "THE IMPOSSIBLE DEATH",
-		"text": "My witness dies in the cell block every loop - shot, in a room holding only one prisoner, and that prisoner has no gun. It can't happen, but it does. The only ones who'd know what really went on in there are the ones who were in there. Start in the cells."},
-	{"flag": "saw_wall_shot", "title": "THE SHOT FROM THE WALL",
-		"text": "I waited in the cells at midnight and saw it myself. The muzzle-flash came from INSIDE THE WALL - through solid concrete - and he dropped. I was right there and couldn't stop it. There's a way into that block I can't see. Find it, and I get to the other side of the killer."},
-	{"flag": "heard_evidence_tip", "title": "OVERHEARD - INTERROGATION",
-		"text": "Through the two-way glass: the investigator logged the case file into EVIDENCE himself - on a hidden, weighted shelf in the back. The record of this whole night is sitting in that room."},
-	{"flag": "know_weight_trap", "title": "THE SPRING PLATE",
-		"text": "The unlogged package in evidence sits on a weight-sensitive plate. Lifting it bare rings every bell in the building. It wants a stand-in - about a pound."},
-	{"flag": "found_murder_weapon", "title": "THE PACKAGE - HIS BROTHER",
-		"text": "The buried package is the CASE FILE my witness is testifying on. Mugshot on the front - and tucked behind it, a family photo. Two brothers at a lake. One is the defendant. The other is the CAPTAIN. That's the motive: the testimony buries his brother. Maybe I can take his GUN before it happens - crack his locker (his precious pooch's birthday might help) and end this once and for all."},
-	{"flag": "captain_is_guilty", "title": "NOT A GUN - A DOORWAY",
-		"text": "Cracked his locker expecting the gun. Instead the whole thing swings off the wall - a hidden passage running straight to the cells. He doesn't keep the weapon here. He keeps the ROUTE. That's how a man dies in a sealed cell. Now I have to stop him before midnight - he'll be here, at the passage, at the end."},
-	{"flag": "taught_death_seen", "title": "WHAT I NEED TO NAIL HIM",
-		"text": "Facing him alone gets me killed, and words don't stick to a captain. I need BOTH, in the same run: the PACKAGE from the evidence room in my hand, and a WITNESS he'd never expect - the rookie, hidden and listening. Talk to the ROOKIE and set the meet: locker room, 0:15. Then grab the evidence and be there at the end."},
-	{"flag": "inmate_tip", "title": "THE WITNESS IS IN INTERROGATION",
-		"text": "The prisoner saw them march my witness past not ten minutes ago - he's down in INTERROGATION right now, the whole night shift around him. Word inside: somebody CLOSE wanted him gone. He was safer behind bars. Go to interrogation."},
 ]
 
 var _dim: ColorRect
@@ -209,6 +221,11 @@ func _rebuild() -> void:
 			c.queue_free()
 	var unlocked: Array = entries.filter(
 			func(e): return Flags.has_flag(String(e.get("flag", ""))))
+	# TIMELINE order: notes sort by WHEN their moment comes in the loop, not
+	# by when you learned them - the page reads as the plan of the run, top
+	# to bottom, execute in order
+	unlocked.sort_custom(func(a, b) -> bool:
+		return float(a.get("when", 900.0)) < float(b.get("when", 900.0)))
 	# fill DOWN each column before spilling into the next
 	var per_col := maxi(ceili(float(unlocked.size()) / 3.0), 1)
 	var idx := 0
@@ -223,6 +240,10 @@ func _rebuild() -> void:
 		col.add_child(note)
 		# ink pools and fades a shade from note to note
 		var ink := Color(0.9, 0.86, 0.77) + Color(1, 1, 1) * _jitter(idx, 5, 0.05)
+		# the countdown stamp, dim, above the title - matches the HUD clock
+		var stamp := String(e.get("stamp", ""))
+		if stamp != "":
+			_add_label(note, stamp, 17, Color(0.62, 0.57, 0.47))
 		_add_label(note, "•  " + String(e.get("title", "")), 28, ink)
 		_add_label(note, String(e.get("text", "")), 22, Color(0.93, 0.91, 0.86), 500.0)
 		_add_label(col, " ", 14, Color.WHITE)

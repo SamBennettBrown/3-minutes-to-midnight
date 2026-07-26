@@ -79,5 +79,15 @@ func _process(_delta: float) -> void:
 	# the player's own motion - the prompt is parented to the player, so
 	# smoothing toward a world goal while the body moves reads as violent
 	# jitter. A direct set is rock-steady.)
-	global_position = nearest.global_position + _anchor_offset + Vector3(0, h + bob, 0)
+	var pos := nearest.global_position + _anchor_offset + Vector3(0, h + bob, 0)
+	# big props (the evidence shelves especially): the mesh centre sits DEEP
+	# inside the model, which parks the E awkwardly in the shelving. Pull it
+	# toward the player so it floats off the prop's face instead.
+	if not nearest.has_method("get_conversation"):
+		var pull := body.global_position - pos
+		pull.y = 0.0
+		var d := pull.length()
+		if d > 0.01:
+			pos += pull / d * minf(0.55, d * 0.4)
+	global_position = pos
 	visible = true

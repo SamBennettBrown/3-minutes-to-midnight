@@ -9,6 +9,7 @@ const Flags := preload("res://scripts/game/flags.gd")
 
 var _code := ""
 var _flag := ""
+var _on_success := Callable()
 var _entered := ""
 var _display: Label
 var _box: VBoxContainer
@@ -65,9 +66,10 @@ func _ready() -> void:
 	visible = false
 
 
-func open(code: String, flag: String) -> void:
+func open(code: String, flag: String, on_success: Callable = Callable()) -> void:
 	_code = code
 	_flag = flag
+	_on_success = on_success
 	_entered = ""
 	visible = true
 	get_tree().paused = true
@@ -99,6 +101,10 @@ func _submit() -> void:
 			Flags.set_flag(_flag)
 		_play("res://audio/sfx/keycard.mp3")
 		_close()
+		# tell the keypad prop the code went through (opens the passage,
+		# plays the reveal) - AFTER closing so the world is unpaused
+		if _on_success.is_valid():
+			_on_success.call()
 	else:
 		_play("res://audio/ambient/static.wav")
 		_entered = ""

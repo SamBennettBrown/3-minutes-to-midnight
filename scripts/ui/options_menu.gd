@@ -347,13 +347,16 @@ func _add_button(text: String, cb: Callable) -> Button:
 
 
 func _refresh() -> void:
-	if _bw_btn != null:
+	# is_instance_valid too, not just null - page switches free the settings
+	# buttons but leave these vars pointing at the corpses, and F11 can call
+	# this while the settings page isn't built
+	if _bw_btn != null and is_instance_valid(_bw_btn):
 		_bw_btn.text = "BLACK & WHITE:  %s" % ("ON" if bw_on else "OFF")
-	if _dither_btn != null:
+	if _dither_btn != null and is_instance_valid(_dither_btn):
 		_dither_btn.text = "DITHERING:  %s" % ("ON" if dither_on else "OFF")
-	if _fs_btn != null:
+	if _fs_btn != null and is_instance_valid(_fs_btn):
 		_fs_btn.text = "FULLSCREEN:  %s" % ("ON" if fullscreen_on else "OFF")
-	if _vol_btn != null:
+	if _vol_btn != null and is_instance_valid(_vol_btn):
 		_vol_btn.text = "VOLUME:  %d%%" % volume_pct
 
 
@@ -398,6 +401,12 @@ static func _load_settings() -> bool:
 
 
 func _input(event: InputEvent) -> void:
+	# F11: quick fullscreen toggle, anywhere, menu open or not
+	if event is InputEventKey and event.pressed and not event.is_echo() \
+			and event.physical_keycode == KEY_F11:
+		get_viewport().set_input_as_handled()
+		_on_fullscreen()
+		return
 	if event is InputEventKey and event.pressed and not event.is_echo() \
 			and event.physical_keycode == KEY_ESCAPE:
 		if title_mode:

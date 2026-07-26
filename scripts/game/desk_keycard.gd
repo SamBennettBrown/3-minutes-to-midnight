@@ -102,6 +102,9 @@ func interact() -> void:
 	if Flags.has_loop_flag(safe_flag):
 		# she's on the phone, turned away - clean lift
 		Flags.set_loop_flag(grants_flag)
+		# the KNOWLEDGE (card drops at 2:30, grab it during her calls) is
+		# permanent - it becomes a timeline note in the case file
+		Flags.set_flag("know_card_drop")
 		if pickup_sound != "" and ResourceLoader.exists(pickup_sound):
 			Sfx.play_at(self, pickup_sound, pickup_volume_db)
 		dlg.show_dialogue([

@@ -200,13 +200,13 @@ turn_windows = []
 turn_speed = 4.0
 
 [node name="Witness" parent="." unique_id=1992559892 instance=ExtResource("45_witness")]
-transform = Transform3D(-0.492288, 0, -0.870432, 0, 1, 0, 0.870432, 0, -0.492288, -2.1020606, 0, -22.785679)
+transform = Transform3D(-0.2913, 0, 0.9566, 0, 1, 0, -0.9566, 0, -0.2913, -2.1020606, 0, -19.064346)
 turn_windows = []
 turn_speed = 4.0
 vanish_at = 0.0
 
 [node name="Investigator" parent="." unique_id=2132622844 instance=ExtResource("43_ross")]
-transform = Transform3D(-0.20078, 0, 0.979636, 0, 1, 0, -0.979636, 0, -0.20078, 2.5289958, 0, -21.470287)
+transform = Transform3D(0.2913, 0, -0.9566, 0, 1, 0, 0.9566, 0, 0.2913, 2.5289958, 0, -20.474525)
 turn_windows = []
 turn_speed = 4.0
 vanish_at = 0.0

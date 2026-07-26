@@ -39,6 +39,10 @@ var _line := 0
 var _t := 0.0
 var _playing := false
 var _fading_out := false
+# ESC-skip stays LOCKED until the opening gunshot has fully played out -
+# the shot is the hook, nobody gets to cut it off
+var _elapsed := 0.0
+var _skip_at := 0.0
 
 
 func _enter_tree() -> void:
@@ -93,7 +97,7 @@ func _ready() -> void:
 	_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_hint.add_theme_font_size_override("font_size", 20)
 	_hint.add_theme_color_override("font_color", Color(0.8, 0.8, 0.78))
-	_hint.text = "E to continue   ·   ESC to skip"
+	_hint.text = "E to continue"
 	_hint.modulate.a = 0.0
 	_layer.add_child(_hint)
 	_playing = true
@@ -101,16 +105,24 @@ func _ready() -> void:
 	# before opening, so ESC skips the intro instead of raising the menu
 	add_to_group("active_peek")
 	_lock_player.call_deferred(true)
-	# the gunshot that opens the night
+	# the gunshot that opens the night; skipping unlocks only once it's rung out
 	var p := get_tree().get_first_node_in_group("player") as Node3D
 	if p != null and ResourceLoader.exists("res://audio/sfx/gun_fire.mp3"):
 		Sfx.play(self, "res://audio/sfx/gun_fire.mp3", -6.0)
+		var shot := load("res://audio/sfx/gun_fire.mp3") as AudioStream
+		if shot != null:
+			_skip_at = shot.get_length()
 	_show_line()
 
 
 func _process(delta: float) -> void:
 	if not _playing:
 		return
+	_elapsed += delta
+	# once the shot has rung out, the hint starts offering the skip
+	if _hint != null and _skip_at > 0.0 and _elapsed >= _skip_at:
+		_hint.text = "E to continue   ·   ESC to skip"
+		_skip_at = 0.0
 	_t += delta
 	# fade the line IN, then HOLD until the player presses E to advance
 	# (with a short minimum so a held key can't skip the whole thing).
@@ -157,6 +169,10 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.is_echo() \
 			and event.physical_keycode == KEY_ESCAPE:
 		get_viewport().set_input_as_handled()
+		# swallow ESC (so the pause menu can't grab it) but refuse the skip
+		# until the opening gunshot has finished
+		if _elapsed < _skip_at:
+			return
 		_finish()
 
 
@@ -168,6 +184,14 @@ func _finish() -> void:
 		_label.queue_free()
 	if _hint != null:
 		_hint.queue_free()
+	# the trinket winds the night back for the FIRST time: the rewind
+	# spectacle plays over the black as the bridge into the loop
+	var lose := get_tree().get_first_node_in_group("lose_screen")
+	if lose != null and lose.has_method("play_rewind"):
+		lose.play_rewind(1.7)
+		await get_tree().create_timer(1.7).timeout
+		if not is_inside_tree():
+			return
 	# lift the black, hand control back, and only THEN raise the flags that
 	# wake the world. ORDER MATTERS: the rookie's opening beat starts the
 	# moment bound_promise exists and re-locks the player - raising the flag

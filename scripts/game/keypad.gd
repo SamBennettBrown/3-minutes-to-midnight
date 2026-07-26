@@ -3,8 +3,10 @@ extends Node3D
 const Tuning := preload("res://scripts/game/tuning.gd")
 
 # A keypad lock: interact to open the code-entry UI. The code lives on
-# a note somewhere in the world - knowledge, not a key item. Once the
-# flag is set, the keypad stays unlocked every loop (Deathloop clause).
+# a note somewhere in the world - knowledge, not a key item. The lock
+# itself RESETS completely: you punch the code in every single time -
+# what persists across loops is only what you KNOW (sets_flag) and what
+# the story has revealed (reveal_flag).
 
 const Flags := preload("res://scripts/game/flags.gd")
 
@@ -47,24 +49,23 @@ func _process(_delta: float) -> void:
 
 
 func interact() -> void:
-	if sets_flag != "" and Flags.has_flag(sets_flag):
-		# already cracked: opening it again is a per-loop act
-		var dlg := get_tree().get_first_node_in_group("dialogue")
-		if dlg == null or dlg.visible:
-			return
-		if opens_loop_flag != "":
-			Flags.set_loop_flag(opens_loop_flag)
-		# the full reveal plays exactly ONCE per game (reveal_flag remembers
-		# across loops); later opens just get the short line
-		if not _revealed and not reveal_dialogue.is_empty() \
-				and (reveal_flag == "" or not Flags.has_flag(reveal_flag)):
-			_revealed = true
-			if reveal_flag != "":
-				Flags.set_flag(reveal_flag)
-			dlg.show_dialogue(reveal_dialogue)
-		else:
-			dlg.show_dialogue([{"speaker": "KEYPAD", "text": unlocked_text}])
-		return
+	# the lock never remembers - every open means punching the code in again
 	var ui := get_tree().get_first_node_in_group("keypad_ui")
 	if ui != null:
-		ui.open(code, sets_flag)
+		ui.open(code, sets_flag, _on_code_accepted)
+
+
+func _on_code_accepted() -> void:
+	# correct code: the per-loop act happens (passage swings open, locker
+	# vanishes) and the full reveal plays exactly ONCE per game
+	if opens_loop_flag != "":
+		Flags.set_loop_flag(opens_loop_flag)
+	var dlg := get_tree().get_first_node_in_group("dialogue")
+	if dlg == null or dlg.visible:
+		return
+	if not _revealed and not reveal_dialogue.is_empty() \
+			and (reveal_flag == "" or not Flags.has_flag(reveal_flag)):
+		_revealed = true
+		if reveal_flag != "":
+			Flags.set_flag(reveal_flag)
+		dlg.show_dialogue(reveal_dialogue)
