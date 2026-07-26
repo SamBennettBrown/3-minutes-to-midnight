@@ -221,7 +221,7 @@ strip_root_motion = true
 voice_clip = "res://audio/sfx/receptionist.mp3"
 dialogue = [{
 "speaker": "RECEPTIONIST",
-"text": "Sorry, detective - my boyfriend keeps calling. Clocking out? Sign here and I'll let them know you're- oop, that's him again. Hold on."
+"text": "Sorry, detective - my boyfriend keeps calling. Clocking out?"
 }]
 sets_flag = "talked_reception"
 

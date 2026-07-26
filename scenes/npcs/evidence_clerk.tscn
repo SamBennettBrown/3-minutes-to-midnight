@@ -65,7 +65,7 @@ schedule = [{
 barks = [{
 "dur": 3.0,
 "t": 6.0,
-"text": "Anyone asks - I left an hour ago."
+"text": "Anyone asks - I left an hour from now."
 }, {
 "dur": 4.0,
 "t": 28.0,

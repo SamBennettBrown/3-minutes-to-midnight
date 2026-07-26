@@ -21,7 +21,7 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 ## flips while you're still locked out.
 @export var door_local := Vector3(2.5, 1.5, 5.75)
 @export var door_size := Vector3(3.0, 3.0, 0.9)
-@export var line := "Light under the door, blinds drawn tight. CAPTAIN - DO NOT DISTURB. From inside, a growl: 'Occupied, detective.' He never leaves before 1:00 on that clock."
+@export var line := "Light under the door, blinds drawn tight. CAPTAIN - DO NOT DISTURB. From inside, a growl: 'Occupied, detective.' He never leaves before 11:59 on that clock."
 @export var speaker := "CAPTAIN'S OFFICE"
 
 var _clock: Node

@@ -80,7 +80,7 @@ func _ready() -> void:
 			]},
 			# --- knows the weight trap -> the vending machine ---
 			{"flag": "know_weight_trap", "lines": [
-				{"speaker": "THE ROOKIE", "text": "A counterweight? About a pound? ...The vending machine bags. The Puffy Stars. Trust me, I've bought enough of them to know the heft."},
+				{"speaker": "THE ROOKIE", "text": "A counterweight? About a POUND? ...The vending machine bags. The Puffy Stars. Trust me, I've bought enough of them to know the heft."},
 				{"speaker": "DETECTIVE", "text": "A bag of chips. This case gets more dignified by the minute."},
 				{"speaker": "THE ROOKIE", "text": "Machine eats dollars, fair warning. Anything else you need, just ask!"},
 			]},

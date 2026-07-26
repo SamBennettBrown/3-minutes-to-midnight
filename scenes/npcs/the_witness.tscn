@@ -32,7 +32,7 @@ barks = [{
 }, {
 "dur": 4.5,
 "t": 52.0,
-"text": "You keep saying 'safe'. Nobody's said where."
+"text": "You keep saying 'safe'."
 }]
 schedule = [{
 "clip": "idle",

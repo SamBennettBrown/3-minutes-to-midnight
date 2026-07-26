@@ -38,7 +38,7 @@ func interact() -> void:
 		return
 	if Flags.has_loop_flag("have_chips"):
 		dlg.show_dialogue([
-			{"speaker": "DETECTIVE", "text": "Already got loose bag, and one seems like plenty."},
+			{"speaker": "DETECTIVE", "text": "Already got the loose bag, and one seems like plenty."},
 		])
 		return
 	if not Flags.has_flag("seen_stuck_snack"):
@@ -56,7 +56,7 @@ func interact() -> void:
 	if journal != null:
 		journal._show_toast("TAKEN  —  PUFFY STARS")
 	dlg.show_dialogue([
-		{"speaker": "DETECTIVE", "text": "I put a shoulder into it. The bag drops. PUFFY STARS - mine now. Feels about right for a swap."},
+		{"speaker": "DETECTIVE", "text": "I put a shoulder into it. The bag drops. PUFFY STARS - mine now..."},
 	])
 
 

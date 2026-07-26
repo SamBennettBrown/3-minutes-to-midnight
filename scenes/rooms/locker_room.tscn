@@ -263,8 +263,8 @@ script = ExtResource("90_autocol")
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, 0.9315636)
 script = ExtResource("91_item")
 dialogue = [{
-"speaker": "LOCKER",
-"text": "A day-shift officer's locker. A spare tie, cough drops, and a photo of a fishing boat."
+"speaker": "DETECTIVE",
+"text": "A day-shift officer's locker. Nothing noteworthy here."
 }]
 prompt_height = 1.6
 examine_sound = "res://audio/sfx/door_close.mp3"
@@ -273,8 +273,8 @@ examine_sound = "res://audio/sfx/door_close.mp3"
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, -2.2975802)
 script = ExtResource("91_item")
 dialogue = [{
-"speaker": "LOCKER",
-"text": "Somebody drew a tiny hat on the blank name plate."
+"speaker": "DETECTIVE",
+"text": "Nothing noteworthy here"
 }]
 prompt_height = 1.6
 examine_sound = "res://audio/sfx/door_close.mp3"
@@ -283,7 +283,7 @@ examine_sound = "res://audio/sfx/door_close.mp3"
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, 1.826855)
 script = ExtResource("91_item")
 dialogue = [{
-"speaker": "LOCKER",
+"speaker": "DETECTIVE",
 "text": "The rookie's locker - fresh marker on the tape. Three coffee punch cards, all one stamp from free."
 }]
 prompt_height = 1.6
@@ -293,7 +293,7 @@ examine_sound = "res://audio/sfx/door_close.mp3"
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.3000052, 0.010403633, 4.770116)
 script = ExtResource("91_item")
 dialogue = [{
-"speaker": "LOCKER",
+"speaker": "DETECTIVE",
 "text": "The range sergeant's locker. Ear protection, a spare uniform, a thermos gone cold. Nothing that helps me tonight."
 }]
 prompt_height = 1.6
@@ -303,7 +303,7 @@ examine_sound = "res://audio/sfx/door_close.mp3"
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.7305937, 0.010403633, 4.770116)
 script = ExtResource("91_item")
 dialogue = [{
-"speaker": "LOCKER",
+"speaker": "DETECTIVE",
 "text": "Gym bag, gym smell. Padlock hanging open."
 }]
 prompt_height = 1.6
@@ -313,7 +313,7 @@ examine_sound = "res://audio/sfx/door_close.mp3"
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.8784986, 0.010403633, 4.770116)
 script = ExtResource("91_item")
 dialogue = [{
-"speaker": "LOCKER",
+"speaker": "DETECTIVE",
 "text": "The investigator's locker. Nothing visible through the vents but darkness."
 }]
 prompt_height = 1.6
@@ -323,7 +323,7 @@ examine_sound = "res://audio/sfx/door_close.mp3"
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.4986129, 0.010403633, 4.770116)
 script = ExtResource("91_item")
 dialogue = [{
-"speaker": "LOCKER",
+"speaker": "DETECTIVE",
 "text": "A postcard from Lisbon taped inside the vent slats."
 }]
 prompt_height = 1.6
@@ -333,7 +333,7 @@ examine_sound = "res://audio/sfx/door_close.mp3"
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, -1.3411549)
 script = ExtResource("91_item")
 dialogue = [{
-"speaker": "LOCKER",
+"speaker": "DETECTIVE",
 "text": "The night officer's locker. Night-shift kit: flashlight batteries and a crossword book."
 }]
 prompt_height = 1.6
@@ -343,8 +343,8 @@ examine_sound = "res://audio/sfx/door_close.mp3"
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, 2.7900233)
 script = ExtResource("91_item")
 dialogue = [{
-"speaker": "LOCKER",
-"text": "The evidence clerk's locker. Cleared out - empty hangers, one bent. He wasn't planning on coming back tonight."
+"speaker": "DETECTIVE",
+"text": "The evidence clerk's locker. Cleared out - empty hangers, one bent."
 }]
 prompt_height = 1.6
 examine_sound = "res://audio/sfx/door_close.mp3"
@@ -408,10 +408,10 @@ transform = Transform3D(0.9781476, 0, 0.2079117, 0, 1, 0, -0.2079117, 0, 0.97814
 script = ExtResource("91_item")
 dialogue = [{
 "speaker": "NEWS CLIPPING",
-"text": "A folded column, months old: 'STING COLLAPSES - ALLEGED KINGPIN WALKS AGAIN. Case dissolved after key evidence went missing. Prosecutors say only ONE witness remains willing to testify.'"
+"text": "A folded column, months old: 'STING COLLAPSES - ALLEGED KINGPIN WALKS AGAIN. Case dissolved after key evidence went missing.'"
 }, {
 "speaker": "DETECTIVE",
-"text": "Evidence goes missing, cases dissolve, and the man walks. One witness left. Mine."
+"text": "Evidence goes missing, cases dissolve, and the man walks. You're not getting away this time."
 }]
 sets_flag = "read_clipping"
 prompt_height = 0.35

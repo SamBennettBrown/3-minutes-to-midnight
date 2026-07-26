@@ -58,18 +58,18 @@ func interact() -> void:
 			{"speaker": "DETECTIVE", "text": "Bag of Puffy Stars on the plate, package off. Even trade... It's not a weapon. It's a case file. The one the witness is testifying against."},
 			{"speaker": "DETECTIVE", "text": "A mugshot clipped to the front. And behind it - a family photo. Two brothers at a lake, arms around each other. One of them is our defendant."},
 			{"speaker": "DETECTIVE", "text": "The other... is the CAPTAIN. The man the witness would put away is his own brother. THAT'S the motive. Somebody buried this here to keep it quiet."},
-			{"speaker": "DETECTIVE", "text": "If the Captain's the shooter... maybe I can get to his GUN first. Crack his locker, take the piece, and prevent this whole thing once and for all."},
+			{"speaker": "DETECTIVE", "text": "If the Captain's the shooter... maybe I can get to his gun first. Crack his locker, take the piece, and prevent this whole thing once and for all."},
 		])
 	elif not Flags.has_flag("know_weight_trap"):
 		# first look: learn the trap (permanent knowledge)
 		Flags.set_flag("know_weight_trap")
 		dlg.show_dialogue([
 			{"speaker": "DETECTIVE", "text": "A brown paper package - no tag, no log number, tucked behind the shelf on a spring-loaded plate. Filed evidence doesn't live like this. Somebody in this building BURIED it."},
-			{"speaker": "DETECTIVE", "text": "And the plate's weight-sensitive - lift it bare and every bell rings. I need a stand-in. About a pound."},
+			{"speaker": "DETECTIVE", "text": "And the plate's weight-sensitive - lift it bare and every bell rings. I need a stand-in. About a POUND."},
 		])
 	else:
 		# knows the trap, no counterweight: a soft stop, NOT a loss - the
 		# detective just won't do it without the swap ready
 		dlg.show_dialogue([
-			{"speaker": "DETECTIVE", "text": "Not without a counterweight. The second I lift this bare, the plate springs and the whole floor comes running. I need that snack bag first."},
+			{"speaker": "DETECTIVE", "text": "Not without a counterweight. The second I lift this, the plate springs and the whole floor comes running. I'll have to do this... Indiana Jones style."},
 		])

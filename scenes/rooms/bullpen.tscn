@@ -463,7 +463,7 @@ transform = Transform3D(0.1799608, 0, -0.7794961, 0, 0.8, 0, 0.7794961, 0, 0.179
 script = ExtResource("5_item")
 dialogue = [{
 "speaker": "DETECTIVE",
-"text": "My desk. My case file. ...I don't need to look at this again for at least three minutes."
+"text": "My desk. My case file. ...I don't need to look at this again."
 }]
 prompt_height = 0.4
 
@@ -579,7 +579,7 @@ dialogue = [{
 "text": "...static chews the signal. '-osing arguments expected tomorrow... prosecution's key witness under protection tonight...' The defendant's mugshot fills the screen."
 }, {
 "speaker": "DETECTIVE",
-"text": "That's him. The man my witness is putting away. ...Why does he look familiar? I can't place the face."
+"text": "That's him. The man my witness is putting away. ...Why does he look familiar?"
 }]
 sets_flag = "saw_tv_report"
 prompt_height = 0.6
@@ -595,11 +595,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.083801, -4.7683716e-07, -4.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.987319, 0.7431811, -4.318269)
 script = ExtResource("5_item")
 dialogue = [{
-"speaker": "DONUT BOX",
-"text": "A dozen gone, one left. Chocolate."
-}, {
 "speaker": "DETECTIVE",
-"text": "Somebody's saving it."
+"text": "A dozen gone, one left. Chocolate. I hate chocolate."
 }]
 prompt_height = 0.4
 
@@ -722,11 +719,8 @@ transform = Transform3D(0.83867055, 0, 0.54463905, 0, 1, 0, -0.54463905, 0, 0.83
 transform = Transform3D(0.99151665, 0, -0.12997913, 0, 1, 0, 0.12997913, 0, 0.99151665, 2.6052039, 0.77488947, 0.806825)
 script = ExtResource("5_item")
 dialogue = [{
-"speaker": "CHANGE JAR",
-"text": "A jar of quarters on somebody's desk. Masking tape label: VENDING MONEY. DO NOT TOUCH."
-}, {
 "speaker": "DETECTIVE",
-"text": "A man with a system. That machine must do good business."
+"text": "A jar of quarters on somebody's desk. Masking tape label: VENDING MONEY. DO NOT TOUCH."
 }]
 prompt_height = 0.4
 
