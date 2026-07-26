@@ -85,18 +85,18 @@ schedule = [{
 dialogue_variants = [{
 "lines": [{
 "speaker": "WITNESS",
-"text": "You again? We keep having this conversation... don't we. They're going to kill me tonight. I can FEEL it."
+"text": "How many times have you had this conversation with me? They're going to come for me tonight. I can FEEL it."
 }]
 }, {
 "after": 118.0,
 "lines": [{
 "speaker": "WITNESS",
-"text": "Detective? They put me back here. Said it's for my own good. ...It doesn't feel that way."
+"text": "Detective? They put me back here. Said it's for my own good...It doesn't feel that way."
 }, {
 "speaker": "DETECTIVE",
 "text": "Listen to me. Stay in this cell. Don't open it for anyone - not a badge, not a friendly face. Everything is going to be fine. I promise you."
 }, {
 "speaker": "WITNESS",
-"text": "...You always say that. And it never is."
+"text": "...You say that. but I gave you that heirloom for a reason..."
 }]
 }]

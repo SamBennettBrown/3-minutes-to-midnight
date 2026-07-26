@@ -355,10 +355,10 @@ reveal_dialogue = [{
 "text": "...Oh. That's not what I expected."
 }, {
 "speaker": "DETECTIVE",
-"text": "No gun. No shelf. No BACK. The whole locker swings off the wall like a door - and behind it, a crawlspace. A hidden passage, running straight toward the cells."
+"text": "The whole locker swings off the wall like a door - and behind it, A hidden chamber.."
 }, {
 "speaker": "DETECTIVE",
-"text": "He doesn't keep the murder weapon here. He keeps the murder ROUTE. That's how he gets to a sealed cell - right through the wall. THAT'S how my witness dies."
+"text": "He doesn't keep the murder weapon here, but that doesn't make him innocent.. This is how he gets to the witness - right through the wall."
 }]
 reveal_flag = "captain_is_guilty"
 opens_loop_flag = "passage_open_this_loop"

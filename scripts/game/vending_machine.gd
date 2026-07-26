@@ -34,7 +34,7 @@ func interact() -> void:
 		return
 	if Flags.has_loop_flag("have_chips"):
 		dlg.show_dialogue([
-			{"speaker": "DETECTIVE", "text": "Already got the bag. One's plenty."},
+			{"speaker": "DETECTIVE", "text": "Already got loose bag, and one seems like plenty."},
 		])
 		return
 	if not Flags.has_flag("seen_stuck_snack"):
@@ -42,11 +42,10 @@ func interact() -> void:
 		Flags.set_flag("seen_stuck_snack")
 		dlg.show_dialogue([
 			{"speaker": "VENDING MACHINE", "text": "A bag of PUFFY STARS hangs by one corner, wedged against the glass. Paid for. Never collected."},
-			{"speaker": "DETECTIVE", "text": "Somebody wanted a snack in their last few minutes... and didn't stick around to shake it loose. A full bag - about a pound of air and salt."},
+			{"speaker": "DETECTIVE", "text": "Looks like somebody wanted a snack... and didn't stick around to shake it loose. About A POUND of salty snacks. Let me see if I can reach it.."},
 		])
 		return
 	# shake it loose - now you're holding it (resets every loop)
-	Flags.set_loop_flag("have_chips")
 	# the SMACK of a shoulder hitting the machine, then the mechanism
 	# rattling the bag loose - CAPPED, the source recording runs for ages
 	# and would still be droning from the next room over
@@ -55,3 +54,4 @@ func interact() -> void:
 	dlg.show_dialogue([
 		{"speaker": "DETECTIVE", "text": "I put a shoulder into it. The bag drops. PUFFY STARS - mine now. Feels about right for a swap."},
 	])
+	Flags.set_loop_flag("have_chips")

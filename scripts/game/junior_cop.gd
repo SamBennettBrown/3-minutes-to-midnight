@@ -96,8 +96,8 @@ func _ready() -> void:
 				{"speaker": "THE ROOKIE", "text": "Coffee, detective? Two sug-"},
 				{"speaker": "DETECTIVE", "text": "You keep asking if I need anything, kid. ...Actually. I do."},
 				{"speaker": "THE ROOKIE", "text": "...Wait. Really? What do you need?"},
-				{"speaker": "DETECTIVE", "text": "When that clock reads 0:15, be in the locker room. Hidden. Not a sound, no matter what you hear - you just remember every word."},
-				{"speaker": "THE ROOKIE", "text": "Locker room. 0:15. Invisible. ...I won't let you down, detective."},
+				{"speaker": "DETECTIVE", "text": "When that clock reads 11:59:45, be in the locker room. Hidden. Not a sound, no matter what you hear - you just remember every word."},
+				{"speaker": "THE ROOKIE", "text": "Locker room. 11:59:45. Invisible. ...I won't let you down, detective."},
 			]},
 			# --- recruited: he makes the meet on his own ---
 			{"flag": "have_rookie", "lines": [
