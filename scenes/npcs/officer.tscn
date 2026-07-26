@@ -17,23 +17,43 @@ schedule = [{
 }, {
 "clip": "walk",
 "pos": Vector3(4.5, 0, -4),
-"t": 2.0
-}, {
-"clip": "idle",
-"pos": Vector3(-1.5, 0, -2.2),
-"t": 9.0
+"t": 4.0
 }, {
 "clip": "walk",
 "pos": Vector3(-1.5, 0, -2.2),
-"t": 13.0
+"t": 8.0
+}, {
+"clip": "idle",
+"pos": Vector3(-1.5, 0, -2.2),
+"t": 14.0
+}, {
+"clip": "walk",
+"pos": Vector3(4.5, 0, -4),
+"t": 18.0
 }, {
 "clip": "idle",
 "pos": Vector3(4.5, 0, -4),
-"t": 20.0
+"t": 26.0
+}, {
+"clip": "walk",
+"pos": Vector3(4.5, 0, -4),
+"t": 34.0
+}, {
+"clip": "walk",
+"pos": Vector3(-1.5, 0, -2.2),
+"t": 38.0
+}, {
+"clip": "idle",
+"pos": Vector3(-1.5, 0, -2.2),
+"t": 44.0
+}, {
+"clip": "walk",
+"pos": Vector3(4.5, 0, -4),
+"t": 48.0
 }, {
 "clip": "idle",
 "pos": Vector3(4.5, 0, -4),
-"t": 24.0
+"t": 400.0
 }]
 barks = []
 visible_mesh = "SM_Chr_Officer_Male_01"

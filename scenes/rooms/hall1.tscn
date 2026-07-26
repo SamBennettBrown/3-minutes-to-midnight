@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://begwrj6a1y2p2"]
 
+[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
 [ext_resource type="Texture2D" uid="uid://dpy4d6umynf7p" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_04.png" id="2_0q2jt"]
 [ext_resource type="FontFile" uid="uid://canmpksdd2ct8" path="res://fonts/Special_Elite/SpecialElite-Regular.ttf" id="2_font"]
@@ -270,3 +271,8 @@ transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 1.80
 
 [node name="SM_Prop_Security_Camera_02" parent="props" unique_id=1668634689 instance=ExtResource("5_0q2jt")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 1.8060008, 2.4212992, 1.2931991)
+
+[node name="Ambient" type="Node" parent="." unique_id=199100004]
+script = ExtResource("89_ambient")
+sound = "res://audio/ambient/air_conditioner.mp3"
+volume_db = -27.0

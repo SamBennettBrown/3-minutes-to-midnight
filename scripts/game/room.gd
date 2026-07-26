@@ -190,6 +190,7 @@ func activate() -> void:
 		cam.make_current()
 	if _active_room_name != "" and _active_room_name != name:
 		Sfx.play(self, "res://audio/sfx/door_close.mp3", -14.0)
+		_splice()
 	_active_room_name = name
 	var hud := get_tree().get_first_node_in_group("room_label")
 	if hud != null:
@@ -197,3 +198,30 @@ func activate() -> void:
 		if label == "":
 			label = String(name).capitalize().to_upper()
 		hud.set_room(label)
+
+
+# a single-splice film artifact on the hard cut: the grain and the
+# posterization jump for a few frames, like the reel skipping between two
+# surveillance feeds. Respects the player's dithering-off setting.
+static var _splice_busy := false
+
+func _splice() -> void:
+	# reentry guard: a second cut inside the window would capture the SPIKED
+	# values as its baseline and leave the whole game crunchy
+	if _splice_busy:
+		return
+	var rect: ColorRect = get_tree().get_first_node_in_group("dither_fx")
+	if rect == null or rect.material == null:
+		return
+	var mat: ShaderMaterial = rect.material
+	if float(mat.get_shader_parameter("grain")) <= 0.0:
+		return
+	_splice_busy = true
+	var base_sg = mat.get_shader_parameter("shadow_grain")
+	var base_ll = mat.get_shader_parameter("luma_levels")
+	mat.set_shader_parameter("shadow_grain", 3.6)
+	mat.set_shader_parameter("luma_levels", 6)
+	get_tree().create_timer(0.07).timeout.connect(func() -> void:
+		mat.set_shader_parameter("shadow_grain", base_sg)
+		mat.set_shader_parameter("luma_levels", base_ll)
+		_splice_busy = false)

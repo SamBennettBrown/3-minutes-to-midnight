@@ -25,6 +25,9 @@ var _rect: ColorRect
 var _audio: AudioStreamPlayer
 var _teach_label: Label
 var _active := false
+## set by cell_murder just before the t180 restart: the witnessed shot
+## already played IN the cell, so this reset skips its own flash + bang
+var suppress_shot_once := false
 # the rewind spectacle: while the rewind sfx plays under the black, the
 # clock rips backward from 0:00 up to 3:00 with rings converging on it
 var _fx: RewindFx
@@ -109,15 +112,17 @@ func _process(delta: float) -> void:
 	_fx.progress = p
 	_fx.queue_redraw()
 	# the readout accelerates like tape on rewind: slow first ticks, then a
-	# blur up to 3:00
+	# blur up to 3:00 - and the whole clock RECEDES hard as the night is
+	# pulled away from you
+	var base := lerpf(1.0, 0.45, p * p)
 	var s := int(round(p * p * 180.0))
 	var txt := "%d:%02d" % [s / 60, s % 60]
 	if txt != _fx_clock.text:
 		_fx_clock.text = txt
 		# juice: every flip punches the clock a little bigger
 		_fx_clock.pivot_offset = _fx_clock.size * 0.5
-		_fx_clock.scale = Vector2(1.18, 1.18)
-	_fx_clock.scale = _fx_clock.scale.lerp(Vector2.ONE, delta * 10.0)
+		_fx_clock.scale = Vector2(base * 1.16, base * 1.16)
+	_fx_clock.scale = _fx_clock.scale.lerp(Vector2(base, base), delta * 10.0)
 
 
 func _start_rewind_fx(duration: float) -> void:
@@ -182,15 +187,20 @@ func play_lose(teach_line := "") -> void:
 	if _active:
 		return
 	_active = true
-	# muzzle flash, then black
-	_rect.color = Color(1, 1, 1, 1)
 	get_tree().paused = true
-	if _audio.stream != null:
-		_audio.play()
-	await get_tree().create_timer(0.06).timeout
-	if not is_instance_valid(self) or not is_inside_tree():
-		return
-	_rect.color = Color(0, 0, 0, 1)
+	if suppress_shot_once:
+		# the shot already rang out in the cell - straight to black
+		suppress_shot_once = false
+		_rect.color = Color(0, 0, 0, 1)
+	else:
+		# muzzle flash, then black
+		_rect.color = Color(1, 1, 1, 1)
+		if _audio.stream != null:
+			_audio.play()
+		await get_tree().create_timer(0.06).timeout
+		if not is_instance_valid(self) or not is_inside_tree():
+			return
+		_rect.color = Color(0, 0, 0, 1)
 	# a taught death lingers with the lesson on screen before the rewind
 	if teach_line != "":
 		_teach_label.text = teach_line

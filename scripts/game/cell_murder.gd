@@ -19,10 +19,10 @@ extends Node
 const Flags := preload("res://scripts/game/flags.gd")
 const Sfx := preload("res://scripts/game/sfx.gd")
 
-## the shot lands AT midnight (0:00 = t180). You must be in the cells in the
-## final moments to witness it - firing at ~179 so it reads as "at midnight",
-## not 10 seconds early. window_end guards the upper edge.
-@export var window_start := 178.5
+## the shot lands AT midnight (0:00 = t180). Fires at ~179.85 so the HUD
+## already reads 0:00 when the flash hits - the murder happens ON the stroke,
+## not with a second on the clock. window_end guards the upper edge.
+@export var window_start := 179.85
 @export var window_end := 180.0
 ## how far into the wall the flash appears to come from (local, informational)
 @export var shot_sound := "res://audio/sfx/gun_fire.mp3"
@@ -76,13 +76,42 @@ func _process(_delta: float) -> void:
 
 func _reveal() -> void:
 	Flags.set_flag("saw_wall_shot")
-	# the muzzle-flash from inside the wall. NO gunshot sfx here - the loop's
-	# own restart plays THE shot (lose_screen), so the murder is a single
-	# gunshot at 0:00, not two. We just add the flash + the realisation.
+	# THIS is the shot - flash and bang together, witnessed at 0:00. The
+	# loop's restart follows within a breath, so the lose screen must NOT
+	# fire its own gunshot on top (one murder, one shot).
+	if ResourceLoader.exists(shot_sound):
+		Sfx.play(self, shot_sound, shot_volume_db)
+	# the report kicks the camera itself - a hard jolt that settles fast
+	var cam := get_viewport().get_camera_3d()
+	if cam != null:
+		cam.v_offset = 0.07
+		cam.h_offset = 0.04
+		var ct := create_tween()
+		ct.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+		ct.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
+		ct.tween_property(cam, "v_offset", 0.0, 0.35)
+		ct.parallel().tween_property(cam, "h_offset", 0.0, 0.35)
+	var lose := get_tree().get_first_node_in_group("lose_screen")
+	if lose != null:
+		lose.suppress_shot_once = true
 	var tw := create_tween()
 	tw.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 	tw.tween_property(_rect, "color:a", 0.9, 0.05)
 	tw.tween_property(_rect, "color:a", 0.0, 0.5)
+	# the corridor itself strobes: a harsh light at the wall for a breath,
+	# thrown from where the hole is - not just a screen flash
+	if _cells != null:
+		var flash_light := OmniLight3D.new()
+		flash_light.light_color = Color(1.0, 0.97, 0.9)
+		flash_light.light_energy = 10.0
+		flash_light.omni_range = 9.0
+		flash_light.shadow_enabled = true
+		flash_light.position = Vector3(-4.4, 1.6, 3.5)
+		_cells.add_child(flash_light)
+		var lt := create_tween()
+		lt.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+		lt.tween_property(flash_light, "light_energy", 0.0, 0.18)
+		lt.tween_callback(flash_light.queue_free)
 	# the realisation - shown as narration (pauses the tree, so the loop's
 	# t180 auto-restart waits until the player reads it, then fires the shot)
 	var dlg := get_tree().get_first_node_in_group("dialogue")

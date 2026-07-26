@@ -42,6 +42,8 @@ var _r_tick := 0.0
 var _r_tock := false
 var _prev_left := -1
 var _dlg: Node
+# the final-minute drone: static that swells and sharpens as 0:00 nears
+var _drone: AudioStreamPlayer
 
 
 func _enter_tree() -> void:
@@ -57,7 +59,9 @@ func _enter_tree() -> void:
 
 func _ready() -> void:
 	var hud := CanvasLayer.new()
-	hud.layer = 101
+	# ABOVE the intercom banner (102), BELOW the pause menu (105) so the
+	# menu's dim still covers it, and below case-file toasts (104)
+	hud.layer = 103
 	add_child(hud)
 	# the countdown owns the top-centre of the screen - big, so it's the
 	# thing you can't look away from
@@ -67,6 +71,9 @@ func _ready() -> void:
 	_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_label.add_theme_font_size_override("font_size", 96)
 	_label.add_theme_color_override("font_color", Color(0.95, 0.95, 0.93))
+	# a dark outline lifts it off whatever ends up underneath
+	_label.add_theme_color_override("font_outline_color", Color(0, 0, 0, 0.9))
+	_label.add_theme_constant_override("outline_size", 12)
 	hud.add_child(_label)
 	# the hold-R banner: big, centred, blood-warm - ramps in over the darken
 	# while the trinket ticks, so a restart never sneaks up on you
@@ -108,6 +115,9 @@ func _process(delta: float) -> void:
 		var rem_f: float = maxf(loop_length - time, 0.0)
 		_label.text = "%d:%02d" % [int(rem_f) / 60, int(rem_f) % 60]
 		_label.visible = true
+		# the world holds its breath - the drone dies with the freeze
+		if _drone != null and _drone.playing:
+			_drone.stop()
 		return
 	time += delta
 	if time >= loop_length:
@@ -124,7 +134,7 @@ func _process(delta: float) -> void:
 		if _r_tick <= 0.0:
 			_r_tick = lerpf(0.24, 0.08, prog)
 			_r_tock = not _r_tock
-			Sfx.play(self, "res://audio/sfx/tock.mp3" if _r_tock else "res://audio/sfx/tick.mp3", -6.0)
+			Sfx.play(self, "res://audio/ambient/tock.mp3" if _r_tock else "res://audio/ambient/tick.mp3", -6.0)
 		if _r_held >= restart_hold:
 			_r_held = 0.0
 			_r_label.modulate.a = 0.0
@@ -146,6 +156,34 @@ func _process(delta: float) -> void:
 	_label.visible = true
 	_heartbeat(left, delta)
 	_tension_ramp()
+	_drone_ramp(rem)
+
+
+# a low bed of static that rises through the final minute - by 0:10 it's
+# a hiss right under everything. Dies with the scene on restart; the
+# endgame freeze stops it cold (the world holds its breath instead).
+func _drone_ramp(rem: float) -> void:
+	if not Flags.has_flag("intro_done"):
+		return
+	if rem > 60.0:
+		if _drone != null and _drone.playing:
+			_drone.stop()
+		return
+	if _drone == null:
+		if not ResourceLoader.exists("res://audio/ambient/static.wav"):
+			return
+		_drone = AudioStreamPlayer.new()
+		var s: AudioStream = load("res://audio/ambient/static.wav")
+		if s is AudioStreamWAV and s.loop_mode == AudioStreamWAV.LOOP_DISABLED:
+			s = s.duplicate()
+			s.loop_mode = AudioStreamWAV.LOOP_FORWARD
+		_drone.stream = s
+		add_child(_drone)
+	if not _drone.playing:
+		_drone.play()
+	var t := 1.0 - rem / 60.0
+	_drone.volume_db = lerpf(-44.0, -16.0, t)
+	_drone.pitch_scale = lerpf(0.55, 0.95, t)
 
 
 func _heartbeat(left: int, delta: float) -> void:
@@ -158,8 +196,11 @@ func _heartbeat(left: int, delta: float) -> void:
 	_prev_left = left
 	if not Flags.has_flag("intro_done"):
 		return
-	if left <= 60:
-		_label.scale = Vector2(1.3, 1.3)
+	if left <= 30:
+		# the pops sharpen as the night closes in
+		_label.scale = Vector2(1.45, 1.45)
+	elif left <= 60:
+		_label.scale = Vector2(1.2, 1.2)
 	if left <= 30:
 		var swell := lerpf(tick_swell_start_db, tick_swell_end_db, 1.0 - float(left) / 30.0)
 		Sfx.play(self, "res://audio/ambient/tick.mp3" if left % 2 == 0 \

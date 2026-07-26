@@ -35,7 +35,7 @@ barks = [{
 "flag": "heard_evidence_tip",
 "hear_range": 9.0,
 "t": 42.0,
-"text": "Don't worry - I logged the case file into evidence myself. Hidden, weighted shelf in the back. Safe as it gets."
+"text": "Don't worry - I logged the case file into evidence myself, by the book. It'll be waiting for the trial. Safe as it gets."
 }, {
 "dur": 4.0,
 "t": 115.0,
@@ -103,12 +103,32 @@ schedule = [{
 "t": 200.0
 }, {
 "clip": "walk",
-"spot": "Bullpen/Center",
-"t": 205.0
+"spot": "Bullpen/WalkSE",
+"t": 203.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/WalkS",
+"t": 207.0
+}, {
+"clip": "walk",
+"spot": "Bullpen/WalkMid",
+"t": 210.0
 }, {
 "clip": "idle",
-"spot": "Bullpen/Center",
+"spot": "Bullpen/WalkMid",
 "t": 400.0
+}]
+dialogue_variants = [{
+"lines": [{
+"speaker": "INVESTIGATOR",
+"text": "Move along. This one's ours."
+}]
+}, {
+"after": 125.0,
+"lines": [{
+"speaker": "INVESTIGATOR",
+"text": "The witness? Locked in the cells - bars and a foot of concrete. Safest room in the building. Don't you worry, detective."
+}]
 }]
 dialogue = [{
 "speaker": "INVESTIGATOR",

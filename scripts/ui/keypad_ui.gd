@@ -73,6 +73,7 @@ func open(code: String, flag: String, on_success: Callable = Callable()) -> void
 	_entered = ""
 	visible = true
 	get_tree().paused = true
+	_play("res://audio/sfx/button_beep.mp3")
 	_update()
 
 
@@ -85,11 +86,13 @@ func _update() -> void:
 
 
 func _press(t: String) -> void:
-	if t == "CLR":
-		_entered = ""
-	elif t == "OK":
+	if t == "OK":
 		_submit()
 		return
+	# every key answers with a beep - the pad feels wired-in
+	_play("res://audio/sfx/button_beep.mp3")
+	if t == "CLR":
+		_entered = ""
 	elif _entered.length() < _code.length():
 		_entered += t
 	_update()
@@ -99,7 +102,9 @@ func _submit() -> void:
 	if _entered == _code:
 		if _flag != "":
 			Flags.set_flag(_flag)
-		_play("res://audio/sfx/keycard.mp3")
+		# a mechanical unlatch - keycard.mp3 belongs to the evidence-room
+		# door alone, so the pad answers with its own click
+		_play("res://audio/sfx/click.mp3")
 		_close()
 		# tell the keypad prop the code went through (opens the passage,
 		# plays the reveal) - AFTER closing so the world is unpaused
@@ -132,6 +137,7 @@ func _input(event: InputEvent) -> void:
 	elif k == KEY_ENTER or k == KEY_KP_ENTER:
 		_submit()
 	elif k == KEY_BACKSPACE:
+		_play("res://audio/sfx/button_beep.mp3")
 		_entered = _entered.left(-1)
 		_update()
 	elif k >= KEY_0 and k <= KEY_9:

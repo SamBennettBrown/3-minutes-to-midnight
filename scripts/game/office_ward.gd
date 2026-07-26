@@ -13,11 +13,15 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 
 ## loop time the captain leaves (the door unblocks). Match his schedule.
 @export var clear_at := 120.0
-## the door gap, in OFFICE-LOCAL coords (south wall doorway)
-@export var door_local := Vector3(2.5, 1.5, 4.97)
-@export var door_size := Vector3(2.4, 3.0, 0.35)
-@export var line := "Occupied. I'm in here, detective - find somewhere else to be."
-@export var speaker := "THE CAPTAIN"
+## the door gap, in OFFICE-LOCAL coords (south wall doorway). The slab is
+## pushed OUT past the wall band on purpose: pressed against it, the player
+## must stay clearly over the BULLPEN floor - if the block sits flush in the
+## wall, leaning on it tips the room resolver into the office and the camera
+## flips while you're still locked out.
+@export var door_local := Vector3(2.5, 1.5, 5.75)
+@export var door_size := Vector3(3.0, 3.0, 0.9)
+@export var line := "Light under the door, blinds drawn tight. CAPTAIN - DO NOT DISTURB. From inside, a growl: 'Occupied, detective.' He never leaves before 2:00 on that clock."
+@export var speaker := "CAPTAIN'S OFFICE"
 
 var _clock: Node
 var _room: Node3D
@@ -48,21 +52,24 @@ func _process(_delta: float) -> void:
 	var closed: bool = _clock.time < clear_at
 	if _shape.disabled == closed:
 		_shape.disabled = not closed
-	if not closed or _said:
+	if not closed:
 		return
-	# bump line, once per loop (scene reload re-arms it) - HORIZONTAL
-	# distance; the slab centre sits 1.5m up
+	# bump line - HORIZONTAL distance; the slab centre sits 1.5m up. It
+	# re-arms when you walk away, so every approach gets the growl.
 	var p := get_tree().get_first_node_in_group("player") as Node3D
 	if p == null:
 		return
 	var flat := (_room.global_position + door_local) - p.global_position if _room != null \
 			else global_position - p.global_position
 	flat.y = 0.0
-	if flat.length() < 1.7:
-		_said = true
-		var dlg := get_tree().get_first_node_in_group("dialogue")
-		if dlg != null and not dlg.visible:
-			dlg.show_dialogue([{"speaker": speaker, "text": line}])
+	if flat.length() < 2.0:
+		if not _said:
+			_said = true
+			var dlg := get_tree().get_first_node_in_group("dialogue")
+			if dlg != null and not dlg.visible:
+				dlg.show_dialogue([{"speaker": speaker, "text": line}])
+	elif _said and flat.length() > 3.8:
+		_said = false
 
 
 func _find_office() -> Node3D:

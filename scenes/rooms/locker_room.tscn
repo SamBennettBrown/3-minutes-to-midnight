@@ -267,6 +267,7 @@ dialogue = [{
 "text": "A day-shift officer's locker. A spare tie, cough drops, and a photo of a fishing boat."
 }]
 prompt_height = 1.6
+examine_sound = "res://audio/sfx/door_close.mp3"
 
 [node name="SM_Prop_Weapon_Locker_11" parent="Props" unique_id=674329273 instance=ExtResource("5_1k2jd")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, -2.2975802)
@@ -276,6 +277,7 @@ dialogue = [{
 "text": "Somebody drew a tiny hat on the blank name plate."
 }]
 prompt_height = 1.6
+examine_sound = "res://audio/sfx/door_close.mp3"
 
 [node name="SM_Prop_Weapon_Locker_03" parent="Props" unique_id=377133470 instance=ExtResource("5_1k2jd")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, 1.826855)
@@ -285,6 +287,7 @@ dialogue = [{
 "text": "The rookie's locker - fresh marker on the tape. Three coffee punch cards, all one stamp from free."
 }]
 prompt_height = 1.6
+examine_sound = "res://audio/sfx/door_close.mp3"
 
 [node name="SM_Prop_Weapon_Locker_07" parent="Props" unique_id=969206529 instance=ExtResource("5_1k2jd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.3000052, 0.010403633, 4.770116)
@@ -294,6 +297,7 @@ dialogue = [{
 "text": "The range sergeant's locker. Ear protection, a spare uniform, a thermos gone cold. Nothing that helps me tonight."
 }]
 prompt_height = 1.6
+examine_sound = "res://audio/sfx/door_close.mp3"
 
 [node name="SM_Prop_Weapon_Locker_08" parent="Props" unique_id=196579980 instance=ExtResource("5_1k2jd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.7305937, 0.010403633, 4.770116)
@@ -303,6 +307,7 @@ dialogue = [{
 "text": "Gym bag, gym smell. Padlock hanging open."
 }]
 prompt_height = 1.6
+examine_sound = "res://audio/sfx/door_close.mp3"
 
 [node name="SM_Prop_Weapon_Locker_09" parent="Props" unique_id=2041242339 instance=ExtResource("5_1k2jd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.8784986, 0.010403633, 4.770116)
@@ -312,6 +317,7 @@ dialogue = [{
 "text": "The investigator's locker. Nothing visible through the vents but darkness."
 }]
 prompt_height = 1.6
+examine_sound = "res://audio/sfx/door_close.mp3"
 
 [node name="SM_Prop_Weapon_Locker_10" parent="Props" unique_id=1047345779 instance=ExtResource("5_1k2jd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.4986129, 0.010403633, 4.770116)
@@ -321,6 +327,7 @@ dialogue = [{
 "text": "A postcard from Lisbon taped inside the vent slats."
 }]
 prompt_height = 1.6
+examine_sound = "res://audio/sfx/door_close.mp3"
 
 [node name="SM_Prop_Weapon_Locker_04" parent="Props" unique_id=1312032880 instance=ExtResource("5_1k2jd")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, -1.3411549)
@@ -330,6 +337,7 @@ dialogue = [{
 "text": "The night officer's locker. Night-shift kit: flashlight batteries and a crossword book."
 }]
 prompt_height = 1.6
+examine_sound = "res://audio/sfx/door_close.mp3"
 
 [node name="SM_Prop_Weapon_Locker_05" parent="Props" unique_id=2062319173 instance=ExtResource("5_1k2jd")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.779654, 0.010403633, 2.7900233)
@@ -339,6 +347,7 @@ dialogue = [{
 "text": "The evidence clerk's locker. Cleared out - empty hangers, one bent. He wasn't planning on coming back tonight."
 }]
 prompt_height = 1.6
+examine_sound = "res://audio/sfx/door_close.mp3"
 
 [node name="SM_Prop_Weapon_Locker_06" parent="Props" unique_id=1206367764 instance=ExtResource("5_1k2jd")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.7876024, 0.010403633, -3.5)
@@ -363,9 +372,6 @@ reveal_dialogue = [{
 reveal_flag = "captain_is_guilty"
 opens_loop_flag = "passage_open_this_loop"
 hide_when_flag = "passage_open_this_loop"
-
-[node name="SM_Sign_Label_01" parent="Props" unique_id=334238416 instance=ExtResource("16_47ryp")]
-transform = Transform3D(1.1924881e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, 1.1924881e-08, -5.2125306e-16, 3.233544, 1.669495, -3.2707381)
 
 [node name="SM_Prop_Bench_02" parent="Props" unique_id=1500003497 instance=ExtResource("6_x4sv2")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 2.3563566, -2.3841858e-07, -1.4597298)

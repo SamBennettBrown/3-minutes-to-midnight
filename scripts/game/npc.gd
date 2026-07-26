@@ -73,6 +73,12 @@ func _ready() -> void:
 	super._ready()
 	add_to_group("talkable")
 	_clock = get_tree().get_first_node_in_group("loop_clock")
+	# resolve spots and seed at the first waypoint NOW, not lazily on the
+	# first post-intro tick - lazy resolution left NPCs standing at their
+	# authored editor transform all through the fade-up, then visibly
+	# SNAPPING to schedule[0] the moment the intro handed over control.
+	# Deferred so every room's markers are guaranteed in the tree first.
+	_resolve_spots.call_deferred()
 
 
 func _process(_delta: float) -> void:
@@ -278,6 +284,9 @@ func _do_bark(b: Dictionary) -> void:
 	var txt := String(b.get("text", ""))
 	if txt != "":
 		bark(txt, float(b.get("dur", 3.0)))
+		# the character's own voice mumble under the text - same clip they
+		# use in conversation, positional, so it carries their timbre
+		_play_voice()
 	var snd := String(b.get("sound", ""))
 	if snd != "" and ResourceLoader.exists(snd):
 		# own one-shot player - the footstep player would cut this off;

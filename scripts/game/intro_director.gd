@@ -65,10 +65,9 @@ func _ready() -> void:
 	_layer.add_child(_black)
 
 	if Flags.has_flag("intro_done"):
-		# a later loop: just lift the black wash and let the loop run
-		var tw := create_tween()
-		tw.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
-		tw.tween_property(_black, "color:a", 0.0, fade)
+		# a later loop: hold the black for a beat with a film-slate stamp
+		# ("NIGHT 14 - 11:57 PM"), then lift the wash and let the loop run
+		_show_slate()
 		return
 
 	# first run this session: the scripted monologue
@@ -212,3 +211,28 @@ func _lock_player(locked: bool) -> void:
 	var p := get_tree().get_first_node_in_group("player")
 	if p != null:
 		p.input_locked = locked
+
+
+# the film slate: every restarted night is numbered, stamped on the black
+# before the fade-up - the count is FELT, and every gif explains itself
+func _show_slate() -> void:
+	var slate := Label.new()
+	slate.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	slate.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	slate.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	slate.text = "NIGHT %d  —  11:57 PM" % Flags.loops
+	var tw_font := "res://fonts/Special_Elite/SpecialElite-Regular.ttf"
+	if ResourceLoader.exists(tw_font):
+		slate.add_theme_font_override("font", load(tw_font))
+	slate.add_theme_font_size_override("font_size", 44)
+	slate.add_theme_color_override("font_color", Color(0.9, 0.88, 0.82))
+	_layer.add_child(slate)
+	Sfx.play(self, "res://audio/sfx/click.mp3", -10.0)
+	await get_tree().create_timer(1.5).timeout
+	if not is_inside_tree():
+		return
+	var tw := create_tween()
+	tw.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+	tw.tween_property(slate, "modulate:a", 0.0, fade * 0.5)
+	tw.parallel().tween_property(_black, "color:a", 0.0, fade)
+	tw.tween_callback(slate.queue_free)

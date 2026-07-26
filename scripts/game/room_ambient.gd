@@ -22,6 +22,7 @@ var _room: Node3D
 
 
 func _ready() -> void:
+	add_to_group("room_ambient")
 	if sound == "" or not ResourceLoader.exists(sound):
 		return
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -49,6 +50,16 @@ func _resolve_room() -> void:
 			_room = n
 			return
 		n = n.get_parent()
+
+
+# the endgame's breath-hold: everything ambient sinks away, leaving only
+# voices and the heartbeat. One-way - the confrontation ends the loop.
+func hush(seconds := 0.8) -> void:
+	if _player == null:
+		return
+	var tw := create_tween()
+	tw.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+	tw.tween_property(_player, "volume_db", -60.0, seconds)
 
 
 func _process(_delta: float) -> void:

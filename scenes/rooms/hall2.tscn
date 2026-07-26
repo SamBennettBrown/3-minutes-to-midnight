@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bjno51ebqavpw"]
 
+[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
 [ext_resource type="Texture2D" uid="uid://brya1xpufru8p" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Floor_Tile_05.png" id="2_23kvc"]
 [ext_resource type="Texture2D" uid="uid://dpy4d6umynf7p" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_04.png" id="2_fod6d"]
@@ -254,3 +255,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18243694, 1.5539026, -1.819
 
 [node name="SM_Sign_Lockers_01" parent="." unique_id=1041251083 instance=ExtResource("10_r27p1")]
 transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, -1.0513673, 2.0697608, 1.7626764)
+
+[node name="Ambient" type="Node" parent="." unique_id=199100005]
+script = ExtResource("89_ambient")
+sound = "res://audio/ambient/air_conditioner.mp3"
+volume_db = -27.0

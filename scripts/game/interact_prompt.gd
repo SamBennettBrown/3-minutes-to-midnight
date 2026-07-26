@@ -19,10 +19,43 @@ var _target: Node3D
 # pushed it a different way. Characters keep their origin (feet), which is
 # already centred.
 var _anchor_offset := Vector3.ZERO
+# the current target PROP glows softly - the E floats near the player, so
+# the glow is what says exactly WHICH thing you're on. Characters skip it
+# (a glowing person reads wrong; people are obviously talkable).
+var _hl_mat: StandardMaterial3D
+var _hl_meshes: Array = []
 
 
 func _ready() -> void:
 	process_priority = 100
+	_hl_mat = StandardMaterial3D.new()
+	_hl_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	_hl_mat.blend_mode = BaseMaterial3D.BLEND_MODE_ADD
+	# a faint BLOOD-warm wash - reads even through the mono grade
+	_hl_mat.albedo_color = Color(0.1, 0.035, 0.03)
+
+
+func _set_highlight(n: Node3D) -> void:
+	_clear_highlight()
+	if n == null or n.has_method("get_conversation"):
+		return
+	# some interactables (the vending machine) are bare logic nodes whose
+	# visible prop lives elsewhere - follow their machine_path to the meshes
+	var vis: Node = n
+	if "machine_path" in n:
+		var prop: Node = n.get_node_or_null(n.machine_path)
+		if prop != null:
+			vis = prop
+	for m in vis.find_children("*", "MeshInstance3D", true, false):
+		m.material_overlay = _hl_mat
+		_hl_meshes.append(m)
+
+
+func _clear_highlight() -> void:
+	for m in _hl_meshes:
+		if is_instance_valid(m):
+			m.material_overlay = null
+	_hl_meshes.clear()
 
 
 func _compute_anchor_offset(n: Node3D) -> Vector3:
@@ -52,8 +85,12 @@ func _process(_delta: float) -> void:
 		return
 	var nearest := Interact.nearest(get_tree(), body.global_position, prompt_range)
 	if nearest == null:
-		visible = false
-		_target = null
+		_clear_highlight()
+		# fade OUT instead of popping off
+		modulate.a = maxf(modulate.a - _delta / 0.1, 0.0)
+		if modulate.a <= 0.0:
+			visible = false
+			_target = null
 		return
 	# STICKY target: when several interactables are packed together (the wall
 	# lockers), don't let the prompt jitter between them as you shuffle. Keep
@@ -66,6 +103,7 @@ func _process(_delta: float) -> void:
 			nearest = _target
 	if nearest != _target:
 		_anchor_offset = _compute_anchor_offset(nearest)
+		_set_highlight(nearest)
 	elif _target != null and _anchor_offset == Vector3.ZERO and not nearest.has_method("get_conversation"):
 		# same target but offset never resolved (meshes may load a frame late)
 		_anchor_offset = _compute_anchor_offset(nearest)
@@ -74,6 +112,9 @@ func _process(_delta: float) -> void:
 	var ph = nearest.get("prompt_height")
 	if ph != null:
 		h = float(ph)
+	# the glow breathes with the E's bob so they read as one signal
+	_hl_mat.albedo_color = Color(0.1, 0.035, 0.03) \
+			* (0.8 + 0.35 * sin(Time.get_ticks_msec() * 0.004))
 	var bob := sin(Time.get_ticks_msec() * 0.004) * 0.06
 	# snap straight onto the target every frame. (An earlier lerp here fought
 	# the player's own motion - the prompt is parented to the player, so
@@ -90,4 +131,8 @@ func _process(_delta: float) -> void:
 		if d > 0.01:
 			pos += pull / d * minf(0.55, d * 0.4)
 	global_position = pos
+	# fade IN over ~0.1s - kills the last spreadsheet-UI pop
+	if not visible:
+		modulate.a = 0.0
 	visible = true
+	modulate.a = minf(modulate.a + _delta / 0.1, 1.0)

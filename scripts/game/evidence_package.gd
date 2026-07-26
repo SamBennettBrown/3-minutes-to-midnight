@@ -14,8 +14,8 @@ const Flags := preload("res://scripts/game/flags.gd")
 const Sfx := preload("res://scripts/game/sfx.gd")
 
 @export var prompt_height := 1.4
-## the snick of palming the package off the plate
-@export_file("*.wav", "*.ogg", "*.mp3") var pickup_sound := "res://audio/sfx/click.mp3"
+## the sound of the counterweight swap - chips down, package up
+@export_file("*.wav", "*.ogg", "*.mp3") var pickup_sound := "res://audio/sfx/pickup.mp3"
 @export var pickup_volume_db := -8.0
 
 
@@ -32,13 +32,18 @@ func interact() -> void:
 			{"speaker": "DETECTIVE", "text": "Already made the swap. The package is mine this loop."},
 		])
 		return
-	if Flags.has_loop_flag("have_chips"):
-		# counterweight in hand - clean swap
+	if Flags.has_loop_flag("have_chips") and Flags.has_flag("know_weight_trap"):
+		# trap known AND counterweight in hand THIS loop - clean swap.
+		# (both gates matter: without know_weight_trap the first-look plays
+		# below, so the swap can never fire before the setup)
 		Flags.set_loop_flag("have_evidence_package")
 		Flags.set_flag("found_murder_weapon")
 		Flags.clear_loop_flag("have_chips")  # the chips stay on the plate
 		if pickup_sound != "" and ResourceLoader.exists(pickup_sound):
 			Sfx.play_at(self, pickup_sound, pickup_volume_db)
+		var journal := get_tree().get_first_node_in_group("journal")
+		if journal != null:
+			journal._show_toast("TAKEN  —  THE PACKAGE")
 		dlg.show_dialogue([
 			{"speaker": "DETECTIVE", "text": "Bag of Puffy Stars on the plate, package off. Even trade... It's not a weapon. It's a case file. The one the witness is testifying against."},
 			{"speaker": "DETECTIVE", "text": "A mugshot clipped to the front. And behind it - a family photo. Two brothers at a lake, arms around each other. One of them is our defendant."},
@@ -49,8 +54,8 @@ func interact() -> void:
 		# first look: learn the trap (permanent knowledge)
 		Flags.set_flag("know_weight_trap")
 		dlg.show_dialogue([
-			{"speaker": "DETECTIVE", "text": "A brown paper package, no tag, back on the plate. And the plate's spring-loaded - weight-sensitive. Lift it bare and every bell in the building goes off."},
-			{"speaker": "DETECTIVE", "text": "I need something that weighs about the same to leave in its place. A full snack bag, maybe - about a pound."},
+			{"speaker": "DETECTIVE", "text": "A brown paper package - no tag, no log number, tucked behind the shelf on a spring-loaded plate. Filed evidence doesn't live like this. Somebody in this building BURIED it."},
+			{"speaker": "DETECTIVE", "text": "And the plate's weight-sensitive - lift it bare and every bell rings. I need a stand-in. About a pound."},
 		])
 	else:
 		# knows the trap, no counterweight: a soft stop, NOT a loss - the

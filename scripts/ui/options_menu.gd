@@ -58,8 +58,9 @@ func _ready() -> void:
 		if not _load_settings():
 			if _mat != null:
 				bw_on = float(_mat.get_shader_parameter("mono")) > 0.5
-				dither_on = float(_mat.get_shader_parameter("grain")) > 0.0
 			fullscreen_on = DisplayServer.window_get_mode() >= DisplayServer.WINDOW_MODE_FULLSCREEN
+	# dithering is ALWAYS on - no toggle, and an old saved "off" is ignored
+	dither_on = true
 	_apply()
 
 	_click_audio = AudioStreamPlayer.new()
@@ -83,6 +84,8 @@ func _ready() -> void:
 	_box.rotation_degrees = -8.0
 	_box.add_theme_constant_override("separation", 18)
 	add_child(_box)
+	if not title_mode:
+		_build_controls_card()
 	if title_mode:
 		_show_page("title")
 		visible = true
@@ -158,12 +161,48 @@ func _show_page(page: String) -> void:
 			get_tree().paused = false
 			get_tree().change_scene_to_file("res://scenes/title_screen.tscn"))
 	else:
+		# dithering has no toggle - the game is built around the grain and
+		# looks flat without it
 		_bw_btn = _add_button("", _on_bw)
-		_dither_btn = _add_button("", _on_dither)
 		_fs_btn = _add_button("", _on_fullscreen)
 		_vol_btn = _add_button("", _on_volume)
 		_add_button("BACK", func() -> void: _show_page("title" if title_mode else "main"))
 	_refresh()
+
+
+# the controls card, off to the right of the pause menu - tilted the
+# other way so the page reads like two notes pinned to a board
+func _build_controls_card() -> void:
+	var card := VBoxContainer.new()
+	card.anchor_left = 1.0
+	card.anchor_right = 1.0
+	card.anchor_top = 0.5
+	card.anchor_bottom = 0.5
+	card.offset_left = -520.0
+	card.offset_top = -160.0
+	card.rotation_degrees = 4.0
+	card.add_theme_constant_override("separation", 10)
+	add_child(card)
+	var tfont: FontFile = load("res://fonts/Special_Elite/SpecialElite-Regular.ttf")
+	var lines := [
+		["", "CONTROLS", 34],
+		["WASD", "move", 26],
+		["SHIFT", "run", 26],
+		["E", "interact / talk", 26],
+		["TAB", "case file", 26],
+		["HOLD R", "restart the night", 26],
+	]
+	for entry in lines:
+		var l := Label.new()
+		var key := String(entry[0])
+		l.text = String(entry[1]).to_upper() if key == "" \
+				else "%s  —  %s" % [key, String(entry[1])]
+		l.add_theme_font_size_override("font_size", int(entry[2]))
+		l.add_theme_color_override("font_color",
+				Color(0.92, 0.92, 0.9) if key == "" else Color(0.72, 0.72, 0.68))
+		if tfont != null:
+			l.add_theme_font_override("font", tfont)
+		card.add_child(l)
 
 
 func _build_splash() -> void:

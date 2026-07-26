@@ -58,7 +58,7 @@ func _process(_delta: float) -> void:
 			open = true
 	if open != _open:
 		_apply(open)
-	if _open or locked_line == "" or _said:
+	if _open or locked_line == "":
 		return
 	var p: Node3D = get_tree().get_first_node_in_group("player")
 	if p == null:
@@ -69,10 +69,15 @@ func _process(_delta: float) -> void:
 	var flat := global_position - p.global_position
 	flat.y = 0.0
 	if flat.length() < 1.8:
-		_said = true
-		var dlg := get_tree().get_first_node_in_group("dialogue")
-		if dlg != null and not dlg.visible:
-			dlg.show_dialogue([{"speaker": locked_speaker, "text": locked_line}])
+		if not _said:
+			_said = true
+			var dlg := get_tree().get_first_node_in_group("dialogue")
+			if dlg != null and not dlg.visible:
+				dlg.show_dialogue([{"speaker": locked_speaker, "text": locked_line}])
+	elif _said and flat.length() > 3.5:
+		# walked away: the next bump speaks again - a silent locked door
+		# reads as a dead one
+		_said = false
 
 
 func _apply(open: bool) -> void:

@@ -41,7 +41,8 @@ func _ready() -> void:
 	_label(box, "ALEC DOBBELSTEYN", 36, Color(0.92, 0.92, 0.9))
 	_label(box, "DAVID ESTEY", 36, Color(0.92, 0.92, 0.9))
 	_label(box, "SAMWISE THE BRAVE", 36, Color(0.92, 0.92, 0.9))
-	_label(box, "CLAUDE", 36, Color(0.92, 0.92, 0.9))
+	_label(box, " ", 20, Color.WHITE)
+	_label(box, "thanks for playing our game", 28, Color(0.85, 0.82, 0.72), true)
 	_label(box, " ", 20, Color.WHITE)
 
 	_label(box, "our detective will return in", 24, Color(0.65, 0.65, 0.62))

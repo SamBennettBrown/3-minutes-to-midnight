@@ -97,9 +97,15 @@ func _show_hint(text: String) -> void:
 		_hint_layer.layer = 109
 		add_child(_hint_layer)
 		_hint = Label.new()
+		# BOTTOM-CENTRE: the bottom-left corner belongs to the room label
+		# ("INTERROGATION" during the peek) and the two were stacking
+		_hint.anchor_left = 0.0
+		_hint.anchor_right = 1.0
 		_hint.anchor_top = 1.0
 		_hint.anchor_bottom = 1.0
-		_hint.position = Vector2(70, -70)
+		_hint.offset_top = -70.0
+		_hint.offset_bottom = -40.0
+		_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		_hint.add_theme_font_size_override("font_size", 24)
 		_hint.add_theme_color_override("font_color", Color(0.7, 0.7, 0.66))
 		_hint_layer.add_child(_hint)

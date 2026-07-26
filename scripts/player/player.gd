@@ -322,13 +322,16 @@ func _process(_delta: float) -> void:
 				or room.sees_point(global_position, 0.4) \
 				or _standing_room_visible()
 		model.visible = shown
-		# the floating bark rides the model: only ever visible when this
-		# character is actually being rendered (in the active room, or revealed
-		# through the observation-glass peek). When culled, the bark is hidden
-		# so interrogation chatter can't float through the observation wall.
-		# Its own timer still governs how long it lingers once shown.
+		# the floating bark rides the model - but with a STRICTER gate. The
+		# model check uses sees_point's seam margin, which counts a character
+		# standing just past a shared wall as "seen": the wall still occludes
+		# their MESH (depth test), but the bark label is no_depth_test and
+		# floats straight through the concrete. So text only shows when the
+		# room the character is STANDING IN is actually rendering - the
+		# active room, or interrogation revealed through the window peek.
 		if _bark_label != null:
-			_bark_label.visible = shown and _bark_timer > 0.0
+			_bark_label.visible = _bark_timer > 0.0 and shown \
+					and _standing_room_visible()
 
 	if _dlg == null:
 		_dlg = get_tree().get_first_node_in_group("dialogue")
@@ -351,8 +354,37 @@ func _process(_delta: float) -> void:
 		_bark_timer -= _delta
 		if _bark_timer <= 0.0 and _bark_label != null:
 			_bark_label.visible = false
+		elif _bark_label != null and _bark_label.visible:
+			_clamp_bark_to_frame()
 
 	_step_footsteps(_delta)
+
+
+# Keep the bark inside the shot. Some fixed cameras sit low and close (the
+# cells), and a label parked 2.4m over a head can project clean above the
+# frame. Project the authored spot; if it lands in the top band (under the
+# countdown), slide the label down toward the head until it reads.
+func _clamp_bark_to_frame() -> void:
+	var cam := get_viewport().get_camera_3d()
+	if cam == null:
+		return
+	var top_y := prompt_height + 0.4
+	var head_y := 1.1
+	var top := global_position + Vector3(0, top_y, 0)
+	if cam.is_position_behind(top):
+		return
+	var sp_top := cam.unproject_position(top)
+	# the safe band: below the countdown, plus room for the text's own height
+	var margin := 170.0
+	if sp_top.y >= margin:
+		_bark_label.position.y = top_y
+		return
+	var sp_head := cam.unproject_position(global_position + Vector3(0, head_y, 0))
+	var denom := sp_head.y - sp_top.y
+	if denom <= 1.0:
+		return
+	var t := clampf((margin - sp_top.y) / denom, 0.0, 1.0)
+	_bark_label.position.y = lerpf(top_y, head_y, t)
 
 
 # is the room this character physically stands in currently rendering?
@@ -379,6 +411,11 @@ func _step_footsteps(delta: float) -> void:
 			_step_timer = footstep_interval
 			_step_player.stream = _steps[_step_i % _steps.size()]
 			_step_i += 1
+			# never metronomic: each step lands at its own pitch, and a walk
+			# treads softer than a run
+			_step_player.pitch_scale = randf_range(0.92, 1.08)
+			_step_player.volume_db = footstep_volume_db \
+					+ (0.0 if current_clip == "run" else -4.0)
 			_step_player.play()
 	else:
 		_step_timer = 0.15

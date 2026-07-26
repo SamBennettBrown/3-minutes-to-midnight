@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ct2hlblthqslk"]
 
+[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
 [ext_resource type="PackedScene" uid="uid://qbe3hbx26dna" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_DeskToy_Orbiter_01.fbx" id="3_5j0ig"]
 [ext_resource type="PackedScene" uid="uid://lo0rtuclr27v" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Desk_02.fbx" id="3_8ipm2"]
@@ -345,3 +346,8 @@ dialogue = [{
 sets_flag = "know_bday_dog"
 prompt_height = 0.4
 transform = Transform3D(-0.34202012, 0, -0.9396926, 0, 1, 0, 0.9396926, 0, -0.34202012, -1.8187869, 0.80188334, -0.9858415)
+
+[node name="Ambient" type="Node" parent="." unique_id=199100006]
+script = ExtResource("89_ambient")
+sound = "res://audio/ambient/light_static.mp3"
+volume_db = -22.0

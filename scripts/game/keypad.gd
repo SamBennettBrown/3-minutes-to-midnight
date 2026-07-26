@@ -9,6 +9,7 @@ const Tuning := preload("res://scripts/game/tuning.gd")
 # the story has revealed (reveal_flag).
 
 const Flags := preload("res://scripts/game/flags.gd")
+const Sfx := preload("res://scripts/game/sfx.gd")
 
 @export var code := Tuning.CELLS_CODE
 @export var sets_flag := "cells_unlocked"
@@ -29,6 +30,10 @@ const Flags := preload("res://scripts/game/flags.gd")
 ## Checked against BOTH flag pools, so a per-loop flag (opens_loop_flag)
 ## brings the locker BACK each restart. Empty = never hide.
 @export var hide_when_flag := ""
+## how many reveal lines play BEFORE the door actually opens - the beat
+## lands mid-dialogue ("...that's not what I expected" -> the locker swings
+## aside -> the realisation continues over the open passage)
+@export var reveal_open_after := 2
 
 var _revealed := false
 var _hidden := false
@@ -46,6 +51,11 @@ func _process(_delta: float) -> void:
 		visible = false
 		if is_in_group("talkable"):
 			remove_from_group("talkable")
+		# the auto-collider boxed this prop at startup; hiding the mesh
+		# leaves that invisible box behind and it walls off the doorway -
+		# kill the collision along with the visual
+		for cs in find_children("*", "CollisionShape3D", true, false):
+			cs.disabled = true
 
 
 func interact() -> void:
@@ -56,16 +66,33 @@ func interact() -> void:
 
 
 func _on_code_accepted() -> void:
-	# correct code: the per-loop act happens (passage swings open, locker
-	# vanishes) and the full reveal plays exactly ONCE per game
-	if opens_loop_flag != "":
-		Flags.set_loop_flag(opens_loop_flag)
 	var dlg := get_tree().get_first_node_in_group("dialogue")
-	if dlg == null or dlg.visible:
+	var fresh: bool = not _revealed and not reveal_dialogue.is_empty() \
+			and (reveal_flag == "" or not Flags.has_flag(reveal_flag)) \
+			and dlg != null and not dlg.visible
+	if not fresh:
+		# repeat opens: the passage just swings aside, no ceremony
+		_open_passage()
 		return
-	if not _revealed and not reveal_dialogue.is_empty() \
-			and (reveal_flag == "" or not Flags.has_flag(reveal_flag)):
-		_revealed = true
-		if reveal_flag != "":
-			Flags.set_flag(reveal_flag)
-		dlg.show_dialogue(reveal_dialogue)
+	_revealed = true
+	if reveal_flag != "":
+		Flags.set_flag(reveal_flag)
+	# the beat: expectation first ("let's have that gun... that's not what I
+	# expected"), THEN the locker swings off the wall, THEN the realisation
+	var cut := clampi(reveal_open_after, 0, reveal_dialogue.size())
+	if cut > 0:
+		dlg.show_dialogue(reveal_dialogue.slice(0, cut))
+		await dlg.closed
+		if not is_inside_tree():
+			return
+	_open_passage()
+	if cut < reveal_dialogue.size():
+		dlg.show_dialogue(reveal_dialogue.slice(cut))
+
+
+func _open_passage() -> void:
+	if opens_loop_flag == "":
+		return
+	Flags.set_loop_flag(opens_loop_flag)
+	# the locker grinding off the wall
+	Sfx.play_at(self, "res://audio/sfx/door_close.mp3", -8.0)

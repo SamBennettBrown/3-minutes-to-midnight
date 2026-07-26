@@ -89,6 +89,8 @@ func show_dialogue(lines: Array, flag_on_end: String = "") -> void:
 	_opened_frame = Engine.get_process_frames()
 	visible = true
 	get_tree().paused = true
+	# the letterbox slides in with a breath, not a pop
+	Sfx.play(self, "res://audio/sfx/journal.mp3", -20.0)
 	opened.emit()
 	_refresh()
 
@@ -140,6 +142,7 @@ func _process(_delta: float) -> void:
 		if _index >= _lines.size():
 			visible = false
 			get_tree().paused = false
+			Sfx.play(self, "res://audio/sfx/journal.mp3", -22.0)
 			if _flag_on_end != "":
 				Flags.set_flag(_flag_on_end)
 			closed.emit()

@@ -68,7 +68,7 @@ camera_look_at = Vector3(0, 0.9, -0.6)
 [node name="Ambient" type="Node" parent="." unique_id=1453353623]
 script = ExtResource("1_ambient")
 sound = "res://audio/ambient/air_conditioner.mp3"
-volume_db = -20.0
+volume_db = -15.0
 
 [node name="Camera" type="Camera3D" parent="." unique_id=1328592386]
 transform = Transform3D(0.35052815, -0.26234943, 0.8990567, 9.4638e-09, 0.9599643, 0.2801226, -0.9365522, -0.098190844, 0.3364945, 3.8566084, 2.4333131, 3.737784)

@@ -30,6 +30,9 @@ const StoryLock := preload("res://scripts/game/story_lock.gd")
 ## "bound_promise") and this stays hidden/uninteractable until that flag is
 ## set - so nothing is exposed during the black-screen opening.
 @export var unlock_flag := ""
+## optional sound on EVERY examine - the metal clank of a locker being
+## pulled open. Empty = silent (notes, photos).
+@export_file("*.wav", "*.ogg", "*.mp3") var examine_sound := ""
 
 
 func _ready() -> void:

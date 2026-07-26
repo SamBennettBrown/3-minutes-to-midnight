@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bqas57w3xm5aa"]
+
+[ext_resource type="Script" path="res://scripts/tools/floor_audit.gd" id="1_audit"]
+
+[node name="FloorAudit" type="Node"]
+script = ExtResource("1_audit")

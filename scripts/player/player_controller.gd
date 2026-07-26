@@ -102,6 +102,12 @@ func _move_camera_relative(input: Vector2, running: bool, delta: float) -> bool:
 		if cam != null:
 			_latched_fwd = -cam.global_transform.basis.z
 			_latched_fwd.y = 0.0
+			if _latched_fwd.length() < 0.1:
+				# TOP-DOWN shot (the hidden nook): the camera's forward is
+				# straight down, which flattens to a zero vector and killed
+				# W/S entirely. Screen-UP is the honest "forward" there.
+				_latched_fwd = cam.global_transform.basis.y
+				_latched_fwd.y = 0.0
 			_latched_fwd = _latched_fwd.normalized()
 			_latched_right = cam.global_transform.basis.x
 			_latched_right.y = 0.0
@@ -217,6 +223,10 @@ func _try_talk() -> void:
 	var nearest := _nearest_talkable()
 	if nearest == null:
 		return
+	# every E-press that CONNECTS answers with a soft tick - some targets
+	# have their own foley, some are silent until the text box; this makes
+	# every press feel received
+	Sfx.play(self, "res://audio/sfx/click.mp3", -18.0)
 	# custom interactions (keypads, machines) override the dialogue path
 	if nearest.has_method("interact"):
 		nearest.interact()
@@ -226,7 +236,10 @@ func _try_talk() -> void:
 		var convo: Dictionary = nearest.get_conversation()
 		dlg.show_dialogue(convo.get("lines", []), convo.get("sets_flag", ""))
 		return
-	# plain interactables: static dialogue + flag
+	# plain interactables: static dialogue + flag. A physical prop can
+	# answer with its own sound (the lockers clank open)
+	if "examine_sound" in nearest and String(nearest.examine_sound) != "":
+		Sfx.play_at(nearest, String(nearest.examine_sound), -10.0)
 	var flag := ""
 	if "sets_flag" in nearest:
 		flag = nearest.sets_flag

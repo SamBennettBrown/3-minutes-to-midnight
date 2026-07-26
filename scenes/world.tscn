@@ -90,12 +90,15 @@ neighbors = Array[NodePath]([NodePath("../Bullpen")])
 
 [node name="Hall1" parent="Rooms" unique_id=1463765539 instance=ExtResource("36_hall1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -17)
+neighbors = Array[NodePath]([NodePath("../Bullpen"), NodePath("../Interrogation"), NodePath("../Observation")])
 
 [node name="Interrogation" parent="Rooms" unique_id=227344372 instance=ExtResource("32_interrogation")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
+neighbors = Array[NodePath]([NodePath("../Hall1")])
 
 [node name="Observation" parent="Rooms" unique_id=1520339026 instance=ExtResource("38_observation")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27)
+neighbors = Array[NodePath]([NodePath("../Hall1")])
 
 [node name="MirrorGlass" parent="Rooms/Observation" index="-1"]
 peek_camera = NodePath("../../Interrogation/PeekCamera")
@@ -111,11 +114,11 @@ neighbors = Array[NodePath]([NodePath("../Hall2"), NodePath("../Tunnel")])
 
 [node name="Cells" parent="Rooms" unique_id=1276451036 instance=ExtResource("34_cells")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
-neighbors = Array[NodePath]([NodePath("../Hall2"), NodePath("../Tunnel")])
+neighbors = Array[NodePath]([NodePath("../Hall2")])
 
 [node name="Tunnel" parent="Rooms" unique_id=216065554 instance=ExtResource("40_tunnel")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.224182, 0, 3.5)
-neighbors = Array[NodePath]([NodePath("../LockerRoom"), NodePath("../Cells")])
+neighbors = Array[NodePath]([NodePath("../LockerRoom")])
 
 [node name="Player" parent="." unique_id=577674332 instance=ExtResource("1_f3sb7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 1)

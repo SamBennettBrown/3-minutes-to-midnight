@@ -15,6 +15,10 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 @export var prompt_height := 1.7
 ## the wedged-bag mesh to hide once it drops (optional)
 @export var bag_path: NodePath
+## the actual machine PROP that rocks on the shoulder-check. This script
+## node only owns the interaction + collision; the visible machine is a
+## separate prop, so rocking `self` moved nothing on screen.
+@export var machine_path: NodePath
 
 
 func _ready() -> void:
@@ -46,12 +50,49 @@ func interact() -> void:
 		])
 		return
 	# shake it loose - now you're holding it (resets every loop)
-	# the SMACK of a shoulder hitting the machine, then the mechanism
-	# rattling the bag loose - CAPPED, the source recording runs for ages
-	# and would still be droning from the next room over
-	Sfx.play_at(self, "res://audio/sfx/bump.mp3", -6.0)
-	Sfx.play_at(self, "res://audio/sfx/vendingmachine.mp3", -8.0, 3.5)
+	Flags.set_loop_flag("have_chips")
+	_drop_sequence()
+	var journal := get_tree().get_first_node_in_group("journal")
+	if journal != null:
+		journal._show_toast("TAKEN  —  PUFFY STARS")
 	dlg.show_dialogue([
 		{"speaker": "DETECTIVE", "text": "I put a shoulder into it. The bag drops. PUFFY STARS - mine now. Feels about right for a swap."},
 	])
-	Flags.set_loop_flag("have_chips")
+
+
+# The full foley beat, in order: SMACK of the shoulder, then the mechanism
+# rattling (capped - the source recording runs for ages), then the click of
+# the bag landing in the tray. Timers run through the dialogue pause.
+func _drop_sequence() -> void:
+	Sfx.play_at(self, "res://audio/sfx/smack.mp3", -6.0)
+	_rock()
+	# the shoulder-check bumps the camera too - smaller than a gunshot
+	var cam := get_viewport().get_camera_3d()
+	if cam != null:
+		cam.v_offset = 0.035
+		var ct := create_tween()
+		ct.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+		ct.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
+		ct.tween_property(cam, "v_offset", 0.0, 0.3)
+	await get_tree().create_timer(0.35).timeout
+	if not is_inside_tree():
+		return
+	Sfx.play_at(self, "res://audio/sfx/vendingmachine.mp3", -8.0, 3.5)
+	await get_tree().create_timer(0.9).timeout
+	if not is_inside_tree():
+		return
+	Sfx.play_at(self, "res://audio/sfx/click.mp3", -8.0)
+
+
+# the shoulder-check lands: the whole machine leans away, wobbles back
+# past centre once, and settles. Runs through the dialogue pause.
+func _rock() -> void:
+	var target: Node3D = get_node_or_null(machine_path)
+	if target == null:
+		target = self
+	var tw := create_tween()
+	tw.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+	tw.tween_property(target, "rotation:z", 0.045, 0.08).set_ease(Tween.EASE_OUT)
+	tw.tween_property(target, "rotation:z", -0.022, 0.14).set_ease(Tween.EASE_IN_OUT)
+	tw.tween_property(target, "rotation:z", 0.01, 0.14).set_ease(Tween.EASE_IN_OUT)
+	tw.tween_property(target, "rotation:z", 0.0, 0.12).set_ease(Tween.EASE_OUT)

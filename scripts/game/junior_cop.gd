@@ -24,14 +24,19 @@ extends "res://scripts/player/player.gd"
 ## how close he keeps while following you on the final run (legacy - the
 ## rookie no longer follows; kept so old scene overrides still load)
 @export var follow_distance := 1.6
-## the room he hides in for the ambush, and the marker he tucks behind
+## the room he hides in for the ambush, and the marker he tucks behind.
+## He waits OUTSIDE the locker room door - out of the captain's sight -
+## and only steps in when the endgame calls step_in() for his line.
 @export var stage_room_name := "LockerRoom"
-@export var stage_spot_name := "LockerRoom/Door"
+@export var stage_spot_name := "Hall2/DoorLocker"
+## where the dramatic entrance lands - just inside the locker room door
+@export var step_in_spot := "LockerRoom/Door"
 ## loop time he leaves his post to make the meet ("locker room, 0:15") -
 ## early enough to be hidden there before the clock reads 0:15 (t165)
 @export var stage_go_time := 150.0
 
 const Tuning := preload("res://scripts/game/tuning.gd")
+const CoffeeSfx := preload("res://scripts/game/sfx.gd")
 var _state := "approach"
 var _player_body: Node3D
 var _dialogue_ui: Node
@@ -80,9 +85,9 @@ func _ready() -> void:
 			]},
 			# --- found the brother file -> point at the OFFICE (the code) ---
 			{"flag": "found_murder_weapon", "lines": [
-				{"speaker": "THE ROOKIE", "text": "The captain's locker? It's got a keypad - good luck. Between us... sometimes I sneak into his office just to look at his medals. Hope I'm that decorated one day."},
-				{"speaker": "THE ROOKIE", "text": "He's got this whole wall of photos in there too. His daughter, his wife... that dog of his. Man LOVES that dog. Talks about its birthday like it's a national holiday."},
-				{"speaker": "DETECTIVE", "text": "...Birthdays. Kid - anything you need, it's yours. Later."},
+				{"speaker": "THE ROOKIE", "text": "Between us... sometimes I sneak into the captain's office just to look at his medals. Hope I'm that decorated one day."},
+				{"speaker": "THE ROOKIE", "text": "It's a whole shrine in there, honestly. The man acts carved out of granite, but... everything he loves is up on that wall."},
+				{"speaker": "DETECTIVE", "text": "Everything he loves. ...Hm. Kid - anything you need, it's yours. Later."},
 			]},
 			# --- knows about the passage -> the end of the loop ---
 			{"flag": "captain_is_guilty", "lines": [
@@ -107,6 +112,7 @@ func _ready() -> void:
 	strip_root_motion = true
 	super._ready()
 	add_to_group("talkable")
+	add_to_group("rookie")
 	global_position = spawn_pos
 
 
@@ -208,6 +214,22 @@ func _process(delta: float) -> void:
 			play("idle")
 			if anim_player != null:
 				anim_player.speed_scale = 1.0
+		"step_in":
+			# the reveal: through the door, plant himself, face the captain
+			var m := _find_spot(step_in_spot)
+			var target := m.global_position if m != null else global_position
+			if _step_toward(target, 0.2, delta, approach_speed):
+				play("idle")
+				if anim_player != null:
+					anim_player.speed_scale = 1.0
+				_state = "staged"
+
+
+## Called by the endgame director mid-confrontation: the rookie was waiting
+## outside the door - now he walks in for "I did, Captain."
+func step_in() -> void:
+	if _state == "staged":
+		_state = "step_in"
 
 
 # world position of the hidden marker the rookie tucks into
@@ -336,6 +358,9 @@ func _try_open_intro() -> void:
 
 
 func _finish_intro() -> void:
+	# the punchline to every coffee exchange: the detective actually takes
+	# the sip, every single loop
+	CoffeeSfx.play_at(self, "res://audio/sfx/coffee.mp3", -8.0, 3.0)
 	_set_player_locked(false)
 	_state = "to_post"
 

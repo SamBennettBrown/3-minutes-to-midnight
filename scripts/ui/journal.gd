@@ -29,8 +29,10 @@ const NOTE_FONT := preload("res://fonts/Special_Elite/SpecialElite-Regular.ttf")
 		"text": "Shot dead in a sealed cell, every loop. No gun in the room. Start in the cells."},
 	{"flag": "inmate_tip", "title": "WITNESS IN INTERROGATION", "when": 5.0, "stamp": "UNTIL 2:00",
 		"text": "He's in INTERROGATION until 2:00. Word inside: somebody CLOSE wanted him gone."},
+	{"flag": "read_pad_note", "title": "PEOPLE INSIDE", "when": 12.0,
+		"text": "The witness told them plain: the defendant has PEOPLE INSIDE the precinct. It's in the investigator's own notes."},
 	{"flag": "heard_evidence_tip", "title": "OVERHEARD - INTERROGATION", "when": 15.0,
-		"text": "The case file is in EVIDENCE - hidden, weighted shelf in the back."},
+		"text": "The investigator logged the case file into EVIDENCE for the trial. The whole case, one room over."},
 	{"flag": "know_card_drop", "title": "THE CLERK'S CARD", "when": 30.0, "stamp": "2:30",
 		"text": "Clerk dumps his keycard on the front desk at 2:30. Rosa's boyfriend calls at 2:20 - that's my window."},
 	{"flag": "seen_stuck_snack", "title": "THE STUCK BAG", "when": 40.0,
@@ -41,8 +43,8 @@ const NOTE_FONT := preload("res://fonts/Special_Elite/SpecialElite-Regular.ttf")
 		"text": "The defendant is the CAPTAIN'S BROTHER. Family photo in the file. Get the gun from his locker - end this."},
 	{"flag": "captains_locker_open", "title": "0806", "when": 70.0,
 		"text": "The dog's birthday. His locker opens to it - every night."},
-	{"flag": "captain_is_guilty", "title": "NOT A GUN - A DOORWAY", "when": 120.0, "stamp": "HE MOVES AT 2:00",
-		"text": "A hidden passage to the cells, behind his locker. He leaves his office at 2:00."},
+	{"flag": "captain_is_guilty", "title": "NOT A GUN - A HOLE", "when": 120.0, "stamp": "HE MOVES AT 2:00",
+		"text": "A hidden nook behind his locker - a firing hole drilled through to the cells. He leaves his office at 2:00. Midnight ends up RIGHT HERE."},
 	{"flag": "taught_death_seen", "title": "HOW TO NAIL HIM", "when": 165.0, "stamp": "0:15",
 		"text": "PACKAGE in hand. ROOKIE hidden and listening. Locker room, 0:15."},
 	{"flag": "saw_wall_shot", "title": "THE SHOT FROM THE WALL", "when": 180.0, "stamp": "0:00",
@@ -64,6 +66,10 @@ var _toast_root: Control
 var _toast_box: VBoxContainer
 var _toast_label: Label
 var _toast_tween: Tween
+# back-to-back toasts (package pickup fires two) QUEUE instead of
+# stomping - the new one hurries the current one off, then takes the spot
+var _toast_queue: Array = []
+var _toast_busy := false
 
 
 func _enter_tree() -> void:
@@ -121,9 +127,19 @@ func _on_flag_set(flag: String) -> void:
 
 
 func _show_toast(text: String) -> void:
+	if _toast_busy:
+		_toast_queue.append(text)
+		# fast-exit the current toast so the next lands a beat later
+		if _toast_tween != null and _toast_tween.is_valid():
+			_toast_tween.kill()
+			_toast_tween = create_tween()
+			_toast_tween.tween_property(_toast_box, "modulate:a", 0.0, 0.25)
+			_toast_tween.tween_callback(_toast_done)
+		return
+	_toast_busy = true
 	if _toast_root == null:
 		var layer := CanvasLayer.new()
-		layer.layer = 103
+		layer.layer = 104
 		add_child(layer)
 		_toast_root = Control.new()
 		_toast_root.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -186,7 +202,14 @@ func _show_toast(text: String) -> void:
 	_toast_tween.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_CUBIC)
 	_toast_tween.tween_property(_toast_box, "modulate:a", 0.0, 0.4)
 	_toast_tween.parallel().tween_property(_toast_box, "scale", Vector2(0.92, 0.92), 0.4)
-	_toast_tween.tween_callback(func(): _toast_root.visible = false)
+	_toast_tween.tween_callback(_toast_done)
+
+
+func _toast_done() -> void:
+	_toast_root.visible = false
+	_toast_busy = false
+	if not _toast_queue.is_empty():
+		_show_toast(_toast_queue.pop_front())
 
 
 func _input(event: InputEvent) -> void:

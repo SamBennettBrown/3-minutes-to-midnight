@@ -77,7 +77,8 @@ func _process(delta: float) -> void:
 	if show and not _drop_played:
 		_drop_played = true
 		if drop_sound != "" and ResourceLoader.exists(drop_sound):
-			Sfx.play(self, drop_sound, drop_volume_db)
+			# positional - the clink belongs to the desk, not the whole station
+			Sfx.play_at(self, drop_sound, drop_volume_db)
 	if show != visible:
 		visible = show
 	# only offer the E-prompt while it's actually on the desk
@@ -107,6 +108,9 @@ func interact() -> void:
 		Flags.set_flag("know_card_drop")
 		if pickup_sound != "" and ResourceLoader.exists(pickup_sound):
 			Sfx.play_at(self, pickup_sound, pickup_volume_db)
+		var journal := get_tree().get_first_node_in_group("journal")
+		if journal != null:
+			journal._show_toast("TAKEN  —  EVIDENCE KEYCARD")
 		dlg.show_dialogue([
 			{"speaker": "DETECTIVE", "text": "Her back's turned. I palm the card off the desk edge. Evidence room's mine now - for a few minutes."},
 		])

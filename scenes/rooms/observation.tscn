@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bhi6uurcm80er"]
 
+[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
 [ext_resource type="PackedScene" uid="uid://cxc4bmtgj12uj" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Keyboard_01.fbx" id="2_jo3kw"]
 [ext_resource type="Texture2D" uid="uid://hhakklqq20uy" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_01.png" id="3_4rkwm"]
@@ -264,3 +265,8 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 1.5)
 script = ExtResource("99_window")
 prompt_height = 0.6
+
+[node name="Ambient" type="Node" parent="." unique_id=199100003]
+script = ExtResource("89_ambient")
+sound = "res://audio/ambient/static.wav"
+volume_db = -27.0
