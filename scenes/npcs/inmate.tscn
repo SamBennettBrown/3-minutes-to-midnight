@@ -27,15 +27,15 @@ push_in_time = 0.7
 dialogue_variants = [{
 "lines": [{
 "speaker": "PRISONER",
-"text": "Quiet night. Well - except the shot. There's always the shot."
+"text": "I sure would love some PUFFY STARS right about now, I wonder if there's some in the vending machine"
 }]
 }, {
 "lines": [{
 "speaker": "PRISONER",
-"text": "Your witness? They marched him right past me not ten minutes ago. He's down in interrogation now - the whole night shift's crammed in around him."
+"text": "Your witness? He was in the cell over not ten minutes ago. He's down in interrogation now."
 }, {
 "speaker": "PRISONER",
-"text": "Word inside is somebody wanted him gone. Somebody CLOSE. He was safer in HERE, detective. Bars keep things out better than they keep things in."
+"text": "He seemed really nervous, helpless even. He didn't seem to have any confidence in the police's ability to protect him"
 }, {
 "speaker": "DETECTIVE",
 "text": "Interrogation. Somebody with a badge, a schedule, and three minutes. Let's go have a look."

@@ -139,14 +139,17 @@ func _win(captain: Node3D) -> void:
 		# something else is mid-line; wait a beat and re-drive
 		await dlg.closed
 	dlg.show_dialogue([
-		{"speaker": "THE CAPTAIN", "text": "Out of my way, detective. I have a loose end in that cell and three minutes to tie it off."},
-		{"speaker": "DETECTIVE", "text": "Recognize this? Two brothers at a lake. One of them's wearing your face. The other one is sitting in a courtroom because of MY witness."},
-		{"speaker": "THE CAPTAIN", "text": "...Where did you get that."},
-		{"speaker": "DETECTIVE", "text": "Where you buried it - your own evidence room. Along with the passage behind your locker. You walk through that wall and put him down every single night. For your brother."},
-		{"speaker": "THE CAPTAIN", "text": "You think a photo convicts a captain? It's your word against mine, and mine wears more brass. Nobody heard a thing."},
-		{"speaker": "THE ROOKIE", "text": "...I did, Captain. I heard every word of it."},
+		{"speaker": "THE CAPTAIN", "text": "Out of my way, detective. I have a loose end to take care of"},
+		{"speaker": "DETECTIVE", "text": "Recognize this? Two brothers at a lake. The other one is sitting in a jail cell because of MY witness."},
+		{"speaker": "THE CAPTAIN", "text": "...Where did you get that?"},
+		{"speaker": "DETECTIVE", "text": "Where you left it. You hid it in away in the evidence room behind the shelf. Using the hidden passage behind that locker, you're about to put him down for good."},
+		{"speaker": "THE CAPTAIN", "text": "So what, gumshoe? It's your word against mine, and mine wears more brass. Nobody will know a thing."},
+		{"speaker": "THE ROOKIE", "text": "I did, Captain. I heard every word of it."},
 		{"speaker": "THE CAPTAIN", "text": "...You. How long have you-"},
 		{"speaker": "DETECTIVE", "text": "Long enough. The photo, and a witness who lives. The two things you could never plan around. It's over."},
+		{"speaker": "DETECTIVE", "text": "I think it's about time you... *takes off glasses*"},
+		{"speaker": "DETECTIVE", "text": "Clocked out, Captain "},
+		{"speaker": "CSI MIAMI", "text": "YEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH!!"},
 	])
 	await dlg.closed
 	if not is_inside_tree():
