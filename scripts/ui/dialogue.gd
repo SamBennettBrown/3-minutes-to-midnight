@@ -49,6 +49,7 @@ var _last_clack := 0
 
 var _speaker := Label.new()
 var _text := Label.new()
+var _e_hint := Label.new()
 
 
 func _ready() -> void:
@@ -77,6 +78,20 @@ func _ready() -> void:
 	_text.position = Vector2(70, 66)
 	_text.size = Vector2(1700, 130)
 	bg.add_child(_text)
+	# the advance key, always visible in the corner of the letterbox -
+	# dim while the line types, bright once it's waiting on the player
+	_e_hint.text = "E ▸"
+	_e_hint.add_theme_font_size_override("font_size", 26)
+	_e_hint.add_theme_color_override("font_color", Color(0.8, 0.78, 0.7))
+	_e_hint.anchor_left = 1.0
+	_e_hint.anchor_right = 1.0
+	_e_hint.anchor_top = 1.0
+	_e_hint.anchor_bottom = 1.0
+	_e_hint.offset_left = -120.0
+	_e_hint.offset_right = -46.0
+	_e_hint.offset_top = -52.0
+	_e_hint.offset_bottom = -18.0
+	bg.add_child(_e_hint)
 	visible = false
 
 
@@ -130,10 +145,17 @@ func _process(_delta: float) -> void:
 			if n - _last_clack >= 3:
 				_last_clack = n
 				Sfx.play(self, clack_path, -24.0)
+	# the E cue breathes bright once the line is done typing
+	var done: bool = _text.visible_characters < 0 \
+			or _text.visible_characters >= total
+	_e_hint.modulate.a = (0.85 + 0.15 * sin(Time.get_ticks_msec() * 0.006)) \
+			if done else 0.35
 	# the interact press that OPENED the dialogue must not also advance it
 	if Engine.get_process_frames() == _opened_frame:
 		return
 	if Input.is_action_just_pressed("interact"):
+		# every press answers - completing a line or advancing to the next
+		Sfx.play(self, "res://audio/sfx/hover.mp3", -12.0)
 		# first press completes the line; the next advances
 		if _text.visible_characters >= 0 and _text.visible_characters < total:
 			_text.visible_characters = -1

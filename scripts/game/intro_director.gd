@@ -43,6 +43,10 @@ var _fading_out := false
 # the shot is the hook, nobody gets to cut it off
 var _elapsed := 0.0
 var _skip_at := 0.0
+# the clock under the monologue: a slow tick-tock on the black, the loop
+# already breathing before the player ever sees a room
+var _tick_t := 0.0
+var _tock := false
 
 
 func _enter_tree() -> void:
@@ -122,6 +126,14 @@ func _process(delta: float) -> void:
 	if _hint != null and _skip_at > 0.0 and _elapsed >= _skip_at:
 		_hint.text = "E to continue   ·   ESC to skip"
 		_skip_at = 0.0
+	# the tick-tock under the words - waits for the gunshot to finish first
+	if _elapsed >= _skip_at or _skip_at == 0.0:
+		_tick_t -= delta
+		if _tick_t <= 0.0:
+			_tick_t = 1.0
+			_tock = not _tock
+			Sfx.play(self, "res://audio/ambient/tock.mp3" if _tock \
+					else "res://audio/ambient/tick.mp3", -14.0)
 	_t += delta
 	# fade the line IN, then HOLD until the player presses E to advance
 	# (with a short minimum so a held key can't skip the whole thing).
@@ -138,6 +150,7 @@ func _process(delta: float) -> void:
 		if _hint != null and _t >= fade + 0.4:
 			_hint.modulate.a = minf((_t - fade - 0.4) / 0.4, 0.55)
 		if _t >= fade + min_read and Input.is_action_just_pressed("interact"):
+			Sfx.play(self, "res://audio/sfx/hover.mp3", -12.0)
 			_fading_out = true
 			_t = 0.0
 			if _hint != null:

@@ -156,8 +156,12 @@ barks = [{
 "t": 41.8,
 "text": "It's him again. ...Hi baby. Yes, I miss you too. Hang on, one sec-"
 }, {
-"dur": 4.0,
-"t": 78.0,
+"sound": "res://audio/sfx/phone.mp3",
+"sound_len": 4.0,
+"t": 74.0
+}, {
+"dur": 5.0,
+"t": 75.8,
 "text": "He KNOWS I'm at work. ...It's kind of sweet though. Right?"
 }, {
 "sound": "res://audio/sfx/phone.mp3",
@@ -167,6 +171,22 @@ barks = [{
 "dur": 5.0,
 "t": 101.8,
 "text": "That's him AGAIN. ...Hi honey. No I can't talk, I- okay, thirty seconds."
+}, {
+"sound": "res://audio/sfx/phone.mp3",
+"sound_len": 4.0,
+"t": 128.0
+}, {
+"dur": 5.0,
+"t": 129.8,
+"text": "Babe, I SWEAR- ...okay. Twenty seconds. TWENTY."
+}, {
+"sound": "res://audio/sfx/phone.mp3",
+"sound_len": 4.0,
+"t": 156.0
+}, {
+"dur": 5.0,
+"t": 157.8,
+"text": "...You know what, fine, tell me about the sandwich."
 }]
 turn_windows = [{
 "dur": 14.0,
@@ -176,7 +196,22 @@ turn_windows = [{
 }, {
 "dur": 14.0,
 "flag": "receptionist_turned",
+"t": 76.0,
+"yaw": 40.0
+}, {
+"dur": 14.0,
+"flag": "receptionist_turned",
 "t": 100.0,
+"yaw": 40.0
+}, {
+"dur": 14.0,
+"flag": "receptionist_turned",
+"t": 130.0,
+"yaw": 40.0
+}, {
+"dur": 14.0,
+"flag": "receptionist_turned",
+"t": 158.0,
 "yaw": 40.0
 }]
 turn_speed = 4.0

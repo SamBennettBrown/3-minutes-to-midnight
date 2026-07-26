@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://bhi6uurcm80er"]
 
+[ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="86_item"]
+[ext_resource type="Script" uid="uid://cv22om4sbyjyj" path="res://scripts/game/auto_collider.gd" id="86_autocol"]
+[ext_resource type="Script" path="res://scripts/game/timed_light.gd" id="88_timedlight"]
 [ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
 [ext_resource type="PackedScene" uid="uid://cxc4bmtgj12uj" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Keyboard_01.fbx" id="2_jo3kw"]
@@ -145,8 +148,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 0)
 
 [node name="SM_Prop_Computer_Monitor_Double_01" parent="." unique_id=1487812561 instance=ExtResource("5_lei6d")]
 transform = Transform3D(0.9781476, 0, 0.2079117, 0, 1, 0, -0.2079117, 0, 0.9781476, -3.1192894, 0.7617593, -1.6118714)
+script = ExtResource("86_item")
+dialogue = [{
+"speaker": "MONITOR",
+"text": "Both screens dark. The security feed index scrolls: CELLS - OFFLINE. LOCKER RM - OFFLINE. EVIDENCE - OFFLINE. Every camera in the building, off for the night."
+}, {
+"speaker": "DETECTIVE",
+"text": "Cameras don't turn themselves off. That takes a login. Rank."
+}]
+sets_flag = "saw_cams_off"
+prompt_height = 0.6
 
 [node name="SM_Prop_Desk_01" parent="." unique_id=2101133561 instance=ExtResource("6_yeupe")]
+script = ExtResource("86_autocol")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9986734, 0, -1.3498406)
 
 [node name="walls" type="Node3D" parent="." unique_id=1757418906]
@@ -247,6 +261,7 @@ shape = SubResource("shape_pillar")
 [node name="probs" type="Node3D" parent="." unique_id=825837620]
 
 [node name="SM_Prop_Camera_Tripod_01" parent="." unique_id=1646655534 instance=ExtResource("7_yeupe")]
+script = ExtResource("86_autocol")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4358847, 0.06857419, 1.4172232)
 
 [node name="SM_Prop_Cord_Desk_01" parent="." unique_id=1063300300 instance=ExtResource("8_v7ipn")]
@@ -256,6 +271,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.602775, 0.006146269, -1.57
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.200063, 0.7565708, -1.4283698)
 
 [node name="SM_Prop_Rolling_TV_01" parent="." unique_id=984121972 instance=ExtResource("11_43msq")]
+script = ExtResource("86_autocol")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1250503, -2.3841858e-07, -1.5638833)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1793452724]
@@ -270,3 +286,12 @@ prompt_height = 0.6
 script = ExtResource("89_ambient")
 sound = "res://audio/ambient/static.wav"
 volume_db = -27.0
+
+[node name="WindowLeak" type="OmniLight3D" parent="." unique_id=199100013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 1.5)
+light_color = Color(1, 0.85, 0.6, 1)
+light_energy = 1.4
+light_volumetric_fog_energy = 1.2
+omni_range = 3.2
+script = ExtResource("88_timedlight")
+off_at = 64.0

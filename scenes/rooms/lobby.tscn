@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cgxnessn3xq7o"]
 
+[ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="87_item"]
 [ext_resource type="Script" uid="uid://0vxeo4crdm1y" path="res://scripts/game/desk_keycard.gd" id="1_deskcard"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
 [ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="1_ambient"]
@@ -358,12 +359,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.554405, 1.1810454, -4.5441
 
 [node name="SM_Prop_Book_Magazine_01" parent="." unique_id=187681375 instance=ExtResource("27_ksmiq")]
 transform = Transform3D(0.9781476, 0, 0.2079117, 0, 1, 0, -0.2079117, 0, 0.9781476, 0.23385239, 0.5405872, -0.18527353)
+script = ExtResource("87_item")
+dialogue = [{
+"speaker": "MAGAZINE",
+"text": "Dog-eared cover story: 'TRIAL OF THE DECADE.' A profile of the defendant - came up from nothing, they say. Him and a brother nobody can find a photo of."
+}, {
+"speaker": "DETECTIVE",
+"text": "A brother nobody can find a photo of. Huh."
+}]
+prompt_height = 0.35
 
 [node name="SM_Prop_Bin_01" parent="." unique_id=73389085 instance=ExtResource("28_lh884")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4267416, -2.3841858e-07, -3.2577415)
 
 [node name="SM_Prop_Coffee_Machine_Dripper_01" parent="." unique_id=1760769577 instance=ExtResource("29_xq4x3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5659528, 0.7431601, -3.8157575)
+script = ExtResource("87_item")
+dialogue = [{
+"speaker": "COFFEE MACHINE",
+"text": "A fresh pot, still steaming. A little sign: FOR OUR VISITORS."
+}, {
+"speaker": "DETECTIVE",
+"text": "Fresh coffee for the visitors. We get the stale stuff. ...No wonder the kid's coffee tastes like evidence."
+}]
+prompt_height = 0.7
 
 [node name="SM_Prop_Cup_Coffee_Disposable_Open_Full_01" parent="." unique_id=57160704 instance=ExtResource("30_wesrb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2202773, 0.7471781, -3.5455573)

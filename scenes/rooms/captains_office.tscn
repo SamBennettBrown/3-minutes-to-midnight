@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://ct2hlblthqslk"]
 
-[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
 [ext_resource type="PackedScene" uid="uid://qbe3hbx26dna" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_DeskToy_Orbiter_01.fbx" id="3_5j0ig"]
 [ext_resource type="PackedScene" uid="uid://lo0rtuclr27v" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Desk_02.fbx" id="3_8ipm2"]
 [ext_resource type="Texture2D" uid="uid://cw5srjxnhlvky" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_02.png" id="3_rrcbx"]
-[ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="4_item"]
 [ext_resource type="PackedScene" uid="uid://bj50lcfpa2nq2" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Computer_Setup_01.fbx" id="5_xd2es"]
 [ext_resource type="PackedScene" uid="uid://sd1yxjxfv3cq" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Chair_07.fbx" id="6_72qvo"]
 [ext_resource type="PackedScene" uid="uid://dydqw5ee0o0do" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Shelf_05.fbx" id="7_5j0ig"]
@@ -27,22 +25,16 @@
 [ext_resource type="PackedScene" uid="uid://cyxqk3654t66u" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Bld_Floor_Carpet_01.fbx" id="24_72qvo"]
 [ext_resource type="PackedScene" uid="uid://bqmemrvvsnpqr" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Shelf_02.fbx" id="25_5j0ig"]
 [ext_resource type="PackedScene" uid="uid://cwf7cshrjaoj6" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Photo_06.fbx" id="26_pbr1g"]
-
-[ext_resource type="Script" path="res://scripts/game/interactable.gd" id="91_item"]
-[ext_resource type="Script" path="res://scripts/game/auto_collider.gd" id="90_autocol"]
-[ext_resource type="Script" path="res://scripts/game/office_ward.gd" id="92_ward"]
+[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
+[ext_resource type="Script" uid="uid://cv22om4sbyjyj" path="res://scripts/game/auto_collider.gd" id="90_autocol"]
+[ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="91_item"]
+[ext_resource type="Script" uid="uid://pn4gs3rlpbrc" path="res://scripts/game/office_ward.gd" id="92_ward"]
 
 [sub_resource type="BoxShape3D" id="shape_trigger"]
 size = Vector3(12, 4, 12)
 
 [sub_resource type="BoxShape3D" id="shape_ward"]
 size = Vector3(8, 3, 6)
-
-[sub_resource type="BoxMesh" id="mesh_frame"]
-size = Vector3(0.22, 0.28, 0.04)
-
-[sub_resource type="StandardMaterial3D" id="mat_frame"]
-albedo_color = Color(0.5, 0.45, 0.35, 1)
 
 [sub_resource type="BoxMesh" id="mesh_glow_h"]
 size = Vector3(2, 0.06, 0.7)
@@ -137,7 +129,6 @@ shape = SubResource("shape_trigger")
 [node name="OfficeWard" type="Area3D" parent="." unique_id=104397291]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
 script = ExtResource("92_ward")
-clear_at = 60.0
 
 [node name="Shape" type="CollisionShape3D" parent="OfficeWard" unique_id=18899254]
 shape = SubResource("shape_ward")
@@ -264,6 +255,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5567859, 0.9313359, 
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.11431408, 0.9313359, 0.089888096)
 
 [node name="SM_Prop_Photo_03" parent="props/SM_Prop_Shelf_05" unique_id=1409111511 instance=ExtResource("10_8nm5v")]
+transform = Transform3D(1, 2.3283064e-10, -1.1641532e-10, 0, 0.9999999, -3.592504e-11, 0, 7.503331e-12, 0.9999999, -0.38917723, 1.542431, -0.008158684)
 script = ExtResource("91_item")
 dialogue = [{
 "speaker": "FRAMED PHOTO",
@@ -271,9 +263,9 @@ dialogue = [{
 }]
 sets_flag = "know_bday_wife"
 prompt_height = 0.4
-transform = Transform3D(1, 2.3283064e-10, -1.1641532e-10, 0, 0.9999999, -3.592504e-11, 0, 7.503331e-12, 0.9999999, -0.38917723, 1.542431, -0.008158684)
 
 [node name="SM_Prop_Photo_02" parent="props/SM_Prop_Shelf_05" unique_id=1801721284 instance=ExtResource("11_f4p3g")]
+transform = Transform3D(0.9702957, 4.656613e-10, -0.24192187, 0, 0.9999997, -5.820766e-11, 0.24192187, 8.185452e-12, 0.9702954, 0.34424198, 1.5366756, -0.024834156)
 script = ExtResource("91_item")
 dialogue = [{
 "speaker": "FRAMED PHOTO",
@@ -281,10 +273,18 @@ dialogue = [{
 }]
 sets_flag = "know_bday_daughter"
 prompt_height = 0.4
-transform = Transform3D(0.9702957, 4.656613e-10, -0.24192187, 0, 0.9999997, -5.820766e-11, 0.24192187, 8.185452e-12, 0.9702954, 0.34424198, 1.5366756, -0.024834156)
 
 [node name="SM_Prop_Medal_Display_01" parent="props" unique_id=1303044608 instance=ExtResource("12_k3oqm")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.7741656, 1.8154495, 1.5494392)
+script = ExtResource("91_item")
+dialogue = [{
+"speaker": "MEDAL DISPLAY",
+"text": "Valor. Distinguished service. And Marksman of the Year - three years running. Every one polished to a mirror."
+}, {
+"speaker": "DETECTIVE",
+"text": "The kid worships this case. ...Marksman of the year. Hm."
+}]
+prompt_height = 0.4
 
 [node name="SM_Prop_Trophy_03" parent="props" unique_id=1448108501 instance=ExtResource("13_3u5dc")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.618363, 2.0922658, -3.2925317)
@@ -297,9 +297,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.8
 
 [node name="SM_Prop_Plaque_02" parent="props" unique_id=2065141295 instance=ExtResource("15_x3yj8")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.872014, 1.6464664, -1.5015596)
-
-[node name="SM_Prop_Shelf_Wall_01" parent="." unique_id=2117624375 instance=ExtResource("16_my6qi")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.6314607, 1.5464058, -3.75483)
 
 [node name="SM_Prop_Bin_01" parent="props" unique_id=73389085 instance=ExtResource("17_mi53f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8214313, -4.7683716e-07, -3.3937693)
@@ -334,7 +331,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1595922, 0.012151957, -2.99
 [node name="SM_Prop_Shelf_02" parent="props" unique_id=659108115 instance=ExtResource("25_5j0ig")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.530515, -2.3841858e-07, -0.069233656)
 
+[node name="SM_Prop_Shelf_Wall_01" parent="." unique_id=2117624375 instance=ExtResource("16_my6qi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.6314607, 1.5464058, -3.75483)
+
 [node name="SM_Prop_Photo_06" parent="." unique_id=2068231 instance=ExtResource("26_pbr1g")]
+transform = Transform3D(-0.34202012, 0, -0.9396926, 0, 1, 0, 0.9396926, 0, -0.34202012, -1.8187869, 0.80188334, -0.9858415)
 script = ExtResource("91_item")
 dialogue = [{
 "speaker": "FRAMED PHOTO",
@@ -345,9 +346,22 @@ dialogue = [{
 }]
 sets_flag = "know_bday_dog"
 prompt_height = 0.4
-transform = Transform3D(-0.34202012, 0, -0.9396926, 0, 1, 0, 0.9396926, 0, -0.34202012, -1.8187869, 0.80188334, -0.9858415)
 
 [node name="Ambient" type="Node" parent="." unique_id=199100006]
 script = ExtResource("89_ambient")
 sound = "res://audio/ambient/light_static.mp3"
 volume_db = -22.0
+
+[node name="ShelfLamp" type="SpotLight3D" parent="." unique_id=199100012]
+transform = Transform3D(-0.159, -0.76, 0.62, 0, 0.628, 0.77, -0.987, 0.122, -0.1, -3.3, 2.9, -0.4)
+light_color = Color(1, 0.9, 0.75, 1)
+light_energy = 2.6
+shadow_enabled = true
+spot_range = 4.5
+spot_angle = 42.0
+
+[node name="SM_Prop_Books_01" parent="." unique_id=308371569 instance=ExtResource("8_pbr1g")]
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 4.398803, 0.35145164, 0.022587568)
+
+[node name="SM_Prop_Books_02" parent="." unique_id=1548118105 instance=ExtResource("8_pbr1g")]
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 4.398803, 0.7907898, -0.27603158)

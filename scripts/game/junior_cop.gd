@@ -59,15 +59,16 @@ func _ready() -> void:
 	#    recruit beat.
 	if dialogue_variants.is_empty():
 		dialogue_variants = [
-			# --- no leads yet -> the cells / the prisoner ---
+			# --- no leads yet -> the cells / the prisoner. He knows NOTHING
+			# about any murder - only the detective loops. He just gossips.
 			{"lines": [
-				{"speaker": "THE ROOKIE", "text": "A man shot in a SEALED cell? Gives me the creeps. If anybody saw how, it's whoever else is locked up down there."},
-				{"speaker": "DETECTIVE", "text": "The other prisoner. Worth a conversation."},
-				{"speaker": "THE ROOKIE", "text": "Careful in the cell block, yeah? And if you need anything - anything - I'm right here."},
+				{"speaker": "THE ROOKIE", "text": "Whole station's wound up about the witness tonight. They've got the cell block down Hall 2 prepped and everything."},
+				{"speaker": "DETECTIVE", "text": "The cell block. ...Yeah. I know how tonight goes."},
+				{"speaker": "THE ROOKIE", "text": "There's another guest down there too - talkative type, opinions on everybody. And hey, if you need anything - anything - I'm right here."},
 			]},
 			# --- prisoner said interrogation -> point at the observation glass ---
 			{"flag": "inmate_tip", "lines": [
-				{"speaker": "THE ROOKIE", "text": "Interrogation's sealed tight - NO ENTRY, captain's orders. But, uh... the observation room's right next door. Two-way glass."},
+				{"speaker": "THE ROOKIE", "text": "Interrogation's sealed tight - NO ENTRY, captain's orders. But, uh... the observation room's right next door, off Hall 1. Two-way glass."},
 				{"speaker": "DETECTIVE", "text": "You didn't tell me that."},
 				{"speaker": "THE ROOKIE", "text": "Tell you what? I didn't say anything. ...Need anything else, you know where I am."},
 			]},
@@ -102,7 +103,8 @@ func _ready() -> void:
 				{"speaker": "DETECTIVE", "text": "You keep asking if I need anything, kid. ...Actually. I do."},
 				{"speaker": "THE ROOKIE", "text": "...Wait. Really? What do you need?"},
 				{"speaker": "DETECTIVE", "text": "When that clock reads 11:59:45, be in the locker room. Hidden. Not a sound, no matter what you hear - you just remember every word."},
-				{"speaker": "THE ROOKIE", "text": "Locker room. 11:59:45. Invisible. ...I won't let you down, detective."},
+				{"speaker": "DETECTIVE", "text": "And I'll be there holding the PROOF - the package from the evidence room. Your ears, my paper. It takes both, or he buries us both."},
+				{"speaker": "THE ROOKIE", "text": "Locker room. 11:59:45. Invisible. You bring the package. ...I won't let you down, detective."},
 			]},
 			# --- recruited: he makes the meet on his own ---
 			{"flag": "have_rookie", "lines": [
@@ -200,15 +202,36 @@ func _process(delta: float) -> void:
 			play("idle")
 			if anim_player != null:
 				anim_player.speed_scale = 1.0
+			# don't stare at the wall: track the detective when they're
+			# around, otherwise stand facing the room like a person would
+			if _player_body == null:
+				_player_body = get_tree().get_first_node_in_group("player")
+			if _player_body != null:
+				var flat := _player_body.global_position - global_position
+				flat.y = 0.0
+				if flat.length() < 6.0:
+					_face(_player_body.global_position, delta)
+				else:
+					_face(Vector3(0.0, 0.0, 0.0), delta)
 		"staging":
-			# off to the meet: walk to the hiding spot in the locker room
+			# off to the meet: walk to the hiding spot outside the locker room
 			var spot := _stage_target()
 			if _step_toward(spot, 0.2, delta, approach_speed):
 				play("idle")
 				if anim_player != null:
 					anim_player.speed_scale = 1.0
-				# he's hidden and ready - the endgame director reads this
+				# he's hidden and ready - the endgame director reads this.
+				# TRULY hidden: the player's own route to the meet passes his
+				# spot, so he goes invisible until his entrance - the reveal
+				# is "I did, Captain", not passing him in the hallway
 				Flags.set_loop_flag("rookie_staged")
+				visible = false
+				if is_in_group("talkable"):
+					remove_from_group("talkable")
+				# no invisible wall: his blocking capsule sits right on the
+				# player's own path to the meet
+				for cs in find_children("*", "CollisionShape3D", true, false):
+					cs.disabled = true
 				_state = "staged"
 		"staged":
 			play("idle")
@@ -226,9 +249,12 @@ func _process(delta: float) -> void:
 
 
 ## Called by the endgame director mid-confrontation: the rookie was waiting
-## outside the door - now he walks in for "I did, Captain."
+## outside the door, unseen - now he appears and walks in for "I did, Captain."
 func step_in() -> void:
 	if _state == "staged":
+		visible = true
+		for cs in find_children("*", "CollisionShape3D", true, false):
+			cs.disabled = false
 		_state = "step_in"
 
 
@@ -313,7 +339,8 @@ func _pick_intro() -> Dictionary:
 			{"speaker": "DETECTIVE", "text": "You keep asking if I need anything, kid. ...Actually. I do."},
 			{"speaker": "THE ROOKIE", "text": "...Wait. Really? What do you need?"},
 			{"speaker": "DETECTIVE", "text": "When that clock reads 0:15, be in the locker room. Hidden. Not a sound, no matter what you hear - you just remember every word."},
-			{"speaker": "THE ROOKIE", "text": "Locker room. 0:15. Invisible. ...I won't let you down, detective."},
+			{"speaker": "DETECTIVE", "text": "And I'll be there holding the PROOF - the package from the evidence room. Your ears, my paper. It takes both, or he buries us both."},
+			{"speaker": "THE ROOKIE", "text": "Locker room. 0:15. Invisible. You bring the package. ...I won't let you down, detective."},
 		]}
 	if Flags.has_flag("have_rookie"):
 		return {"sets_flag": "", "lines": [

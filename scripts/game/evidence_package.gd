@@ -17,6 +17,9 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 ## the sound of the counterweight swap - chips down, package up
 @export_file("*.wav", "*.ogg", "*.mp3") var pickup_sound := "res://audio/sfx/pickup.mp3"
 @export var pickup_volume_db := -8.0
+## the sliding shelf parked in FRONT of this one - until it's been shoved
+## aside, you can't reach past it to the plate
+@export var blocker_path: NodePath
 
 
 func _ready() -> void:
@@ -26,6 +29,13 @@ func _ready() -> void:
 func interact() -> void:
 	var dlg := get_tree().get_first_node_in_group("dialogue")
 	if dlg == null or dlg.visible:
+		return
+	# the slider in front must be OUT before you can reach the back shelf
+	var blocker := get_node_or_null(blocker_path)
+	if blocker != null and not bool(blocker.get("_out")):
+		dlg.show_dialogue([
+			{"speaker": "DETECTIVE", "text": "There's a whole shelf parked flush in front of this one. I can't reach past it - it'll have to move first."},
+		])
 		return
 	if Flags.has_loop_flag("have_evidence_package"):
 		dlg.show_dialogue([

@@ -22,6 +22,7 @@ const RoomState := preload("res://scripts/game/room.gd")
 
 var _prev_cam: Camera3D
 var _watching := false
+var _closed_frame := -100
 var _hint_layer: CanvasLayer
 var _hint: Label
 var _tint: ColorRect
@@ -32,10 +33,23 @@ func _ready() -> void:
 
 
 func interact() -> void:
+	# already peeking? step back instead of going dead - E toggles, and a
+	# stuck _watching state can never brick the window
 	if _watching:
+		_step_back()
 		return
+	# the E that just closed the peek also unlocks input the same frame -
+	# without this guard it would immediately re-open what it closed
+	if Engine.get_process_frames() - _closed_frame < 5:
+		return
+	# resolve by path, with a tree-wide FALLBACK: exported builds resolved
+	# the instanced-scene NodePath override differently than the editor and
+	# the peek silently did nothing in the .exe
 	var cam := get_node_or_null(peek_camera) as Camera3D
 	if cam == null:
+		cam = get_tree().root.find_child("PeekCamera", true, false) as Camera3D
+	if cam == null:
+		push_error("[window_view] no peek camera found")
 		return
 	_watching = true
 	# claim ESC + block the pause menu while peeking (options_menu checks
@@ -43,7 +57,7 @@ func interact() -> void:
 	add_to_group("active_peek")
 	_prev_cam = get_viewport().get_camera_3d()
 	# reveal interrogation just for the peek, then look through its camera
-	var room := get_node_or_null(peek_room)
+	var room := _resolve_peek_room()
 	if room != null:
 		room.visible = true
 	cam.make_current()
@@ -56,26 +70,27 @@ func interact() -> void:
 	var p := get_tree().get_first_node_in_group("player")
 	if p != null:
 		p.input_locked = true
-	_show_hint("ESC — step back")
+	_show_hint("E / ESC — step back")
 
 
 func _input(event: InputEvent) -> void:
 	if not _watching:
 		return
 	if event is InputEventKey and event.pressed and not event.is_echo() \
-			and event.physical_keycode == KEY_ESCAPE:
+			and (event.physical_keycode == KEY_ESCAPE or event.physical_keycode == KEY_E):
 		get_viewport().set_input_as_handled()
 		_step_back()
 
 
 func _step_back() -> void:
 	_watching = false
+	_closed_frame = Engine.get_process_frames()
 	remove_from_group("active_peek")
 	_set_tint(false)
 	if _hint != null:
 		_hint.visible = false
 	# re-hide interrogation and restore observation's camera
-	var room := get_node_or_null(peek_room)
+	var room := _resolve_peek_room()
 	if room != null and RoomState.current != room:
 		room.visible = false
 	if is_instance_valid(_prev_cam):
@@ -89,6 +104,15 @@ func _step_back() -> void:
 	var p := get_tree().get_first_node_in_group("player")
 	if p != null:
 		p.input_locked = false
+
+
+func _resolve_peek_room() -> Node3D:
+	var room := get_node_or_null(peek_room) as Node3D
+	if room == null:
+		for r in get_tree().get_nodes_in_group("room"):
+			if String(r.name) == "Interrogation":
+				return r as Node3D
+	return room
 
 
 func _show_hint(text: String) -> void:

@@ -11,7 +11,8 @@ extends Area3D
 const Flags := preload("res://scripts/game/flags.gd")
 const Sfx := preload("res://scripts/game/sfx.gd")
 
-## loop time the captain leaves (the door unblocks). Match his schedule.
+## loop time the captain leaves (the door unblocks). Match his schedule:
+## he stays in until 1:00 on the countdown (t120).
 @export var clear_at := 120.0
 ## the door gap, in OFFICE-LOCAL coords (south wall doorway). The slab is
 ## pushed OUT past the wall band on purpose: pressed against it, the player
@@ -20,35 +21,39 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 ## flips while you're still locked out.
 @export var door_local := Vector3(2.5, 1.5, 5.75)
 @export var door_size := Vector3(3.0, 3.0, 0.9)
-@export var line := "Light under the door, blinds drawn tight. CAPTAIN - DO NOT DISTURB. From inside, a growl: 'Occupied, detective.' He never leaves before 2:00 on that clock."
+@export var line := "Light under the door, blinds drawn tight. CAPTAIN - DO NOT DISTURB. From inside, a growl: 'Occupied, detective.' He never leaves before 1:00 on that clock."
 @export var speaker := "CAPTAIN'S OFFICE"
 
 var _clock: Node
 var _room: Node3D
+var _block: StaticBody3D
 var _shape: CollisionShape3D
 var _said := false
 
 
 func _ready() -> void:
-	_room = _find_office()
-	var block := StaticBody3D.new()
+	_block = StaticBody3D.new()
 	_shape = CollisionShape3D.new()
 	var box := BoxShape3D.new()
 	box.size = door_size
 	_shape.shape = box
-	block.add_child(_shape)
-	add_child(block)
-	# the office room sits unrotated in the world, so local offsets add
-	if _room != null:
-		block.global_position = _room.global_position + door_local
-	else:
-		block.position = door_local
+	_block.add_child(_shape)
+	add_child(_block)
+	_block.position = door_local
 
 
 func _process(_delta: float) -> void:
 	if _clock == null:
 		_clock = get_tree().get_first_node_in_group("loop_clock")
 		return
+	# resolve the room LAZILY: at _ready the office hadn't joined the
+	# "room" group yet (children ready before parents), so an eager lookup
+	# always missed - which parked the door slab off-target and measured
+	# the bump line from ~8m away, so the growl never fired
+	if _room == null:
+		_room = _find_office()
+		if _room != null:
+			_block.global_position = _room.global_position + door_local
 	var closed: bool = _clock.time < clear_at
 	if _shape.disabled == closed:
 		_shape.disabled = not closed

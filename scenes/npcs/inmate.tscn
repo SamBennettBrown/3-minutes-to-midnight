@@ -32,7 +32,7 @@ dialogue_variants = [{
 }, {
 "lines": [{
 "speaker": "PRISONER",
-"text": "Your witness? He was in the cell over not ten minutes ago. He's down in interrogation now."
+"text": "Your witness? He was in the cell over not ten minutes ago. He's down in interrogation now - through the bullpen, off HALL 1."
 }, {
 "speaker": "PRISONER",
 "text": "He seemed really nervous, helpless even. He didn't seem to have any confidence in the police's ability to protect him"
@@ -42,4 +42,10 @@ dialogue_variants = [{
 }],
 "once": true,
 "sets_flag": "inmate_tip"
+}, {
+"after": 158.0,
+"lines": [{
+"speaker": "PRISONER",
+"text": "They put your guy in the cell over. ...Anyway. The pipes in this place knock four times before the heat comes on. Three years, you notice things."
+}]
 }]

@@ -26,15 +26,19 @@ const NOTE_FONT := preload("res://fonts/Special_Elite/SpecialElite-Regular.ttf")
 	{"flag": "bound_promise", "title": "THE TRINKET", "when": 0.0,
 		"text": "The Witness slid a small brass charm into my pocket."},
 	{"flag": "know_impossible_death", "title": "THE IMPOSSIBLE DEATH", "when": 1.0,
-		"text": "Shot dead in a sealed cell, every loop. No gun in the room. Start in the cells."},
+		"text": "Shot dead in a sealed cell, every loop. No gun in the room. Start in the cells - down HALL 2."},
 	{"flag": "inmate_tip", "title": "WITNESS IN INTERROGATION", "when": 5.0, "stamp": "UNTIL 2:00",
-		"text": "He's in INTERROGATION until 2:00. Word inside: somebody CLOSE wanted him gone."},
+		"text": "He's in INTERROGATION - off HALL 1 - until 2:00. Word inside: somebody CLOSE wanted him gone."},
+	{"flag": "saw_cams_off", "title": "CAMERAS OFF", "when": 8.0,
+		"text": "Every security feed in the building - dark, all night. That takes a login with rank."},
+	{"flag": "saw_tv_report", "title": "THE LATE REPORT", "when": 10.0,
+		"text": "The defendant's face on every channel. Familiar, somehow. I can't place it."},
 	{"flag": "read_pad_note", "title": "PEOPLE INSIDE", "when": 12.0,
 		"text": "The witness told them plain: the defendant has PEOPLE INSIDE the precinct. It's in the investigator's own notes."},
 	{"flag": "heard_evidence_tip", "title": "OVERHEARD - INTERROGATION", "when": 15.0,
 		"text": "The investigator logged the case file into EVIDENCE for the trial. The whole case, one room over."},
 	{"flag": "know_card_drop", "title": "THE CLERK'S CARD", "when": 30.0, "stamp": "2:30",
-		"text": "Clerk dumps his keycard on the front desk at 2:30. Rosa's boyfriend calls at 2:20 - that's my window."},
+		"text": "Clerk dumps his keycard on the front desk at 2:30. Rosa's boyfriend calls about every half-minute - every call is a window."},
 	{"flag": "seen_stuck_snack", "title": "THE STUCK BAG", "when": 40.0,
 		"text": "PUFFY STARS wedged in the vending machine. About a pound. One shoulder-check."},
 	{"flag": "know_weight_trap", "title": "THE SPRING PLATE", "when": 50.0,
@@ -43,8 +47,14 @@ const NOTE_FONT := preload("res://fonts/Special_Elite/SpecialElite-Regular.ttf")
 		"text": "The defendant is the CAPTAIN'S BROTHER. Family photo in the file. Get the gun from his locker - end this."},
 	{"flag": "captains_locker_open", "title": "0806", "when": 70.0,
 		"text": "The dog's birthday. His locker opens to it - every night."},
-	{"flag": "captain_is_guilty", "title": "NOT A GUN - A HOLE", "when": 120.0, "stamp": "HE MOVES AT 2:00",
-		"text": "A hidden nook behind his locker - a firing hole drilled through to the cells. He leaves his office at 2:00. Midnight ends up RIGHT HERE."},
+	{"flag": "know_bday_wife", "title": "RUTH - JULY 30", "when": 121.0,
+		"text": "The wife. Engraved on the anniversary photo: 'my JULY 30 girl.'"},
+	{"flag": "know_bday_daughter", "title": "MABEL - MARCH 12", "when": 122.0,
+		"text": "The daughter, turning nine, fish half her size. MARCH 12."},
+	{"flag": "know_bday_dog", "title": "DEPUTY BISCUIT - AUGUST 6", "when": 123.0,
+		"text": "The dog. Party hat. 'Born AUGUST 6. Best boy on the force.' The only polished frame on the shelf."},
+	{"flag": "captain_is_guilty", "title": "NOT A GUN - A HOLE", "when": 120.0, "stamp": "HE MOVES AT 1:00",
+		"text": "A hidden nook behind his locker - a firing hole drilled through to the cells. He leaves his office at 1:00. Midnight ends up RIGHT HERE."},
 	{"flag": "taught_death_seen", "title": "HOW TO NAIL HIM", "when": 165.0, "stamp": "0:15",
 		"text": "PACKAGE in hand. ROOKIE hidden and listening. Locker room, 0:15."},
 	{"flag": "saw_wall_shot", "title": "THE SHOT FROM THE WALL", "when": 180.0, "stamp": "0:00",
@@ -70,6 +80,8 @@ var _toast_tween: Tween
 # stomping - the new one hurries the current one off, then takes the spot
 var _toast_queue: Array = []
 var _toast_busy := false
+var _tab_hint: Label
+var _dlg_node: Node
 
 
 func _enter_tree() -> void:
@@ -112,11 +124,58 @@ func _ready() -> void:
 		row.add_child(col)
 		_cols.append(col)
 
+	# how to put the file away - bottom-centre of the page
+	var close_hint := Label.new()
+	close_hint.anchor_left = 0.0
+	close_hint.anchor_right = 1.0
+	close_hint.anchor_top = 1.0
+	close_hint.anchor_bottom = 1.0
+	close_hint.offset_top = -64.0
+	close_hint.offset_bottom = -34.0
+	close_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	close_hint.text = "TAB / J  —  close the file"
+	close_hint.add_theme_font_override("font", NOTE_FONT)
+	close_hint.add_theme_font_size_override("font_size", 20)
+	close_hint.add_theme_color_override("font_color", Color(0.6, 0.58, 0.5))
+	add_child(close_hint)
+
 	visible = false
+
+	# a quiet standing reminder, bottom-right, that the case file exists -
+	# its own low layer so the page, dialogue and menus all cover it
+	var hint_layer := CanvasLayer.new()
+	hint_layer.layer = 103
+	add_child(hint_layer)
+	_tab_hint = Label.new()
+	_tab_hint.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT)
+	_tab_hint.offset_left = -260.0
+	_tab_hint.offset_right = -40.0
+	_tab_hint.offset_top = -64.0
+	_tab_hint.offset_bottom = -34.0
+	_tab_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	_tab_hint.text = "TAB — case file"
+	_tab_hint.add_theme_font_override("font", NOTE_FONT)
+	_tab_hint.add_theme_font_size_override("font_size", 20)
+	_tab_hint.add_theme_color_override("font_color", Color(0.72, 0.7, 0.62))
+	_tab_hint.modulate.a = 0.45
+	_tab_hint.visible = false
+	hint_layer.add_child(_tab_hint)
 
 	# "case file updated" toast - lives outside the journal page so it
 	# shows during play; the layer stays visible, the page doesn't
 	Flags.subscribe(_on_flag_set)
+
+
+func _process(_delta: float) -> void:
+	# the standing TAB hint: only during live play - not on the intro
+	# black, not under a dialogue letterbox, not while the page is open
+	if _tab_hint == null:
+		return
+	if _dlg_node == null:
+		_dlg_node = get_tree().get_first_node_in_group("dialogue")
+	_tab_hint.visible = Flags.has_flag("bound_promise") and not visible \
+			and not (_dlg_node != null and _dlg_node.visible) \
+			and not get_tree().paused
 
 
 func _on_flag_set(flag: String) -> void:

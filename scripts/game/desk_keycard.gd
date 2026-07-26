@@ -40,6 +40,7 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 
 var _clock: Node
 var _glow: OmniLight3D
+var _arrow: Label3D
 var _pulse := 0.0
 var _drop_played := false
 var _prev_time := 999.0
@@ -55,6 +56,17 @@ func _ready() -> void:
 	_glow.omni_range = 1.2
 	_glow.position = Vector3(0, 0.12, 0)
 	add_child(_glow)
+	# a bobbing marker so the card can't be missed on the cluttered desk
+	_arrow = Label3D.new()
+	_arrow.text = "▼"
+	_arrow.font_size = 64
+	_arrow.outline_size = 12
+	_arrow.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+	_arrow.no_depth_test = true
+	_arrow.pixel_size = 0.005
+	_arrow.modulate = Color(1.0, 0.25, 0.2)
+	_arrow.position = Vector3(0, 0.55, 0)
+	add_child(_arrow)
 
 
 func _process(delta: float) -> void:
@@ -92,6 +104,7 @@ func _process(delta: float) -> void:
 		_pulse += delta * 3.0
 		var base: float = glow_energy_safe if Flags.has_loop_flag(safe_flag) else glow_energy
 		_glow.light_energy = base * (0.7 + 0.3 * sin(_pulse))
+		_arrow.position.y = 0.55 + 0.06 * sin(_pulse * 1.4)
 	else:
 		_glow.light_energy = 0.0
 

@@ -150,6 +150,26 @@ func _show_page(page: String) -> void:
 			await get_tree().create_timer(0.2).timeout
 			get_tree().quit())
 	elif page == "main":
+		# the game's name over the pause column - smaller sibling of the
+		# title card, static minute hand still reading 11:57
+		var pfont := load("res://fonts/Special_Elite/SpecialElite-Regular.ttf")
+		var p1 := Label.new()
+		p1.text = "THREE MINUTES"
+		p1.add_theme_font_size_override("font_size", 40)
+		p1.add_theme_color_override("font_color", Color(0.97, 0.97, 0.95))
+		if pfont != null:
+			p1.add_theme_font_override("font", pfont)
+		_box.add_child(p1)
+		var p2 := Label.new()
+		p2.text = "TO MIDNIGHT"
+		p2.add_theme_font_size_override("font_size", 52)
+		p2.add_theme_color_override("font_color", Color(0.97, 0.97, 0.95))
+		if pfont != null:
+			p2.add_theme_font_override("font", pfont)
+		_box.add_child(p2)
+		var gap := Label.new()
+		gap.text = " "
+		_box.add_child(gap)
 		_add_button("CONTINUE", _on_continue)
 		_add_button("SETTINGS", func() -> void: _show_page("settings"))
 		_add_button("CREDITS", _on_credits)

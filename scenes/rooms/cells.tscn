@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://2wic0q1jji0f"]
 
-[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
 [ext_resource type="Texture2D" uid="uid://dnwxfwc21tnud" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Ceiling_Tile_02.png" id="2_0428n"]
 [ext_resource type="PackedScene" uid="uid://dpm8lj0ysqdlg" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Bld_Wall_Door_Cell_01.fbx" id="3_gqlh2"]
@@ -12,8 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://ckgde03t5rxsi" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Table_01.fbx" id="10_gqlh2"]
 [ext_resource type="PackedScene" uid="uid://bvcge065bx5nx" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Sink_Toilet_01.fbx" id="10_y3btd"]
 [ext_resource type="PackedScene" uid="uid://cb2jyycov5rj6" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Bench_03.fbx" id="11_mve0g"]
+[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 [ext_resource type="Script" uid="uid://cv22om4sbyjyj" path="res://scripts/game/auto_collider.gd" id="90_autocol"]
-[ext_resource type="Script" uid="uid://cd8jayk7qqp2v" path="res://scripts/game/flag_gate.gd" id="91_gate"]
 [ext_resource type="FontFile" uid="uid://canmpksdd2ct8" path="res://fonts/Special_Elite/SpecialElite-Regular.ttf" id="98_font"]
 [ext_resource type="Script" uid="uid://fokcbe25o2i3" path="res://scripts/game/floor_label.gd" id="99_label"]
 
@@ -263,7 +262,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.284451, 1.1920929e-07, 0.56
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2770362, 4.0489138e-17, -0.5219816)
 
 [node name="SM_Prop_Bench_03" parent="props" unique_id=1775372875 instance=ExtResource("11_mve0g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4590776, -2.3841858e-07, -4.452217)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7414184, -2.3841858e-07, -4.452217)
 
 [node name="SignHall2" type="Label3D" parent="." unique_id=13901888]
 transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, -3.2546833, 0.02, -0.06278676)

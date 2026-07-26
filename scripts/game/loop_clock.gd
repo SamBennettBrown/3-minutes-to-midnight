@@ -58,6 +58,8 @@ func _enter_tree() -> void:
 
 
 func _ready() -> void:
+	# the score rides the clock - spawned here so no scene wiring is needed
+	add_child(load("res://scripts/game/bg_music.gd").new())
 	var hud := CanvasLayer.new()
 	# ABOVE the intercom banner (102), BELOW the pause menu (105) so the
 	# menu's dim still covers it, and below case-file toasts (104)

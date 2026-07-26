@@ -171,7 +171,8 @@ func _no_evidence_death() -> void:
 			{"speaker": "DETECTIVE", "text": "It's over, Captain. I know what's behind your locker. I know about your brother."},
 			{"speaker": "THE CAPTAIN", "text": "My brother? Show me. Show me one shred of paper that says any of that out loud."},
 			{"speaker": "DETECTIVE", "text": "..."},
-			{"speaker": "THE CAPTAIN", "text": "That's what I thought."},
+			{"speaker": "THE CAPTAIN", "text": "That's what I thought. ...And whoever's breathing back there - you can come out too, son."},
+			{"speaker": "THE ROOKIE", "text": "...Sir, I-"},
 		])
 		await dlg.closed
 		if not is_inside_tree():
