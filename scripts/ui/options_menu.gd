@@ -80,7 +80,9 @@ func _ready() -> void:
 
 	_build_splash()
 	_box = VBoxContainer.new()
-	_box.position = Vector2(70, 420)
+	# pause menu sits higher (it gained a title block); the TITLE SCREEN
+	# keeps its original framing
+	_box.position = Vector2(70, 420 if title_mode else 290)
 	_box.rotation_degrees = -8.0
 	_box.add_theme_constant_override("separation", 18)
 	add_child(_box)

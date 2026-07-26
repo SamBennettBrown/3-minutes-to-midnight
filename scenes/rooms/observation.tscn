@@ -1,22 +1,22 @@
 [gd_scene format=3 uid="uid://bhi6uurcm80er"]
 
-[ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="86_item"]
-[ext_resource type="Script" uid="uid://cv22om4sbyjyj" path="res://scripts/game/auto_collider.gd" id="86_autocol"]
-[ext_resource type="Script" path="res://scripts/game/timed_light.gd" id="88_timedlight"]
-[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
 [ext_resource type="PackedScene" uid="uid://cxc4bmtgj12uj" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Keyboard_01.fbx" id="2_jo3kw"]
 [ext_resource type="Texture2D" uid="uid://hhakklqq20uy" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_01.png" id="3_4rkwm"]
-[ext_resource type="Script" path="res://scripts/game/window_view.gd" id="99_window"]
 [ext_resource type="PackedScene" uid="uid://dtcer0cc3jbgv" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Computer_Monitor_Double_01.fbx" id="5_lei6d"]
 [ext_resource type="PackedScene" uid="uid://da0o675semsa7" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Desk_01.fbx" id="6_yeupe"]
 [ext_resource type="PackedScene" uid="uid://bxa2x1am5erjc" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Camera_Tripod_01.fbx" id="7_yeupe"]
 [ext_resource type="PackedScene" uid="uid://bu287pdpai3v1" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Cord_Desk_01.fbx" id="8_v7ipn"]
 [ext_resource type="PackedScene" uid="uid://c2evd4mirrlbd" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Recorder_01.fbx" id="9_gek3m"]
 [ext_resource type="PackedScene" uid="uid://d1r7rdog0t03h" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Rolling_TV_01.fbx" id="11_43msq"]
+[ext_resource type="Script" uid="uid://cv22om4sbyjyj" path="res://scripts/game/auto_collider.gd" id="86_autocol"]
+[ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="86_item"]
+[ext_resource type="Script" uid="uid://c2j5qjqwbwlw1" path="res://scripts/game/timed_light.gd" id="88_timedlight"]
+[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
+[ext_resource type="Script" uid="uid://bmnvbmilfgvwc" path="res://scripts/game/window_view.gd" id="99_window"]
 
 [sub_resource type="BoxShape3D" id="shape_trigger"]
-size = Vector3(12, 4, 6)
+size = Vector3(11.276489, 4, 5.2403564)
 
 [sub_resource type="BoxMesh" id="mesh_pane"]
 size = Vector3(6, 1.4, 0.06)
@@ -127,13 +127,13 @@ spot_angle = 44.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Shape" type="CollisionShape3D" parent="Trigger" unique_id=949376171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36175537, 0, -0.37982178)
 shape = SubResource("shape_trigger")
 
 [node name="WindowPane" type="MeshInstance3D" parent="." unique_id=278217041]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 1.97)
 mesh = SubResource("mesh_pane")
 surface_material_override/0 = SubResource("mat_pane")
-
 
 [node name="Spots" type="Node3D" parent="." unique_id=1420321063]
 
@@ -160,8 +160,8 @@ sets_flag = "saw_cams_off"
 prompt_height = 0.6
 
 [node name="SM_Prop_Desk_01" parent="." unique_id=2101133561 instance=ExtResource("6_yeupe")]
-script = ExtResource("86_autocol")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9986734, 0, -1.3498406)
+script = ExtResource("86_autocol")
 
 [node name="walls" type="Node3D" parent="." unique_id=1757418906]
 
@@ -261,8 +261,8 @@ shape = SubResource("shape_pillar")
 [node name="probs" type="Node3D" parent="." unique_id=825837620]
 
 [node name="SM_Prop_Camera_Tripod_01" parent="." unique_id=1646655534 instance=ExtResource("7_yeupe")]
-script = ExtResource("86_autocol")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4358847, 0.06857419, 1.4172232)
+script = ExtResource("86_autocol")
 
 [node name="SM_Prop_Cord_Desk_01" parent="." unique_id=1063300300 instance=ExtResource("8_v7ipn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.602775, 0.006146269, -1.5755686)
@@ -271,13 +271,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.602775, 0.006146269, -1.57
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.200063, 0.7565708, -1.4283698)
 
 [node name="SM_Prop_Rolling_TV_01" parent="." unique_id=984121972 instance=ExtResource("11_43msq")]
-script = ExtResource("86_autocol")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1250503, -2.3841858e-07, -1.5638833)
+script = ExtResource("86_autocol")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1793452724]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.1344949, 0)
 
-[node name="MirrorGlass" type="Node3D" parent="."]
+[node name="MirrorGlass" type="Node3D" parent="." unique_id=1975899135]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 1.5)
 script = ExtResource("99_window")
 prompt_height = 0.6
@@ -294,4 +294,3 @@ light_energy = 1.4
 light_volumetric_fog_energy = 1.2
 omni_range = 3.2
 script = ExtResource("88_timedlight")
-off_at = 64.0

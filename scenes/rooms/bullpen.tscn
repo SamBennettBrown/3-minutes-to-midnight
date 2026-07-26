@@ -13,13 +13,13 @@
 [ext_resource type="PackedScene" uid="uid://bvdwbx6ogpqxm" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Plant_04.fbx" id="5_k24ke"]
 [ext_resource type="Script" uid="uid://bv1n8hg2r8lns" path="res://scripts/game/vending_machine.gd" id="5_vend"]
 [ext_resource type="PackedScene" uid="uid://ddp5hken8m17n" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Chair_01.fbx" id="6_k24ke"]
-[ext_resource type="PackedScene" uid="uid://cx30vux0b38nh" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_WaterCooler_01.fbx" id="6_pa6f4"]
 [ext_resource type="PackedScene" uid="uid://cu6tf05ldqfo8" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_WallDressing_03.fbx" id="7_dxihq"]
 [ext_resource type="PackedScene" uid="uid://ca6igge0xoik8" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Computer_Mouse_01.fbx" id="8_e00gw"]
 [ext_resource type="PackedScene" uid="uid://bwcrj1wl56ho6" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Desk_01.fbx" id="8_u612e"]
 [ext_resource type="PackedScene" uid="uid://8rsahuaxkoxs" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Bin_01.fbx" id="9_pw8ye"]
 [ext_resource type="Texture2D" uid="uid://hhakklqq20uy" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_01.png" id="10_7ku34"]
 [ext_resource type="PackedScene" uid="uid://cx3evkwtfbhr0" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Case_File_01.fbx" id="10_7qj14"]
+[ext_resource type="PackedScene" uid="uid://d1krnbm8t6ata" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_NamePlate_01.fbx" id="10_j1ys2"]
 [ext_resource type="PackedScene" uid="uid://spiam0oup4uh" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Filing_Cabinet_01.fbx" id="11_nunqi"]
 [ext_resource type="PackedScene" uid="uid://gg585tw76anp" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Filing_Cabinet_02.fbx" id="12_sey5g"]
 [ext_resource type="PackedScene" uid="uid://bylmyedsd16wo" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Socket_Wall_02.fbx" id="14_tx11r"]
@@ -46,13 +46,17 @@
 [ext_resource type="PackedScene" uid="uid://dk00vlf5jnq8s" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Plant_12.fbx" id="44_tjwcm"]
 [ext_resource type="PackedScene" uid="uid://cuwwjcadwpxpg" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Money_01.fbx" id="46_ubx8u"]
 [ext_resource type="PackedScene" uid="uid://cpsrki1j41ew3" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Bottle_Medium_01.fbx" id="47_2v5py"]
+[ext_resource type="PackedScene" uid="uid://cdall8perem7j" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Table_Round_01.fbx" id="48_frnkp"]
+[ext_resource type="PackedScene" uid="uid://8vkcw2waoeh5" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Donut_Box_01.fbx" id="49_w8t4b"]
+[ext_resource type="PackedScene" uid="uid://d2xc62twu0pay" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Donut_Choc_01.fbx" id="50_qm1wd"]
+[ext_resource type="PackedScene" uid="uid://67ruc5e4kx62" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Paper_Plate_01.fbx" id="51_of1ls"]
 [ext_resource type="Script" uid="uid://cv22om4sbyjyj" path="res://scripts/game/auto_collider.gd" id="90_autocol"]
 
 [sub_resource type="BoxShape3D" id="shape_zone"]
 size = Vector3(9.541699, 4, 10)
 
 [sub_resource type="BoxShape3D" id="shape_trigger"]
-size = Vector3(22, 4, 12)
+size = Vector3(21.331543, 4, 10.555908)
 
 [sub_resource type="BoxMesh" id="mesh_floor"]
 size = Vector3(20.4, 0.2, 10.4)
@@ -158,7 +162,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3043253, 0.114153266, -4.81
 script = ExtResource("5_item")
 dialogue = [{
 "speaker": "DETECTIVE",
-"text": "Commendations. Employee of the Month. Marksmanship, marksmanship, marksmanship... I'm not up here. Not once. Three years."
+"text": "Three years on the force. I'm not up here once."
 }]
 prompt_height = 1.6
 
@@ -242,6 +246,7 @@ spot_angle = 48.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Shape" type="CollisionShape3D" parent="Trigger" unique_id=350621486]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33422852, 0, -0.22937012)
 shape = SubResource("shape_trigger")
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=1823294569]
@@ -249,7 +254,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 script = ExtResource("90_autocol")
 
 [node name="Mesh" type="MeshInstance3D" parent="Floor" unique_id=213437160]
-transform = Transform3D(1.0001711, 0, 0, 0, 1.0001711, 0, 0, 0, 1.0001711, 0.0038895607, -0.0018117428, 0.0007234812)
+transform = Transform3D(1.0001711, 0, 0, 0, 1.0001711, 0, 0, 0, 1.0001711, 0.0041270256, -0.0018117428, 0.0030218363)
 mesh = SubResource("mesh_floor")
 surface_material_override/0 = SubResource("mat_floor")
 
@@ -264,6 +269,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7147694, 0.1, -4.4997263)
 
 [node name="SM_Prop_Chair_01" parent="Floor" unique_id=181482739 instance=ExtResource("6_k24ke")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2682571, 0.1, -1.0821575)
+
+[node name="SM_Prop_NamePlate_01" parent="Floor" unique_id=2136130421 instance=ExtResource("10_j1ys2")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.5158584, 1.0318158, -0.8897034)
+
+[node name="SM_Prop_NamePlate_02" parent="Floor" unique_id=144674204 instance=ExtResource("10_j1ys2")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -4.4271116, 1.0318158, 0.8162987)
 
 [node name="VendingMachine" type="Node3D" parent="." unique_id=1974383668]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9, 0, -4.35)
@@ -402,9 +413,6 @@ yaw_degrees = 0.0
 [node name="Props" type="Node3D" parent="." unique_id=727383514]
 script = ExtResource("90_autocol")
 
-[node name="SM_Prop_WaterCooler_01" parent="Props" unique_id=1803658849 instance=ExtResource("6_pa6f4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1480427, -2.3841858e-07, -4.5667095)
-
 [node name="SM_Prop_WallDressing_03" parent="Props" unique_id=1848508828 instance=ExtResource("7_dxihq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8649797, 1.4647007, -4.81991)
 
@@ -424,7 +432,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.4
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.456719, -2.3841858e-07, 1.9707713)
 
 [node name="SM_Prop_Filing_Cabinet_02" parent="Props" unique_id=553597095 instance=ExtResource("12_sey5g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2856612, 0.015519537, -4.5700502)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9524856, 0.015519537, -4.5700502)
 
 [node name="SM_Prop_Desk_02" parent="Props" unique_id=633464002 instance=ExtResource("8_u612e")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.288097, 1.1920929e-07, -0.10257536)
@@ -529,7 +537,7 @@ transform = Transform3D(1, 0, -5.563627e-08, 0, 1, 0, 5.563627e-08, 0, 1, 0.0624
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07271112, 0.81915426, -0.29889846)
 
 [node name="SM_Prop_Phone_Desk_01" parent="Props/SM_Prop_Desk_09" unique_id=1905573733 instance=ExtResource("23_nnka0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.82483053, 0.8251374, -0.047973156)
+transform = Transform3D(0.9396926, 0, 0.34202012, 0, 1, 0, -0.34202012, 0, 0.9396926, -0.7674606, 0.8251374, 0.07453108)
 
 [node name="SM_Prop_Chair_05" parent="Props/SM_Prop_Desk_09" unique_id=586659902 instance=ExtResource("19_7qj14")]
 transform = Transform3D(-1, 0, -3.1786506e-08, 0, 1, 0, 3.1786506e-08, 0, -1, 0.03847431, -2.3841858e-07, 1.2574837)
@@ -538,13 +546,13 @@ transform = Transform3D(-1, 0, -3.1786506e-08, 0, 1, 0, 3.1786506e-08, 0, -1, 0.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6594357, 0.31999636, -4.7941027)
 
 [node name="SM_Prop_Socket_Wall_03" parent="Props" unique_id=794772221 instance=ExtResource("14_tx11r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5893168, 0.31999636, -4.7941027)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3725321, 0.31999636, -4.7941027)
 
 [node name="SM_Prop_Vending_Machine_01" parent="Props" unique_id=1975981110 instance=ExtResource("3_wqxhk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1024914, -2.3841858e-07, -3.2336712)
 
 [node name="SM_Prop_Vending_Machine_01" parent="Props/SM_Prop_Vending_Machine_01" index="0" unique_id=896319027]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6911602, 0, -1.2360735)
+transform = Transform3D(0.8041558, 0, -0.5944186, 0, 1, 0, 0.5944186, 0, 0.8041558, 3.984311, 0, -0.8721895)
 material_override = ExtResource("4_uxkrv")
 surface_material_override/0 = SubResource("StandardMaterial3D_uxkrv")
 
@@ -578,7 +586,28 @@ prompt_height = 0.6
 examine_sound = "res://audio/ambient/static.wav"
 
 [node name="SM_Prop_Plant_12" parent="Props" unique_id=1353129599 instance=ExtResource("44_tjwcm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.003046, -2.3841858e-07, 4.0474505)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.003046, -2.3841858e-07, 4.402155)
+
+[node name="SM_Prop_Table_Round_01" parent="Props" unique_id=598933044 instance=ExtResource("48_frnkp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.083801, -4.7683716e-07, -4.170999)
+
+[node name="SM_Prop_Donut_Box_02" parent="Props" unique_id=1333807016 instance=ExtResource("49_w8t4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.987319, 0.7431811, -4.318269)
+script = ExtResource("5_item")
+dialogue = [{
+"speaker": "DONUT BOX",
+"text": "A dozen gone, one left. Chocolate."
+}, {
+"speaker": "DETECTIVE",
+"text": "Somebody's saving it."
+}]
+prompt_height = 0.4
+
+[node name="SM_Prop_Donut_Choc_01" parent="Props" unique_id=796750958 instance=ExtResource("50_qm1wd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.257969, 0.7923838, -3.8104923)
+
+[node name="SM_Prop_Paper_Plate_01" parent="Props" unique_id=137745635 instance=ExtResource("51_of1ls")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.219497, 0.75797796, -3.844184)
 
 [node name="Walls" type="Node3D" parent="." unique_id=2071036973]
 
@@ -687,17 +716,17 @@ transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -1.1475394, 1.4232408, 
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.817075, 2.0812998, 0.08726221)
 
 [node name="SM_Prop_Money_01" parent="." unique_id=706789743 instance=ExtResource("46_ubx8u")]
-transform = Transform3D(0.83867055, 0, 0.54463905, 0, 1, 0, -0.54463905, 0, 0.83867055, 2.5318747, 0.8286068, -0.6646568)
+transform = Transform3D(0.83867055, 0, 0.54463905, 0, 1, 0, -0.54463905, 0, 0.83867055, 2.5883198, 0.8286068, 0.6360342)
 
 [node name="SM_Prop_Bottle_Medium_01" parent="." unique_id=594164015 instance=ExtResource("47_2v5py")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5487587, 0.77488947, -0.8934017)
+transform = Transform3D(0.99151665, 0, -0.12997913, 0, 1, 0, 0.12997913, 0, 0.99151665, 2.6052039, 0.77488947, 0.806825)
 script = ExtResource("5_item")
 dialogue = [{
 "speaker": "CHANGE JAR",
-"text": "A jar heavy with quarters, bills wedged under it. Sharpie on the glass: VENDING FUND. TAKE WHAT YOU NEED, LEAVE WHAT YOU OWE."
+"text": "A jar of quarters on somebody's desk. Masking tape label: VENDING MONEY. DO NOT TOUCH."
 }, {
 "speaker": "DETECTIVE",
-"text": "The machine eats half of it and everybody keeps paying. That's the job in a jar."
+"text": "A man with a system. That machine must do good business."
 }]
 prompt_height = 0.4
 

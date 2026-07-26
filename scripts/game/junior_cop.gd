@@ -74,7 +74,7 @@ func _ready() -> void:
 			]},
 			# --- overheard the evidence tip -> a nudge toward the front desk ---
 			{"flag": "heard_evidence_tip", "lines": [
-				{"speaker": "THE ROOKIE", "text": "You've got that locked-door look, detective."},
+				{"speaker": "THE ROOKIE", "text": "Something's eating you, detective."},
 				{"speaker": "THE ROOKIE", "text": "...All I'll say is, the receptionist sees everything that crosses that front desk. Well. ALMOST everything."},
 				{"speaker": "DETECTIVE", "text": "Kid, you might actually be useful."},
 			]},
@@ -87,7 +87,7 @@ func _ready() -> void:
 			# --- found the brother file -> point at the OFFICE (the code) ---
 			{"flag": "found_murder_weapon", "lines": [
 				{"speaker": "THE ROOKIE", "text": "Between us... sometimes I sneak into the captain's office just to look at his medals. Hope I'm that decorated one day."},
-				{"speaker": "THE ROOKIE", "text": "It's a whole shrine in there, honestly. The man acts carved out of granite, but... everything he loves is up on that wall."},
+				{"speaker": "THE ROOKIE", "text": "It's a whole shrine in there, honestly. He acts like nothing touches him, but everything he loves is up on that wall."},
 				{"speaker": "DETECTIVE", "text": "Everything he loves. ...Hm. Kid - anything you need, it's yours. Later."},
 			]},
 			# --- knows about the passage -> the end of the loop ---

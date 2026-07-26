@@ -199,12 +199,14 @@ func _keep_room_current() -> void:
 	var cur = RoomState.current
 	var pos := global_position
 	var best: Node3D = null
-	var best_d := INF
+	var best_d := -INF
 	for r in get_tree().get_nodes_in_group("room"):
 		if not r.contains_floor_point(pos, SEAM):
 			continue
-		var d: float = r.floor_center().distance_to(pos)
-		if d < best_d:
+		# DEEPEST floor wins - the cut lands mid-wall in both directions
+		# instead of holding the small room's camera into the neighbour
+		var d: float = r.floor_depth(pos) if r.has_method("floor_depth") else 0.0
+		if d > best_d:
 			best_d = d
 			best = r
 	# over no floor (doorway sliver / corridor gap): hold the current room,

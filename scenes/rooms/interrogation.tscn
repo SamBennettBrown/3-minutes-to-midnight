@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bbbawywlm2pmq"]
 
-[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
 [ext_resource type="Texture2D" uid="uid://tgud24kwct07" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_03.png" id="2_hboc2"]
 [ext_resource type="PackedScene" uid="uid://b5bdcwksx3dnc" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_NotePad_01.fbx" id="2_xpbmo"]
@@ -10,23 +9,24 @@
 [ext_resource type="PackedScene" uid="uid://qclq44bswwm1" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Coffee_Cup_01.fbx" id="8_oyhdq"]
 [ext_resource type="PackedScene" uid="uid://do5on3g0d1l6u" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Bld_Wall_Window_Blinds_Down_01.fbx" id="9_vt52e"]
 [ext_resource type="PackedScene" uid="uid://8rsahuaxkoxs" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Bin_01.fbx" id="12_owsvw"]
+[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 [ext_resource type="Script" uid="uid://cv22om4sbyjyj" path="res://scripts/game/auto_collider.gd" id="90_autocol"]
 [ext_resource type="Script" uid="uid://cd8jayk7qqp2v" path="res://scripts/game/flag_gate.gd" id="91_gate"]
 [ext_resource type="Script" uid="uid://ya2iepgusbsw" path="res://scripts/game/timed_flag.gd" id="93_timed"]
 [ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="94_item"]
 
 [sub_resource type="BoxShape3D" id="shape_trigger"]
-size = Vector3(9.82, 4, 9.17)
+size = Vector3(9.314175, 4, 8.775918)
 
 [sub_resource type="BoxMesh" id="mesh_floor"]
-size = Vector3(8.888597, 0.2, 7.573535)
+size = Vector3(9.418597, 0.2, 7.573535)
 
 [sub_resource type="StandardMaterial3D" id="mat_floor"]
 albedo_color = Color(0.13, 0.135, 0.155, 1)
 roughness = 0.9
 
 [sub_resource type="BoxShape3D" id="shape_floor"]
-size = Vector3(8.921213, 0.2, 7.716113)
+size = Vector3(9.451213, 0.2, 7.716113)
 
 [sub_resource type="BoxMesh" id="mesh_sill"]
 size = Vector3(10, 1, 0.3)
@@ -117,19 +117,19 @@ spot_angle = 36.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Shape" type="CollisionShape3D" parent="Trigger" unique_id=1443943797]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2730894, 0, -1.4132323)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020176888, 0, -1.2161913)
 shape = SubResource("shape_trigger")
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=283047511]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.52967, -0.1, 0)
 
 [node name="Mesh" type="MeshInstance3D" parent="Floor" unique_id=1990087968]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6055894, 0, -1.4132323)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8705894, 0, -1.4132323)
 mesh = SubResource("mesh_floor")
 surface_material_override/0 = SubResource("mat_floor")
 
 [node name="Shape" type="CollisionShape3D" parent="Floor" unique_id=1477011250]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.589366, 0, -1.3419433)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.854366, 0, -1.3419433)
 shape = SubResource("shape_floor")
 
 [node name="WindowSill" type="StaticBody3D" parent="." unique_id=1745813268]
@@ -258,10 +258,10 @@ transform = Transform3D(0.97437006, 0, 0.22495104, 0, 1, 0, -0.22495104, 0, 0.97
 script = ExtResource("94_item")
 dialogue = [{
 "speaker": "NOTEPAD",
-"text": "The investigator's shorthand, torn mid-page. One line underlined twice: witness claims the defendant has PEOPLE INSIDE the precinct."
+"text": "The investigator's notes, torn mid-page. One line underlined twice: witness claims the defendant has PEOPLE INSIDE the precinct."
 }, {
 "speaker": "DETECTIVE",
-"text": "People inside. ...He said it to their faces, and they wrote it down like weather."
+"text": "People inside. He told them to their faces. They wrote it down and moved on."
 }]
 sets_flag = "read_pad_note"
 prompt_height = 0.35

@@ -32,13 +32,14 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 @export var locker_room_name := "LockerRoom"
 
 ## the lesson shown on the taught death
-@export var taught_line := "He'd shoot me and call it self-defence - my word against a captain's, and I'm the one who ends up in a cell. I can't take him alone. I need someone who lives to see this."
+@export var taught_line := "He shot me and he'll call it self-defence - my word against a captain's. I can't take him alone. I need a witness of my own in that room."
 ## the lesson when the rookie was hidden but your hands were empty
-@export var no_evidence_line := "Words are wind. I need the PROOF in my hand - the package from the evidence room, the photo of him and his brother. Grab it first, THEN corner him."
+@export var no_evidence_line := "Talk means nothing without the paper. I need the package from the evidence room IN MY HAND - the photo of him and his brother. Grab it first, then corner him."
 
 var _clock: Node
 var _fired := false
 var _pulse := false
+var _kicked := false
 
 
 func _enter_tree() -> void:
@@ -52,8 +53,11 @@ func _process(_delta: float) -> void:
 		_clock = get_tree().get_first_node_in_group("loop_clock")
 		if _clock == null:
 			return
-	# gate 1: you must have proven his guilt. No stumbling into the ending.
+	# gate 1: you must have proven his guilt. No stumbling into the ending -
+	# but he doesn't just VANISH in front of you either: without the proof,
+	# loitering in his locker room at his hour gets you thrown out.
 	if not Flags.has_flag("captain_is_guilty"):
+		_maybe_kick_out()
 		return
 	# gate 2: the intercept window (2:45-3:00)
 	var t: float = _clock.time
@@ -108,6 +112,41 @@ func _intercept(captain: Node3D) -> void:
 		_taught_death()
 
 
+# no proof yet, but standing in his locker room during the final window:
+# the captain throws you out to the hallway instead of vanishing in front
+# of you. Once per loop; without this he'd disappear before your eyes.
+func _maybe_kick_out() -> void:
+	if _kicked or _clock == null:
+		return
+	# from the moment he's settled in for his "shower" (~0:30) to the end
+	var t: float = _clock.time
+	if t < 152.0 or t > window_end:
+		return
+	var player: Node3D = get_tree().get_first_node_in_group("player")
+	var locker := _find_room(locker_room_name)
+	if player == null or locker == null \
+			or not locker.contains_point(player.global_position, 0.0):
+		return
+	var captain := _find_captain()
+	if captain == null or not captain.visible:
+		return
+	_kicked = true
+	var dlg := get_tree().get_first_node_in_group("dialogue")
+	if dlg != null and not dlg.visible:
+		dlg.show_dialogue([
+			{"speaker": "THE CAPTAIN", "text": "Shower time, detective. Locker room's mine till midnight. Out. NOW."},
+		])
+		await dlg.closed
+		if not is_inside_tree():
+			return
+	# deposited in the hall outside the door
+	var spot: Node3D = get_tree().root.find_child("Hall2", true, false)
+	if spot != null:
+		var m: Node3D = spot.find_child("DoorLocker", true, false)
+		if m != null and player != null:
+			player.global_position = m.global_position + Vector3(-0.4, 0.0, -0.8)
+
+
 # the slow pulse under the confrontation. Pauses with the tree (dialogue
 # up = silence between lines), dies with the scene when the loop ends.
 func _start_heartbeat() -> void:
@@ -136,7 +175,7 @@ func _nook_death() -> void:
 			return
 	var lose := get_tree().get_first_node_in_group("lose_screen")
 	if lose != null:
-		lose.play_lose("His nook. His hour. He walked in BEHIND me and that was that. If I want to catch him, I wait OUTSIDE the locker - in the locker room - not inside his own pocket.")
+		lose.play_lose("He came in behind me and I never heard a thing. Next time I wait in the LOCKER ROOM - not inside that closet.")
 
 
 # --- alone: the lesson ---

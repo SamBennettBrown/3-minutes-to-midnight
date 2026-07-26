@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://begwrj6a1y2p2"]
 
-[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
 [ext_resource type="Texture2D" uid="uid://dpy4d6umynf7p" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_04.png" id="2_0q2jt"]
 [ext_resource type="FontFile" uid="uid://canmpksdd2ct8" path="res://fonts/Special_Elite/SpecialElite-Regular.ttf" id="2_font"]
@@ -9,10 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://bdxqcvxyegxe3" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Security_Camera_01.fbx" id="5_0q2jt"]
 [ext_resource type="PackedScene" uid="uid://bsmsen2fessyk" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Plaques_01.fbx" id="7_ywrge"]
 [ext_resource type="PackedScene" uid="uid://bmx5ldjbp7w01" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Plaque_01.fbx" id="9_5qy3e"]
+[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 [ext_resource type="Script" uid="uid://bwnu42umx4iip" path="res://scripts/game/cam_zone.gd" id="92_zone"]
 
 [sub_resource type="BoxShape3D" id="shape_trigger"]
-size = Vector3(6, 4, 26)
+size = Vector3(5.416992, 4, 25.485474)
 
 [sub_resource type="BoxMesh" id="mesh_glow_v"]
 size = Vector3(0.7, 0.06, 2)
@@ -128,6 +128,7 @@ spot_angle = 46.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Shape" type="CollisionShape3D" parent="Trigger" unique_id=866255207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2915039, 0, -0.25726318)
 shape = SubResource("shape_trigger")
 
 [node name="DoorGlowInterrogation" type="MeshInstance3D" parent="." unique_id=409249424]

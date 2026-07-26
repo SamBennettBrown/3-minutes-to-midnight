@@ -140,6 +140,24 @@ func contains_floor_point(p: Vector3, margin := 0.0) -> bool:
 	return false
 
 
+# how deep inside this room's floor footprint a point is - metres to the
+# nearest floor edge, negative when outside. The resolver gives the camera
+# to whichever room the player is DEEPEST inside, which lands the cut at
+# the middle of a shared wall in BOTH directions. (The old nearest-centre
+# tie-break biased toward small rooms: their centre stays closer through
+# the whole doorway band, so the camera held on late and the player walked
+# into the hidden neighbour's black for half a metre.)
+func floor_depth(p: Vector3) -> float:
+	var best := -999.0
+	for cs in _floor_cs_list:
+		if not (cs.shape is BoxShape3D):
+			continue
+		var local := cs.global_transform.affine_inverse() * p
+		var e: Vector3 = cs.shape.size * 0.5
+		best = maxf(best, minf(e.x - absf(local.x), e.z - absf(local.z)))
+	return best
+
+
 # world-space centre of this room's FLOOR - the resolver tie-breaks on the
 # nearest floor centre when two floors' margins overlap at a doorway
 func floor_center() -> Vector3:

@@ -17,21 +17,23 @@
 [ext_resource type="PackedScene" uid="uid://cigsniqoxwphx" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Shelf_Wall_01.fbx" id="16_my6qi"]
 [ext_resource type="PackedScene" uid="uid://fx2jy8g25tlo" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Bin_01.fbx" id="17_mi53f"]
 [ext_resource type="PackedScene" uid="uid://ddp5hken8m17n" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Chair_01.fbx" id="18_i28kd"]
-[ext_resource type="PackedScene" uid="uid://bfmfbqagobqsv" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Table_02.fbx" id="19_cjsbr"]
 [ext_resource type="PackedScene" uid="uid://dxe3biom7anpv" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Poster_01.fbx" id="20_ber57"]
 [ext_resource type="PackedScene" uid="uid://bw2y0uuw1pu3m" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Poster_02.fbx" id="21_533u3"]
 [ext_resource type="PackedScene" uid="uid://cl2jcuw403fro" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Poster_03.fbx" id="22_xmgkq"]
-[ext_resource type="PackedScene" uid="uid://cadwmmg63m2w0" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Plant_01.fbx" id="23_rb24r"]
 [ext_resource type="PackedScene" uid="uid://cyxqk3654t66u" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Bld_Floor_Carpet_01.fbx" id="24_72qvo"]
 [ext_resource type="PackedScene" uid="uid://bqmemrvvsnpqr" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Shelf_02.fbx" id="25_5j0ig"]
 [ext_resource type="PackedScene" uid="uid://cwf7cshrjaoj6" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Photo_06.fbx" id="26_pbr1g"]
+[ext_resource type="PackedScene" uid="uid://bilde340q6lqr" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Poster_Stocks_01.fbx" id="29_k3oqm"]
+[ext_resource type="PackedScene" uid="uid://c4loj2uw2jynv" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Pot_Plant_02.fbx" id="30_3u5dc"]
+[ext_resource type="PackedScene" uid="uid://7e52b03gakxr" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Shelf_01.fbx" id="31_hgee8"]
+[ext_resource type="PackedScene" uid="uid://d1krnbm8t6ata" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_NamePlate_01.fbx" id="32_3u5dc"]
 [ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 [ext_resource type="Script" uid="uid://cv22om4sbyjyj" path="res://scripts/game/auto_collider.gd" id="90_autocol"]
 [ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="91_item"]
 [ext_resource type="Script" uid="uid://pn4gs3rlpbrc" path="res://scripts/game/office_ward.gd" id="92_ward"]
 
 [sub_resource type="BoxShape3D" id="shape_trigger"]
-size = Vector3(12, 4, 12)
+size = Vector3(12, 4, 11.088867)
 
 [sub_resource type="BoxShape3D" id="shape_ward"]
 size = Vector3(8, 3, 6)
@@ -124,6 +126,7 @@ spot_angle = 44.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Shape" type="CollisionShape3D" parent="Trigger" unique_id=18899253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.4555664)
 shape = SubResource("shape_trigger")
 
 [node name="OfficeWard" type="Area3D" parent="." unique_id=104397291]
@@ -307,9 +310,6 @@ transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -0.3
 [node name="SM_Prop_Chair_02" parent="props" unique_id=1875764045 instance=ExtResource("18_i28kd")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -0.58355474, 0, -2.5403004)
 
-[node name="SM_Prop_Table_02" parent="props" unique_id=1329187747 instance=ExtResource("19_cjsbr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4395666, 0, -3.3292804)
-
 [node name="SM_Prop_Poster_01" parent="props" unique_id=891489112 instance=ExtResource("20_ber57")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0705538, 1.4892466, -4.8199997)
 
@@ -318,9 +318,6 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.6
 
 [node name="SM_Prop_Poster_03" parent="props" unique_id=161479302 instance=ExtResource("22_xmgkq")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.8161597, 2.069555, 1.5757822)
-
-[node name="SM_Prop_Plant_01" parent="props" unique_id=322315820 instance=ExtResource("23_rb24r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.098475695, 2.3841858e-07, 4.01083)
 
 [node name="SM_Bld_Floor_Carpet_01" parent="props" unique_id=396877523 instance=ExtResource("24_72qvo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1595922, 0.012151957, 2.0049632)
@@ -365,3 +362,17 @@ transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08
 
 [node name="SM_Prop_Books_02" parent="." unique_id=1548118105 instance=ExtResource("8_pbr1g")]
 transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 4.398803, 0.7907898, -0.27603158)
+
+[node name="SM_Prop_Poster_Stocks_01" parent="." unique_id=776536174 instance=ExtResource("29_k3oqm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.5444498, 2.1237173, 4.8020153)
+
+[node name="SM_Prop_Pot_Plant_02" parent="." unique_id=533716724 instance=ExtResource("30_3u5dc")]
+script = ExtResource("90_autocol")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2137773, 0, 4.149464)
+
+[node name="SM_Prop_Shelf_01" parent="." unique_id=662329713 instance=ExtResource("31_hgee8")]
+script = ExtResource("90_autocol")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1516733, -2.0027161e-07, 4.338046)
+
+[node name="SM_Prop_NamePlate_01" parent="." unique_id=2136130421 instance=ExtResource("32_3u5dc")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.4351978, 0.85914016, -1.0723913)

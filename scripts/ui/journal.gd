@@ -47,6 +47,10 @@ const NOTE_FONT := preload("res://fonts/Special_Elite/SpecialElite-Regular.ttf")
 		"text": "The defendant is the CAPTAIN'S BROTHER. Family photo in the file. Get the gun from his locker - end this."},
 	{"flag": "captains_locker_open", "title": "0806", "when": 70.0,
 		"text": "The dog's birthday. His locker opens to it - every night."},
+	{"flag": "read_clipping", "title": "ONE WITNESS LEFT", "when": 6.0,
+		"text": "He's walked before - evidence went missing, the case dissolved. Only one witness is left willing to talk. Mine."},
+	{"flag": "know_shower_alibi", "title": "THE MIDNIGHT SHOWER", "when": 118.0, "stamp": "11:58",
+		"text": "The captain takes the locker room at midnight sharp. Every night, without fail."},
 	{"flag": "know_bday_wife", "title": "RUTH - JULY 30", "when": 121.0,
 		"text": "The wife. Engraved on the anniversary photo: 'my JULY 30 girl.'"},
 	{"flag": "know_bday_daughter", "title": "MABEL - MARCH 12", "when": 122.0,
@@ -150,10 +154,10 @@ func _ready() -> void:
 	_tab_hint.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT)
 	_tab_hint.offset_left = -260.0
 	_tab_hint.offset_right = -40.0
-	_tab_hint.offset_top = -64.0
+	_tab_hint.offset_top = -92.0
 	_tab_hint.offset_bottom = -34.0
 	_tab_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	_tab_hint.text = "TAB — case file"
+	_tab_hint.text = "TAB — case file\nESC — options"
 	_tab_hint.add_theme_font_override("font", NOTE_FONT)
 	_tab_hint.add_theme_font_size_override("font_size", 20)
 	_tab_hint.add_theme_color_override("font_color", Color(0.72, 0.7, 0.62))

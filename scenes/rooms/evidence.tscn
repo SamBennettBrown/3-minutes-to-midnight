@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bvqg52jo5vyto"]
 
+[ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="96_item"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
 [ext_resource type="Script" path="res://scripts/game/room_ambient.gd" id="1_ambient"]
 [ext_resource type="Texture2D" uid="uid://tgud24kwct07" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_03.png" id="4_4fv0t"]
@@ -280,3 +281,21 @@ light_volumetric_fog_energy = 1.6
 shadow_enabled = true
 spot_range = 5.5
 spot_angle = 40.0
+
+[node name="Peek" type="Node3D" parent="propshelf2" unique_id=199100021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0.05)
+script = ExtResource("96_item")
+dialogue = [{
+"speaker": "DETECTIVE",
+"text": "Tagged and logged, every box. This is the paperwork that gets filed right. Not what I'm after."
+}]
+prompt_height = 1.4
+
+[node name="Peek" type="Node3D" parent="propshelf3" unique_id=199100022]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0.05)
+script = ExtResource("96_item")
+dialogue = [{
+"speaker": "DETECTIVE",
+"text": "Old case boxes, dust on the lids. Nothing buried here."
+}]
+prompt_height = 1.4

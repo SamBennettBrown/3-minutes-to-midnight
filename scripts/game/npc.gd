@@ -294,6 +294,11 @@ func _do_bark(b: Dictionary) -> void:
 		Sfx.play_at(self, snd, -6.0, float(b.get("sound_len", 7.0)))
 	var flag := String(b.get("flag", ""))
 	if flag != "":
+		# the flag only lands if the player could actually WITNESS the line:
+		# close enough AND this character is being rendered (same room, or
+		# revealed through the observation peek). Standing in the hallway
+		# behind a wall within earshot must not grant the clue.
 		var p := get_tree().get_first_node_in_group("player")
-		if p != null and global_position.distance_to(p.global_position) <= float(b.get("hear_range", 6.0)):
+		if p != null and global_position.distance_to(p.global_position) <= float(b.get("hear_range", 6.0)) \
+				and model != null and model.is_visible_in_tree():
 			Flags.set_flag(flag)

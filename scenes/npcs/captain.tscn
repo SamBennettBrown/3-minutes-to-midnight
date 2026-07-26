@@ -33,6 +33,10 @@ barks = [{
 "t": 20.0,
 "text": "Not now, detective. Paperwork. Chain of custody doesn't file itself."
 }, {
+"sound": "res://audio/sfx/door_close.mp3",
+"sound_len": 2.0,
+"t": 122.5
+}, {
 "dur": 4.0,
 "t": 127.0,
 "text": "Long night, people. Do your jobs and go home."
@@ -89,6 +93,21 @@ schedule = [{
 "clip": "idle",
 "spot": "LockerRoom/CaptainsLockerSpot",
 "t": 400.0
+}]
+dialogue_variants = [{
+"lines": [{
+"speaker": "THE CAPTAIN",
+"text": "I'm busy, detective. Whatever it is, it waits. Out."
+}]
+}, {
+"after": 121.0,
+"lines": [{
+"speaker": "THE CAPTAIN",
+"text": "Off the clock, detective. Midnight shower - same time every night. Only part of the day that's mine."
+}, {
+"speaker": "DETECTIVE",
+"text": "Don't let me keep you, Captain."
+}]
 }]
 dialogue = [{
 "speaker": "THE CAPTAIN",

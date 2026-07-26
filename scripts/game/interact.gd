@@ -22,8 +22,12 @@ static func nearest(tree: SceneTree, from: Vector3, reach := Tuning.INTERACT_RAN
 		var d: float = from.distance_to(n.global_position)
 		if d >= best:
 			continue
+		# NEGATIVE margin: neighbouring floors overlap ~0.4m under shared
+		# walls, so a positive margin let you grab bullpen wall props from
+		# inside evidence. Shrinking the footprint keeps interactions
+		# strictly inside the room you're standing in.
 		if room != null and room.has_method("contains_floor_point") \
-				and not room.contains_floor_point(n.global_position, 0.5):
+				and not room.contains_floor_point(n.global_position, -0.2):
 			continue
 		best = d
 		found = n

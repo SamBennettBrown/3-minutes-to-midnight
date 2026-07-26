@@ -104,14 +104,18 @@ func _place_halo(anchor: Vector3) -> void:
 func _compute_anchor_offset(n: Node3D) -> Vector3:
 	if n.has_method("get_conversation"):
 		return Vector3.ZERO  # a character - origin is fine
+	# weighted by mesh SIZE: a prop's small trim meshes (the TV's glass
+	# pane) must not drag the anchor off the body
 	var center := Vector3.ZERO
-	var count := 0
+	var weight := 0.0
 	for m in n.find_children("*", "MeshInstance3D", true, false):
-		center += m.global_transform * m.get_aabb().get_center()
-		count += 1
-	if count == 0:
+		var aabb: AABB = m.get_aabb()
+		var w: float = maxf(aabb.size.x * aabb.size.y * aabb.size.z, 0.001)
+		center += (m.global_transform * aabb.get_center()) * w
+		weight += w
+	if weight <= 0.0:
 		return Vector3.ZERO
-	center /= count
+	center /= weight
 	# XZ only - height still comes from the origin + prompt_height
 	var off := center - n.global_position
 	off.y = 0.0

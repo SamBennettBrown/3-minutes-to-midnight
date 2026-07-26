@@ -26,8 +26,15 @@ var _clock: Node
 var _dlg: Node
 var _in_dialogue := false
 
+# exactly ONE score may exist - a restart mid-dialogue once left two beds
+# running over each other
+static var _live: Node
+
 
 func _ready() -> void:
+	if is_instance_valid(_live) and _live != self:
+		_live.queue_free()
+	_live = self
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	if not ResourceLoader.exists(TRACK):
 		set_process(false)
@@ -77,7 +84,14 @@ func _process(_delta: float) -> void:
 	if not _main.playing:
 		_main.play(fmod(float(_clock.time), _track_len()))
 	if _in_dialogue:
+		# self-heal: if the dialogue is actually gone (scene churn, restart)
+		# the slow variant must not linger under the fresh main track
+		if _dlg == null or not is_instance_valid(_dlg) or not _dlg.visible:
+			_on_dialogue_close()
 		return
+	if _under != null and _under.playing:
+		# never both at once outside a dialogue
+		_under.stop()
 	# outside dialogue: the music pauses whenever the world does (menus,
 	# journal, keypad), and re-syncs to the clock on the way back in
 	var want_paused: bool = get_tree().paused

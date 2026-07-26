@@ -27,7 +27,7 @@ push_in_time = 0.7
 dialogue_variants = [{
 "lines": [{
 "speaker": "PRISONER",
-"text": "I sure would love some PUFFY STARS right about now, I wonder if there's some in the vending machine"
+"text": "Three minutes to midnight and nobody in this building can sit still. You feel it too, right, detective?"
 }]
 }, {
 "lines": [{
@@ -38,7 +38,7 @@ dialogue_variants = [{
 "text": "He seemed really nervous, helpless even. He didn't seem to have any confidence in the police's ability to protect him"
 }, {
 "speaker": "DETECTIVE",
-"text": "Interrogation. Somebody with a badge, a schedule, and three minutes. Let's go have a look."
+"text": "Interrogation, off Hall 1. Worth a look."
 }],
 "once": true,
 "sets_flag": "inmate_tip"

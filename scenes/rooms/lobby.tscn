@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://cgxnessn3xq7o"]
 
-[ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="87_item"]
+[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="1_ambient"]
 [ext_resource type="Script" uid="uid://0vxeo4crdm1y" path="res://scripts/game/desk_keycard.gd" id="1_deskcard"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
-[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="1_ambient"]
 [ext_resource type="FontFile" uid="uid://canmpksdd2ct8" path="res://fonts/Special_Elite/SpecialElite-Regular.ttf" id="2_font"]
 [ext_resource type="Texture2D" uid="uid://bqad1yykn7qqy" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Floor_Carpet_03.png" id="2_fqlfb"]
 [ext_resource type="Script" uid="uid://fokcbe25o2i3" path="res://scripts/game/floor_label.gd" id="3_label"]
@@ -32,10 +31,11 @@
 [ext_resource type="PackedScene" uid="uid://fx2jy8g25tlo" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Bin_01.fbx" id="28_lh884"]
 [ext_resource type="PackedScene" uid="uid://bbkbjl3rgxvgf" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Prop_Coffee_Machine_Dripper_01.fbx" id="29_xq4x3"]
 [ext_resource type="PackedScene" uid="uid://c0ixfpv1sv2gg" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_Cup_Coffee_Disposable_Open_Full_01.fbx" id="30_wesrb"]
+[ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="87_item"]
 [ext_resource type="Script" uid="uid://cv22om4sbyjyj" path="res://scripts/game/auto_collider.gd" id="90_autocol"]
 
 [sub_resource type="BoxShape3D" id="shape_trigger"]
-size = Vector3(12, 4, 12)
+size = Vector3(12, 4, 11.510254)
 
 [sub_resource type="BoxMesh" id="mesh_floor"]
 size = Vector3(10.4, 0.2, 10.4)
@@ -136,6 +136,7 @@ spot_angle = 48.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Shape" type="CollisionShape3D" parent="Trigger" unique_id=482218510]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.24487305)
 shape = SubResource("shape_trigger")
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=130279707]
@@ -362,10 +363,10 @@ transform = Transform3D(0.9781476, 0, 0.2079117, 0, 1, 0, -0.2079117, 0, 0.97814
 script = ExtResource("87_item")
 dialogue = [{
 "speaker": "MAGAZINE",
-"text": "Dog-eared cover story: 'TRIAL OF THE DECADE.' A profile of the defendant - came up from nothing, they say. Him and a brother nobody can find a photo of."
+"text": "Dog-eared cover story: 'TRIAL OF THE DECADE.' A profile of the defendant. No family, no record, no history - the man came out of nowhere. A ghost."
 }, {
 "speaker": "DETECTIVE",
-"text": "A brother nobody can find a photo of. Huh."
+"text": "Nobody comes out of nowhere."
 }]
 prompt_height = 0.35
 
@@ -380,7 +381,7 @@ dialogue = [{
 "text": "A fresh pot, still steaming. A little sign: FOR OUR VISITORS."
 }, {
 "speaker": "DETECTIVE",
-"text": "Fresh coffee for the visitors. We get the stale stuff. ...No wonder the kid's coffee tastes like evidence."
+"text": "Fresh coffee for the visitors. We get the stale stuff."
 }]
 prompt_height = 0.7
 

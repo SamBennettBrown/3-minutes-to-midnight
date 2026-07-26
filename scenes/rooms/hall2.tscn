@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bjno51ebqavpw"]
 
-[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 [ext_resource type="Script" uid="uid://bvl282lgnfccp" path="res://scripts/game/room.gd" id="1_room"]
 [ext_resource type="Texture2D" uid="uid://brya1xpufru8p" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Floor_Tile_05.png" id="2_23kvc"]
 [ext_resource type="Texture2D" uid="uid://dpy4d6umynf7p" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/Textures/Walls_Floors/PolygonPoliceStation_Wall_04.png" id="2_fod6d"]
@@ -9,9 +8,10 @@
 [ext_resource type="Script" uid="uid://fokcbe25o2i3" path="res://scripts/game/floor_label.gd" id="3_label"]
 [ext_resource type="PackedScene" uid="uid://7b4tlg636hx3" path="res://POLYGON_Office_SourceFiles_v4/SourceFiles/FBX/SM_Prop_WallDressing_Clean_01.fbx" id="9_r27p1"]
 [ext_resource type="PackedScene" uid="uid://13fmk5k7m3dl" path="res://POLYGON_Police_Station_SourceFiles_v3/SourceFiles/FBX/SM_Sign_Lockers_01.fbx" id="10_r27p1"]
+[ext_resource type="Script" uid="uid://maee1vsruk4e" path="res://scripts/game/room_ambient.gd" id="89_ambient"]
 
 [sub_resource type="BoxShape3D" id="shape_trigger"]
-size = Vector3(17, 4, 6)
+size = Vector3(15.518646, 4, 5.3721924)
 
 [sub_resource type="BoxMesh" id="mesh_floor"]
 size = Vector3(15.4, 0.2, 4.4)
@@ -120,6 +120,7 @@ spot_angle = 46.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Shape" type="CollisionShape3D" parent="Trigger" unique_id=472340131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014297485, 0, -0.3139038)
 shape = SubResource("shape_trigger")
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=602635736]

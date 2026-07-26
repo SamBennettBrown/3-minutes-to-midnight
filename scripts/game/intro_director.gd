@@ -17,9 +17,9 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 @export var monologue := [
 	"That sound again.",
 	"Three minutes to midnight. My shift's almost over - but no matter what I do, it's always the same.",
-	"I got my witness his justice, the protection he needed. He was so thankful he pressed this into my hand. A family heirloom.",
-	"Then it happens. He's killed in the cell block - and there's no one in there but a prisoner with no gun.",
-	"He's walked in, everyone leaves. A minute later he's dead. And when the clock strikes twelve, it's 11:57 again.",
+	"I got my witness his day in court, and the protection that came with it. He was so grateful he pressed this into my hand. A family heirloom.",
+	"Then it happens. He's shot dead in the cell block - and there's nobody in there but a prisoner with no gun.",
+	"They walk him in, everyone leaves, and a minute later he's dead. When the clock strikes twelve, it's 11:57 again.",
 	"I could throw this thing in the trash and be done with it. But this is the job.",
 	"So. Here we go again.",
 ]

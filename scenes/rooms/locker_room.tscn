@@ -405,6 +405,16 @@ transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8
 
 [node name="SM_Sign_Paper_04" parent="." unique_id=1646970483 instance=ExtResource("14_nj7pm")]
 transform = Transform3D(0.9781476, 0, 0.2079117, 0, 1, 0, -0.2079117, 0, 0.9781476, 2.3751152, 0.4970703, -1.8037541)
+script = ExtResource("91_item")
+dialogue = [{
+"speaker": "NEWS CLIPPING",
+"text": "A folded column, months old: 'STING COLLAPSES - ALLEGED KINGPIN WALKS AGAIN. Case dissolved after key evidence went missing. Prosecutors say only ONE witness remains willing to testify.'"
+}, {
+"speaker": "DETECTIVE",
+"text": "Evidence goes missing, cases dissolve, and the man walks. One witness left. Mine."
+}]
+sets_flag = "read_clipping"
+prompt_height = 0.35
 
 [node name="SM_Sign_Stickynote_02" parent="." unique_id=635035461 instance=ExtResource("15_4xbq2")]
 transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 4.165031, 1.4733686, 2.142148)

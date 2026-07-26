@@ -22,11 +22,36 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	add_to_group("keypad_ui")
 	_mono_font = load("res://fonts/Fira_Code/FiraCode-VariableFont_wght.ttf")
+	# a dark wash so the pad owns the screen while it's up
+	var dim := ColorRect.new()
+	dim.color = Color(0, 0, 0, 0.6)
+	dim.anchor_right = 1.0
+	dim.anchor_bottom = 1.0
+	dim.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(dim)
 	_box = VBoxContainer.new()
-	_box.position = Vector2(70, 280)
-	_box.rotation_degrees = -8.0
+	# CENTRED - the lock is the whole moment
+	_box.anchor_left = 0.5
+	_box.anchor_right = 0.5
+	_box.anchor_top = 0.5
+	_box.anchor_bottom = 0.5
+	_box.offset_left = -140.0
+	_box.offset_top = -220.0
+	_box.rotation_degrees = -4.0
 	_box.add_theme_constant_override("separation", 12)
 	add_child(_box)
+	var esc := Label.new()
+	esc.text = "ESC — step away"
+	esc.anchor_left = 0.0
+	esc.anchor_right = 1.0
+	esc.anchor_top = 1.0
+	esc.anchor_bottom = 1.0
+	esc.offset_top = -70.0
+	esc.offset_bottom = -40.0
+	esc.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	esc.add_theme_font_size_override("font_size", 22)
+	esc.add_theme_color_override("font_color", Color(0.68, 0.68, 0.64))
+	add_child(esc)
 
 	var title := Label.new()
 	title.text = "KEYPAD"

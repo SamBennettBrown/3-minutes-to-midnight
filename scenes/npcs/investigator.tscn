@@ -124,6 +124,18 @@ dialogue_variants = [{
 "text": "Move along. This one's ours."
 }]
 }, {
+"after": 60.0,
+"lines": [{
+"speaker": "INVESTIGATOR",
+"text": "Taking the witness down to lockup now, detective. Give us some room."
+}]
+}, {
+"after": 80.0,
+"lines": [{
+"speaker": "INVESTIGATOR",
+"text": "This one's safe in here. Bars and concrete."
+}]
+}, {
 "after": 125.0,
 "lines": [{
 "speaker": "INVESTIGATOR",

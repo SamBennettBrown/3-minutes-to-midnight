@@ -179,10 +179,14 @@ barks = [{
 "t": 90.0,
 "text": "Ugh - I lost another dollar to that damn vending machine. Third time this week."
 }]
+sets_flag = "know_shower_alibi"
 dialogue = [{
 "speaker": "NIGHT OFFICER",
 "text": "Night shift. You're the day guy who won't go home, huh? It's all yours, detective."
 }, {
 "speaker": "NIGHT OFFICER",
 "text": "The evidence clerk leaves early. Every night. Clocks out, drops his card at the front desk, and he's a ghost before midnight."
+}, {
+"speaker": "NIGHT OFFICER",
+"text": "Oh - and if you want the locker room, go before twelve. Captain hogs the showers at midnight sharp. Every single night. Territorial about it."
 }]
