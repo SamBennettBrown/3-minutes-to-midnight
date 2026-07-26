@@ -261,7 +261,7 @@ dialogue = [{
 "text": "The investigator's notes, torn mid-page. One line underlined twice: witness claims the defendant has PEOPLE INSIDE the precinct."
 }, {
 "speaker": "DETECTIVE",
-"text": "People inside. He told them to their faces. They wrote it down and moved on."
+"text": "People inside...he said it right to their faces."
 }]
 sets_flag = "read_pad_note"
 prompt_height = 0.35

@@ -16,12 +16,12 @@ const Sfx := preload("res://scripts/game/sfx.gd")
 ## the gunshot.
 @export var monologue := [
 	"That sound again.",
-	"Three minutes to midnight. My shift's almost over - but no matter what I do, it's always the same.",
-	"I got my witness his day in court, and the protection that came with it. He was so grateful he pressed this into my hand. A family heirloom.",
-	"Then it happens. He's shot dead in the cell block - and there's nobody in there but a prisoner with no gun.",
-	"They walk him in, everyone leaves, and a minute later he's dead. When the clock strikes twelve, it's 11:57 again.",
-	"I could throw this thing in the trash and be done with it. But this is the job.",
-	"So. Here we go again.",
+	"Three minutes away from getting out of here - but no matter what I do, it's always the same.",
+	"I got the witness his day in court, and the protection that came with it. He thanked me, and discretely pressed a small brass trinket into my hand.",
+	"He's shot dead in his holding cell - there's no one else in there but another unarmed prisoner.",
+	"He's escorted in, everyone leaves. One minute later, he's dead, and I'm sent back to 11:57 again.",
+	"I know it's the trinket that's sending me back. I could throw this thing in the trash and be done with it, but my mama didn't raise a quitter.",
+	"So, here we go again...",
 ]
 @export var fade := 0.6
 ## the shortest a line stays up (after fading in) before E can advance it,

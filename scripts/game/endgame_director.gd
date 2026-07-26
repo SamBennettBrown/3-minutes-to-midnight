@@ -167,7 +167,7 @@ func _nook_death() -> void:
 	var dlg := get_tree().get_first_node_in_group("dialogue")
 	if dlg != null and not dlg.visible:
 		dlg.show_dialogue([
-			{"speaker": "THE CAPTAIN", "text": "...My locker, standing open. And a detective in my favourite little room."},
+			{"speaker": "THE CAPTAIN", "text": "Well well well, look what we have here."},
 			{"speaker": "DETECTIVE", "text": "The floor creaked behind me. I never even got to turn around."},
 		])
 		await dlg.closed
@@ -175,7 +175,7 @@ func _nook_death() -> void:
 			return
 	var lose := get_tree().get_first_node_in_group("lose_screen")
 	if lose != null:
-		lose.play_lose("He came in behind me and I never heard a thing. Next time I wait in the LOCKER ROOM - not inside that closet.")
+		lose.play_lose("He came in behind me, I never heard a thing. Next time, I wait in the LOCKER ROOM - not inside his hidden chamber.")
 
 
 # --- alone: the lesson ---
@@ -184,7 +184,7 @@ func _taught_death() -> void:
 	var dlg := get_tree().get_first_node_in_group("dialogue")
 	if dlg != null and not dlg.visible:
 		dlg.show_dialogue([
-			{"speaker": "THE CAPTAIN", "text": "You. In MY locker room, at MY hour. You really don't stop."},
+			{"speaker": "THE CAPTAIN", "text": "I already told you detective, whatever it is can wait until tomorrow."},
 			{"speaker": "DETECTIVE", "text": "I know what's behind that wall, Captain. I know what you do down there."},
 			{"speaker": "THE CAPTAIN", "text": "Then you know how this ends. No witness, no case. Just a detective who wouldn't go home."},
 		])
@@ -207,8 +207,9 @@ func _no_evidence_death() -> void:
 	var dlg := get_tree().get_first_node_in_group("dialogue")
 	if dlg != null and not dlg.visible:
 		dlg.show_dialogue([
+			{"speaker": "THE CAPTAIN", "text": "I already told you detective, whatever it is can wait until tomorrow."},
 			{"speaker": "DETECTIVE", "text": "It's over, Captain. I know what's behind your locker. I know about your brother."},
-			{"speaker": "THE CAPTAIN", "text": "My brother? Show me. Show me one shred of paper that says any of that out loud."},
+			{"speaker": "THE CAPTAIN", "text": "MY brother? Show me. Show me one shred evidence that even points in that direction."},
 			{"speaker": "DETECTIVE", "text": "..."},
 			{"speaker": "THE CAPTAIN", "text": "That's what I thought. ...And whoever's breathing back there - you can come out too, son."},
 			{"speaker": "THE ROOKIE", "text": "...Sir, I-"},
@@ -231,11 +232,11 @@ func _win(captain: Node3D) -> void:
 		# something else is mid-line; wait a beat and re-drive
 		await dlg.closed
 	dlg.show_dialogue([
-		{"speaker": "THE CAPTAIN", "text": "Out of my way, detective. I have a loose end to take care of"},
+		{"speaker": "THE CAPTAIN", "text": "I already told you detective, whatever it is can wait until tomorrow."},
 		{"speaker": "DETECTIVE", "text": "Recognize this? Two brothers at a lake. The other one is sitting in a jail cell because of MY witness."},
 		{"speaker": "THE CAPTAIN", "text": "...Where did you get that?"},
-		{"speaker": "DETECTIVE", "text": "Where you left it. You hid it in away in the evidence room behind the shelf. Using the hidden passage behind that locker, you're about to put him down for good."},
-		{"speaker": "THE CAPTAIN", "text": "So what, gumshoe? It's your word against mine, and mine wears more brass. Nobody will know a thing."},
+		{"speaker": "DETECTIVE", "text": "Where you left it. You hid it in away in the evidence room behind the shelf. Using the hidden passage behind your locker, you're about to put him down for good."},
+		{"speaker": "THE CAPTAIN", "text": "So what? It's your word against mine, and mine wears more brass. Nobody will know a thing."},
 	])
 	await dlg.closed
 	if not is_inside_tree():
@@ -254,12 +255,12 @@ func _win(captain: Node3D) -> void:
 	dlg.show_dialogue([
 		{"speaker": "THE ROOKIE", "text": "I did, Captain. I heard every word of it."},
 		{"speaker": "THE CAPTAIN", "text": "...You. How long have you-"},
-		{"speaker": "DETECTIVE", "text": "Long enough. The photo, and a witness who lives. The two things you could never plan around. It's over."},
-		{"speaker": "DETECTIVE", "text": "I think it's about time you... *takes off glasses*"},
+		{"speaker": "DETECTIVE", "text": "Long enough. The photo, AND a witness. It's over, captain."},
+		{"speaker": "DETECTIVE", "text": "I think it's about time you... *puts on sunglasses*"},
 		{"speaker": "DETECTIVE", "text": "Clocked out, Captain "},
 		{"speaker": "CSI MIAMI", "text": "YEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH!!"},
 		{"speaker": "THE ROOKIE", "text": "Sir... it's three minutes past midnight. Does this count as overtime?"},
-		{"speaker": "DETECTIVE", "text": "Kid, I've worked this same three minutes more times than I can count. The department owes me a YEAR."},
+		{"speaker": "DETECTIVE", "text": "Kid, I've worked the past three minutes more times than I can count. The department owes me a YEAR."},
 	])
 	await dlg.closed
 	if not is_inside_tree():

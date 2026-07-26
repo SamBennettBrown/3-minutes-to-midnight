@@ -35,7 +35,7 @@ dialogue_variants = [{
 "text": "Your witness? He was in the cell over not ten minutes ago. He's down in interrogation now - through the bullpen, off HALL 1."
 }, {
 "speaker": "PRISONER",
-"text": "He seemed really nervous, helpless even. He didn't seem to have any confidence in the police's ability to protect him"
+"text": "He seemed really nervous, helpless even. He didn't seem to have any confidence in the police's ability to protect him."
 }, {
 "speaker": "DETECTIVE",
 "text": "Interrogation, off Hall 1. Worth a look."
