@@ -14,6 +14,8 @@
 [ext_resource type="Script" uid="uid://cd8jayk7qqp2v" path="res://scripts/game/flag_gate.gd" id="91_gate"]
 [ext_resource type="Script" uid="uid://ya2iepgusbsw" path="res://scripts/game/timed_flag.gd" id="93_timed"]
 [ext_resource type="Script" uid="uid://b06knbkfbadpn" path="res://scripts/game/interactable.gd" id="94_item"]
+[ext_resource type="FontFile" uid="uid://canmpksdd2ct8" path="res://fonts/Special_Elite/SpecialElite-Regular.ttf" id="98_font"]
+[ext_resource type="Script" uid="uid://fokcbe25o2i3" path="res://scripts/game/floor_label.gd" id="99_label"]
 
 [sub_resource type="BoxShape3D" id="shape_trigger"]
 size = Vector3(9.314175, 4, 8.775918)
@@ -79,8 +81,8 @@ size = Vector3(0.2, 3, 2.2)
 script = ExtResource("1_room")
 
 [node name="Camera" type="Camera3D" parent="." unique_id=1698580174]
-transform = Transform3D(0.5713326, -0.19022107, 0.7983703, -2.4760999e-08, 0.97276974, 0.23177381, -0.8207187, -0.13241993, 0.555775, 4.3395567, 1.7693373, 1.9843097)
-fov = 45.0
+transform = Transform3D(0.62772185, -0.45843142, 0.629131, -0.01855561, 0.7991555, 0.60083795, -0.77821654, -0.388833, 0.4931409, 4.034041, 2.1826866, 1.9843097)
+fov = 65.6
 
 [node name="PeekCamera" type="Camera3D" parent="." unique_id=489121704]
 transform = Transform3D(-1, 0, 0, 0, 0.92955035, 0.36869502, 0, 0.36869502, -0.92955035, 0.5, 1.7, -4.9965715)
@@ -209,6 +211,7 @@ surface_material_override/0 = SubResource("mat_wall")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.254533, 1.5, 2.806569)
 
 [node name="Mesh" type="MeshInstance3D" parent="WallEastNear" unique_id=2050385622]
+transform = Transform3D(0.99999344, 0, -0.0036201375, 0, 1, 0, 0.0036201375, 0, 0.99999344, 0, 0, 0)
 mesh = SubResource("mesh_v4")
 surface_material_override/0 = SubResource("mat_wall")
 
@@ -296,3 +299,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5084245, -2.3841858e-07, 1.
 script = ExtResource("89_ambient")
 sound = "res://audio/ambient/light_flicker.mp3"
 volume_db = -16.0
+
+[node name="SignHall1" type="Label3D" parent="." unique_id=199100031]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 3.8524947, 0.02, 0)
+pixel_size = 0.01
+modulate = Color(0.75, 0.75, 0.72, 0.45)
+text = "HALL 1"
+font = ExtResource("98_font")
+font_size = 60
+outline_size = 0
+script = ExtResource("99_label")
+yaw_degrees = 90.0
